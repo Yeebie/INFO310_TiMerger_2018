@@ -15,16 +15,18 @@ public class User {
     private String firstName;
     private String lastName;
     private String password;
+	 private String email;
 
     /**
      * This constructor probably won't be used, but I'm adding it in because the 
      * INFO202 Lecture 1 Interface example has one, this will probably be removed.
      */
-    public User(String userName, String firstName, String lastName, String password) {
+    public User(String userName, String firstName, String lastName, String password, String email) {
         this.userName = userName;
         this.firstName = firstName;
         this.lastName = lastName;
         this.password = password;
+		  this.email = email;
     }
 
     public String getUserName() {
@@ -58,10 +60,18 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+	 
+	 public String getEmail(){
+		 return email;
+	 }
+	 
+	 public void setEmail(String email){
+		 this.email = email;
+	 }
 
     @Override
     public String toString() {
-        return "User{" + "userName=" + userName + ", firstName=" + firstName + ", lastName=" + lastName + ", password=" + password + '}';
+        return "User{" + "userName=" + userName + ", firstName=" + firstName + ", lastName=" + lastName + ", password=" + password + ", email=" + email + '}';
     }
 
 }

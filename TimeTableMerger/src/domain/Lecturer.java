@@ -11,8 +11,8 @@ package domain;
  */
 public class Lecturer extends User {
 
-    public Lecturer(String userName, String firstName, String lastName, String password) {
-        super(userName, firstName, lastName, password);
+    public Lecturer(String userName, String firstName, String lastName, String password, String email) {
+        super(userName, firstName, lastName, password, email);
     }
     
     /** Will have to figure out how the Lecturer can access all the timetables
