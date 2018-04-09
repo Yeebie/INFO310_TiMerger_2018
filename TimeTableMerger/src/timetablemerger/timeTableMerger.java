@@ -9,7 +9,7 @@ package timetablemerger;
  *
  * @author Celine
  */
-public class TimeTableMerger {
+public class timeTableMerger {
 
     /**
      * @param args the command line arguments
