@@ -21,6 +21,10 @@ public class Timetable {
      * time is free" instead of "false, this time is free, which will hopefully
      * simplify things"
      */
+    
+    private User user;
+            
+            
     private Day monday1 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
     private Day tuesday1 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
     private Day wednesday1 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
@@ -36,6 +40,14 @@ public class Timetable {
     private Day saturday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
     private Day sunday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
 
+    public User getUser() {
+        return user;
+    }
+    
+    public void setUser(){
+        this.user = user;
+    }
+    
     public Day getMonday1() {
         return monday1;
     }
