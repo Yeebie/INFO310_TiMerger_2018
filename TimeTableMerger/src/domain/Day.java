@@ -15,7 +15,7 @@ public class Day {
     private Boolean nineAM;
     private Boolean tenAM;
     private Boolean elevenAM;
-    private Boolean twelveAM;
+    private Boolean twelvePM;
     private Boolean onePM;
     private Boolean twoPM;
     private Boolean threePM;
@@ -26,12 +26,12 @@ public class Day {
     private Boolean eightPM;
     private Boolean ninePM;
 
-    public Day(Boolean eightAM, Boolean nineAM, Boolean tenAM, Boolean elevenAM, Boolean twelveAM, Boolean onePM, Boolean twoPM, Boolean threePM, Boolean fourPM, Boolean fivePM, Boolean sixPM, Boolean sevenPM, Boolean eightPM, Boolean ninePM) {
+    public Day(Boolean eightAM, Boolean nineAM, Boolean tenAM, Boolean elevenAM, Boolean twelvePM, Boolean onePM, Boolean twoPM, Boolean threePM, Boolean fourPM, Boolean fivePM, Boolean sixPM, Boolean sevenPM, Boolean eightPM, Boolean ninePM) {
         this.eightAM = eightAM;
         this.nineAM = nineAM;
         this.tenAM = tenAM;
         this.elevenAM = elevenAM;
-        this.twelveAM = twelveAM;
+        this.twelvePM = twelvePM;
         this.onePM = onePM;
         this.twoPM = twoPM;
         this.threePM = threePM;
@@ -75,12 +75,12 @@ public class Day {
         this.elevenAM = elevenAM;
     }
 
-    public Boolean getTwelveAM() {
-        return twelveAM;
+    public Boolean getTwelvePM() {
+        return twelvePM;
     }
 
-    public void setTwelveAM(Boolean twelveAM) {
-        this.twelveAM = twelveAM;
+    public void setTwelvePM(Boolean twelvePM) {
+        this.twelvePM = twelvePM;
     }
 
     public Boolean getOnePM() {

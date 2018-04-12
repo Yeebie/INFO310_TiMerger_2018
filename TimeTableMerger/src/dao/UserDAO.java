@@ -1,10 +1,8 @@
 package dao;
 
 import domain.User;
-import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -13,7 +11,7 @@ import java.sql.SQLException;
  */
 public class UserDAO {
 	
-	private String URL = "jdbc:h2:tcp://localhost:9053/project;IFEXISTS=TRUE";
+	private String URL = "jdbc:h2:tcp://localhost/~/test;IFEXISTS=TRUE";
 	
 	public UserDAO(){
 	}
