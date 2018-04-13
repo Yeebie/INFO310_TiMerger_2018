@@ -25,20 +25,21 @@ public class Timetable {
     private User user;
             
             
-    private Day monday1 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
-    private Day tuesday1 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
-    private Day wednesday1 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
-    private Day thursday1 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
-    private Day friday1 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
-    private Day saturday1 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
-    private Day sunday1 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
-    private Day monday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
-    private Day tuesday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
-    private Day wednesday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
-    private Day thursday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
-    private Day friday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
-    private Day saturday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
-    private Day sunday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
+    private Day monday = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
+    private Day tuesday = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
+    private Day wednesday = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
+    private Day thursday = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
+    private Day friday = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
+    private Day saturday = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
+    private Day sunday = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
+    //removed second week from timetable. can add later if we have time
+    //private Day monday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
+    //private Day tuesday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
+    //private Day wednesday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
+    //private Day thursday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
+    //private Day friday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
+    //private Day saturday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
+    //private Day sunday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
 
     public User getUser() {
         return user;
@@ -48,62 +49,62 @@ public class Timetable {
         this.user = user;
     }
     
-    public Day getMonday1() {
-        return monday1;
+    public Day getMonday() {
+        return monday;
     }
 
-    public void setMonday1(Day monday1) {
-        this.monday1 = monday1;
+    public void setMonday(Day monday) {
+        this.monday = monday;
     }
 
-    public Day getTuesday1() {
-        return tuesday1;
+    public Day getTuesday() {
+        return tuesday;
     }
 
-    public void setTuesday1(Day tuesday1) {
-        this.tuesday1 = tuesday1;
+    public void setTuesday(Day tuesday) {
+        this.tuesday = tuesday;
     }
 
-    public Day getWednesday1() {
-        return wednesday1;
+    public Day getWednesday() {
+        return wednesday;
     }
 
-    public void setWednesday1(Day wednesday1) {
-        this.wednesday1 = wednesday1;
+    public void setWednesday(Day wednesday) {
+        this.wednesday = wednesday;
     }
 
-    public Day getThursday1() {
-        return thursday1;
+    public Day getThursday() {
+        return thursday;
     }
 
-    public void setThursday1(Day thursday1) {
-        this.thursday1 = thursday1;
+    public void setThursday(Day thursday) {
+        this.thursday = thursday;
     }
 
-    public Day getFriday1() {
-        return friday1;
+    public Day getFriday() {
+        return friday;
     }
 
-    public void setFriday1(Day friday1) {
-        this.friday1 = friday1;
+    public void setFriday(Day friday) {
+        this.friday = friday;
     }
 
-    public Day getSaturday1() {
-        return saturday1;
+    public Day getSaturday() {
+        return saturday;
     }
 
-    public void setSaturday1(Day saturday1) {
-        this.saturday1 = saturday1;
+    public void setSaturday(Day saturday) {
+        this.saturday = saturday;
     }
 
-    public Day getSunday1() {
-        return sunday1;
+    public Day getSunday() {
+        return sunday;
     }
 
-    public void setSunday1(Day sunday1) {
-        this.sunday1 = sunday1;
+    public void setSunday(Day sunday) {
+        this.sunday = sunday;
     }
-
+/*
     public Day getMonday2() {
         return monday2;
     }
@@ -159,5 +160,5 @@ public class Timetable {
     public void setSunday2(Day sunday2) {
         this.sunday2 = sunday2;
     }
-
+**/
 }
