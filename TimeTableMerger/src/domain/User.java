@@ -15,7 +15,8 @@ public class User {
     private String firstName;
     private String lastName;
     private String password;
-	 private String email;
+    private String email;
+    private Timetable timetable;
 
     /**
      * This constructor probably won't be used, but I'm adding it in because the 
