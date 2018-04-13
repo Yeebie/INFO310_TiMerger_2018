@@ -11,11 +11,6 @@ package domain;
  */
 public class Times {
     
-    private String hour;
-    
-    public Times(){
-    }
-    
     //not sure what I'm doing here!!! - Claire
     private Boolean eightAM = true;
     private Boolean nineAM = true;
@@ -31,13 +26,23 @@ public class Times {
     private Boolean sevenPM = true;
     private Boolean eightPM = true;
     private Boolean ninePM = true;
-
-    public String getHour() {
-        return hour;
-    }
-
-    public void setHour(String hour) {
-        this.hour = hour;
+    
+    public Times(Boolean eightAM, Boolean nineAM, Boolean tenAM, Boolean elevenAM, Boolean twelvePM, Boolean onePM, Boolean twoPM, 
+            Boolean threePM, Boolean fourPM, Boolean fivePM, Boolean sixPM, Boolean sevenPM, Boolean eightPM, Boolean ninePM){
+        this.eightAM = eightAM;
+        this.nineAM = nineAM;
+        this.tenAM = tenAM;
+        this.elevenAM = elevenAM;
+        this.twelvePM = twelvePM;
+        this.onePM = onePM;
+        this.twoPM = twoPM;
+        this.threePM = threePM;
+        this.fourPM = fourPM;
+        this.fivePM = fivePM;
+        this.sixPM = sixPM;
+        this.sevenPM = sevenPM;
+        this.eightPM = eightPM;
+        this.ninePM = ninePM;
     }
 
     public Boolean getEightAM() {
