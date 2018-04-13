@@ -5,12 +5,10 @@
  */
 package dao;
 
-import java.math.BigDecimal;
+import domain.Day;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.*;
 
 /**
  *
@@ -28,8 +26,8 @@ public class TimetableDAO {
     }
 
     //need to change
-    public void getTimetable(Timetable timetable) {
-        String sql = "select * from Timetable";
+    public void getTimetable(Day day) {
+        String sql = "select * from Day where UserName = ?";
         /*
         try (
                 Connection dbCon = JdbcConnection.getConnection(URL);
@@ -62,8 +60,8 @@ public class TimetableDAO {
     }
 
     //need to change
-    public void addTimeTable(Timetable timetable) {
-        String sql = "merge into product (Product_ID, name, description, category, price, quantity_in_stock) values (?,?,?,?,?,?)";
+    public void createTimetable(Day day) {
+        String sql = "merge into Day (UserName, DayName, eightAM, nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM, sixPM, sevenPM, eightPM, ninePM) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
         /*try (
         // get connection to database
@@ -89,18 +87,18 @@ public class TimetableDAO {
     }
 
     //need to change
-    public void editTimeTable(Timetable timetable) {
+    public void editTimeTable(Day day) {
         //this goes into the Timetable editor.java gui class
     }
 
     //need to change
-    public void deleteTimeTable(Timetable timetable) {
-        String sql = "delete from Timetable where UserName = ?";
+    public void deleteTimeTable(Day day) {
+        String sql = "delete from Day where UserName = ?";
         try (
                 Connection dbCon = JdbcConnection.getConnection(URL);
                 PreparedStatement stmt = dbCon.prepareStatement(sql);) {
 
-            stmt.setString(1, timetable.getUserName().toString());
+            stmt.setString(1, Day.getUserName().toString());
             stmt.executeUpdate();
 
         } catch (SQLException ex) {
@@ -112,8 +110,8 @@ public class TimetableDAO {
     //need to update the values based on the values we are storing in the database
     //is this the same as addTimetable??
     //need to change
-    public void saveTimetable(Timetable timetable) {
-        String sql = "merge into Timetable (UserName, Password, FirstName, LastName, Email) values (?,?,?,?,?)";
+    public void saveTimetable(Day day) {
+        String sql = "merge into Day (UserName, DayName, eightAM, nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM, sixPM, sevenPM, eightPM, ninePM) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         try (
                 Connection dbCon = JdbcConnection.getConnection(URL);
                 PreparedStatement stmt = dbCon.prepareStatement(sql);) {
