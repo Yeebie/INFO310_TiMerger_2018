@@ -5,31 +5,52 @@
  */
 package domain;
 
+import net.sf.oval.constraint.Email;
+import net.sf.oval.constraint.Length;
+import net.sf.oval.constraint.NotBlank;
+import net.sf.oval.constraint.NotNull;
+
 /**
  *
  * @author Yeebo
  */
 public class User {
 
+    @NotNull(message = "User Name must be provided.")
+    @NotBlank(message = "User Name must be provided.")
+    @Length(min = 5, message = "User Name must contain at least 5 characters.")
     private String userName;
+    @NotNull(message = "Name must be provided.")
+    @NotBlank(message = "Name must be provided.")
+    @Length(min = 2, message = "Name must contain at least 2 characters.")
     private String firstName;
+    @NotNull(message = "Name must be provided.")
+    @NotBlank(message = "Name must be provided.")
+    @Length(min = 2, message = "Name must contain at least 2 characters.")
     private String lastName;
+    @NotNull(message = "Password must be provided.")
+    @NotBlank(message = "Password must be provided.")
+    @Length(min = 2, message = "Password must contain at least 2 characters.")
     private String password;
+    @NotNull(message ="Email address must be provided.")
+    @NotBlank(message = "Email address must be provided.")
+    @Email(message = "Please provide a valid email address.")
     private String email;
     
     private Timetable timetable;
+    
 
     /**
      * This constructor probably won't be used, but I'm adding it in because the 
      * INFO202 Lecture 1 Interface example has one, this will probably be removed.
      */
     public User(String userName, String firstName, String lastName, String password, String email, Timetable timetable) {
-        this.userName = userName;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.password = password;
-	this.email = email;
-        this.timetable = timetable;
+        this.setUserName(userName);
+        this.setFirstName(firstName);
+        this.setLastName(lastName);
+        this.setPassword(password);
+	this.setEmail(email);
+        this.setTimetable(timetable);
     }
 
     public String getUserName() {
@@ -76,7 +97,7 @@ public class User {
         return timetable;
     }
     
-    public void setTimetable(){
+    public void setTimetable(Timetable timetable){
         this.timetable = timetable;
     }
          
