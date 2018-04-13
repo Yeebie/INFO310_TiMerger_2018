@@ -73,11 +73,11 @@
                                       <Component id="usernameField" alignment="0" min="-2" pref="146" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Component id="loginLogo" min="-2" pref="318" max="-2" attributes="0"/>
+                              <Component id="jLabel2" alignment="0" pref="353" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="167" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="153" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -86,9 +86,9 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                   <Component id="titleLabel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="loginLogo" min="-2" pref="338" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="usernameLabel" alignment="3" pref="45" max="32767" attributes="0"/>
                       <Component id="usernameField" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
@@ -116,14 +116,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Timetable Merger"/>
             <Property name="name" type="java.lang.String" value="titleLabel" noResource="true"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="loginLogo">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="name" type="java.lang.String" value="loginLogo" noResource="true"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="usernameLabel">
@@ -170,6 +162,14 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Create Account"/>
             <Property name="name" type="java.lang.String" value="backButton" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel2">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/images/uniTimetableLogo.png"/>
+            </Property>
+            <Property name="name" type="java.lang.String" value="jLabel2" noResource="true"/>
           </Properties>
         </Component>
       </SubComponents>
