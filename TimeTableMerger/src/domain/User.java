@@ -23,12 +23,13 @@ public class User {
      * This constructor probably won't be used, but I'm adding it in because the 
      * INFO202 Lecture 1 Interface example has one, this will probably be removed.
      */
-    public User(String userName, String firstName, String lastName, String password, String email) {
+    public User(String userName, String firstName, String lastName, String password, String email, Timetable timetable) {
         this.userName = userName;
         this.firstName = firstName;
         this.lastName = lastName;
         this.password = password;
-		  this.email = email;
+	this.email = email;
+        this.timetable = timetable;
     }
 
     public String getUserName() {
