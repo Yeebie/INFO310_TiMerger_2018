@@ -14,9 +14,9 @@ import java.util.Collection;
  */
 public class Day {
     
-    private Collection<Times> time = new ArrayList<>();
-
-    /* moved this to Times class. Not 100% sure that's what we're supposed to do - Claire
+    private User user;
+    private String dayName;
+    
     private Boolean eightAM;
     private Boolean nineAM;
     private Boolean tenAM;
@@ -32,7 +32,9 @@ public class Day {
     private Boolean eightPM;
     private Boolean ninePM;
 
-    public Day(Boolean eightAM, Boolean nineAM, Boolean tenAM, Boolean elevenAM, Boolean twelvePM, Boolean onePM, Boolean twoPM, Boolean threePM, Boolean fourPM, Boolean fivePM, Boolean sixPM, Boolean sevenPM, Boolean eightPM, Boolean ninePM) {
+    public Day(User user, String dayName, Boolean eightAM, Boolean nineAM, Boolean tenAM, Boolean elevenAM, Boolean twelvePM, Boolean onePM, Boolean twoPM, Boolean threePM, Boolean fourPM, Boolean fivePM, Boolean sixPM, Boolean sevenPM, Boolean eightPM, Boolean ninePM) {
+        this.user = user;
+        this.dayName = dayName;
         this.eightAM = eightAM;
         this.nineAM = nineAM;
         this.tenAM = tenAM;
@@ -47,6 +49,22 @@ public class Day {
         this.sevenPM = sevenPM;
         this.eightPM = eightPM;
         this.ninePM = ninePM;
+    }
+
+    public String getDayName() {
+        return dayName;
+    }
+
+    public void setDayName(String dayName) {
+        this.dayName = dayName;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Boolean getEightAM() {
@@ -159,14 +177,5 @@ public class Day {
 
     public void setNinePM(Boolean ninePM) {
         this.ninePM = ninePM;
-    }
-**/
-
-    public Collection<Times> getTime() {
-        return time;
-    }
-
-    public void setTime(Collection<Times> time) {
-        this.time = time;
     }
 }

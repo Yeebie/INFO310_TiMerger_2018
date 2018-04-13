@@ -5,7 +5,6 @@
  */
 package dao;
 
-import domain.Timetable;
 import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -28,6 +27,7 @@ public class TimetableDAO {
         this.URL = URL;
     }
 
+    //need to change
     public void getTimetable(Timetable timetable) {
         String sql = "select * from Timetable";
         /*
@@ -61,6 +61,7 @@ public class TimetableDAO {
         }*/
     }
 
+    //need to change
     public void addTimeTable(Timetable timetable) {
         String sql = "merge into product (Product_ID, name, description, category, price, quantity_in_stock) values (?,?,?,?,?,?)";
 
@@ -87,10 +88,12 @@ public class TimetableDAO {
 		  throw new DAOException(ex.getMessage(), ex);*/
     }
 
+    //need to change
     public void editTimeTable(Timetable timetable) {
         //this goes into the Timetable editor.java gui class
     }
 
+    //need to change
     public void deleteTimeTable(Timetable timetable) {
         String sql = "delete from Timetable where UserName = ?";
         try (
@@ -107,6 +110,8 @@ public class TimetableDAO {
     }
 
     //need to update the values based on the values we are storing in the database
+    //is this the same as addTimetable??
+    //need to change
     public void saveTimetable(Timetable timetable) {
         String sql = "merge into Timetable (UserName, Password, FirstName, LastName, Email) values (?,?,?,?,?)";
         try (

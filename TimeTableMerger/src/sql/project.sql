@@ -1,3 +1,9 @@
+drop table user;
+drop table time;
+drop table day;
+drop table timetable;
+
+
 CREATE TABLE User (
 UserName varchar(255) NOT NULL,
 Password varchar(255) NOT NULL,
@@ -10,31 +16,24 @@ PRIMARY KEY (UserName),
 
 
 
-CREATE TABLE Time (
-Hour varchar(10) NOT NULL,
-
-PRIMARY KEY (Hour),
-);
-
-
-
 CREATE TABLE Day (
-DayName varchar(20) NOT NULL,
-Hour varchar(10) NOT NULL, 
-
-PRIMARY KEY (DayName, Hour),
-FOREIGN KEY (Hour) References Time(Hour),
-);
-
-
-
-CREATE TABLE Timetable (
 UserName varchar(255) NOT NULL,
 DayName varchar(20) NOT NULL,
-Hour varchar(10) NOT NULL,
-Available varchar(1),
+eightAM varchar(5) NOT NULL,
+nineAM varchar(5) NOT NULL,
+tenAM varchar(5) NOT NULL,
+elevenAM varchar(5) NOT NULL,
+twelvePM varchar(5) NOT NULL,
+onePM varchar(5) NOT NULL,
+twoPM varchar(5) NOT NULL,
+threePM varchar(5) NOT NULL,
+fourPM varchar(5) NOT NULL,
+fivePM varchar(5) NOT NULL,
+sixPM varchar(5) NOT NULL,
+sevenPM varchar(5) NOT NULL,
+eightPM varchar(5) NOT NULL,
+ninePM varchar(5) NOT NULL,
 
-PRIMARY KEY (UserName, DayName, Hour),
-FOREIGN KEY (UserName) References User(UserName),
-FOREIGN KEY (DayName, Hour) References Day(DayName, Hour),
+PRIMARY KEY (UserName, DayName),
+FOREIGN KEY (UserName) REFERENCES User(UserName),
 );

@@ -5,6 +5,8 @@
  */
 package domain;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import net.sf.oval.constraint.Email;
 import net.sf.oval.constraint.Length;
 import net.sf.oval.constraint.NotBlank;
@@ -37,20 +39,19 @@ public class User {
     @Email(message = "Please provide a valid email address.")
     private String email;
     
-    private Timetable timetable;
-    
+    //a user doesn't need to have a timetable, just an array of seven days - Claire
+    private static Collection<Day> days = new ArrayList<>();
 
     /**
      * This constructor probably won't be used, but I'm adding it in because the 
      * INFO202 Lecture 1 Interface example has one, this will probably be removed.
      */
-    public User(String userName, String firstName, String lastName, String password, String email, Timetable timetable) {
+    public User(String userName, String firstName, String lastName, String password, String email) {
         this.setUserName(userName);
         this.setFirstName(firstName);
         this.setLastName(lastName);
         this.setPassword(password);
 	this.setEmail(email);
-        this.setTimetable(timetable);
     }
 
     public String getUserName() {
@@ -92,14 +93,6 @@ public class User {
     public void setEmail(String email){
 	this.email = email;
 	 }
-    
-    public Timetable getTimetable(){
-        return timetable;
-    }
-    
-    public void setTimetable(Timetable timetable){
-        this.timetable = timetable;
-    }
          
     @Override
     public String toString() {
