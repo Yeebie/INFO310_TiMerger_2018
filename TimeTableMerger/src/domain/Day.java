@@ -5,12 +5,18 @@
  */
 package domain;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 /**
  *
  * @author Yeebo
  */
 public class Day {
+    
+    private Collection<Times> time = new ArrayList<>();
 
+    /* moved this to Times class. Not 100% sure that's what we're supposed to do - Claire
     private Boolean eightAM;
     private Boolean nineAM;
     private Boolean tenAM;
@@ -154,5 +160,13 @@ public class Day {
     public void setNinePM(Boolean ninePM) {
         this.ninePM = ninePM;
     }
+**/
 
+    public Collection<Times> getTime() {
+        return time;
+    }
+
+    public void setTime(Collection<Times> time) {
+        this.time = time;
+    }
 }

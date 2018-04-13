@@ -21,10 +21,15 @@ public class Timetable {
      * time is free" instead of "false, this time is free, which will hopefully
      * simplify things"
      */
-    
+    /**
+     * Just playing around with this, feel free to undo anything I've done - Claire
+     */
     private User user;
-            
-            
+    
+    //does this need to go in the dao???
+    private Collection<Day> week = new ArrayList<>();
+
+    /*
     private Day monday = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
     private Day tuesday = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
     private Day wednesday = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
@@ -32,7 +37,7 @@ public class Timetable {
     private Day friday = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
     private Day saturday = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
     private Day sunday = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
-    //removed second week from timetable. can add later if we have time
+    //removed second week but can add later if we have time
     //private Day monday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
     //private Day tuesday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
     //private Day wednesday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
@@ -40,7 +45,7 @@ public class Timetable {
     //private Day friday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
     //private Day saturday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
     //private Day sunday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
-
+**/
     public User getUser() {
         return user;
     }
@@ -49,6 +54,14 @@ public class Timetable {
         this.user = user;
     }
     
+        public Collection<Day> getWeek() {
+        return week;
+    }
+
+    public void setWeek(Collection<Day> week) {
+        this.week = week;
+    }
+    /*
     public Day getMonday() {
         return monday;
     }
