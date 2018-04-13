@@ -63,14 +63,22 @@ public class User {
         this.password = password;
     }
 	 
-	 public String getEmail(){
-		 return email;
+    public String getEmail(){
+	return email;
 	 }
 	 
-	 public void setEmail(String email){
-		 this.email = email;
+    public void setEmail(String email){
+	this.email = email;
 	 }
-
+    
+    public Timetable getTimetable(){
+        return timetable;
+    }
+    
+    public void setTimetable(){
+        this.timetable = timetable;
+    }
+         
     @Override
     public String toString() {
         return "User{" + "userName=" + userName + ", firstName=" + firstName + ", lastName=" + lastName + ", password=" + password + ", email=" + email + '}';
