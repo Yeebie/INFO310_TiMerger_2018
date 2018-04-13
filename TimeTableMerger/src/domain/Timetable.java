@@ -24,10 +24,20 @@ public class Timetable {
     /**
      * Just playing around with this, feel free to undo anything I've done - Claire
      */
-    private User user;
+    
+    //Ive just added this below, but am unsure at the mo as well. Will think about it on Sunday night - Celine
+    private String userName;
+    private String day; 
+    private String hour; 
+    
+    public Timetable(String userName, String day, String hour) {
+        this.userName = userName; 
+	this.day = day; 
+	this.hour = hour;	  
+    }
     
     //does this need to go in the dao???
-    private Collection<Day> week = new ArrayList<>();
+    //private Collection<Day> week = new ArrayList<>();
 
     /*
     private Day monday = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
@@ -46,6 +56,7 @@ public class Timetable {
     //private Day saturday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
     //private Day sunday2 = new Day(true, true, true, true, true, true, true, true, true, true, true, true, true, true);
 **/
+    /*
     public User getUser() {
         return user;
     }
@@ -60,7 +71,8 @@ public class Timetable {
 
     public void setWeek(Collection<Day> week) {
         this.week = week;
-    }
+    }*/
+    
     /*
     public Day getMonday() {
         return monday;
@@ -174,4 +186,8 @@ public class Timetable {
         this.sunday2 = sunday2;
     }
 **/
+
+    public Object getUserName() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
