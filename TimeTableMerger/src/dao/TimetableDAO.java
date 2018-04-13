@@ -24,7 +24,7 @@ public class TimetableDAO {
 	public TimetableDAO(String URL) {
 		this.URL = URL;
 	}
-    
+    /*
         		public void saveTimetable(Timetable timetable) {
 		String sql = "merge into Timetable (UserName, Password, FirstName, LastName, Email) values (?,?,?,?,?)";
 
@@ -44,4 +44,6 @@ public class TimetableDAO {
 			throw new DAOException(ex.getMessage(), ex);
 		}
 	}
+**/
 }
+
