@@ -173,8 +173,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon8w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon8w1ActionPerformed"/>
@@ -195,8 +201,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue8w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue8w1ActionPerformed"/>
@@ -217,8 +229,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed8w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed8w1ActionPerformed"/>
@@ -239,8 +257,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu8w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu8w1ActionPerformed"/>
@@ -261,8 +285,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri8w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri8w1ActionPerformed"/>
@@ -283,8 +313,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat8w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat8w1ActionPerformed"/>
@@ -305,8 +341,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun8w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun8w1ActionPerformed"/>
@@ -327,8 +369,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon9w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon9w1ActionPerformed"/>
@@ -349,8 +397,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue9w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue9w1ActionPerformed"/>
@@ -371,8 +425,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed9w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed9w1ActionPerformed"/>
@@ -393,8 +453,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu9w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu9w1ActionPerformed"/>
@@ -415,8 +481,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri9w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri9w1ActionPerformed"/>
@@ -437,8 +509,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat9w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat9w1ActionPerformed"/>
@@ -459,8 +537,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun9w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun9w1ActionPerformed"/>
@@ -481,8 +565,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon10w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon10w1ActionPerformed"/>
@@ -503,8 +593,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue10w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue10w1ActionPerformed"/>
@@ -525,8 +621,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed10w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed10w1ActionPerformed"/>
@@ -547,8 +649,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu10w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu10w1ActionPerformed"/>
@@ -569,8 +677,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri10w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri10w1ActionPerformed"/>
@@ -591,8 +705,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat10w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat10w1ActionPerformed"/>
@@ -613,8 +733,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun10w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun10w1ActionPerformed"/>
@@ -635,8 +761,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon11w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon11w1ActionPerformed"/>
@@ -657,8 +789,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue11w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue11w1ActionPerformed"/>
@@ -679,8 +817,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed11w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed11w1ActionPerformed"/>
@@ -701,8 +845,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu11w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu11w1ActionPerformed"/>
@@ -723,8 +873,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri11w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri11w1ActionPerformed"/>
@@ -745,8 +901,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat11w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat11w1ActionPerformed"/>
@@ -767,8 +929,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun11w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun11w1ActionPerformed"/>
@@ -789,8 +957,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon12w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon12w1ActionPerformed"/>
@@ -811,8 +985,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue12w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue12w1ActionPerformed"/>
@@ -833,8 +1013,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed12w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed12w1ActionPerformed"/>
@@ -855,8 +1041,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu12w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu12w1ActionPerformed"/>
@@ -877,8 +1069,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri12w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri12w1ActionPerformed"/>
@@ -899,8 +1097,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat12w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat12w1ActionPerformed"/>
@@ -921,8 +1125,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun12w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun12w1ActionPerformed"/>
@@ -943,8 +1153,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon13w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon13w1ActionPerformed"/>
@@ -965,8 +1181,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue13w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue13w1ActionPerformed"/>
@@ -987,8 +1209,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed13w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed13w1ActionPerformed"/>
@@ -1009,8 +1237,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu13w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu13w1ActionPerformed"/>
@@ -1031,8 +1265,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri13w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri13w1ActionPerformed"/>
@@ -1053,8 +1293,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat13w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat13w1ActionPerformed"/>
@@ -1075,8 +1321,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun13w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun13w1ActionPerformed"/>
@@ -1097,8 +1349,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon14w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon14w1ActionPerformed"/>
@@ -1119,8 +1377,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue14w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue14w1ActionPerformed"/>
@@ -1141,8 +1405,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed14w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed14w1ActionPerformed"/>
@@ -1163,8 +1433,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu14w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu14w1ActionPerformed"/>
@@ -1185,8 +1461,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri14w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri14w1ActionPerformed"/>
@@ -1207,8 +1489,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat14w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat14w1ActionPerformed"/>
@@ -1229,8 +1517,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun14w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun14w1ActionPerformed"/>
@@ -1251,8 +1545,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon15w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon15w1ActionPerformed"/>
@@ -1273,8 +1573,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue15w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue15w1ActionPerformed"/>
@@ -1295,8 +1601,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed15w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed15w1ActionPerformed"/>
@@ -1317,8 +1629,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu15w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu15w1ActionPerformed"/>
@@ -1339,8 +1657,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri15w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri15w1ActionPerformed"/>
@@ -1361,8 +1685,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat15w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat15w1ActionPerformed"/>
@@ -1383,8 +1713,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun15w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun15w1ActionPerformed"/>
@@ -1405,8 +1741,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon16w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon16w1ActionPerformed"/>
@@ -1427,8 +1769,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue16w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue16w1ActionPerformed"/>
@@ -1449,8 +1797,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed16w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed16w1ActionPerformed"/>
@@ -1471,8 +1825,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu16w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu16w1ActionPerformed"/>
@@ -1493,8 +1853,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri16w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri16w1ActionPerformed"/>
@@ -1515,8 +1881,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat16w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat16w1ActionPerformed"/>
@@ -1537,8 +1909,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun16w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun16w1ActionPerformed"/>
@@ -1559,8 +1937,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon17w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon17w1ActionPerformed"/>
@@ -1581,8 +1965,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue17w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue17w1ActionPerformed"/>
@@ -1603,8 +1993,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed17w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed17w1ActionPerformed"/>
@@ -1625,8 +2021,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu17w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu17w1ActionPerformed"/>
@@ -1647,8 +2049,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri17w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri17w1ActionPerformed"/>
@@ -1669,8 +2077,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat17w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat17w1ActionPerformed"/>
@@ -1691,8 +2105,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun17w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun17w1ActionPerformed"/>
@@ -1713,8 +2133,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon18w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon18w1ActionPerformed"/>
@@ -1735,8 +2161,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue18w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue18w1ActionPerformed"/>
@@ -1757,8 +2189,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed18w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed18w1ActionPerformed"/>
@@ -1779,8 +2217,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu18w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu18w1ActionPerformed"/>
@@ -1801,8 +2245,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri18w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri18w1ActionPerformed"/>
@@ -1823,8 +2273,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat18w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat18w1ActionPerformed"/>
@@ -1845,8 +2301,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun18w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun18w1ActionPerformed"/>
@@ -1867,8 +2329,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon19w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon19w1ActionPerformed"/>
@@ -1889,8 +2357,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue19w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue19w1ActionPerformed"/>
@@ -1911,8 +2385,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed19w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed19w1ActionPerformed"/>
@@ -1933,8 +2413,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu19w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu19w1ActionPerformed"/>
@@ -1955,8 +2441,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri19w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri19w1ActionPerformed"/>
@@ -1977,8 +2469,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat19w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat19w1ActionPerformed"/>
@@ -1999,8 +2497,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun19w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun19w1ActionPerformed"/>
@@ -2021,8 +2525,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon20w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon20w1ActionPerformed"/>
@@ -2043,8 +2553,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue20w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue20w1ActionPerformed"/>
@@ -2065,8 +2581,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed20w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed20w1ActionPerformed"/>
@@ -2087,8 +2609,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu20w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu20w1ActionPerformed"/>
@@ -2109,8 +2637,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri20w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri20w1ActionPerformed"/>
@@ -2131,8 +2665,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat20w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat20w1ActionPerformed"/>
@@ -2153,8 +2693,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun20w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun20w1ActionPerformed"/>
@@ -2175,8 +2721,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon21w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon21w1ActionPerformed"/>
@@ -2197,8 +2749,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue21w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue21w1ActionPerformed"/>
@@ -2219,8 +2777,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed21w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed21w1ActionPerformed"/>
@@ -2241,8 +2805,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu21w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu21w1ActionPerformed"/>
@@ -2263,8 +2833,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri21w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri21w1ActionPerformed"/>
@@ -2285,8 +2861,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat21w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat21w1ActionPerformed"/>
@@ -2307,8 +2889,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun21w1" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun21w1ActionPerformed"/>
@@ -2321,6 +2909,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="timetableImage1">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/timetableNew.PNG"/>
+                </Property>
                 <Property name="name" type="java.lang.String" value="timetableImage1" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[505, 660]"/>
@@ -2361,8 +2952,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon8w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon8w2ActionPerformed"/>
@@ -2383,8 +2980,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue8w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue8w2ActionPerformed"/>
@@ -2405,8 +3008,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed8w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed8w2ActionPerformed"/>
@@ -2427,8 +3036,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu8w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu8w2ActionPerformed"/>
@@ -2449,8 +3064,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri8w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri8w2ActionPerformed"/>
@@ -2471,8 +3092,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat8w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat8w2ActionPerformed"/>
@@ -2493,8 +3120,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun8w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun8w2ActionPerformed"/>
@@ -2515,8 +3148,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon9w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon9w2ActionPerformed"/>
@@ -2537,8 +3176,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue9w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue9w2ActionPerformed"/>
@@ -2559,8 +3204,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed9w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed9w2ActionPerformed"/>
@@ -2581,8 +3232,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu9w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu9w2ActionPerformed"/>
@@ -2603,8 +3260,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri9w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri9w2ActionPerformed"/>
@@ -2625,8 +3288,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat9w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat9w2ActionPerformed"/>
@@ -2647,8 +3316,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun9w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun9w2ActionPerformed"/>
@@ -2669,8 +3344,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon10w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon10w2ActionPerformed"/>
@@ -2691,8 +3372,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue10w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue10w2ActionPerformed"/>
@@ -2713,8 +3400,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed10w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed10w2ActionPerformed"/>
@@ -2735,8 +3428,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu10w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu10w2ActionPerformed"/>
@@ -2757,8 +3456,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri10w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri10w2ActionPerformed"/>
@@ -2779,8 +3484,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat10w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat10w2ActionPerformed"/>
@@ -2801,8 +3512,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun10w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun10w2ActionPerformed"/>
@@ -2823,8 +3540,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon11w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon11w2ActionPerformed"/>
@@ -2845,8 +3568,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue11w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue11w2ActionPerformed"/>
@@ -2867,8 +3596,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed11w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed11w2ActionPerformed"/>
@@ -2889,8 +3624,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu11w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu11w2ActionPerformed"/>
@@ -2911,8 +3652,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri11w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri11w2ActionPerformed"/>
@@ -2933,8 +3680,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat11w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat11w2ActionPerformed"/>
@@ -2955,8 +3708,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun11w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun11w2ActionPerformed"/>
@@ -2977,8 +3736,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon12w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon12w2ActionPerformed"/>
@@ -2999,8 +3764,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue12w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue12w2ActionPerformed"/>
@@ -3021,8 +3792,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed12w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed12w2ActionPerformed"/>
@@ -3043,8 +3820,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu12w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu12w2ActionPerformed"/>
@@ -3065,8 +3848,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri12w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri12w2ActionPerformed"/>
@@ -3087,8 +3876,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat12w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat12w2ActionPerformed"/>
@@ -3109,8 +3904,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun12w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun12w2ActionPerformed"/>
@@ -3131,8 +3932,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon13w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon13w2ActionPerformed"/>
@@ -3153,8 +3960,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue13w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue13w2ActionPerformed"/>
@@ -3175,8 +3988,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed13w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed13w2ActionPerformed"/>
@@ -3197,8 +4016,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu13w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu13w2ActionPerformed"/>
@@ -3219,8 +4044,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri13w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri13w2ActionPerformed"/>
@@ -3241,8 +4072,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat13w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat13w2ActionPerformed"/>
@@ -3263,8 +4100,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun13w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun13w2ActionPerformed"/>
@@ -3285,8 +4128,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon14w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon14w2ActionPerformed"/>
@@ -3307,8 +4156,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue14w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue14w2ActionPerformed"/>
@@ -3329,8 +4184,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed14w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed14w2ActionPerformed"/>
@@ -3351,8 +4212,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu14w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu14w2ActionPerformed"/>
@@ -3373,8 +4240,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri14w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri14w2ActionPerformed"/>
@@ -3395,8 +4268,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat14w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat14w2ActionPerformed"/>
@@ -3417,8 +4296,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun14w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun14w2ActionPerformed"/>
@@ -3439,8 +4324,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon15w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon15w2ActionPerformed"/>
@@ -3461,8 +4352,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue15w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue15w2ActionPerformed"/>
@@ -3483,8 +4380,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed15w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed15w2ActionPerformed"/>
@@ -3505,8 +4408,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu15w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu15w2ActionPerformed"/>
@@ -3527,8 +4436,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri15w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri15w2ActionPerformed"/>
@@ -3549,8 +4464,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat15w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat15w2ActionPerformed"/>
@@ -3571,8 +4492,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun15w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun15w2ActionPerformed"/>
@@ -3593,8 +4520,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon16w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon16w2ActionPerformed"/>
@@ -3615,8 +4548,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue16w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue16w2ActionPerformed"/>
@@ -3637,8 +4576,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed16w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed16w2ActionPerformed"/>
@@ -3659,8 +4604,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu16w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu16w2ActionPerformed"/>
@@ -3681,8 +4632,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri16w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri16w2ActionPerformed"/>
@@ -3703,8 +4660,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat16w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat16w2ActionPerformed"/>
@@ -3725,8 +4688,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun16w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun16w2ActionPerformed"/>
@@ -3747,8 +4716,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon17w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon17w2ActionPerformed"/>
@@ -3769,8 +4744,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue17w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue17w2ActionPerformed"/>
@@ -3791,8 +4772,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed17w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed17w2ActionPerformed"/>
@@ -3813,8 +4800,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu17w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu17w2ActionPerformed"/>
@@ -3835,8 +4828,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri17w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri17w2ActionPerformed"/>
@@ -3857,8 +4856,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat17w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat17w2ActionPerformed"/>
@@ -3879,8 +4884,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun17w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun17w2ActionPerformed"/>
@@ -3901,8 +4912,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon18w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon18w2ActionPerformed"/>
@@ -3923,8 +4940,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue18w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue18w2ActionPerformed"/>
@@ -3945,8 +4968,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed18w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed18w2ActionPerformed"/>
@@ -3967,8 +4996,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu18w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu18w2ActionPerformed"/>
@@ -3989,8 +5024,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri18w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri18w2ActionPerformed"/>
@@ -4011,8 +5052,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat18w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat18w2ActionPerformed"/>
@@ -4033,8 +5080,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun18w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun18w2ActionPerformed"/>
@@ -4055,8 +5108,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon19w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon19w2ActionPerformed"/>
@@ -4077,8 +5136,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue19w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue19w2ActionPerformed"/>
@@ -4099,8 +5164,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed19w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed19w2ActionPerformed"/>
@@ -4121,8 +5192,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu19w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu19w2ActionPerformed"/>
@@ -4143,8 +5220,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri19w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri19w2ActionPerformed"/>
@@ -4165,8 +5248,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat19w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat19w2ActionPerformed"/>
@@ -4187,8 +5276,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun19w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun19w2ActionPerformed"/>
@@ -4209,8 +5304,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon20w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon20w2ActionPerformed"/>
@@ -4231,8 +5332,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue20w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue20w2ActionPerformed"/>
@@ -4253,8 +5360,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed20w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed20w2ActionPerformed"/>
@@ -4275,8 +5388,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu20w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu20w2ActionPerformed"/>
@@ -4297,8 +5416,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri20w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri20w2ActionPerformed"/>
@@ -4319,8 +5444,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat20w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat20w2ActionPerformed"/>
@@ -4341,8 +5472,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun20w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun20w2ActionPerformed"/>
@@ -4363,8 +5500,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="mon21w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mon21w2ActionPerformed"/>
@@ -4385,8 +5528,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="tue21w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tue21w2ActionPerformed"/>
@@ -4407,8 +5556,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="wed21w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wed21w2ActionPerformed"/>
@@ -4429,8 +5584,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="thu21w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thu21w2ActionPerformed"/>
@@ -4451,8 +5612,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="fri21w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fri21w2ActionPerformed"/>
@@ -4473,8 +5640,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sat21w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sat21w2ActionPerformed"/>
@@ -4495,8 +5668,14 @@
                   </Border>
                 </Property>
                 <Property name="borderPainted" type="boolean" value="true"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/greenTile.png"/>
+                </Property>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="name" type="java.lang.String" value="sun21w2" noResource="true"/>
+                <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/redTile.png"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sun21w2ActionPerformed"/>
@@ -4509,6 +5688,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="timetableImage2">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/timetableNew.PNG"/>
+                </Property>
                 <Property name="name" type="java.lang.String" value="timetableImage2" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[505, 660]"/>
@@ -4533,7 +5715,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="380" y="75" width="320" height="-1"/>
+          <AbsoluteConstraints x="380" y="75" width="320" height="40"/>
         </Constraint>
       </Constraints>
 
@@ -4550,7 +5732,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="switchButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="5" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -4560,6 +5742,9 @@
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/images/switchWeek.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
