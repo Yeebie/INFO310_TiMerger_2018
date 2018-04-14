@@ -16,19 +16,19 @@ import java.sql.SQLException;
  */
 public class TimetableDAO {
 
-    private String URL = "jdbc:h2:tcp://localhost/~/test;IFEXISTS=TRUE";
+	private String URL = "jdbc:h2:tcp://localhost/~/test;IFEXISTS=TRUE";
 
-    public TimetableDAO() {
-    }
+	public TimetableDAO() {
+	}
 
-    public TimetableDAO(String URL) {
-        this.URL = URL;
-    }
+	public TimetableDAO(String URL) {
+		this.URL = URL;
+	}
 
-    //need to change
-    public void getTimetable(Day day) {
-        String sql = "select * from Day where UserName = ?";
-        /*
+	//need to change
+	public void getTimetable(Day day) {
+		String sql = "select * from Day where UserName = ?";
+		/*
         try (
                 Connection dbCon = JdbcConnection.getConnection(URL);
                 PreparedStatement stmt = dbCon.prepareStatement(sql);
@@ -57,76 +57,70 @@ public class TimetableDAO {
             //throw new RuntimeException(ex);
             throw new DAOException(ex.getMessage(), ex);
         }*/
-    }
+	}
 
-    //need to change
-    public void createTimetable(Day day) {
-        String sql = "merge into Day (UserName, DayName, eightAM, nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM, sixPM, sevenPM, eightPM, ninePM) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	//need to change
+	public void createTimetable(Day day) {
+		String sql = "merge into day (User, DayName, eightAM, nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM, sixPM, sevenPM, eightPM, ninePM) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		try (
+				  // get connection to database
+				  Connection dbCon = JdbcConnection.getConnection(URL);
+				  // create the statement
+				  PreparedStatement stmt = dbCon.prepareStatement(sql);) {
+			// copy the data from the product domain object into the SQL parameters
+			stmt.setString(1, day.getUserName());
+			stmt.setString(2, day.getDayName());
+			stmt.setBoolean(3, day.getEightAM());
+			stmt.setString(4, product.getCategory());
+			stmt.setBigDecimal(5, product.getPrice());
+			stmt.setInt(6, product.getQuantityInStock());
 
-        /*try (
-        // get connection to database
-        Connection dbCon = JdbcConnection.getConnection(url);
+			stmt.executeUpdate();  // execute the statement
 
-        // create the statement
-        PreparedStatement stmt = dbCon.prepareStatement(sql);
-    ) {
-        // copy the data from the product domain object into the SQL parameters
-        stmt.setInt(1, product.getProductID());
-        stmt.setString(2, product.getName());
-		  stmt.setString(3, product.getDescription());
-		  stmt.setString(4, product.getCategory());
-		  stmt.setBigDecimal(5, product.getPrice());
-		  stmt.setInt(6, product.getQuantityInStock());
+		} catch (SQLException ex) {  // we are forced to catch SQLException
+			// don't let the SQLException leak from our DAO encapsulation
+			//throw new RuntimeException(ex);
+			throw new DAOException(ex.getMessage(), ex);
+		}
+		//need to change
+	public void editTimeTable(Day day) {
+		//this goes into the Timetable editor.java gui class
+	}
 
-        stmt.executeUpdate();  // execute the statement
+	//need to change
+	public void deleteTimeTable(Day day) {
+		String sql = "delete from Day where UserName = ?";
+		try (
+				  Connection dbCon = JdbcConnection.getConnection(URL);
+				  PreparedStatement stmt = dbCon.prepareStatement(sql);) {
 
-    } catch (SQLException ex) {  // we are forced to catch SQLException
-        // don't let the SQLException leak from our DAO encapsulation
-        //throw new RuntimeException(ex);
-		  throw new DAOException(ex.getMessage(), ex);*/
-    }
+			stmt.setString(1, Day.getUserName().toString());
+			stmt.executeUpdate();
 
-    //need to change
-    public void editTimeTable(Day day) {
-        //this goes into the Timetable editor.java gui class
-    }
+		} catch (SQLException ex) {
+			//throw new RuntimeException(ex);
+			throw new DAOException(ex.getMessage(), ex);
+		}
+	}
 
-    //need to change
-    public void deleteTimeTable(Day day) {
-        String sql = "delete from Day where UserName = ?";
-        try (
-                Connection dbCon = JdbcConnection.getConnection(URL);
-                PreparedStatement stmt = dbCon.prepareStatement(sql);) {
+	//need to update the values based on the values we are storing in the database
+	//is this the same as addTimetable??
+	//need to change
+	public void saveTimetable(Day day) {
+		String sql = "merge into Day (UserName, DayName, eightAM, nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM, sixPM, sevenPM, eightPM, ninePM) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		try (
+				  Connection dbCon = JdbcConnection.getConnection(URL);
+				  PreparedStatement stmt = dbCon.prepareStatement(sql);) {
 
-            stmt.setString(1, Day.getUserName().toString());
-            stmt.executeUpdate();
-
-        } catch (SQLException ex) {
-            //throw new RuntimeException(ex);
-            throw new DAOException(ex.getMessage(), ex);
-        }
-    }
-
-    //need to update the values based on the values we are storing in the database
-    //is this the same as addTimetable??
-    //need to change
-    public void saveTimetable(Day day) {
-        String sql = "merge into Day (UserName, DayName, eightAM, nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM, sixPM, sevenPM, eightPM, ninePM) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-        try (
-                Connection dbCon = JdbcConnection.getConnection(URL);
-                PreparedStatement stmt = dbCon.prepareStatement(sql);) {
-
-            /*stmt.setString(1, user.getUserName());
+			/*stmt.setString(1, user.getUserName());
             stmt.setString(2, user.getPassword());
             stmt.setString(3, user.getFirstName());
             stmt.setString(4, user.getLastName());
             stmt.setString(5, user.getEmail());
 
             stmt.executeUpdate();*/
-
-        } catch (SQLException ex) {
-            throw new DAOException(ex.getMessage(), ex);
-        }
-    }
+		} catch (SQLException ex) {
+			throw new DAOException(ex.getMessage(), ex);
+		}
+	}
 }
-
