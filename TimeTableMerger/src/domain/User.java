@@ -42,6 +42,7 @@ public class User {
 	//a user doesn't need to have a timetable, just an array of seven days - Claire
 	private static Collection<Day> days = new ArrayList<>();
 
+        public User() {} 
 	/**
 	 * This constructor probably won't be used, but I'm adding it in because the
 	 * INFO202 Lecture 1 Interface example has one, this will probably be
