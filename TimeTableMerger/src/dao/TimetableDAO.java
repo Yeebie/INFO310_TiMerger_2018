@@ -6,9 +6,14 @@
 package dao;
 
 import domain.Day;
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 /**
  *
@@ -25,38 +30,50 @@ public class TimetableDAO {
 		this.URL = URL;
 	}
 
-	//need to change
-	public void getTimetable(Day day) {
+	//Will this actually work? we'll probably have to revisit
+	public Collection<Day> getTimetable(Day day) {
 		String sql = "select * from Day where UserName = ?";
-		/*
-        try (
-                Connection dbCon = JdbcConnection.getConnection(URL);
-                PreparedStatement stmt = dbCon.prepareStatement(sql);
-            ) {
-            ResultSet rs = stmt.executeQuery();
-            List<Timetable> timetable1 = new ArrayList<>();
-            
-            while(rs.next) {
-            // get the data out of the query
 
-                //Integer id = rs.getInt("product_id");
-                //String name = rs.getString("name");
-                //String description = rs.getString("description");
-                //String category = rs.getString("category");
-                //BigDecimal price = rs.getBigDecimal("price");
-                //Integer quantity = rs.getInt("quantity_in_stock");
+		try (
+				  Connection dbCon = JdbcConnection.getConnection(URL);
+				  PreparedStatement stmt = dbCon.prepareStatement(sql);) {
 
-                // use the data to create a product object
-                Timetable t = new Timetable(user, name, description, category, price, quantity);
+			ResultSet rs = stmt.executeQuery();
 
-                // and put it in the collection
-                timetable.add(t);
-            }
-            return timetable;
-        } catch (SQLException ex) {
-            //throw new RuntimeException(ex);
-            throw new DAOException(ex.getMessage(), ex);
-        }*/
+			List<Day> days = new ArrayList<>();
+
+			while (rs.next()) {
+
+				// get the data out of the query				
+				String userName = rs.getString("userName");
+				String dayName = rs.getString("dayName");
+				Boolean eightAM = rs.getBoolean("eightAM");
+				Boolean nineAM = rs.getBoolean("nineAM");
+				Boolean tenAM = rs.getBoolean("tenAM");
+				Boolean elevenAM = rs.getBoolean("elevenAM");
+				Boolean twelvePM = rs.getBoolean("twlevePM");
+				Boolean onePM = rs.getBoolean("onePM");
+				Boolean twoPM = rs.getBoolean("twoPM");
+				Boolean threePM = rs.getBoolean("threePM");
+				Boolean fourPM = rs.getBoolean("fourPM");
+				Boolean fivePM = rs.getBoolean("fivePM");
+				Boolean sixPM = rs.getBoolean("sixPM");
+				Boolean sevenPM = rs.getBoolean("sevenPM");
+				Boolean eightPM = rs.getBoolean("eightPM");
+				Boolean ninePM = rs.getBoolean("ninePM");
+				// use the data to create a product object
+				Day d = new Day(userName, dayName, eightAM, nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM, sixPM, sevenPM, eightPM, ninePM);
+
+				// and put it in the collection
+				days.add(d);
+			}
+			
+			return days;
+
+		} catch (SQLException ex) {
+			//throw new RuntimeException(ex);
+			throw new DAOException(ex.getMessage(), ex);
+		}
 	}
 
 	public void createTimetable(Day day) {
