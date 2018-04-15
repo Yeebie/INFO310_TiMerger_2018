@@ -21,7 +21,7 @@ import java.util.List;
  */
 public class TimetableDAO {
 
-	private String URL = "jdbc:h2:tcp://localhost/~/test;IFEXISTS=TRUE";
+	private String URL = "jdbc:h2:tcp//localhost:9092/timetable;IFEXISTS=TRUE";
 
 	public TimetableDAO() {
 	}
