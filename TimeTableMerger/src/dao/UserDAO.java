@@ -12,7 +12,7 @@ import java.sql.SQLException;
  */
 public class UserDAO {
 	
-	private String URL = "jdbc:h2:tcp//localhost:9092/timetable;IFEXISTS=TRUE";
+	private String URL = "jdbc:h2:tcp//localhost:9092;IFEXISTS=TRUE";
 	
 	public UserDAO(){
 	}
