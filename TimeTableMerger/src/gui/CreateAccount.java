@@ -228,7 +228,7 @@ try{
 		String lnameString = lastNameField.getText();
 		String passwordString = passwordField.getText();
                 String passwordString2 = reenterfield.getText();
-		String email = "";
+		String email = emailField.getText();
 		
                 
                 if ( passwordString.equals(passwordString2)){
