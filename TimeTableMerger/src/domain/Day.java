@@ -32,6 +32,10 @@ public class Day {
 	private Boolean eightPM;
 	private Boolean ninePM;
 
+	public Day() {
+
+	}
+
 	public Day(String userName, String dayName, Boolean eightAM, Boolean nineAM, Boolean tenAM, Boolean elevenAM, Boolean twelvePM, Boolean onePM, Boolean twoPM, Boolean threePM, Boolean fourPM, Boolean fivePM, Boolean sixPM, Boolean sevenPM, Boolean eightPM, Boolean ninePM) {
 		this.userName = userName;
 		this.dayName = dayName;

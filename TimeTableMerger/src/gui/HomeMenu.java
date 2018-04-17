@@ -1,15 +1,20 @@
 package gui;
 
+import dao.TimetableDAO;
+
 /**
  *
  * @author broma609
  */
 public class HomeMenu extends javax.swing.JFrame {
 
+	private final TimetableDAO dao;
+
 	/**
 	 * Creates new form Test
 	 */
-	public HomeMenu() {
+	public HomeMenu(TimetableDAO dao) {
+		this.dao = dao;
 		initComponents();
 	}
 
@@ -124,23 +129,33 @@ public class HomeMenu extends javax.swing.JFrame {
    }// </editor-fold>//GEN-END:initComponents
 
    private void newButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newButtonActionPerformed
-      // TODO add your handling code here:
+		// create the dialog instance
+		// the first parameter the parent window, and the second is the modal status
+		EnterTimetable dialog = new EnterTimetable(this, true, dao);
+
+		// centre the dialog on the parent window
+		dialog.setLocationRelativeTo(this);
+
+		// make the dialog visible
+		dialog.setVisible(true);
+
    }//GEN-LAST:event_newButtonActionPerformed
 
    private void viewButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewButtonActionPerformed
-      // TODO add your handling code here:
+		// TODO add your handling code here:
    }//GEN-LAST:event_viewButtonActionPerformed
 
    private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
-      // TODO add your handling code here:
+		// TODO add your handling code here:
+		System.exit(0);
    }//GEN-LAST:event_exitButtonActionPerformed
 
    private void editButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButtonActionPerformed
-      // TODO add your handling code here:
+		// TODO add your handling code here:
    }//GEN-LAST:event_editButtonActionPerformed
 
    private void scheduleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_scheduleButtonActionPerformed
-      // TODO add your handling code here:
+		// TODO add your handling code here:
    }//GEN-LAST:event_scheduleButtonActionPerformed
 
 	/**
@@ -171,12 +186,12 @@ public class HomeMenu extends javax.swing.JFrame {
 		//</editor-fold>
 		//</editor-fold>
 
-		/* Create and display the form */
+		/* Create and display the form
 		java.awt.EventQueue.invokeLater(new Runnable() {
 			public void run() {
-				new HomeMenu().setVisible(true);
+				new HomeMenu(dao).setVisible(true);
 			}
-		});
+		});*/
 	}
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
