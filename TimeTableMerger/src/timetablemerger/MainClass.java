@@ -6,7 +6,8 @@
 package timetablemerger;
 
 import dao.TimetableDAO;
-import gui.HomeMenu;
+import dao.UserDAO;
+import gui.Login;
 
 /**
  *
@@ -14,20 +15,21 @@ import gui.HomeMenu;
  */
 public class MainClass {
 
-	/**
-	 * @param args the command line arguments
-	 */
-	public static void main(String[] args) {
-		// TODO code application logic here
-		// create the frame instance
-		TimetableDAO dao = new TimetableDAO();
-		HomeMenu frame = new HomeMenu(dao);
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        // create the frame instance
+        UserDAO userDAO = new UserDAO();
+        TimetableDAO timetableDAO = new TimetableDAO();
+        Login frame = new Login(userDAO, timetableDAO);
 
-// centre the frame on the screen
-		frame.setLocationRelativeTo(null);
+        // centre the frame on the screen
+        frame.setLocationRelativeTo(null);
 
-// show the frame
-		frame.setVisible(true);
-	}
+        // show the frame
+        frame.setVisible(true);
+    }
 
 }

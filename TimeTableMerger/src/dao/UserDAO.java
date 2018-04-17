@@ -11,70 +11,62 @@ import java.sql.SQLException;
  * @author duecl801
  */
 public class UserDAO {
-	
-	private String URL = "jdbc:h2:tcp//localhost:9092;IFEXISTS=TRUE";
-	
-	public UserDAO(){
-	}
-	
-	public UserDAO(String URL) {
-		this.URL = URL;
-	}
-	
-		public void saveUser(User user) {
-		String sql = "merge into User (UserName, Password, FirstName, LastName, Email) values (?,?,?,?,?)";
 
-		try (
-				  Connection dbCon = JdbcConnection.getConnection(URL);
-				  PreparedStatement stmt = dbCon.prepareStatement(sql);) {
+    private String url = "jdbc:h2:tcp://localhost:9092/info310;IFEXISTS=TRUE";
 
-			stmt.setString(1, user.getUserName());
-			stmt.setString(2, user.getPassword());
-			stmt.setString(3, user.getFirstName());
-			stmt.setString(4, user.getLastName());
-			stmt.setString(5, user.getEmail());
+    public UserDAO() {
+    }
 
-			stmt.executeUpdate();
+    public UserDAO(String url) {
+        this.url = url;
+    }
 
-		} catch (SQLException ex) {
-			throw new DAOException(ex.getMessage(), ex);
-		}
-	}
-		
-                public void searchByUserName(String UserName){
-                    
-                }
-            //public User findByUserName(String UserName) {
+    public void saveUser(User user) {
+        String sql = "merge into User (UserName, Password, FirstName, LastName, Email) values (?,?,?,?,?)";
 
-		//String sql = "select * from User where UserName = ?";
+        try (
+                Connection dbCon = JdbcConnection.getConnection(url);
+                PreparedStatement stmt = dbCon.prepareStatement(sql);) {
 
-		//try (
-				 //Connection connection = JdbcConnection.getConnection(URL);
-				  //PreparedStatement stmt = connection.prepareStatement(sql);) {
+            stmt.setString(1, user.getUserName());
+            stmt.setString(2, user.getPassword());
+            stmt.setString(3, user.getFirstName());
+            stmt.setString(4, user.getLastName());
+            stmt.setString(5, user.getEmail());
 
-			//stmt.setString(1, UserName);
-			//ResultSet rs = stmt.executeQuery();
+            stmt.executeUpdate();
 
-			//if (rs.next()) {
-				//String userName = rs.getString("UserName");
-				//String password = rs.getString("Password");
-				//String firstName = rs.getString("FirstName");
-				//String lastName = rs.getString("LastName");
-				//String email = rs.getString("Email");
+        } catch (SQLException ex) {
+            throw new DAOException(ex.getMessage(), ex);
+        }
+    }
 
-				//return new User(userName, password, firstName, lastName, email);
-			//} else {
-				//return null;
-			//}
+    public void searchByUserName(String UserName) {
 
-		//} catch (SQLException ex) {
-			//throw new DAOException(ex.getMessage(), ex);
-		//}
-	//}
+    }
+    //public User findByUserName(String UserName) {
 
-
-
-/*
+    //String sql = "select * from User where UserName = ?";
+    //try (
+    //Connection connection = JdbcConnection.getConnection(url);
+    //PreparedStatement stmt = connection.prepareStatement(sql);) {
+    //stmt.setString(1, UserName);
+    //ResultSet rs = stmt.executeQuery();
+    //if (rs.next()) {
+    //String userName = rs.getString("UserName");
+    //String password = rs.getString("Password");
+    //String firstName = rs.getString("FirstName");
+    //String lastName = rs.getString("LastName");
+    //String email = rs.getString("Email");
+    //return new User(userName, password, firstName, lastName, email);
+    //} else {
+    //return null;
+    //}
+    //} catch (SQLException ex) {
+    //throw new DAOException(ex.getMessage(), ex);
+    //}
+    //}
+    /*
 ///
 	String url = "jdbc:h2:tcp://localhost:9018/project;IFEXISTS=TRUE;";
 	
@@ -164,77 +156,73 @@ public class UserDAO {
 		}
 	}
 	
-*/
+     */
+    public User getUser(String userName) {
+        String sql = "select * from user where username = ?";
 
-	public User getUser(String userName) {
-			String sql = "select * from user where username = ?";
+        try (
+                // get connection to database
+                Connection connection = JdbcConnection.getConnection(this.url);
+                // create the statement
+                PreparedStatement stmt = connection.prepareStatement(sql);) {
+            // set the parameter
+            stmt.setString(1, userName);
 
-		try (
-				  // get connection to database
-				  Connection connection = JdbcConnection.getConnection(this.URL);
-				  // create the statement
-				  PreparedStatement stmt = connection.prepareStatement(sql);) {
-			// set the parameter
-			stmt.setString(1, userName);
+            // execute the query
+            ResultSet rs = stmt.executeQuery();
 
-			// execute the query
-			ResultSet rs = stmt.executeQuery();
+            // query only returns a single result, so use 'if' instead of 'while'
+            if (rs.next()) {
+                String username2 = rs.getString("username");
+                String fname = rs.getString("firstname");
+                String email = rs.getString("email");
+                String password = rs.getString("password");
+                String lname = rs.getString("lastname");
 
-			// query only returns a single result, so use 'if' instead of 'while'
-			if (rs.next()) {
-				String username2 = rs.getString("username");
-				String fname = rs.getString("firstname");
-				String email = rs.getString("email");
-				String password = rs.getString("password");
-				String lname = rs.getString("lastname");
-				
-				User c = new User(username2, fname, lname, password, email);
-				return c;
+                User c = new User(username2, fname, lname, password, email);
+                return c;
 
-			} else {
-				// no student matches given ID so return null
-				return null;
-			}
+            } else {
+                // no student matches given ID so return null
+                return null;
+            }
 
-		} catch (SQLException ex) {  // we are forced to catch SQLException
-			// don't let the SQLException leak from our DAO encapsulation
-			throw new DAOException(ex.getMessage(), ex);
-		}
-	}
+        } catch (SQLException ex) {  // we are forced to catch SQLException
+            // don't let the SQLException leak from our DAO encapsulation
+            throw new DAOException(ex.getMessage(), ex);
+        }
+    }
 
-	
-	public Boolean validateCredentials(String userName, String password) {
-		String sql = "select * from user where username = ? and password = ? ";
+    public Boolean validateCredentials(String userName, String password) {
+        String sql = "select * from user where username = ? and password = ? ";
 
-		try (
-				  // get connection to database
-				  Connection connection = JdbcConnection.getConnection(this.URL);
-				  // create the statement
-				  PreparedStatement stmt = connection.prepareStatement(sql);) {
-			// set the parameter
-			stmt.setString(1, userName);
-                        stmt.setString(2, password);
-			// execute the query
-			ResultSet rs = stmt.executeQuery();
+        try (
+                // get connection to database
+                Connection connection = JdbcConnection.getConnection(this.url);
+                // create the statement
+                PreparedStatement stmt = connection.prepareStatement(sql);) {
+            // set the parameter
+            stmt.setString(1, userName);
+            stmt.setString(2, password);
+            // execute the query
+            ResultSet rs = stmt.executeQuery();
 
-			// query only returns a single result, so use 'if' instead of 'while'
-			if (rs.next()) {
+            // query only returns a single result, so use 'if' instead of 'while'
+            if (rs.next()) {
 
-				return true;
+                return true;
 
-			} else {
-				// no student matches given ID so return null
-				return false;
-			}
+            } else {
+                // no student matches given ID so return null
+                return false;
+            }
 
-		} catch (SQLException ex) {  // we are forced to catch SQLException
-			// don't let the SQLException leak from our DAO encapsulation
-			throw new DAOException(ex.getMessage(), ex);
-		}
-	}
-	
-        
-        
+        } catch (SQLException ex) {  // we are forced to catch SQLException
+            // don't let the SQLException leak from our DAO encapsulation
+            throw new DAOException(ex.getMessage(), ex);
+        }
+    }
+
 }
 
 /*
@@ -271,4 +259,4 @@ public class UserDAO {
 		return null;
 	}
 }
-*/
+ */

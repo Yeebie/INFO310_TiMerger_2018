@@ -182,4 +182,9 @@ public class Day {
 	public void setNinePM(Boolean ninePM) {
 		this.ninePM = ninePM;
 	}
+
+    @Override
+    public String toString() {
+        return "Day{" + "userName=" + userName + ", dayName=" + dayName + ", eightAM=" + eightAM + ", nineAM=" + nineAM + ", tenAM=" + tenAM + ", elevenAM=" + elevenAM + ", twelvePM=" + twelvePM + ", onePM=" + onePM + ", twoPM=" + twoPM + ", threePM=" + threePM + ", fourPM=" + fourPM + ", fivePM=" + fivePM + ", sixPM=" + sixPM + ", sevenPM=" + sevenPM + ", eightPM=" + eightPM + ", ninePM=" + ninePM + '}';
+    }
 }

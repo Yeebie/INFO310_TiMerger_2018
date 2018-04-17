@@ -54,9 +54,9 @@
                           <EmptySpace min="-2" pref="194" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="loginButton" min="-2" pref="143" max="-2" attributes="0"/>
+                                  <Component id="jButtonLogin" min="-2" pref="143" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="backButton" min="-2" pref="143" max="-2" attributes="0"/>
+                                  <Component id="jButtonCreateAccount" min="-2" pref="143" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
@@ -97,8 +97,8 @@
                   </Group>
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="loginButton" alignment="0" max="32767" attributes="0"/>
-                      <Component id="backButton" alignment="0" min="-2" pref="38" max="-2" attributes="0"/>
+                      <Component id="jButtonLogin" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jButtonCreateAccount" alignment="0" min="-2" pref="38" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
               </Group>
@@ -146,22 +146,22 @@
             <Property name="name" type="java.lang.String" value="passwordField" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="loginButton">
+        <Component class="javax.swing.JButton" name="jButtonLogin">
           <Properties>
             <Property name="text" type="java.lang.String" value="Log in"/>
-            <Property name="name" type="java.lang.String" value="loginButton" noResource="true"/>
+            <Property name="name" type="java.lang.String" value="jButtonLogin" noResource="true"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonLoginActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="backButton">
+        <Component class="javax.swing.JButton" name="jButtonCreateAccount">
           <Properties>
             <Property name="text" type="java.lang.String" value="Create Account"/>
-            <Property name="name" type="java.lang.String" value="backButton" noResource="true"/>
+            <Property name="name" type="java.lang.String" value="jButtonCreateAccount" noResource="true"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCreateAccountActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
