@@ -213,9 +213,7 @@ public class UserDAO {
 
             // query only returns a single result, so use 'if' instead of 'while'
             if (rs.next()) {
-
                 return true;
-
             } else {
                 // no student matches given ID so return null
                 return false;

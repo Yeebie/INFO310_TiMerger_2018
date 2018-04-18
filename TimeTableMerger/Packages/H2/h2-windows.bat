@@ -1,11 +1,11 @@
 @echo off
 
 :: ports
-set web_port=8748
-set db_port=9748
+set web_port=8092
+set db_port=9092
 
 :: location of the H2 database files
-set dbhome=D:\
+set dbhome=H:\
 
 :: create dbhome if it doesn't already exist
 if not exist %dbhome% mkdir %dbhome%
