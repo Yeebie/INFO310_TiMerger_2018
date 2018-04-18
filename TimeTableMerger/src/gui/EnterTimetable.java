@@ -39,9 +39,9 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
         initComponents();
 	 }
 		  
-		  public EnterTimetable(Window parent, boolean modal, TimetableDAO dao, Day Monday1, Day Tuesday1, Day Wednesday1, 
-					 Day Thursday1, Day Friday1, Day Saturday1, Day Sunday1, Day Monday2, Day Tuesday2, Day Wedneday2, 
-					 Day Thursday2, Day Friday2, Day Saturday2, Day Sunday2){
+		  public EnterTimetable(Window parent, boolean modal, TimetableDAO dao, Day monday1, Day tuesday1, Day wednesday1, 
+					 Day thursday1, Day friday1, Day saturday1, Day sunday1, Day monday2, Day tuesday2, Day wedneday2, 
+					 Day thursday2, Day friday2, Day saturday2, Day sunday2){
 		 this(parent, modal, dao);
 		 //this.product = productToEdit;
 		this.setName("viewTimetable");
