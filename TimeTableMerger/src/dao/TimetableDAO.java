@@ -32,7 +32,7 @@ public class TimetableDAO {
     }
 
     //Will this actually work? we'll probably have to revisit
-    public Collection<Day> getTimetable(Day day) {
+    public Day getTimetable(Day day) {
         String sql = "select * from Day where UserName = ?";
 
         try (
