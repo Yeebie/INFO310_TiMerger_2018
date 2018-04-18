@@ -4231,76 +4231,135 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
        /* Learn how Users work :/
 		String userName = userName.getUserName();*/
        //Username is test data, want to implement login (IRONICALLY BREAKS EVERYTHING)
-       String userName = "Yeebo";
+       String userName = "sa";
 
        Day mondayWeek1 = new Day(userName, "Monday Week 1", storeMon8w1, storeMon9w1, storeMon10w1, storeMon11w1, storeMon12w1,
                storeMon13w1, storeMon14w1, storeMon15w1, storeMon16w1, storeMon17w1, storeMon18w1, storeMon19w1,
                storeMon20w1, storeMon21w1);
 
-       Day mondayWeek2 = new Day(userName, "Monday Week 2", storeMon8w2, storeMon9w2, storeMon10w2, storeMon11w2, storeMon12w2,
-               storeMon13w2, storeMon14w2, storeMon15w2, storeMon16w2, storeMon17w2, storeMon18w2, storeMon19w2,
-               storeMon20w2, storeMon21w2);
        Day tuesdayWeek1 = new Day(userName, "Tuesday Week 1", storeTue8w1, storeTue9w1, storeTue10w1, storeTue11w1, storeTue12w1,
                storeTue13w1, storeTue14w1, storeTue15w1, storeTue16w1, storeTue17w1, storeTue18w1, storeTue19w1,
                storeTue20w1, storeTue21w1);
-
-       Day tuesdayWeek2 = new Day(userName, "Tuesday Week 2", storeTue8w2, storeTue9w2, storeTue10w2, storeTue11w2, storeTue12w2,
-               storeTue13w2, storeTue14w2, storeTue15w2, storeTue16w2, storeTue17w2, storeTue18w2, storeTue19w2,
-               storeTue20w2, storeTue21w2);
 
        Day wednesdayWeek1 = new Day(userName, "Wednesday Week 1", storeWed8w1, storeWed9w1, storeWed10w1, storeWed11w1, storeWed12w1,
                storeWed13w1, storeWed14w1, storeWed15w1, storeWed16w1, storeWed17w1, storeWed18w1, storeWed19w1,
                storeWed20w1, storeWed21w1);
 
-       Day wednesdayWeek2 = new Day(userName, "Wednesday Week 2", storeWed8w2, storeWed9w2, storeWed10w2, storeWed11w2, storeWed12w2,
-               storeWed13w2, storeWed14w2, storeWed15w2, storeWed16w2, storeWed17w2, storeWed18w2, storeWed19w2,
-               storeWed20w2, storeWed21w2);
-
        Day thursdayWeek1 = new Day(userName, "Thursday Week 1", storeThu8w1, storeThu9w1, storeThu10w1, storeThu11w1, storeThu12w1,
                storeThu13w1, storeThu14w1, storeThu15w1, storeThu16w1, storeThu17w1, storeThu18w1, storeThu19w1,
                storeThu20w1, storeThu21w1);
-
-       Day thursdayWeek2 = new Day(userName, "Thursday Week 2", storeThu8w2, storeThu9w2, storeThu10w2, storeThu11w2, storeThu12w2,
-               storeThu13w2, storeThu14w2, storeThu15w2, storeThu16w2, storeThu17w2, storeThu18w2, storeThu19w2,
-               storeThu20w2, storeThu21w2);
 
        Day fridayWeek1 = new Day(userName, "Friday Week 1", storeFri8w1, storeFri9w1, storeFri10w1, storeFri11w1, storeFri12w1,
                storeFri13w1, storeFri14w1, storeFri15w1, storeFri16w1, storeFri17w1, storeFri18w1, storeFri19w1,
                storeFri20w1, storeFri21w1);
 
-       Day fridayWeek2 = new Day(userName, "Friday Week 2", storeFri8w2, storeFri9w2, storeFri10w2, storeFri11w2, storeFri12w2,
-               storeFri13w2, storeFri14w2, storeFri15w2, storeFri16w2, storeFri17w2, storeFri18w2, storeFri19w2,
-               storeFri20w2, storeFri21w2);
-
        Day saturdayWeek1 = new Day(userName, "Saturday Week 1", storeSat8w1, storeSat9w1, storeSat10w1, storeSat11w1, storeSat12w1,
                storeSat13w1, storeSat14w1, storeSat15w1, storeSat16w1, storeSat17w1, storeSat18w1, storeSat19w1,
                storeSat20w1, storeSat21w1);
-
-       Day saturdayWeek2 = new Day(userName, "Saturday Week 2", storeSat8w2, storeSat9w2, storeSat10w2, storeSat11w2, storeSat12w2,
-               storeSat13w2, storeSat14w2, storeSat15w2, storeSat16w2, storeSat17w2, storeSat18w2, storeSat19w2,
-               storeSat20w2, storeSat21w2);
 
        Day sundayWeek1 = new Day(userName, "Sunday Week 1", storeSun8w1, storeSun9w1, storeSun10w1, storeSun11w1, storeSun12w1,
                storeSun13w1, storeSun14w1, storeSun15w1, storeSun16w1, storeSun17w1, storeSun18w1, storeSun19w1,
                storeSun20w1, storeSun21w1);
 
-       Day sundayWeek2 = new Day(userName, "Sunday Week 2", storeSun8w2, storeSun9w2, storeSun10w2, storeSun11w2, storeSun12w2,
-               storeSun13w2, storeSun14w2, storeSun15w2, storeSun16w2, storeSun17w2, storeSun18w2, storeSun19w2,
-               storeSun20w2, storeSun21w2);
+       Day mondayWeek2 = new Day();
+       Day tuesdayWeek2 = new Day();
+       Day wednesdayWeek2 = new Day();
+       Day thursdayWeek2 = new Day();
+       Day fridayWeek2 = new Day();
+       Day saturdayWeek2 = new Day();
+       Day sundayWeek2 = new Day();
+
+       if (storeMon8w2 && storeMon9w2 && storeMon10w2 && storeMon11w2 && storeMon12w2
+               && storeMon13w2 && storeMon14w2 && storeMon15w2 && storeMon16w2 && storeMon17w2 && storeMon18w2 && storeMon19w2
+               && storeMon20w2 && storeMon21w2 && storeTue8w2 && storeTue9w2 && storeTue10w2 && storeTue11w2 && storeTue12w2
+               && storeTue13w2 && storeTue14w2 && storeTue15w2 && storeTue16w2 && storeTue17w2 && storeTue18w2 && storeTue19w2
+               && storeTue20w2 && storeTue21w2 && storeWed8w2 && storeWed9w2 && storeWed10w2 && storeWed11w2 && storeWed12w2
+               && storeWed13w2 && storeWed14w2 && storeWed15w2 && storeWed16w2 && storeWed17w2 && storeWed18w2 && storeWed19w2
+               && storeWed20w2 && storeWed21w2 && storeThu8w2 && storeThu9w2 && storeThu10w2 && storeThu11w2 && storeThu12w2
+               && storeThu13w2 && storeThu14w2 && storeThu15w2 && storeThu16w2 && storeThu17w2 && storeThu18w2 && storeThu19w2
+               && storeThu20w2 && storeThu21w2 && storeFri8w2 && storeFri9w2 && storeFri10w2 && storeFri11w2 && storeFri12w2
+               && storeFri13w2 && storeFri14w2 && storeFri15w2 && storeFri16w2 && storeFri17w2 && storeFri18w2 && storeFri19w2
+               && storeFri20w2 && storeFri21w2 && storeSat8w2 && storeSat9w2 && storeSat10w2 && storeSat11w2 && storeSat12w2
+               && storeSat13w2 && storeSat14w2 && storeSat15w2 && storeSat16w2 && storeSat17w2 && storeSat18w2 && storeSat19w2
+               && storeSat20w2 && storeSat21w2 && storeSun8w2 && storeSun9w2 && storeSun10w2 && storeSun11w2 && storeSun12w2
+               && storeSun13w2 && storeSun14w2 && storeSun15w2 && storeSun16w2 && storeSun17w2 && storeSun18w2 && storeSun19w2
+               && storeSun20w2 && storeSun21w2 == false) {
+
+           System.out.println("Week 2 False");
+
+           mondayWeek2 = new Day(userName, "Monday Week 2", storeMon8w1, storeMon9w1, storeMon10w1, storeMon11w1, storeMon12w1,
+                   storeMon13w1, storeMon14w1, storeMon15w1, storeMon16w1, storeMon17w1, storeMon18w1, storeMon19w1,
+                   storeMon20w1, storeMon21w1);
+
+           tuesdayWeek2 = new Day(userName, "Tuesday Week 2", storeTue8w1, storeTue9w1, storeTue10w1, storeTue11w1, storeTue12w1,
+                   storeTue13w1, storeTue14w1, storeTue15w1, storeTue16w1, storeTue17w1, storeTue18w1, storeTue19w1,
+                   storeTue20w1, storeTue21w1);
+
+           wednesdayWeek2 = new Day(userName, "Wednesday Week 2", storeWed8w1, storeWed9w1, storeWed10w1, storeWed11w1, storeWed12w1,
+                   storeWed13w1, storeWed14w1, storeWed15w1, storeWed16w1, storeWed17w1, storeWed18w1, storeWed19w1,
+                   storeWed20w1, storeWed21w1);
+
+           thursdayWeek2 = new Day(userName, "Thursday Week 2", storeThu8w1, storeThu9w1, storeThu10w1, storeThu11w1, storeThu12w1,
+                   storeThu13w1, storeThu14w1, storeThu15w1, storeThu16w1, storeThu17w1, storeThu18w1, storeThu19w1,
+                   storeThu20w1, storeThu21w1);
+
+           fridayWeek2 = new Day(userName, "Friday Week 2", storeFri8w1, storeFri9w1, storeFri10w1, storeFri11w1, storeFri12w1,
+                   storeFri13w1, storeFri14w1, storeFri15w1, storeFri16w1, storeFri17w1, storeFri18w1, storeFri19w1,
+                   storeFri20w1, storeFri21w1);
+
+           saturdayWeek2 = new Day(userName, "Saturday Week 2", storeSat8w1, storeSat9w1, storeSat10w1, storeSat11w1, storeSat12w1,
+                   storeSat13w1, storeSat14w1, storeSat15w1, storeSat16w1, storeSat17w1, storeSat18w1, storeSat19w1,
+                   storeSat20w1, storeSat21w1);
+
+           sundayWeek2 = new Day(userName, "Sunday Week 2", storeSun8w1, storeSun9w1, storeSun10w1, storeSun11w1, storeSun12w1,
+                   storeSun13w1, storeSun14w1, storeSun15w1, storeSun16w1, storeSun17w1, storeSun18w1, storeSun19w1,
+                   storeSun20w1, storeSun21w1);
+
+       } else {
+
+           mondayWeek2 = new Day(userName, "Monday Week 2", storeMon8w2, storeMon9w2, storeMon10w2, storeMon11w2, storeMon12w2,
+                   storeMon13w2, storeMon14w2, storeMon15w2, storeMon16w2, storeMon17w2, storeMon18w2, storeMon19w2,
+                   storeMon20w2, storeMon21w2);
+
+           tuesdayWeek2 = new Day(userName, "Tuesday Week 2", storeTue8w2, storeTue9w2, storeTue10w2, storeTue11w2, storeTue12w2,
+                   storeTue13w2, storeTue14w2, storeTue15w2, storeTue16w2, storeTue17w2, storeTue18w2, storeTue19w2,
+                   storeTue20w2, storeTue21w2);
+
+           wednesdayWeek2 = new Day(userName, "Wednesday Week 2", storeWed8w2, storeWed9w2, storeWed10w2, storeWed11w2, storeWed12w2,
+                   storeWed13w2, storeWed14w2, storeWed15w2, storeWed16w2, storeWed17w2, storeWed18w2, storeWed19w2,
+                   storeWed20w2, storeWed21w2);
+
+           thursdayWeek2 = new Day(userName, "Thursday Week 2", storeThu8w2, storeThu9w2, storeThu10w2, storeThu11w2, storeThu12w2,
+                   storeThu13w2, storeThu14w2, storeThu15w2, storeThu16w2, storeThu17w2, storeThu18w2, storeThu19w2,
+                   storeThu20w2, storeThu21w2);
+
+           fridayWeek2 = new Day(userName, "Friday Week 2", storeFri8w2, storeFri9w2, storeFri10w2, storeFri11w2, storeFri12w2,
+                   storeFri13w2, storeFri14w2, storeFri15w2, storeFri16w2, storeFri17w2, storeFri18w2, storeFri19w2,
+                   storeFri20w2, storeFri21w2);
+
+           saturdayWeek2 = new Day(userName, "Saturday Week 2", storeSat8w2, storeSat9w2, storeSat10w2, storeSat11w2, storeSat12w2,
+                   storeSat13w2, storeSat14w2, storeSat15w2, storeSat16w2, storeSat17w2, storeSat18w2, storeSat19w2,
+                   storeSat20w2, storeSat21w2);
+
+           sundayWeek2 = new Day(userName, "Sunday Week 2", storeSun8w2, storeSun9w2, storeSun10w2, storeSun11w2, storeSun12w2,
+                   storeSun13w2, storeSun14w2, storeSun15w2, storeSun16w2, storeSun17w2, storeSun18w2, storeSun19w2,
+                   storeSun20w2, storeSun21w2);
+       }
 
        saveTimetable(mondayWeek1);
-       saveTimetable(mondayWeek2);
        saveTimetable(tuesdayWeek1);
-       saveTimetable(tuesdayWeek2);
        saveTimetable(wednesdayWeek1);
-       saveTimetable(wednesdayWeek2);
        saveTimetable(thursdayWeek1);
-       saveTimetable(thursdayWeek2);
        saveTimetable(fridayWeek1);
-       saveTimetable(fridayWeek2);
        saveTimetable(saturdayWeek1);
-       saveTimetable(saturdayWeek2);
        saveTimetable(sundayWeek1);
+
+       saveTimetable(mondayWeek2);
+       saveTimetable(tuesdayWeek2);
+       saveTimetable(wednesdayWeek2);
+       saveTimetable(thursdayWeek2);
+       saveTimetable(fridayWeek2);
+       saveTimetable(saturdayWeek2);
        saveTimetable(sundayWeek2);
 
        /**

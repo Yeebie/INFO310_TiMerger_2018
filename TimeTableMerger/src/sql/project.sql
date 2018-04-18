@@ -1,6 +1,5 @@
 drop all objects;
 
-
 CREATE TABLE User (
 UserName varchar(255) NOT NULL,
 Password varchar(255) NOT NULL,
@@ -10,8 +9,6 @@ Email varchar(255) NOT NULL,
 
 PRIMARY KEY (UserName),
 );
-
-
 
 CREATE TABLE Day (
 UserName varchar(255) NOT NULL,
@@ -34,3 +31,7 @@ ninePM boolean NOT NULL,
 PRIMARY KEY (UserName, DayName),
 FOREIGN KEY (UserName) REFERENCES User(UserName),
 );
+
+ /** Creating a test use while App can't remember Login */
+INSERT INTO USER (USERNAME, PASSWORD, FIRSTNAME, LASTNAME, EMAIL)
+VALUES ('sa', 'sa', 's', 'a', 'sa@sa.com'); 
