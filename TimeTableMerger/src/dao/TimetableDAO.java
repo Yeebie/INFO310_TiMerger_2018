@@ -77,6 +77,7 @@ public class TimetableDAO {
         }
     }
 
+	 
     public void createTimetable(Day day) {
         String sql = "merge into day (UserName, DayName, eightAM, nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM, sixPM, sevenPM, eightPM, ninePM) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         try (
@@ -154,7 +155,8 @@ public class TimetableDAO {
             throw new DAOException(ex.getMessage(), ex);
         }
     }
-
+	 
+//do we need this method? we haven't given the user an option to delete their timetable anywhere in the program
     public void deleteTimeTable(Day day) {
         String sql = "delete from Day where UserName = ?";
         try (
@@ -173,6 +175,7 @@ public class TimetableDAO {
     //need to update the values based on the values we are storing in the database
     //is this the same as addTimetable??
     //need to change
+	 //can we delete this method? this is the same as createTimetable and isn't currently being used anywhere
     public void saveTimetable(Day day) {
         String sql = "merge into Day (UserName, DayName, eightAM, nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM, sixPM, sevenPM, eightPM, ninePM) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         try (

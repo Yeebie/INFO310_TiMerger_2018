@@ -142,7 +142,15 @@ public class HomeMenu extends javax.swing.JFrame {
    }//GEN-LAST:event_newButtonActionPerformed
 
    private void viewButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewButtonActionPerformed
-       // TODO add your handling code here:
+        // create the dialog instance
+       // the first parameter the parent window, and the second is the modal status
+       EnterTimetable dialog = new EnterTimetable(this, true, dao);
+
+       // centre the dialog on the parent window
+      dialog.setLocationRelativeTo(this);
+
+       // make the dialog visible
+      dialog.setVisible(true);
    }//GEN-LAST:event_viewButtonActionPerformed
 
    private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
@@ -151,7 +159,15 @@ public class HomeMenu extends javax.swing.JFrame {
    }//GEN-LAST:event_exitButtonActionPerformed
 
    private void editButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButtonActionPerformed
-       // TODO add your handling code here:
+               // create the dialog instance
+       // the first parameter the parent window, and the second is the modal status
+       EnterTimetable dialog = new EnterTimetable(this, true, dao);
+
+       // centre the dialog on the parent window
+      dialog.setLocationRelativeTo(this);
+
+       // make the dialog visible
+      dialog.setVisible(true);
    }//GEN-LAST:event_editButtonActionPerformed
 
    private void scheduleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_scheduleButtonActionPerformed
