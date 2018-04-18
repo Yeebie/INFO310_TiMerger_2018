@@ -1,10 +1,14 @@
 package dao;
 
 import domain.User;
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 /**
  *
@@ -222,6 +226,34 @@ public class UserDAO {
             throw new DAOException(ex.getMessage(), ex);
         }
     }
+	 
+	 public Collection<User> getUserList(){
+		 String sql = "select * from User order by FirstName";
+		 
+		 		try (
+				  Connection dbCon = JdbcConnection.getConnection(url);
+				  PreparedStatement stmt = dbCon.prepareStatement(sql);) {
+
+			ResultSet rs = stmt.executeQuery();
+			List<User> users = new ArrayList<>();
+
+			while (rs.next()) {
+				String userName = rs.getString("UserName");
+				String firstName = rs.getString("FirstName");
+				String lastName = rs.getString("LastName");
+				String email = rs.getString("Email");
+				String password = rs.getString("Password");
+
+				User u = new User(userName, firstName, lastName, email, password);
+
+				users.add(u);
+			}
+			return users;
+
+		} catch (SQLException ex) {
+			throw new DAOException(ex.getMessage(), ex);
+		}
+	 }
 
 }
 
