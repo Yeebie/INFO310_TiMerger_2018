@@ -1,16 +1,25 @@
 package gui;
 
+import dao.UserDAO;
+import gui.helpers.SimpleListModel;
+
 /**
  *
  * @author broma609
  */
 public class Contacts extends javax.swing.JFrame {
+	
+	private UserDAO userDAO;
+	private SimpleListModel myModel = new SimpleListModel();
 
 	/**
 	 * Creates new form Contacts
 	 */
 	public Contacts() {
 		initComponents();
+		
+		myModel.updateItems(userDAO.getUserList());
+		usersList.setModel(myModel);
 	}
 
 	/**
@@ -28,8 +37,8 @@ public class Contacts extends javax.swing.JFrame {
       searchButton = new javax.swing.JButton();
       addButton = new javax.swing.JButton();
       exitButton = new javax.swing.JButton();
-      contactsListPane = new javax.swing.JScrollPane();
-      contactsTextArea = new javax.swing.JTextArea();
+      jScrollPane1 = new javax.swing.JScrollPane();
+      usersList = new javax.swing.JList<>();
 
       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,52 +71,53 @@ public class Contacts extends javax.swing.JFrame {
          }
       });
 
-      contactsListPane.setName("contactsListPane"); // NOI18N
+      jScrollPane1.setName("jScrollPane1"); // NOI18N
 
-      contactsTextArea.setColumns(20);
-      contactsTextArea.setRows(5);
-      contactsTextArea.setName("contactsTextArea"); // NOI18N
-      contactsListPane.setViewportView(contactsTextArea);
+      usersList.setModel(new javax.swing.AbstractListModel<String>() {
+         String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+         public int getSize() { return strings.length; }
+         public String getElementAt(int i) { return strings[i]; }
+      });
+      usersList.setName("usersList"); // NOI18N
+      jScrollPane1.setViewportView(usersList);
 
       javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
       mainPanel.setLayout(mainPanelLayout);
       mainPanelLayout.setHorizontalGroup(
          mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
-            .addContainerGap(136, Short.MAX_VALUE)
-            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-               .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addComponent(contactsListPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addGroup(mainPanelLayout.createSequentialGroup()
-                     .addGap(9, 9, 9)
-                     .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(titleLabel)
-                        .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
-                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                     .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addContainerGap(145, Short.MAX_VALUE)
+            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+               .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 424, javax.swing.GroupLayout.PREFERRED_SIZE)
                .addGroup(mainPanelLayout.createSequentialGroup()
-                  .addGap(93, 93, 93)
                   .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addGap(18, 18, 18)
-                  .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                  .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addGap(112, 112, 112))
+               .addGroup(mainPanelLayout.createSequentialGroup()
+                  .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                     .addComponent(titleLabel)
+                     .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
+                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                  .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
             .addGap(131, 131, 131))
       );
       mainPanelLayout.setVerticalGroup(
          mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
-            .addContainerGap(37, Short.MAX_VALUE)
+            .addContainerGap(44, Short.MAX_VALUE)
             .addComponent(titleLabel)
             .addGap(27, 27, 27)
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                .addComponent(searchButton))
-            .addGap(18, 18, 18)
-            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-               .addComponent(exitButton)
-               .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(18, 18, 18)
-            .addComponent(contactsListPane, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(64, 64, 64))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+               .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+               .addComponent(exitButton))
+            .addGap(19, 19, 19)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(55, 55, 55))
       );
 
       javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -165,12 +175,12 @@ public class Contacts extends javax.swing.JFrame {
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
    private javax.swing.JButton addButton;
-   private javax.swing.JScrollPane contactsListPane;
-   private javax.swing.JTextArea contactsTextArea;
    private javax.swing.JButton exitButton;
+   private javax.swing.JScrollPane jScrollPane1;
    private javax.swing.JPanel mainPanel;
    private javax.swing.JButton searchButton;
    private javax.swing.JTextField searchField;
    private javax.swing.JLabel titleLabel;
+   private javax.swing.JList<String> usersList;
    // End of variables declaration//GEN-END:variables
 }
