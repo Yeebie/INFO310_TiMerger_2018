@@ -4198,35 +4198,35 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
        Boolean storeSat20w2 = sat20w2.isSelected();
        Boolean storeSat21w2 = sat21w2.isSelected();
 
-       Boolean storeSun8w1 = sat8w1.isSelected();
-       Boolean storeSun9w1 = sat9w1.isSelected();
-       Boolean storeSun10w1 = sat10w1.isSelected();
-       Boolean storeSun11w1 = sat11w1.isSelected();
-       Boolean storeSun12w1 = sat12w1.isSelected();
-       Boolean storeSun13w1 = sat13w1.isSelected();
-       Boolean storeSun14w1 = sat14w1.isSelected();
-       Boolean storeSun15w1 = sat15w1.isSelected();
-       Boolean storeSun16w1 = sat16w1.isSelected();
-       Boolean storeSun17w1 = sat17w1.isSelected();
-       Boolean storeSun18w1 = sat18w1.isSelected();
-       Boolean storeSun19w1 = sat19w1.isSelected();
-       Boolean storeSun20w1 = sat20w1.isSelected();
-       Boolean storeSun21w1 = sat21w1.isSelected();
+       Boolean storeSun8w1 = sun8w1.isSelected();
+       Boolean storeSun9w1 = sun9w1.isSelected();
+       Boolean storeSun10w1 = sun10w1.isSelected();
+       Boolean storeSun11w1 = sun11w1.isSelected();
+       Boolean storeSun12w1 = sun12w1.isSelected();
+       Boolean storeSun13w1 = sun13w1.isSelected();
+       Boolean storeSun14w1 = sun14w1.isSelected();
+       Boolean storeSun15w1 = sun15w1.isSelected();
+       Boolean storeSun16w1 = sun16w1.isSelected();
+       Boolean storeSun17w1 = sun17w1.isSelected();
+       Boolean storeSun18w1 = sun18w1.isSelected();
+       Boolean storeSun19w1 = sun19w1.isSelected();
+       Boolean storeSun20w1 = sun20w1.isSelected();
+       Boolean storeSun21w1 = sun21w1.isSelected();
 
-       Boolean storeSun8w2 = sat8w2.isSelected();
-       Boolean storeSun9w2 = sat9w2.isSelected();
-       Boolean storeSun10w2 = sat10w2.isSelected();
-       Boolean storeSun11w2 = sat11w2.isSelected();
-       Boolean storeSun12w2 = sat12w2.isSelected();
-       Boolean storeSun13w2 = sat13w2.isSelected();
-       Boolean storeSun14w2 = sat14w2.isSelected();
-       Boolean storeSun15w2 = sat15w2.isSelected();
-       Boolean storeSun16w2 = sat16w2.isSelected();
-       Boolean storeSun17w2 = sat17w2.isSelected();
-       Boolean storeSun18w2 = sat18w2.isSelected();
-       Boolean storeSun19w2 = sat19w2.isSelected();
-       Boolean storeSun20w2 = sat20w2.isSelected();
-       Boolean storeSun21w2 = sat21w2.isSelected();
+       Boolean storeSun8w2 = sun8w2.isSelected();
+       Boolean storeSun9w2 = sun9w2.isSelected();
+       Boolean storeSun10w2 = sun10w2.isSelected();
+       Boolean storeSun11w2 = sun11w2.isSelected();
+       Boolean storeSun12w2 = sun12w2.isSelected();
+       Boolean storeSun13w2 = sun13w2.isSelected();
+       Boolean storeSun14w2 = sun14w2.isSelected();
+       Boolean storeSun15w2 = sun15w2.isSelected();
+       Boolean storeSun16w2 = sun16w2.isSelected();
+       Boolean storeSun17w2 = sun17w2.isSelected();
+       Boolean storeSun18w2 = sun18w2.isSelected();
+       Boolean storeSun19w2 = sun19w2.isSelected();
+       Boolean storeSun20w2 = sun20w2.isSelected();
+       Boolean storeSun21w2 = sun21w2.isSelected();
 
        /* Learn how Users work :/
 		String userName = userName.getUserName();*/
@@ -4285,38 +4285,30 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
                && storeSun13w2 && storeSun14w2 && storeSun15w2 && storeSun16w2 && storeSun17w2 && storeSun18w2 && storeSun19w2
                && storeSun20w2 && storeSun21w2 == false) {
 
-           System.out.println("Week 2 False");
+           System.out.println("Week 2 = False");
 
-           mondayWeek2 = new Day(userName, "Monday Week 2", storeMon8w1, storeMon9w1, storeMon10w1, storeMon11w1, storeMon12w1,
-                   storeMon13w1, storeMon14w1, storeMon15w1, storeMon16w1, storeMon17w1, storeMon18w1, storeMon19w1,
-                   storeMon20w1, storeMon21w1);
+           mondayWeek2 = mondayWeek1;
+           mondayWeek2.setDayName("Monday Week 2");
 
-           tuesdayWeek2 = new Day(userName, "Tuesday Week 2", storeTue8w1, storeTue9w1, storeTue10w1, storeTue11w1, storeTue12w1,
-                   storeTue13w1, storeTue14w1, storeTue15w1, storeTue16w1, storeTue17w1, storeTue18w1, storeTue19w1,
-                   storeTue20w1, storeTue21w1);
+           tuesdayWeek2 = tuesdayWeek1;
+           tuesdayWeek2.setDayName("Tuesday Week 2");
 
-           wednesdayWeek2 = new Day(userName, "Wednesday Week 2", storeWed8w1, storeWed9w1, storeWed10w1, storeWed11w1, storeWed12w1,
-                   storeWed13w1, storeWed14w1, storeWed15w1, storeWed16w1, storeWed17w1, storeWed18w1, storeWed19w1,
-                   storeWed20w1, storeWed21w1);
+           wednesdayWeek2 = wednesdayWeek1;
+           wednesdayWeek2.setDayName("Wednesday Week 2");
 
-           thursdayWeek2 = new Day(userName, "Thursday Week 2", storeThu8w1, storeThu9w1, storeThu10w1, storeThu11w1, storeThu12w1,
-                   storeThu13w1, storeThu14w1, storeThu15w1, storeThu16w1, storeThu17w1, storeThu18w1, storeThu19w1,
-                   storeThu20w1, storeThu21w1);
+           thursdayWeek2 = thursdayWeek1;
+           thursdayWeek2.setDayName("Thursday Week 2");
 
-           fridayWeek2 = new Day(userName, "Friday Week 2", storeFri8w1, storeFri9w1, storeFri10w1, storeFri11w1, storeFri12w1,
-                   storeFri13w1, storeFri14w1, storeFri15w1, storeFri16w1, storeFri17w1, storeFri18w1, storeFri19w1,
-                   storeFri20w1, storeFri21w1);
+           fridayWeek2 = fridayWeek1;
+           fridayWeek2.setDayName("Friday Week 2");
 
-           saturdayWeek2 = new Day(userName, "Saturday Week 2", storeSat8w1, storeSat9w1, storeSat10w1, storeSat11w1, storeSat12w1,
-                   storeSat13w1, storeSat14w1, storeSat15w1, storeSat16w1, storeSat17w1, storeSat18w1, storeSat19w1,
-                   storeSat20w1, storeSat21w1);
+           saturdayWeek2 = saturdayWeek1;
+           saturdayWeek2.setDayName("Saturday Week 2");
 
-           sundayWeek2 = new Day(userName, "Sunday Week 2", storeSun8w1, storeSun9w1, storeSun10w1, storeSun11w1, storeSun12w1,
-                   storeSun13w1, storeSun14w1, storeSun15w1, storeSun16w1, storeSun17w1, storeSun18w1, storeSun19w1,
-                   storeSun20w1, storeSun21w1);
+           sundayWeek2 = sundayWeek1;
+           sundayWeek2.setDayName("Sunday Week 2");
 
        } else {
-
            mondayWeek2 = new Day(userName, "Monday Week 2", storeMon8w2, storeMon9w2, storeMon10w2, storeMon11w2, storeMon12w2,
                    storeMon13w2, storeMon14w2, storeMon15w2, storeMon16w2, storeMon17w2, storeMon18w2, storeMon19w2,
                    storeMon20w2, storeMon21w2);
@@ -4381,7 +4373,6 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 
     private void saveTimetable(Day day) {
         dao.createTimetable(day);
-        System.out.println(day.toString());
         dispose();
     }
 
