@@ -32,19 +32,19 @@ public class TimetableDAO {
     }
 
     //Will this actually work? we'll probably have to revisit
-    public Day getTimetable(Day day) {
-        String sql = "select * from Day where UserName = ?";
+    public Day getTimetable(String uName, String dName) {
+		 
+		String sql = "select * from Day where UserName = ? AND DayName = ?";
 
-        try (
-                Connection dbCon = JdbcConnection.getConnection(url);
-                PreparedStatement stmt = dbCon.prepareStatement(sql);) {
+		try (
+				  Connection connection = JdbcConnection.getConnection(url);
+				  PreparedStatement stmt = connection.prepareStatement(sql);) {
 
-            ResultSet rs = stmt.executeQuery();
+			stmt.setString(1, uName);
+			stmt.setString(2, dName);
+			ResultSet rs = stmt.executeQuery();
 
-            List<Day> days = new ArrayList<>();
-
-            while (rs.next()) {
-
+			if (rs.next()) {
                 // get the data out of the query				
                 String userName = rs.getString("userName");
                 String dayName = rs.getString("dayName");
@@ -62,20 +62,16 @@ public class TimetableDAO {
                 Boolean sevenPM = rs.getBoolean("sevenPM");
                 Boolean eightPM = rs.getBoolean("eightPM");
                 Boolean ninePM = rs.getBoolean("ninePM");
-                // use the data to create a product object
-                Day d = new Day(userName, dayName, eightAM, nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM, sixPM, sevenPM, eightPM, ninePM);
 
-                // and put it in the collection
-                days.add(d);
-            }
+				return new Day(userName, dayName, eightAM, nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM, sixPM, sevenPM, eightPM, ninePM);
+			} else {
+				return null;
+			}
 
-            return days;
-
-        } catch (SQLException ex) {
-            //throw new RuntimeException(ex);
-            throw new DAOException(ex.getMessage(), ex);
-        }
-    }
+		} catch (SQLException ex) {
+			throw new DAOException(ex.getMessage(), ex);
+		}
+	 }
 
 	 
     public void createTimetable(Day day) {
