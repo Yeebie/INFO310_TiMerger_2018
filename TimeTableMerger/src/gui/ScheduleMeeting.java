@@ -1,16 +1,25 @@
 package gui;
 
+import dao.UserDAO;
+import gui.helpers.SimpleListModel;
+
 /**
  *
  * @author broma609
  */
 public class ScheduleMeeting extends javax.swing.JFrame {
+	
+	private UserDAO userDAO;
+	private SimpleListModel myModel = new SimpleListModel();
 
 	/**
 	 * Creates new form ScheduleMeeting
 	 */
 	public ScheduleMeeting() {
 		initComponents();
+		
+		myModel.updateItems(userDAO.getUserList());
+		usersList.setModel(myModel);
 	}
 
 	/**
@@ -43,8 +52,8 @@ public class ScheduleMeeting extends javax.swing.JFrame {
       searchField = new javax.swing.JTextField();
       searchButton = new javax.swing.JButton();
       searchLabel = new javax.swing.JLabel();
-      searchResultsPane = new javax.swing.JScrollPane();
-      searchTextArea = new javax.swing.JTextArea();
+      jScrollPane1 = new javax.swing.JScrollPane();
+      usersList = new javax.swing.JList<>();
 
       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -143,12 +152,15 @@ public class ScheduleMeeting extends javax.swing.JFrame {
       searchLabel.setText("People:");
       searchLabel.setName("searchLabel"); // NOI18N
 
-      searchResultsPane.setName("searchResultsPane"); // NOI18N
+      jScrollPane1.setName("jScrollPane1"); // NOI18N
 
-      searchTextArea.setColumns(20);
-      searchTextArea.setRows(5);
-      searchTextArea.setName("searchTextArea"); // NOI18N
-      searchResultsPane.setViewportView(searchTextArea);
+      usersList.setModel(new javax.swing.AbstractListModel<String>() {
+         String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+         public int getSize() { return strings.length; }
+         public String getElementAt(int i) { return strings[i]; }
+      });
+      usersList.setName("usersList"); // NOI18N
+      jScrollPane1.setViewportView(usersList);
 
       javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
       mainPanel.setLayout(mainPanelLayout);
@@ -159,13 +171,13 @@ public class ScheduleMeeting extends javax.swing.JFrame {
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                .addGroup(mainPanelLayout.createSequentialGroup()
                   .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                     .addComponent(searchResultsPane, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE)
                      .addGroup(mainPanelLayout.createSequentialGroup()
                         .addComponent(searchLabel)
                         .addGap(18, 18, 18)
-                        .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
+                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE))
+                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                  .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                   .addGap(0, 0, Short.MAX_VALUE))
                .addGroup(mainPanelLayout.createSequentialGroup()
                   .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -194,8 +206,8 @@ public class ScheduleMeeting extends javax.swing.JFrame {
                               .addGap(18, 18, 18)
                               .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                  .addComponent(satCheckBox)
-                                 .addComponent(sunCheckBox))))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                                 .addComponent(sunCheckBox))))))
+                  .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
             .addContainerGap(165, Short.MAX_VALUE)
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -217,7 +229,7 @@ public class ScheduleMeeting extends javax.swing.JFrame {
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                .addComponent(durationCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                .addComponent(durationLabel))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                .addGroup(mainPanelLayout.createSequentialGroup()
                   .addGap(10, 10, 10)
@@ -261,17 +273,15 @@ public class ScheduleMeeting extends javax.swing.JFrame {
                   .addGap(67, 67, 67)))
             .addGap(30, 30, 30)
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addComponent(searchButton)
                .addGroup(mainPanelLayout.createSequentialGroup()
                   .addGap(9, 9, 9)
                   .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                      .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                     .addComponent(searchLabel))
-                  .addGap(18, 18, 18))
-               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
-                  .addComponent(searchButton)
-                  .addGap(9, 9, 9)))
-            .addComponent(searchResultsPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(21, 21, 21))
+                     .addComponent(searchLabel))))
+            .addGap(18, 18, 18)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(29, 29, 29))
       );
 
       javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -302,6 +312,7 @@ public class ScheduleMeeting extends javax.swing.JFrame {
    private javax.swing.JLabel durationLabel;
    private javax.swing.JCheckBox friCheckBox;
    private javax.swing.JLabel friLabel;
+   private javax.swing.JScrollPane jScrollPane1;
    private javax.swing.JPanel mainPanel;
    private javax.swing.JCheckBox monCheckBox;
    private javax.swing.JLabel monLabel;
@@ -310,8 +321,6 @@ public class ScheduleMeeting extends javax.swing.JFrame {
    private javax.swing.JButton searchButton;
    private javax.swing.JTextField searchField;
    private javax.swing.JLabel searchLabel;
-   private javax.swing.JScrollPane searchResultsPane;
-   private javax.swing.JTextArea searchTextArea;
    private javax.swing.JCheckBox sunCheckBox;
    private javax.swing.JLabel sunLabel;
    private javax.swing.JCheckBox thuCheckBox;
@@ -319,6 +328,7 @@ public class ScheduleMeeting extends javax.swing.JFrame {
    private javax.swing.JLabel titleLabel;
    private javax.swing.JCheckBox tueCheckBox;
    private javax.swing.JLabel tueLabel;
+   private javax.swing.JList<String> usersList;
    private javax.swing.JCheckBox wedCheckBox;
    private javax.swing.JLabel wedLabel;
    // End of variables declaration//GEN-END:variables
