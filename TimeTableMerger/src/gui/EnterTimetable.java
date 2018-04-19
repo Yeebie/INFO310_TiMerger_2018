@@ -31,7 +31,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 	private Day tuesdayWeek2 = new Day();
 	private Day wednesdayWeek2 = new Day();
 	private Day thursdayWeek2 = new Day();
-        private Day fridayWeek2 = new Day();
+	private Day fridayWeek2 = new Day();
 	private Day saturdayWeek2 = new Day();
 	private Day sundayWeek2 = new Day();
 
@@ -49,22 +49,25 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 		this.userStorageDAO = userStorageDAO;
 
 		initComponents();
-                
-                mondayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Monday");
-                tuesdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Tuesday");
-                wednesdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Wednesday");
-                thursdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Thursday");
-                fridayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Friday");
-                saturdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Saturday");
-                sundayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Sunday");
-                mondayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Monday");
-                tuesdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Tuesday");
-                wednesdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Wednesday");
-                thursdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Thursday");
-                fridayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Friday");
-                saturdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Saturday");
-                sundayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Sunday");
-		
+	}
+
+		public EnterTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserStorageDAO userStorageDAO){
+		this(parent, modal, timetableDAO, userStorageDAO);
+		mondayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Monday");
+		tuesdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Tuesday");
+		wednesdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Wednesday");
+		thursdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Thursday");
+		fridayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Friday");
+		saturdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Saturday");
+		sundayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Sunday");
+		mondayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Monday");
+		tuesdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Tuesday");
+		wednesdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Wednesday");
+		thursdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Thursday");
+		fridayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Friday");
+		saturdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Saturday");
+		sundayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Sunday");
+
 		mon8w1.setSelected(mondayWeek1.getEightAM());
 		mon9w1.setSelected(mondayWeek1.getNineAM());
 		mon10w1.setSelected(mondayWeek1.getTenAM());
@@ -79,7 +82,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 		mon19w1.setSelected(mondayWeek1.getSevenPM());
 		mon20w1.setSelected(mondayWeek1.getEightPM());
 		mon21w1.setSelected(mondayWeek1.getNinePM());
-	
+
 		tue8w1.setSelected(tuesdayWeek1.getEightAM());
 		tue9w1.setSelected(tuesdayWeek1.getNineAM());
 		tue10w1.setSelected(tuesdayWeek1.getTenAM());
@@ -94,7 +97,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 		tue19w1.setSelected(tuesdayWeek1.getSevenPM());
 		tue20w1.setSelected(tuesdayWeek1.getEightPM());
 		tue21w1.setSelected(tuesdayWeek1.getNinePM());
-	
+
 		wed8w1.setSelected(wednesdayWeek1.getEightAM());
 		wed9w1.setSelected(wednesdayWeek1.getNineAM());
 		wed10w1.setSelected(wednesdayWeek1.getTenAM());
@@ -109,7 +112,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 		wed19w1.setSelected(wednesdayWeek1.getSevenPM());
 		wed20w1.setSelected(wednesdayWeek1.getEightPM());
 		wed21w1.setSelected(wednesdayWeek1.getNinePM());
-		
+
 		thu8w1.setSelected(thursdayWeek1.getEightAM());
 		thu9w1.setSelected(thursdayWeek1.getNineAM());
 		thu10w1.setSelected(thursdayWeek1.getTenAM());
@@ -124,7 +127,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 		thu19w1.setSelected(thursdayWeek1.getSevenPM());
 		thu20w1.setSelected(thursdayWeek1.getEightPM());
 		thu21w1.setSelected(thursdayWeek1.getNinePM());
-		
+
 		fri8w1.setSelected(fridayWeek1.getEightAM());
 		fri9w1.setSelected(fridayWeek1.getNineAM());
 		fri10w1.setSelected(fridayWeek1.getTenAM());
@@ -139,7 +142,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 		fri19w1.setSelected(fridayWeek1.getSevenPM());
 		fri20w1.setSelected(fridayWeek1.getEightPM());
 		fri21w1.setSelected(fridayWeek1.getNinePM());
-		
+
 		sat8w1.setSelected(saturdayWeek1.getEightAM());
 		sat9w1.setSelected(saturdayWeek1.getNineAM());
 		sat10w1.setSelected(saturdayWeek1.getTenAM());
@@ -154,7 +157,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 		sat19w1.setSelected(saturdayWeek1.getSevenPM());
 		sat20w1.setSelected(saturdayWeek1.getEightPM());
 		sat21w1.setSelected(saturdayWeek1.getNinePM());
-		
+
 		sun8w1.setSelected(sundayWeek1.getEightAM());
 		sun9w1.setSelected(sundayWeek1.getNineAM());
 		sun10w1.setSelected(sundayWeek1.getTenAM());
@@ -169,7 +172,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 		sun19w1.setSelected(sundayWeek1.getSevenPM());
 		sun20w1.setSelected(sundayWeek1.getEightPM());
 		sun21w1.setSelected(sundayWeek1.getNinePM());
-		
+
 		mon8w2.setSelected(mondayWeek2.getEightAM());
 		mon9w2.setSelected(mondayWeek2.getNineAM());
 		mon10w2.setSelected(mondayWeek2.getTenAM());
@@ -184,7 +187,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 		mon19w2.setSelected(mondayWeek2.getSevenPM());
 		mon20w2.setSelected(mondayWeek2.getEightPM());
 		mon21w2.setSelected(mondayWeek2.getNinePM());
-	
+
 		tue8w2.setSelected(tuesdayWeek2.getEightAM());
 		tue9w2.setSelected(tuesdayWeek2.getNineAM());
 		tue10w2.setSelected(tuesdayWeek2.getTenAM());
@@ -199,7 +202,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 		tue19w2.setSelected(tuesdayWeek2.getSevenPM());
 		tue20w2.setSelected(tuesdayWeek2.getEightPM());
 		tue21w2.setSelected(tuesdayWeek2.getNinePM());
-	
+
 		wed8w2.setSelected(wednesdayWeek2.getEightAM());
 		wed9w2.setSelected(wednesdayWeek2.getNineAM());
 		wed10w2.setSelected(wednesdayWeek2.getTenAM());
@@ -214,7 +217,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 		wed19w2.setSelected(wednesdayWeek2.getSevenPM());
 		wed20w2.setSelected(wednesdayWeek2.getEightPM());
 		wed21w2.setSelected(wednesdayWeek2.getNinePM());
-		
+
 		thu8w2.setSelected(thursdayWeek2.getEightAM());
 		thu9w2.setSelected(thursdayWeek2.getNineAM());
 		thu10w2.setSelected(thursdayWeek2.getTenAM());
@@ -229,7 +232,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 		thu19w2.setSelected(thursdayWeek2.getSevenPM());
 		thu20w2.setSelected(thursdayWeek2.getEightPM());
 		thu21w2.setSelected(thursdayWeek2.getNinePM());
-		
+
 		fri8w2.setSelected(fridayWeek2.getEightAM());
 		fri9w2.setSelected(fridayWeek2.getNineAM());
 		fri10w2.setSelected(fridayWeek2.getTenAM());
@@ -244,7 +247,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 		fri19w2.setSelected(fridayWeek2.getSevenPM());
 		fri20w2.setSelected(fridayWeek2.getEightPM());
 		fri21w2.setSelected(fridayWeek2.getNinePM());
-		
+
 		sat8w2.setSelected(saturdayWeek2.getEightAM());
 		sat9w2.setSelected(saturdayWeek2.getNineAM());
 		sat10w2.setSelected(saturdayWeek2.getTenAM());
@@ -259,7 +262,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 		sat19w2.setSelected(saturdayWeek2.getSevenPM());
 		sat20w2.setSelected(saturdayWeek2.getEightPM());
 		sat21w2.setSelected(saturdayWeek2.getNinePM());
-		
+
 		sun8w2.setSelected(sundayWeek2.getEightAM());
 		sun9w2.setSelected(sundayWeek2.getNineAM());
 		sun10w2.setSelected(sundayWeek2.getTenAM());
