@@ -31,7 +31,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 	private Day tuesdayWeek2 = new Day();
 	private Day wednesdayWeek2 = new Day();
 	private Day thursdayWeek2 = new Day();
-	private Day fridayWeek2 = new Day();
+        private Day fridayWeek2 = new Day();
 	private Day saturdayWeek2 = new Day();
 	private Day sundayWeek2 = new Day();
 
@@ -49,30 +49,21 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 		this.userStorageDAO = userStorageDAO;
 
 		initComponents();
-	}
-
-	public EnterTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserStorageDAO userStorageDAO, Day mondayWeek1, 
-                Day tuesdayWeek1, Day wednesdayWeek1,Day thursdayWeek1, Day fridayWeek1, Day saturdayWeek1, Day sundayWeek1, 
-                Day mondayWeek2, Day tuesdayWeek2, Day wednesdayWeek2, Day thursdayWeek2, Day fridayWeek2, Day saturdayWeek2, 
-                Day sundayWeek2) {
-            
-		this(parent, modal, timetableDAO, userStorageDAO);
-		this.mondayWeek1 = mondayWeek1;
-		this.tuesdayWeek1 = tuesdayWeek1;
-		this.wednesdayWeek1 = wednesdayWeek1;
-		this.thursdayWeek1 = thursdayWeek1;
-		this.fridayWeek1 = fridayWeek1;
-		this.saturdayWeek1 = saturdayWeek1;
-		this.sundayWeek1 = sundayWeek1;
-		this.mondayWeek2 = mondayWeek2;
-		this.tuesdayWeek2 = tuesdayWeek2;
-		this.wednesdayWeek2 = wednesdayWeek2;
-		this.thursdayWeek2 = thursdayWeek2;
-		this.fridayWeek2 = fridayWeek2;
-		this.saturdayWeek2 = saturdayWeek2;
-		this.sundayWeek2 = sundayWeek2;
-
-		this.setName("viewTimetable");
+                
+                mondayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Monday");
+                tuesdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Tuesday");
+                wednesdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Wednesday");
+                thursdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Thursday");
+                fridayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Friday");
+                saturdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Saturday");
+                sundayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Sunday");
+                mondayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Monday");
+                tuesdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Tuesday");
+                wednesdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Wednesday");
+                thursdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Thursday");
+                fridayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Friday");
+                saturdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Saturday");
+                sundayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Sunday");
 		
 		mon8w1.setSelected(mondayWeek1.getEightAM());
 		mon9w1.setSelected(mondayWeek1.getNineAM());
