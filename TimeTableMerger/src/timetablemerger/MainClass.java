@@ -7,6 +7,7 @@ package timetablemerger;
 
 import dao.TimetableDAO;
 import dao.UserDAO;
+import dao.UserStorageDAO;
 import gui.Login;
 
 /**
@@ -23,11 +24,11 @@ public class MainClass {
         // create the frame instance
         UserDAO userDAO = new UserDAO();
         TimetableDAO timetableDAO = new TimetableDAO();
-        Login frame = new Login(userDAO, timetableDAO);
-
+		  UserStorageDAO userStorageDAO = new UserStorageDAO();
+		  
+        Login frame = new Login(userDAO, timetableDAO, userStorageDAO);
         // centre the frame on the screen
         frame.setLocationRelativeTo(null);
-
         // show the frame
         frame.setVisible(true);
     }

@@ -1,6 +1,7 @@
 package gui;
 
 import dao.TimetableDAO;
+import dao.UserStorageDAO;
 import domain.Day;
 import domain.User;
 import java.awt.CardLayout;
@@ -18,7 +19,8 @@ import javax.swing.JOptionPane;
 public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFrame
 
 	private boolean userIDEditable = true;
-	private final TimetableDAO dao;
+	private final TimetableDAO timetableDAO;
+	private final UserStorageDAO userStorageDAO;
 
 	//SimpleListModel myModel = new SimpleListModel();     //Potentially use SimpleListModel for ContactList?
 	Day day = new Day();
@@ -31,19 +33,20 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 	 * @param modal
 	 * @param dao
 	 */
-	public EnterTimetable(Window parent, boolean modal, TimetableDAO dao) {
+	public EnterTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserStorageDAO userStorageDAO) {
 		super(parent);
 		setModal(modal);
-		this.dao = dao;
+		this.timetableDAO = timetableDAO;
+		this.userStorageDAO = userStorageDAO;
 
 		initComponents();
 	}
 
-	public EnterTimetable(Window parent, boolean modal, TimetableDAO dao, Day monday1, Day tuesday1, Day wednesday1,
+	public EnterTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserStorageDAO userStorageDAO, Day monday1, Day tuesday1, Day wednesday1,
 			  Day thursday1, Day friday1, Day saturday1, Day sunday1, Day monday2, Day tuesday2, Day wednesday2,
 			  Day thursday2, Day friday2, Day saturday2, Day sunday2) {
 		//look at product report from info202
-		this(parent, modal, dao);
+		this(parent, modal, timetableDAO, userStorageDAO);
 		//this.product = productToEdit;
 		this.setName("viewTimetable");
 		//Ignore everything below this in the constructor I'm just playing around with the code
@@ -4256,7 +4259,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 		/* Learn how Users work :/
 		String userName = userName.getUserName();*/
 		//Username is test data, want to implement login (IRONICALLY BREAKS EVERYTHING)
-		String userName = "sa";
+		String userName = userStorageDAO.getUserName();
 
 		Day mondayWeek1 = new Day(userName, "Monday Week 1", storeMon8w1, storeMon9w1, storeMon10w1, storeMon11w1, storeMon12w1,
 				  storeMon13w1, storeMon14w1, storeMon15w1, storeMon16w1, storeMon17w1, storeMon18w1, storeMon19w1,
@@ -4464,6 +4467,14 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 		saveTimetable(saturdayWeek2);
 		saveTimetable(sundayWeek2);
 
+		dispose();
+
+		HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userStorageDAO);
+		// centre the dialog on the parent window
+		dialog.setLocationRelativeTo(this);
+		// make the dialog visible
+		dialog.setVisible(true);
+
 		/**
 		 * See if we can use this to make sure nothing is overwritten, use both
 		 * userName and dayName
@@ -4482,13 +4493,17 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
    }//GEN-LAST:event_buttonSaveTimetableActionPerformed
 
 	private void saveTimetable(Day day) {
-		dao.createTimetable(day);
-		dispose();
+		timetableDAO.createTimetable(day);
 	}
 
    private void buttonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelActionPerformed
 		// TODO add your handling code here:
 		dispose();
+		HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userStorageDAO);
+		// centre the dialog on the parent window
+		dialog.setLocationRelativeTo(this);
+		// make the dialog visible
+		dialog.setVisible(true);
    }//GEN-LAST:event_buttonCancelActionPerformed
 
    // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -31,7 +31,3 @@ ninePM boolean NOT NULL,
 PRIMARY KEY (UserName, DayName),
 FOREIGN KEY (UserName) REFERENCES User(UserName),
 );
-
- /** Creating a test use while App can't remember Login */
-INSERT INTO USER (USERNAME, PASSWORD, FIRSTNAME, LASTNAME, EMAIL)
-VALUES ('sa', 'sa', 's', 'a', 'sa@sa.com'); 
