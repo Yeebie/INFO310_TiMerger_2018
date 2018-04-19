@@ -21,9 +21,23 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 	private boolean userIDEditable = true;
 	private final TimetableDAO timetableDAO;
 	private final UserStorageDAO userStorageDAO;
+		private Day monday1 = new Day();
+	private Day tuesday1 = new Day();
+	private Day wednesday1 = new Day();
+	private Day thursday1 = new Day();
+	private Day friday1 = new Day();
+	private Day saturday1 = new Day();
+	private Day sunday1 = new Day();
+	private Day monday2 = new Day();
+	private Day tuesday2 = new Day();
+	private Day wednesday2 = new Day();
+	private Day thursday2 = new Day();
+	private Day friday2 = new Day();
+	private Day saturday2 = new Day();
+	private Day sunday2 = new Day();
+
 
 	//SimpleListModel myModel = new SimpleListModel();     //Potentially use SimpleListModel for ContactList?
-	Day day = new Day();
 	//ValidationHelper validHelp = new ValidationHelper(); //Was used for price formatting, probably not needed for this project
 
 	/**
@@ -45,33 +59,234 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 	public EnterTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserStorageDAO userStorageDAO, Day monday1, Day tuesday1, Day wednesday1,
 			  Day thursday1, Day friday1, Day saturday1, Day sunday1, Day monday2, Day tuesday2, Day wednesday2,
 			  Day thursday2, Day friday2, Day saturday2, Day sunday2) {
-		//look at product report from info202
 		this(parent, modal, timetableDAO, userStorageDAO);
-		//this.product = productToEdit;
-		this.setName("viewTimetable");
-		//Ignore everything below this in the constructor I'm just playing around with the code
-		//JCheckBox.setSelected(boolean)
-		//saveTimetable(mondayWeek1);
-		//saveTimetable(tuesdayWeek1);
-		//saveTimetable(wednesdayWeek1);
-		//saveTimetable(thursdayWeek1);
-		//saveTimetable(fridayWeek1);
-		//saveTimetable(saturdayWeek1);
-		//saveTimetable(sundayWeek1);
+				this.monday1 = monday1;
+		this.tuesday1 = tuesday1;
+		this.wednesday1 = wednesday1;
+		this.thursday1 = thursday1;
+		this.friday1 = friday1;
+		this.saturday1 = saturday1;
+		this.sunday1 = sunday1;
+		this.monday2 = monday2;
+		this.tuesday2 = tuesday2;
+		this.wednesday2 = wednesday2;
+		this.thursday2 = thursday2;
+		this.friday2 = friday2;
+		this.saturday2 = saturday2;
+		this.sunday2 = sunday2;
 
-		//saveTimetable(mondayWeek2);
-		//saveTimetable(tuesdayWeek2);
-		//saveTimetable(wednesdayWeek2);
-		//saveTimetable(thursdayWeek2);
-		//saveTimetable(fridayWeek2);
-		//saveTimetable(saturdayWeek2);
-		//saveTimetable(sundayWeek2);
-		/**
-		 * Old JComboBox code, could use this for Contact List?
-		 */
-		//comboBoxCategory.setEditable(true);
-		//myModel.updateItems(dao.getCategories());
-		//comboBoxCategory.setModel(myModel);
+		this.setName("viewTimetable");
+		
+				mon8w1.setSelected(monday1.getEightAM());
+		mon9w1.setSelected(monday1.getNineAM());
+		mon10w1.setSelected(monday1.getTenAM());
+		mon11w1.setSelected(monday1.getElevenAM());
+		mon12w1.setSelected(monday1.getTwelvePM());
+		mon13w1.setSelected(monday1.getOnePM());
+		mon14w1.setSelected(monday1.getTwoPM());
+		mon15w1.setSelected(monday1.getThreePM());
+		mon16w1.setSelected(monday1.getFourPM());
+		mon17w1.setSelected(monday1.getFivePM());
+		mon18w1.setSelected(monday1.getSixPM());
+		mon19w1.setSelected(monday1.getSevenPM());
+		mon20w1.setSelected(monday1.getEightPM());
+		mon21w1.setSelected(monday1.getNinePM());
+	
+		tue8w1.setSelected(tuesday1.getEightAM());
+		tue9w1.setSelected(tuesday1.getNineAM());
+		tue10w1.setSelected(tuesday1.getTenAM());
+		tue11w1.setSelected(tuesday1.getElevenAM());
+		tue12w1.setSelected(tuesday1.getTwelvePM());
+		tue13w1.setSelected(tuesday1.getOnePM());
+		tue14w1.setSelected(tuesday1.getTwoPM());
+		tue15w1.setSelected(tuesday1.getThreePM());
+		tue16w1.setSelected(tuesday1.getFourPM());
+		tue17w1.setSelected(tuesday1.getFivePM());
+		tue18w1.setSelected(tuesday1.getSixPM());
+		tue19w1.setSelected(tuesday1.getSevenPM());
+		tue20w1.setSelected(tuesday1.getEightPM());
+		tue21w1.setSelected(tuesday1.getNinePM());
+	
+		wed8w1.setSelected(wednesday1.getEightAM());
+		wed9w1.setSelected(wednesday1.getNineAM());
+		wed10w1.setSelected(wednesday1.getTenAM());
+		wed11w1.setSelected(wednesday1.getElevenAM());
+		wed12w1.setSelected(wednesday1.getTwelvePM());
+		wed13w1.setSelected(wednesday1.getOnePM());
+		wed14w1.setSelected(wednesday1.getTwoPM());
+		wed15w1.setSelected(wednesday1.getThreePM());
+		wed16w1.setSelected(wednesday1.getFourPM());
+		wed17w1.setSelected(wednesday1.getFivePM());
+		wed18w1.setSelected(wednesday1.getSixPM());
+		wed19w1.setSelected(wednesday1.getSevenPM());
+		wed20w1.setSelected(wednesday1.getEightPM());
+		wed21w1.setSelected(wednesday1.getNinePM());
+		
+		thu8w1.setSelected(thursday1.getEightAM());
+		thu9w1.setSelected(thursday1.getNineAM());
+		thu10w1.setSelected(thursday1.getTenAM());
+		thu11w1.setSelected(thursday1.getElevenAM());
+		thu12w1.setSelected(thursday1.getTwelvePM());
+		thu13w1.setSelected(thursday1.getOnePM());
+		thu14w1.setSelected(thursday1.getTwoPM());
+		thu15w1.setSelected(thursday1.getThreePM());
+		thu16w1.setSelected(thursday1.getFourPM());
+		thu17w1.setSelected(thursday1.getFivePM());
+		thu18w1.setSelected(thursday1.getSixPM());
+		thu19w1.setSelected(thursday1.getSevenPM());
+		thu20w1.setSelected(thursday1.getEightPM());
+		thu21w1.setSelected(thursday1.getNinePM());
+		
+		fri8w1.setSelected(friday1.getEightAM());
+		fri9w1.setSelected(friday1.getNineAM());
+		fri10w1.setSelected(friday1.getTenAM());
+		fri11w1.setSelected(friday1.getElevenAM());
+		fri12w1.setSelected(friday1.getTwelvePM());
+		fri13w1.setSelected(friday1.getOnePM());
+		fri14w1.setSelected(friday1.getTwoPM());
+		fri15w1.setSelected(friday1.getThreePM());
+		fri16w1.setSelected(friday1.getFourPM());
+		fri17w1.setSelected(friday1.getFivePM());
+		fri18w1.setSelected(friday1.getSixPM());
+		fri19w1.setSelected(friday1.getSevenPM());
+		fri20w1.setSelected(friday1.getEightPM());
+		fri21w1.setSelected(friday1.getNinePM());
+		
+		sat8w1.setSelected(saturday1.getEightAM());
+		sat9w1.setSelected(saturday1.getNineAM());
+		sat10w1.setSelected(saturday1.getTenAM());
+		sat11w1.setSelected(saturday1.getElevenAM());
+		sat12w1.setSelected(saturday1.getTwelvePM());
+		sat13w1.setSelected(saturday1.getOnePM());
+		sat14w1.setSelected(saturday1.getTwoPM());
+		sat15w1.setSelected(saturday1.getThreePM());
+		sat16w1.setSelected(saturday1.getFourPM());
+		sat17w1.setSelected(saturday1.getFivePM());
+		sat18w1.setSelected(saturday1.getSixPM());
+		sat19w1.setSelected(saturday1.getSevenPM());
+		sat20w1.setSelected(saturday1.getEightPM());
+		sat21w1.setSelected(saturday1.getNinePM());
+		
+		sun8w1.setSelected(sunday1.getEightAM());
+		sun9w1.setSelected(sunday1.getNineAM());
+		sun10w1.setSelected(sunday1.getTenAM());
+		sun11w1.setSelected(sunday1.getElevenAM());
+		sun12w1.setSelected(sunday1.getTwelvePM());
+		sun13w1.setSelected(sunday1.getOnePM());
+		sun14w1.setSelected(sunday1.getTwoPM());
+		sun15w1.setSelected(sunday1.getThreePM());
+		sun16w1.setSelected(sunday1.getFourPM());
+		sun17w1.setSelected(sunday1.getFivePM());
+		sun18w1.setSelected(sunday1.getSixPM());
+		sun19w1.setSelected(sunday1.getSevenPM());
+		sun20w1.setSelected(sunday1.getEightPM());
+		sun21w1.setSelected(sunday1.getNinePM());
+		
+		mon8w2.setSelected(monday2.getEightAM());
+		mon9w2.setSelected(monday2.getNineAM());
+		mon10w2.setSelected(monday2.getTenAM());
+		mon11w2.setSelected(monday2.getElevenAM());
+		mon12w2.setSelected(monday2.getTwelvePM());
+		mon13w2.setSelected(monday2.getOnePM());
+		mon14w2.setSelected(monday2.getTwoPM());
+		mon15w2.setSelected(monday2.getThreePM());
+		mon16w2.setSelected(monday2.getFourPM());
+		mon17w2.setSelected(monday2.getFivePM());
+		mon18w2.setSelected(monday2.getSixPM());
+		mon19w2.setSelected(monday2.getSevenPM());
+		mon20w2.setSelected(monday2.getEightPM());
+		mon21w2.setSelected(monday2.getNinePM());
+	
+		tue8w2.setSelected(tuesday2.getEightAM());
+		tue9w2.setSelected(tuesday2.getNineAM());
+		tue10w2.setSelected(tuesday2.getTenAM());
+		tue11w2.setSelected(tuesday2.getElevenAM());
+		tue12w2.setSelected(tuesday2.getTwelvePM());
+		tue13w2.setSelected(tuesday2.getOnePM());
+		tue14w2.setSelected(tuesday2.getTwoPM());
+		tue15w2.setSelected(tuesday2.getThreePM());
+		tue16w2.setSelected(tuesday2.getFourPM());
+		tue17w2.setSelected(tuesday2.getFivePM());
+		tue18w2.setSelected(tuesday2.getSixPM());
+		tue19w2.setSelected(tuesday2.getSevenPM());
+		tue20w2.setSelected(tuesday2.getEightPM());
+		tue21w2.setSelected(tuesday2.getNinePM());
+	
+		wed8w2.setSelected(wednesday2.getEightAM());
+		wed9w2.setSelected(wednesday2.getNineAM());
+		wed10w2.setSelected(wednesday2.getTenAM());
+		wed11w2.setSelected(wednesday2.getElevenAM());
+		wed12w2.setSelected(wednesday2.getTwelvePM());
+		wed13w2.setSelected(wednesday2.getOnePM());
+		wed14w2.setSelected(wednesday2.getTwoPM());
+		wed15w2.setSelected(wednesday2.getThreePM());
+		wed16w2.setSelected(wednesday2.getFourPM());
+		wed17w2.setSelected(wednesday2.getFivePM());
+		wed18w2.setSelected(wednesday2.getSixPM());
+		wed19w2.setSelected(wednesday2.getSevenPM());
+		wed20w2.setSelected(wednesday2.getEightPM());
+		wed21w2.setSelected(wednesday2.getNinePM());
+		
+		thu8w2.setSelected(thursday2.getEightAM());
+		thu9w2.setSelected(thursday2.getNineAM());
+		thu10w2.setSelected(thursday2.getTenAM());
+		thu11w2.setSelected(thursday2.getElevenAM());
+		thu12w2.setSelected(thursday2.getTwelvePM());
+		thu13w2.setSelected(thursday2.getOnePM());
+		thu14w2.setSelected(thursday2.getTwoPM());
+		thu15w2.setSelected(thursday2.getThreePM());
+		thu16w2.setSelected(thursday2.getFourPM());
+		thu17w2.setSelected(thursday2.getFivePM());
+		thu18w2.setSelected(thursday2.getSixPM());
+		thu19w2.setSelected(thursday2.getSevenPM());
+		thu20w2.setSelected(thursday2.getEightPM());
+		thu21w2.setSelected(thursday2.getNinePM());
+		
+		fri8w2.setSelected(friday2.getEightAM());
+		fri9w2.setSelected(friday2.getNineAM());
+		fri10w2.setSelected(friday2.getTenAM());
+		fri11w2.setSelected(friday2.getElevenAM());
+		fri12w2.setSelected(friday2.getTwelvePM());
+		fri13w2.setSelected(friday2.getOnePM());
+		fri14w2.setSelected(friday2.getTwoPM());
+		fri15w2.setSelected(friday2.getThreePM());
+		fri16w2.setSelected(friday2.getFourPM());
+		fri17w2.setSelected(friday2.getFivePM());
+		fri18w2.setSelected(friday2.getSixPM());
+		fri19w2.setSelected(friday2.getSevenPM());
+		fri20w2.setSelected(friday2.getEightPM());
+		fri21w2.setSelected(friday2.getNinePM());
+		
+		sat8w2.setSelected(saturday2.getEightAM());
+		sat9w2.setSelected(saturday2.getNineAM());
+		sat10w2.setSelected(saturday2.getTenAM());
+		sat11w2.setSelected(saturday2.getElevenAM());
+		sat12w2.setSelected(saturday2.getTwelvePM());
+		sat13w2.setSelected(saturday2.getOnePM());
+		sat14w2.setSelected(saturday2.getTwoPM());
+		sat15w2.setSelected(saturday2.getThreePM());
+		sat16w2.setSelected(saturday2.getFourPM());
+		sat17w2.setSelected(saturday2.getFivePM());
+		sat18w2.setSelected(saturday2.getSixPM());
+		sat19w2.setSelected(saturday2.getSevenPM());
+		sat20w2.setSelected(saturday2.getEightPM());
+		sat21w2.setSelected(saturday2.getNinePM());
+		
+		sun8w2.setSelected(sunday2.getEightAM());
+		sun9w2.setSelected(sunday2.getNineAM());
+		sun10w2.setSelected(sunday2.getTenAM());
+		sun11w2.setSelected(sunday2.getElevenAM());
+		sun12w2.setSelected(sunday2.getTwelvePM());
+		sun13w2.setSelected(sunday2.getOnePM());
+		sun14w2.setSelected(sunday2.getTwoPM());
+		sun15w2.setSelected(sunday2.getThreePM());
+		sun16w2.setSelected(sunday2.getFourPM());
+		sun17w2.setSelected(sunday2.getFivePM());
+		sun18w2.setSelected(sunday2.getSixPM());
+		sun19w2.setSelected(sunday2.getSevenPM());
+		sun20w2.setSelected(sunday2.getEightPM());
+		sun21w2.setSelected(sunday2.getNinePM());
+
 	}
 
 	/**
