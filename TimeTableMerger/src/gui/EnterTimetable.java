@@ -3245,12 +3245,6 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 
    private void mon8w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon8w1ActionPerformed
 		// TODO add your handling code here:
-		Boolean storemon8w1test = mon8w1.isSelected();
-		if (storemon8w1test == true) {
-			System.out.println("True = I am busy");
-		} else {
-			System.out.println("False = I am free");
-		}
    }//GEN-LAST:event_mon8w1ActionPerformed
 
    private void switchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_switchButtonActionPerformed
@@ -4256,9 +4250,6 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 		Boolean storeSun20w2 = sun20w2.isSelected();
 		Boolean storeSun21w2 = sun21w2.isSelected();
 
-		/* Learn how Users work :/
-		String userName = userName.getUserName();*/
-		//Username is test data, want to implement login (IRONICALLY BREAKS EVERYTHING)
 		String userName = userStorageDAO.getUserName();
 
 		Day mondayWeek1 = new Day(userName, "Week 1 Monday", storeMon8w1, storeMon9w1, storeMon10w1, storeMon11w1, storeMon12w1,
@@ -4333,8 +4324,6 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 				  == false && storeSun13w2 == false && storeSun14w2 == false && storeSun15w2 == false && storeSun16w2 == false && storeSun17w2 == false && storeSun18w2 == false && storeSun19w2
 				  == false && storeSun20w2 == false && storeSun21w2 == false) {
 
-			System.out.println("There's nothing in Week 2, will copy Week 1");
-
 			mondayWeek2.setEightAM(storeMon8w1);
 			mondayWeek2.setNineAM(storeMon9w1);
 			mondayWeek2.setTenAM(storeMon10w1);
@@ -4349,7 +4338,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 			mondayWeek2.setSevenPM(storeMon19w1);
 			mondayWeek2.setEightPM(storeMon20w1);
 			mondayWeek2.setNinePM(storeMon21w1);
-			mondayWeek2.setDayName("Monday Week 2");
+			mondayWeek2.setDayName("Week 2 Monday");
 
 			tuesdayWeek2.setEightAM(storeTue8w1);
 			tuesdayWeek2.setNineAM(storeTue9w1);
@@ -4365,7 +4354,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 			tuesdayWeek2.setSevenPM(storeTue19w1);
 			tuesdayWeek2.setEightPM(storeTue20w1);
 			tuesdayWeek2.setNinePM(storeTue21w1);
-			tuesdayWeek2.setDayName("Tuesday Week 2");
+			tuesdayWeek2.setDayName("Week 2 Tuesday");
 
 			wednesdayWeek2.setEightAM(storeWed8w1);
 			wednesdayWeek2.setNineAM(storeWed9w1);
@@ -4381,7 +4370,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 			wednesdayWeek2.setSevenPM(storeWed19w1);
 			wednesdayWeek2.setEightPM(storeWed20w1);
 			wednesdayWeek2.setNinePM(storeWed21w1);
-			wednesdayWeek2.setDayName("Wednesday Week 2");
+			wednesdayWeek2.setDayName("Week 2 Wednesday");
 
 			thursdayWeek2.setEightAM(storeThu8w1);
 			thursdayWeek2.setNineAM(storeThu9w1);
@@ -4397,7 +4386,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 			thursdayWeek2.setSevenPM(storeThu19w1);
 			thursdayWeek2.setEightPM(storeThu20w1);
 			thursdayWeek2.setNinePM(storeThu21w1);
-			thursdayWeek2.setDayName("Thursday Week 2");
+			thursdayWeek2.setDayName("Week 2 Thursday");
 
 			fridayWeek2.setEightAM(storeFri8w1);
 			fridayWeek2.setNineAM(storeFri9w1);
@@ -4413,7 +4402,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 			fridayWeek2.setSevenPM(storeFri19w1);
 			fridayWeek2.setEightPM(storeFri20w1);
 			fridayWeek2.setNinePM(storeFri21w1);
-			fridayWeek2.setDayName("Friday Week 2");
+			fridayWeek2.setDayName("Week 2 Friday");
 
 			saturdayWeek2.setEightAM(storeSat8w1);
 			saturdayWeek2.setNineAM(storeSat9w1);
@@ -4429,7 +4418,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 			saturdayWeek2.setSevenPM(storeSat19w1);
 			saturdayWeek2.setEightPM(storeSat20w1);
 			saturdayWeek2.setNinePM(storeSat21w1);
-			saturdayWeek2.setDayName("Saturday Week 2");
+			saturdayWeek2.setDayName("Week 2 Saturday");
 
 			sundayWeek2.setEightAM(storeSun8w1);
 			sundayWeek2.setNineAM(storeSun9w1);
@@ -4445,10 +4434,8 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 			sundayWeek2.setSevenPM(storeSun19w1);
 			sundayWeek2.setEightPM(storeSun20w1);
 			sundayWeek2.setNinePM(storeSun21w1);
-			sundayWeek2.setDayName("Sunday Week 2");
+			sundayWeek2.setDayName("Week 2 Sunday");
 
-		} else {
-			System.out.println("There's something in Week 2, will not copy Week 1");
 		}
 
 		saveTimetable(mondayWeek1);
