@@ -42,12 +42,12 @@ public class Login extends javax.swing.JFrame {
       usernameLabel = new javax.swing.JLabel();
       usernameField = new javax.swing.JTextField();
       passwordLabel = new javax.swing.JLabel();
-      passwordField = new javax.swing.JTextField();
       jButtonLogin = new javax.swing.JButton();
       jButtonCreateAccount = new javax.swing.JButton();
       jLabel2 = new javax.swing.JLabel();
+      passwordField = new javax.swing.JTextField();
 
-      setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+      setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
       jPanel1.setBackground(new java.awt.Color(255, 255, 255));
       jPanel1.setName("jPanel1"); // NOI18N
@@ -67,8 +67,6 @@ public class Login extends javax.swing.JFrame {
       passwordLabel.setText("Password:");
       passwordLabel.setName("passwordLabel"); // NOI18N
 
-      passwordField.setName("passwordField"); // NOI18N
-
       jButtonLogin.setText("Log in");
       jButtonLogin.setName("jButtonLogin"); // NOI18N
       jButtonLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -87,6 +85,13 @@ public class Login extends javax.swing.JFrame {
 
       jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/uniTimetableLogo.png"))); // NOI18N
       jLabel2.setName("jLabel2"); // NOI18N
+
+      passwordField.setName("passwordField"); // NOI18N
+      passwordField.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            passwordFieldActionPerformed(evt);
+         }
+      });
 
       javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
       jPanel1.setLayout(jPanel1Layout);
@@ -111,8 +116,8 @@ public class Login extends javax.swing.JFrame {
                            .addComponent(passwordLabel))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                           .addComponent(passwordField)
-                           .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                           .addComponent(usernameField, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+                           .addComponent(passwordField)))
                      .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGap(165, 165, 165))
       );
@@ -129,8 +134,8 @@ public class Login extends javax.swing.JFrame {
                .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-               .addComponent(passwordField)
-               .addComponent(passwordLabel))
+               .addComponent(passwordLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+               .addComponent(passwordField))
             .addGap(26, 26, 26)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                .addComponent(jButtonLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -196,6 +201,10 @@ public class Login extends javax.swing.JFrame {
 		 createAccount.setLocationRelativeTo(this);
 		 createAccount.setVisible(true);
     }//GEN-LAST:event_jButtonCreateAccountActionPerformed
+
+   private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
+      // TODO add your handling code here:
+   }//GEN-LAST:event_passwordFieldActionPerformed
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
    private javax.swing.JButton jButtonCreateAccount;
