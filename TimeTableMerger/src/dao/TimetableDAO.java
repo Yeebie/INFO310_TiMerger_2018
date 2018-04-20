@@ -52,7 +52,7 @@ public class TimetableDAO {
                 Boolean nineAM = rs.getBoolean("nineAM");
                 Boolean tenAM = rs.getBoolean("tenAM");
                 Boolean elevenAM = rs.getBoolean("elevenAM");
-                Boolean twelvePM = rs.getBoolean("twlevePM");
+                Boolean twelvePM = rs.getBoolean("twelvePM");
                 Boolean onePM = rs.getBoolean("onePM");
                 Boolean twoPM = rs.getBoolean("twoPM");
                 Boolean threePM = rs.getBoolean("threePM");
