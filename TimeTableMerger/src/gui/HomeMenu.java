@@ -172,7 +172,7 @@ public class HomeMenu extends javax.swing.JDialog {
 	Day wednesdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Wednesday");
 	Day thursdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Thursday");
 	Day fridayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Friday");
-	Day saturdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Saturdday");
+	Day saturdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Saturday");
 	Day sundayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Sunday");
 	Day mondayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Monday");
 	Day tuesdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Tuesday");
