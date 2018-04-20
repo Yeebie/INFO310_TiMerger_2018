@@ -14,7 +14,7 @@ public class UserStorageDAO {
 	public void setUserName(String userName) {
 		this.currentUser = userName;
 		if(userName.equals("")){
-			System.out.println("There is no user logged in. Fix this bug");
+			System.out.println("There is no user logged in.");
 		}
 		System.out.println("This is the stored username: " + userName);
 	}

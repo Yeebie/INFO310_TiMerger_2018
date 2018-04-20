@@ -20,6 +20,9 @@ public class Login extends javax.swing.JFrame {
 
 	/**
 	 * Creates new form Test
+	 * @param userDAO
+	 * @param timetableDAO
+	 * @param userStorageDAO
 	 */
 	public Login(UserDAO userDAO, TimetableDAO timetableDAO, UserStorageDAO userStorageDAO) {
 		this.userDAO = userDAO;
@@ -185,8 +188,7 @@ public class Login extends javax.swing.JFrame {
 		} catch (DAOException ex) {
 			// message box 
 			//	throw new DAOException(ex.getMessage(), ex);
-			int result = JOptionPane.showConfirmDialog(
-					  this, ex.getMessage());
+			JOptionPane.showConfirmDialog(this, ex.getMessage());
 		}
    }//GEN-LAST:event_jButtonLoginActionPerformed
 
