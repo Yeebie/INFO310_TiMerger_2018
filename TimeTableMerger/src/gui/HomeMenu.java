@@ -212,7 +212,7 @@ public class HomeMenu extends javax.swing.JDialog {
    }//GEN-LAST:event_editButtonActionPerformed
 
    private void scheduleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_scheduleButtonActionPerformed
-		// TODO add your handling code here:
+
    }//GEN-LAST:event_scheduleButtonActionPerformed
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
