@@ -44,34 +44,77 @@ public class UserDAO {
             throw new DAOException(ex.getMessage(), ex);
         }
     }
+	 
+	 public User getUser(String userName) {
+        String sql = "select * from user where username = ?";
 
-    public void searchByUserName(String UserName) {
+        try (
+                // get connection to database
+                Connection connection = JdbcConnection.getConnection(this.url);
+                // create the statement
+                PreparedStatement stmt = connection.prepareStatement(sql);) {
+            // set the parameter
+            stmt.setString(1, userName);
 
+            // execute the query
+            ResultSet rs = stmt.executeQuery();
+
+            // query only returns a single result, so use 'if' instead of 'while'
+            if (rs.next()) {
+                String username2 = rs.getString("username");
+                String fname = rs.getString("firstname");
+                String email = rs.getString("email");
+                String password = rs.getString("password");
+                String lname = rs.getString("lastname");
+
+                User c = new User(username2, fname, lname, password, email);
+                return c;
+
+            } else {
+                // no student matches given ID so return null
+                return null;
+            }
+
+        } catch (SQLException ex) {  // we are forced to catch SQLException
+            // don't let the SQLException leak from our DAO encapsulation
+            throw new DAOException(ex.getMessage(), ex);
+        }
     }
-    //public User findByUserName(String UserName) {
 
-    //String sql = "select * from User where UserName = ?";
-    //try (
-    //Connection connection = JdbcConnection.getConnection(url);
-    //PreparedStatement stmt = connection.prepareStatement(sql);) {
-    //stmt.setString(1, UserName);
-    //ResultSet rs = stmt.executeQuery();
-    //if (rs.next()) {
-    //String userName = rs.getString("UserName");
-    //String password = rs.getString("Password");
-    //String firstName = rs.getString("FirstName");
-    //String lastName = rs.getString("LastName");
-    //String email = rs.getString("Email");
-    //return new User(userName, password, firstName, lastName, email);
-    //} else {
-    //return null;
-    //}
-    //} catch (SQLException ex) {
-    //throw new DAOException(ex.getMessage(), ex);
-    //}
-    //}
-    /*
-///
+	 /*
+	public void searchByUserName(String UserName) {
+		String sql = "select * from user where username = ?";
+		try (
+				  // get connection to database
+				  Connection connection = JdbcConnection.getConnection(this.url);
+				  // create the statement
+				  PreparedStatement stmt = connection.prepareStatement(sql);) {
+			// set the parameter
+			stmt.setString(1, userName);
+
+			// execute the query
+			ResultSet rs = stmt.executeQuery();
+
+			if (rs.next()) {
+                String username2 = rs.getString("username");
+                String fname = rs.getString("firstname");
+                String email = rs.getString("email");
+                String password = rs.getString("password");
+                String lname = rs.getString("lastname");
+				return new User(userName, password, firstName, lastName, email);
+			} else {
+				return null;
+			}
+		} catch (SQLException ex) {
+			throw new DAOException(ex.getMessage(), ex);
+		}
+	}*/
+    
+
+
+	 
+
+/*
 	String url = "jdbc:h2:tcp://localhost:9018/project;IFEXISTS=TRUE;";
 	
 
@@ -161,44 +204,11 @@ public class UserDAO {
 	}
 	
      */
-    public User getUser(String userName) {
-        String sql = "select * from user where username = ?";
-
-        try (
-                // get connection to database
-                Connection connection = JdbcConnection.getConnection(this.url);
-                // create the statement
-                PreparedStatement stmt = connection.prepareStatement(sql);) {
-            // set the parameter
-            stmt.setString(1, userName);
-
-            // execute the query
-            ResultSet rs = stmt.executeQuery();
-
-            // query only returns a single result, so use 'if' instead of 'while'
-            if (rs.next()) {
-                String username2 = rs.getString("username");
-                String fname = rs.getString("firstname");
-                String email = rs.getString("email");
-                String password = rs.getString("password");
-                String lname = rs.getString("lastname");
-
-                User c = new User(username2, fname, lname, password, email);
-                return c;
-
-            } else {
-                // no student matches given ID so return null
-                return null;
-            }
-
-        } catch (SQLException ex) {  // we are forced to catch SQLException
-            // don't let the SQLException leak from our DAO encapsulation
-            throw new DAOException(ex.getMessage(), ex);
-        }
-    }
+    
 
     public Boolean validateCredentials(String userName, String password) {
         String sql = "select * from user where username = ? and password = ? ";
+		  //String sql = "select username, password from User";
 
         try (
                 // get connection to database
@@ -218,11 +228,23 @@ public class UserDAO {
                 // no student matches given ID so return null
                 return false;
             }
+				
+				// get the data out of the query
+            /*String username1 = rs.getString("username");
+				String password1 = rs.getString("password");
+
+				if(username1.equals(userName) && password1.equals(password)){
+					return true;
+				}else{
+					return false;
+				}
+			}*/
 
         } catch (SQLException ex) {  // we are forced to catch SQLException
             // don't let the SQLException leak from our DAO encapsulation
             throw new DAOException(ex.getMessage(), ex);
         }
+		  //return null; 
     }
 	 
 	 public Collection<User> getUserList(){
@@ -254,39 +276,3 @@ public class UserDAO {
 	 }
 
 }
-
-/*
-	String sql = "select username, password from Customer";
-
-    try (
-        // get a connection to the database
-        Connection dbCon = JdbcConnection.getConnection(url);
-        // create the statement
-        PreparedStatement stmt = dbCon.prepareStatement(sql);
-    ) {
-        // execute the query
-		  stmt.setString(1, userName);
-		  stmt.setString(6, passWord);
-        ResultSet rs = stmt.executeQuery();
-
-        // iterate through the query results
-        if(rs.next()) {
-            // get the data out of the query
-            String username = rs.getString("username");
-				String password = rs.getString("password");
-
-				if(username.equals(userName) && password.equals(passWord)){
-					return true;
-				}else{
-					return false;
-				}
-			}
-   
-    } catch (SQLException ex) {
-        //throw new RuntimeException(ex);
-		  throw new DAOException(ex.getMessage(), ex);
-    }
-		return null;
-	}
-}
- */

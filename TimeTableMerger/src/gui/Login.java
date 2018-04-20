@@ -167,24 +167,20 @@ public class Login extends javax.swing.JFrame {
 			if (var) {
 				this.user = userDAO.getUser(userNameString);
 				System.out.println(this.user);
+				
+				userStorageDAO.setUserName(userNameString);
+
+				HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userStorageDAO);
+				// centre the dialog on the parent window
+				dialog.setLocationRelativeTo(this);
+				// make the dialog visible
+				dialog.setVisible(true);
 
 			} else {
-				int result = JOptionPane.showConfirmDialog(
-						  this, "user not found");
+				JOptionPane.showConfirmDialog(this, "user not found");
 			}
 			//System.out.println(dao.getProducts());
-
-			dispose();
-			
-			userStorageDAO.setUserName(userNameString);
-
-			HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userStorageDAO);
-			// centre the dialog on the parent window
-			dialog.setLocationRelativeTo(this);
-			// make the dialog visible
-			dialog.setVisible(true);
-
-			
+			//dispose();
 
 		} catch (DAOException ex) {
 			// message box 
