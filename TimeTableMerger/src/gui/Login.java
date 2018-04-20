@@ -48,7 +48,7 @@ public class Login extends javax.swing.JFrame {
       jButtonLogin = new javax.swing.JButton();
       jButtonCreateAccount = new javax.swing.JButton();
       jLabel2 = new javax.swing.JLabel();
-      passwordField = new javax.swing.JTextField();
+      passwordField = new javax.swing.JPasswordField();
 
       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -90,11 +90,6 @@ public class Login extends javax.swing.JFrame {
       jLabel2.setName("jLabel2"); // NOI18N
 
       passwordField.setName("passwordField"); // NOI18N
-      passwordField.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            passwordFieldActionPerformed(evt);
-         }
-      });
 
       javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
       jPanel1.setLayout(jPanel1Layout);
@@ -136,9 +131,11 @@ public class Login extends javax.swing.JFrame {
                .addComponent(usernameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
                .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-               .addComponent(passwordLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-               .addComponent(passwordField))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addGroup(jPanel1Layout.createSequentialGroup()
+                  .addComponent(passwordField)
+                  .addGap(1, 1, 1))
+               .addComponent(passwordLabel))
             .addGap(26, 26, 26)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                .addComponent(jButtonLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -200,16 +197,12 @@ public class Login extends javax.swing.JFrame {
 		 createAccount.setVisible(true);
     }//GEN-LAST:event_jButtonCreateAccountActionPerformed
 
-   private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
-      // TODO add your handling code here:
-   }//GEN-LAST:event_passwordFieldActionPerformed
-
    // Variables declaration - do not modify//GEN-BEGIN:variables
    private javax.swing.JButton jButtonCreateAccount;
    private javax.swing.JButton jButtonLogin;
    private javax.swing.JLabel jLabel2;
    private javax.swing.JPanel jPanel1;
-   private javax.swing.JTextField passwordField;
+   private javax.swing.JPasswordField passwordField;
    private javax.swing.JLabel passwordLabel;
    private javax.swing.JLabel titleLabel;
    private javax.swing.JTextField usernameField;

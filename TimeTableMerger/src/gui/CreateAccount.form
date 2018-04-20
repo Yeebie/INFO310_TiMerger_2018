@@ -60,15 +60,14 @@
                                   <Component id="emailField" min="-2" pref="230" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="reenterLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="passwordLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="reenterLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="passwordField" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
-                                      <Component id="reenterfield" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="reenterfield" min="-2" pref="230" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="passwordLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="passwordField" min="-2" pref="230" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -118,26 +117,26 @@
                       <Component id="lastNameField" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="emailLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="emailField" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="emailLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="emailField" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="passwordLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="passwordField" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="passwordLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="reenterfield" alignment="3" pref="31" max="32767" attributes="0"/>
                       <Component id="reenterLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="reenterfield" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="loginButton" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                       <Component id="cancelButton" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="93" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -215,14 +214,6 @@
             <Property name="name" type="java.lang.String" value="passwordLabel" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="passwordField">
-          <Properties>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[12, 40]"/>
-            </Property>
-            <Property name="name" type="java.lang.String" value="passwordField" noResource="true"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="reenterLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -230,14 +221,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Re-enter Password:"/>
             <Property name="name" type="java.lang.String" value="reenterLabel" noResource="true"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="reenterfield">
-          <Properties>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[12, 40]"/>
-            </Property>
-            <Property name="name" type="java.lang.String" value="reenterfield" noResource="true"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="loginButton">
@@ -279,6 +262,16 @@
               <Dimension value="[12, 40]"/>
             </Property>
             <Property name="name" type="java.lang.String" value="emailField" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="passwordField">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="passwordField" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="reenterfield">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="reenterfield" noResource="true"/>
           </Properties>
         </Component>
       </SubComponents>

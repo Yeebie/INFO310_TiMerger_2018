@@ -46,15 +46,15 @@ public class CreateAccount extends javax.swing.JFrame {
       lastNameLabel = new javax.swing.JLabel();
       lastNameField = new javax.swing.JTextField();
       passwordLabel = new javax.swing.JLabel();
-      passwordField = new javax.swing.JTextField();
       reenterLabel = new javax.swing.JLabel();
-      reenterfield = new javax.swing.JTextField();
       loginButton = new javax.swing.JButton();
       cancelButton = new javax.swing.JButton();
       emailLabel = new javax.swing.JLabel();
       emailField = new javax.swing.JTextField();
+      passwordField = new javax.swing.JPasswordField();
+      reenterfield = new javax.swing.JPasswordField();
 
-      setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+      setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
       jPanel1.setBackground(new java.awt.Color(255, 255, 255));
       jPanel1.setName("jPanel1"); // NOI18N
@@ -93,15 +93,9 @@ public class CreateAccount extends javax.swing.JFrame {
       passwordLabel.setText("Password:");
       passwordLabel.setName("passwordLabel"); // NOI18N
 
-      passwordField.setMinimumSize(new java.awt.Dimension(12, 40));
-      passwordField.setName("passwordField"); // NOI18N
-
       reenterLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
       reenterLabel.setText("Re-enter Password:");
       reenterLabel.setName("reenterLabel"); // NOI18N
-
-      reenterfield.setMinimumSize(new java.awt.Dimension(12, 40));
-      reenterfield.setName("reenterfield"); // NOI18N
 
       loginButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
       loginButton.setText("Submit");
@@ -128,6 +122,10 @@ public class CreateAccount extends javax.swing.JFrame {
       emailField.setMinimumSize(new java.awt.Dimension(12, 40));
       emailField.setName("emailField"); // NOI18N
 
+      passwordField.setName("passwordField"); // NOI18N
+
+      reenterfield.setName("reenterfield"); // NOI18N
+
       javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
       jPanel1.setLayout(jPanel1Layout);
       jPanel1Layout.setHorizontalGroup(
@@ -146,13 +144,13 @@ public class CreateAccount extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
                      .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                           .addComponent(reenterLabel, javax.swing.GroupLayout.Alignment.TRAILING)
-                           .addComponent(passwordLabel, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addComponent(reenterLabel)
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                           .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                           .addComponent(reenterfield, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addComponent(reenterfield, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(passwordLabel)
+                        .addGap(18, 18, 18)
+                        .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))))
                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                   .addGroup(jPanel1Layout.createSequentialGroup()
                      .addGap(188, 188, 188)
@@ -188,22 +186,22 @@ public class CreateAccount extends javax.swing.JFrame {
                .addComponent(lastNameLabel)
                .addComponent(lastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGap(18, 18, 18)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                .addComponent(emailLabel)
                .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGap(18, 18, 18)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-               .addComponent(passwordLabel)
-               .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(22, 22, 22)
+               .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+               .addComponent(passwordLabel))
+            .addGap(18, 18, 18)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-               .addComponent(reenterLabel)
-               .addComponent(reenterfield, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(42, 42, 42)
+               .addComponent(reenterfield, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+               .addComponent(reenterLabel))
+            .addGap(49, 49, 49)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addContainerGap(93, Short.MAX_VALUE))
+            .addGap(94, 94, 94))
       );
 
       javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -262,8 +260,7 @@ public class CreateAccount extends javax.swing.JFrame {
 //		}
 				 userDAO.saveUser(this.user);
 			 } else {
-				 int result = JOptionPane.showConfirmDialog(
-							this, "password not match!!");
+				 JOptionPane.showConfirmDialog(this, "Please enter the same password as above.");
 			 }
 			 //sSystem.out.println(dao.getProducts());
 			 dispose();
@@ -292,10 +289,10 @@ public class CreateAccount extends javax.swing.JFrame {
    private javax.swing.JTextField lastNameField;
    private javax.swing.JLabel lastNameLabel;
    private javax.swing.JButton loginButton;
-   private javax.swing.JTextField passwordField;
+   private javax.swing.JPasswordField passwordField;
    private javax.swing.JLabel passwordLabel;
    private javax.swing.JLabel reenterLabel;
-   private javax.swing.JTextField reenterfield;
+   private javax.swing.JPasswordField reenterfield;
    private javax.swing.JLabel titleLabel;
    private javax.swing.JTextField usernameField;
    private javax.swing.JLabel usernameLabel;
