@@ -21,6 +21,7 @@ public class ScheduleMeeting extends javax.swing.JFrame {
 		
 		myModel.updateItems(userDAO.getUserList());
 		usersList.setModel(myModel);
+                Integer[] times = {1,2,3,4};
 	}
 
 	/**
