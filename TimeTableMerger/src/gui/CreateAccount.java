@@ -28,6 +28,7 @@ public class CreateAccount extends javax.swing.JFrame {
 		this.userDAO = userDAO;
 		this.timetableDAO = timetableDAO;
 		this.userStorageDAO = userStorageDAO;
+		this.setName("Create Account");
 		initComponents();
 	}
 

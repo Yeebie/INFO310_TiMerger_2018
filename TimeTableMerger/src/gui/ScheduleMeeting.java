@@ -16,6 +16,7 @@ public class ScheduleMeeting extends javax.swing.JFrame {
 	 * Creates new form ScheduleMeeting
 	 */
 	public ScheduleMeeting() {
+		this.setName("Schedule Meeting");
 		initComponents();
 		
 		myModel.updateItems(userDAO.getUserList());

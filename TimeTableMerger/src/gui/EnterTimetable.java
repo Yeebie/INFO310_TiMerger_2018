@@ -29,6 +29,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 		super.setModal(modal);
 		this.timetableDAO = timetableDAO;
 		this.userStorageDAO = userStorageDAO;
+		this.setName("New Timetable");
 
 		initComponents();
 	}

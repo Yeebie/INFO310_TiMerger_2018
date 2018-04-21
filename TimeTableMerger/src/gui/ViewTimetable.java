@@ -62,6 +62,8 @@ public class ViewTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
 		super.setModal(modal);
 		this.timetableDAO = timetableDAO;
 		this.userStorageDAO = userStorageDAO;
+		this.setName("View Timetable");
+		
 		initComponents();
 		
 		this.mondayWeek1 = mondayWeek1;
@@ -79,6 +81,7 @@ public class ViewTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
 		this.saturdayWeek2 = saturdayWeek2;
 		this.sundayWeek2 = sundayWeek2;
 
+		//set checkbox values 
 		mon8w1.setSelected(mondayWeek1.getEightAM());
 		mon9w1.setSelected(mondayWeek1.getNineAM());
 		mon10w1.setSelected(mondayWeek1.getTenAM());
@@ -288,219 +291,6 @@ public class ViewTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
 		sun19w2.setSelected(sundayWeek2.getSevenPM());
 		sun20w2.setSelected(sundayWeek2.getEightPM());
 		sun21w2.setSelected(sundayWeek2.getNinePM());
-               
-               //disable editing 
-                mon8w1.setEnabled(false);
-		mon9w1.setEnabled(false);
-		mon10w1.setEnabled(false);
-		mon11w1.setEnabled(false);
-		mon12w1.setEnabled(false);
-		mon13w1.setEnabled(false);
-		mon14w1.setEnabled(false);
-		mon15w1.setEnabled(false);
-		mon16w1.setEnabled(false);
-		mon17w1.setEnabled(false);
-		mon18w1.setEnabled(false);
-		mon19w1.setEnabled(false);
-		mon20w1.setEnabled(false);
-		mon21w1.setEnabled(false);
-
-		tue8w1.setEnabled(false);
-                tue9w1.setEnabled(false);
-                tue10w1.setEnabled(false);
-                tue11w1.setEnabled(false);
-                tue12w1.setEnabled(false);
-                tue13w1.setEnabled(false);
-                tue14w1.setEnabled(false);
-                tue15w1.setEnabled(false);
-                tue16w1.setEnabled(false);
-                tue17w1.setEnabled(false);
-                tue18w1.setEnabled(false);
-                tue19w1.setEnabled(false);
-                tue20w1.setEnabled(false);
-                tue21w1.setEnabled(false);
-
-		wed8w1.setEnabled(false);
-                wed9w1.setEnabled(false);
-                wed10w1.setEnabled(false);
-                wed11w1.setEnabled(false);
-                wed12w1.setEnabled(false);
-                wed13w1.setEnabled(false);
-                wed14w1.setEnabled(false);
-                wed15w1.setEnabled(false);
-                wed16w1.setEnabled(false);
-                wed17w1.setEnabled(false);
-                wed18w1.setEnabled(false);
-                wed19w1.setEnabled(false);
-                wed20w1.setEnabled(false);
-                wed21w1.setEnabled(false);
-
-		thu8w1.setEnabled(false);
-                thu9w1.setEnabled(false);
-                thu10w1.setEnabled(false);
-                thu11w1.setEnabled(false);
-                thu12w1.setEnabled(false);
-                thu13w1.setEnabled(false);
-                thu14w1.setEnabled(false);
-                thu15w1.setEnabled(false);
-                thu16w1.setEnabled(false);
-                thu17w1.setEnabled(false);
-                thu18w1.setEnabled(false);
-                thu19w1.setEnabled(false);
-                thu20w1.setEnabled(false);
-                thu21w1.setEnabled(false);
-
-		fri8w1.setEnabled(false);
-                fri9w1.setEnabled(false);
-                fri10w1.setEnabled(false);
-                fri11w1.setEnabled(false);
-                fri12w1.setEnabled(false);
-                fri13w1.setEnabled(false);
-                fri13w1.setEnabled(false);
-                fri15w1.setEnabled(false);
-                fri16w1.setEnabled(false);
-                fri17w1.setEnabled(false);
-                fri18w1.setEnabled(false);
-                fri19w1.setEnabled(false);
-                fri20w1.setEnabled(false);
-                fri21w1.setEnabled(false);
-
-		sat8w1.setEnabled(false);
-                sat9w1.setEnabled(false);
-                sat10w1.setEnabled(false);
-                sat11w1.setEnabled(false);
-                sat12w1.setEnabled(false);
-                sat13w1.setEnabled(false);
-                sat14w1.setEnabled(false);
-                sat15w1.setEnabled(false);
-                sat16w1.setEnabled(false);
-                sat17w1.setEnabled(false);
-                sat18w1.setEnabled(false);
-                sat19w1.setEnabled(false);
-                sat20w1.setEnabled(false);
-                sat21w1.setEnabled(false);
-
-		sun8w1.setEnabled(false);
-                sun9w1.setEnabled(false);
-                sun10w1.setEnabled(false);
-                sun11w1.setEnabled(false);
-                sun12w1.setEnabled(false);
-                sun13w1.setEnabled(false);
-                sun14w1.setEnabled(false);
-                sun15w1.setEnabled(false);
-                sun16w1.setEnabled(false);
-                sun17w1.setEnabled(false);
-                sun18w1.setEnabled(false);
-                sun19w1.setEnabled(false);
-                sun20w1.setEnabled(false);
-                sun21w1.setEnabled(false);
-                
-                mon8w2.setEnabled(false);
-		mon9w2.setEnabled(false);
-		mon10w2.setEnabled(false);
-		mon11w2.setEnabled(false);
-		mon12w2.setEnabled(false);
-		mon13w2.setEnabled(false);
-		mon14w2.setEnabled(false);
-		mon15w2.setEnabled(false);
-		mon16w2.setEnabled(false);
-		mon17w2.setEnabled(false);
-		mon18w2.setEnabled(false);
-		mon19w2.setEnabled(false);
-		mon20w2.setEnabled(false);
-		mon21w2.setEnabled(false);
-
-		tue8w2.setEnabled(false);
-                tue9w2.setEnabled(false);
-                tue10w2.setEnabled(false);
-                tue11w2.setEnabled(false);
-                tue12w2.setEnabled(false);
-                tue13w2.setEnabled(false);
-                tue14w2.setEnabled(false);
-                tue15w2.setEnabled(false);
-                tue16w2.setEnabled(false);
-                tue17w2.setEnabled(false);
-                tue18w2.setEnabled(false);
-                tue19w2.setEnabled(false);
-                tue20w2.setEnabled(false);
-                tue21w2.setEnabled(false);
-
-		wed8w2.setEnabled(false);
-                wed9w2.setEnabled(false);
-                wed10w2.setEnabled(false);
-                wed11w2.setEnabled(false);
-                wed12w2.setEnabled(false);
-                wed13w2.setEnabled(false);
-                wed14w2.setEnabled(false);
-                wed15w2.setEnabled(false);
-                wed16w2.setEnabled(false);
-                wed17w2.setEnabled(false);
-                wed18w2.setEnabled(false);
-                wed19w2.setEnabled(false);
-                wed20w2.setEnabled(false);
-                wed21w2.setEnabled(false);
-
-		thu8w2.setEnabled(false);
-                thu9w2.setEnabled(false);
-                thu10w2.setEnabled(false);
-                thu11w2.setEnabled(false);
-                thu12w2.setEnabled(false);
-                thu13w2.setEnabled(false);
-                thu14w2.setEnabled(false);
-                thu15w2.setEnabled(false);
-                thu16w2.setEnabled(false);
-                thu17w2.setEnabled(false);
-                thu18w2.setEnabled(false);
-                thu19w2.setEnabled(false);
-                thu20w2.setEnabled(false);
-                thu21w2.setEnabled(false);
-
-		fri8w2.setEnabled(false);
-                fri9w2.setEnabled(false);
-                fri10w2.setEnabled(false);
-                fri11w2.setEnabled(false);
-                fri12w2.setEnabled(false);
-                fri13w2.setEnabled(false);
-                fri13w2.setEnabled(false);
-                fri15w2.setEnabled(false);
-                fri16w2.setEnabled(false);
-                fri17w2.setEnabled(false);
-                fri18w2.setEnabled(false);
-                fri19w2.setEnabled(false);
-                fri20w2.setEnabled(false);
-                fri21w2.setEnabled(false);
-
-		sat8w2.setEnabled(false);
-                sat9w2.setEnabled(false);
-                sat10w2.setEnabled(false);
-                sat11w2.setEnabled(false);
-                sat12w2.setEnabled(false);
-                sat13w2.setEnabled(false);
-                sat14w2.setEnabled(false);
-                sat15w2.setEnabled(false);
-                sat16w2.setEnabled(false);
-                sat17w2.setEnabled(false);
-                sat18w2.setEnabled(false);
-                sat19w2.setEnabled(false);
-                sat20w2.setEnabled(false);
-                sat21w2.setEnabled(false);
-
-		sun8w2.setEnabled(false);
-                sun9w2.setEnabled(false);
-                sun10w2.setEnabled(false);
-                sun11w2.setEnabled(false);
-                sun12w2.setEnabled(false);
-                sun13w2.setEnabled(false);
-                sun14w2.setEnabled(false);
-                sun15w2.setEnabled(false);
-                sun16w2.setEnabled(false);
-                sun17w2.setEnabled(false);
-                sun18w2.setEnabled(false);
-                sun19w2.setEnabled(false);
-                sun20w2.setEnabled(false);
-                sun21w2.setEnabled(false);
-
-
 	}
 	/**
 	 * This method is called from within the constructor to initialize the form.

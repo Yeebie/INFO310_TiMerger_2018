@@ -1,6 +1,7 @@
 package gui;
 
 import dao.TimetableDAO;
+import dao.UserDAO;
 import dao.UserStorageDAO;
 import java.awt.Window;
 import domain.Day;
@@ -30,6 +31,7 @@ public class HomeMenu extends javax.swing.JDialog {
 
 	/**
 	 * Creates new form Test
+	 *
 	 * @param parent
 	 * @param modal
 	 * @param timetableDAO
@@ -161,34 +163,35 @@ public class HomeMenu extends javax.swing.JDialog {
    }//GEN-LAST:event_newButtonActionPerformed
 
    private void viewButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewButtonActionPerformed
+		dispose();
+		//initialise each day with the users data
+		Day mondayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Monday");
+		Day tuesdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Tuesday");
+		Day wednesdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Wednesday");
+		Day thursdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Thursday");
+		Day fridayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Friday");
+		Day saturdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Saturday");
+		Day sundayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Sunday");
+		Day mondayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Monday");
+		Day tuesdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Tuesday");
+		Day wednesdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Wednesday");
+		Day thursdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Thursday");
+		Day fridayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Friday");
+		Day saturdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Saturday");
+		Day sundayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Sunday");
+
 		// create the dialog instance
 		// the first parameter the parent window, and the second is the modal status
-		dispose();
-		
-	Day mondayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Monday");
-	Day tuesdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Tuesday");
-	Day wednesdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Wednesday");
-	Day thursdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Thursday");
-	Day fridayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Friday");
-	Day saturdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Saturday");
-	Day sundayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Sunday");
-	Day mondayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Monday");
-	Day tuesdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Tuesday");
-	Day wednesdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Wednesday");
-	Day thursdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Thursday");
-	Day fridayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Friday");
-	Day saturdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Saturday");
-	Day sundayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Sunday");
-		
 		ViewTimetable dialog = new ViewTimetable(this, true, timetableDAO, userStorageDAO, mondayWeek1, tuesdayWeek1, wednesdayWeek1,
-		thursdayWeek1, fridayWeek1, saturdayWeek1, sundayWeek1, mondayWeek2, tuesdayWeek2, wednesdayWeek2, thursdayWeek2, fridayWeek2, 
-		saturdayWeek2, sundayWeek2);
-
-	// centre the dialog on the parent window
-	dialog.setLocationRelativeTo (this);
-
+				  thursdayWeek1, fridayWeek1, saturdayWeek1, sundayWeek1, mondayWeek2, tuesdayWeek2, wednesdayWeek2, thursdayWeek2, fridayWeek2,
+				  saturdayWeek2, sundayWeek2);
+		dialog.pack();
+		// Edit: manually double its size:
+		dialog.setSize(715,677);	
+		// centre the dialog on the parent window
+		dialog.setLocationRelativeTo(this);
 		// make the dialog visible
-	dialog.setVisible (true);
+		dialog.setVisible(true);
    }//GEN-LAST:event_viewButtonActionPerformed
 
    private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
@@ -197,20 +200,18 @@ public class HomeMenu extends javax.swing.JDialog {
    }//GEN-LAST:event_exitButtonActionPerformed
 
    private void editButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButtonActionPerformed
+		dispose();
 		// create the dialog instance
 		// the first parameter the parent window, and the second is the modal status
-		
 		EnterTimetable dialog = new EnterTimetable(this, true, timetableDAO, userStorageDAO);
-
 		// centre the dialog on the parent window
 		dialog.setLocationRelativeTo(this);
-
 		// make the dialog visible
 		dialog.setVisible(true);
    }//GEN-LAST:event_editButtonActionPerformed
 
    private void scheduleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_scheduleButtonActionPerformed
-
+		dispose();
    }//GEN-LAST:event_scheduleButtonActionPerformed
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
