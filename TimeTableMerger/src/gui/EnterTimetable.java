@@ -3,13 +3,8 @@ package gui;
 import dao.TimetableDAO;
 import dao.UserStorageDAO;
 import domain.Day;
-import domain.User;
 import java.awt.CardLayout;
 import java.awt.Window;
-//import gui.helpers.SimpleListModel;
-//import gui.helpers.ValidationHelper;
-import java.awt.Window;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -20,27 +15,14 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 	private boolean userIDEditable = true;
 	private final TimetableDAO timetableDAO;
 	private final UserStorageDAO userStorageDAO;
-	private Day mondayWeek1 = new Day();
-	private Day tuesdayWeek1 = new Day();
-	private Day wednesdayWeek1 = new Day();
-	private Day thursdayWeek1 = new Day();
-	private Day fridayWeek1 = new Day();
-	private Day saturdayWeek1 = new Day();
-	private Day sundayWeek1 = new Day();
-	private Day mondayWeek2 = new Day();
-	private Day tuesdayWeek2 = new Day();
-	private Day wednesdayWeek2 = new Day();
-	private Day thursdayWeek2 = new Day();
-	private Day fridayWeek2 = new Day();
-	private Day saturdayWeek2 = new Day();
-	private Day sundayWeek2 = new Day();
 
 	/**
 	 * Saves a new Timetable
 	 *
 	 * @param parent
 	 * @param modal
-	 * @param dao
+	 * @param timetableDAO
+	 * @param userStorageDAO
 	 */
 	public EnterTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserStorageDAO userStorageDAO) {
 		super(parent);
@@ -49,239 +31,6 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 		this.userStorageDAO = userStorageDAO;
 
 		initComponents();
-	}
-
-		public EnterTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserStorageDAO userStorageDAO, 
-                        Day mondayWeek1, Day tuesdayWeek1, Day wednesdayWeek1, Day thursdayWeek1, Day fridayWeek1, Day saturdayWeek1,
-                        Day sundayWeek1, Day mondayWeek2, Day tuesdayWeek2, Day wednesdayWeek2, Day thursdayWeek2, Day fridayWeek2,
-                        Day saturdayWeek2, Day sundayWeek2){
-                    
-		this(parent, modal, timetableDAO, userStorageDAO);
-		this.mondayWeek1 = mondayWeek1;
-		this.tuesdayWeek1 = tuesdayWeek1;
-		this.wednesdayWeek1 = wednesdayWeek1;
-		this.thursdayWeek1 = thursdayWeek1;
-		this.fridayWeek1 = fridayWeek1;
-		this.saturdayWeek1 = saturdayWeek1;
-		this.sundayWeek1 = sundayWeek1;
-		this.mondayWeek2 = mondayWeek2;
-		this.tuesdayWeek2 = tuesdayWeek2;
-		this.wednesdayWeek2 = wednesdayWeek2;
-		this.thursdayWeek2 = thursdayWeek2;
-		this.fridayWeek2 = fridayWeek2;
-		this.saturdayWeek2 = saturdayWeek2;
-		this.sundayWeek2 = sundayWeek2;
-
-		mon8w1.setSelected(mondayWeek1.getEightAM());
-		mon9w1.setSelected(mondayWeek1.getNineAM());
-		mon10w1.setSelected(mondayWeek1.getTenAM());
-		mon11w1.setSelected(mondayWeek1.getElevenAM());
-		mon12w1.setSelected(mondayWeek1.getTwelvePM());
-		mon13w1.setSelected(mondayWeek1.getOnePM());
-		mon14w1.setSelected(mondayWeek1.getTwoPM());
-		mon15w1.setSelected(mondayWeek1.getThreePM());
-		mon16w1.setSelected(mondayWeek1.getFourPM());
-		mon17w1.setSelected(mondayWeek1.getFivePM());
-		mon18w1.setSelected(mondayWeek1.getSixPM());
-		mon19w1.setSelected(mondayWeek1.getSevenPM());
-		mon20w1.setSelected(mondayWeek1.getEightPM());
-		mon21w1.setSelected(mondayWeek1.getNinePM());
-
-		tue8w1.setSelected(tuesdayWeek1.getEightAM());
-		tue9w1.setSelected(tuesdayWeek1.getNineAM());
-		tue10w1.setSelected(tuesdayWeek1.getTenAM());
-		tue11w1.setSelected(tuesdayWeek1.getElevenAM());
-		tue12w1.setSelected(tuesdayWeek1.getTwelvePM());
-		tue13w1.setSelected(tuesdayWeek1.getOnePM());
-		tue14w1.setSelected(tuesdayWeek1.getTwoPM());
-		tue15w1.setSelected(tuesdayWeek1.getThreePM());
-		tue16w1.setSelected(tuesdayWeek1.getFourPM());
-		tue17w1.setSelected(tuesdayWeek1.getFivePM());
-		tue18w1.setSelected(tuesdayWeek1.getSixPM());
-		tue19w1.setSelected(tuesdayWeek1.getSevenPM());
-		tue20w1.setSelected(tuesdayWeek1.getEightPM());
-		tue21w1.setSelected(tuesdayWeek1.getNinePM());
-
-		wed8w1.setSelected(wednesdayWeek1.getEightAM());
-		wed9w1.setSelected(wednesdayWeek1.getNineAM());
-		wed10w1.setSelected(wednesdayWeek1.getTenAM());
-		wed11w1.setSelected(wednesdayWeek1.getElevenAM());
-		wed12w1.setSelected(wednesdayWeek1.getTwelvePM());
-		wed13w1.setSelected(wednesdayWeek1.getOnePM());
-		wed14w1.setSelected(wednesdayWeek1.getTwoPM());
-		wed15w1.setSelected(wednesdayWeek1.getThreePM());
-		wed16w1.setSelected(wednesdayWeek1.getFourPM());
-		wed17w1.setSelected(wednesdayWeek1.getFivePM());
-		wed18w1.setSelected(wednesdayWeek1.getSixPM());
-		wed19w1.setSelected(wednesdayWeek1.getSevenPM());
-		wed20w1.setSelected(wednesdayWeek1.getEightPM());
-		wed21w1.setSelected(wednesdayWeek1.getNinePM());
-
-		thu8w1.setSelected(thursdayWeek1.getEightAM());
-		thu9w1.setSelected(thursdayWeek1.getNineAM());
-		thu10w1.setSelected(thursdayWeek1.getTenAM());
-		thu11w1.setSelected(thursdayWeek1.getElevenAM());
-		thu12w1.setSelected(thursdayWeek1.getTwelvePM());
-		thu13w1.setSelected(thursdayWeek1.getOnePM());
-		thu14w1.setSelected(thursdayWeek1.getTwoPM());
-		thu15w1.setSelected(thursdayWeek1.getThreePM());
-		thu16w1.setSelected(thursdayWeek1.getFourPM());
-		thu17w1.setSelected(thursdayWeek1.getFivePM());
-		thu18w1.setSelected(thursdayWeek1.getSixPM());
-		thu19w1.setSelected(thursdayWeek1.getSevenPM());
-		thu20w1.setSelected(thursdayWeek1.getEightPM());
-		thu21w1.setSelected(thursdayWeek1.getNinePM());
-
-		fri8w1.setSelected(fridayWeek1.getEightAM());
-		fri9w1.setSelected(fridayWeek1.getNineAM());
-		fri10w1.setSelected(fridayWeek1.getTenAM());
-		fri11w1.setSelected(fridayWeek1.getElevenAM());
-		fri12w1.setSelected(fridayWeek1.getTwelvePM());
-		fri13w1.setSelected(fridayWeek1.getOnePM());
-		fri14w1.setSelected(fridayWeek1.getTwoPM());
-		fri15w1.setSelected(fridayWeek1.getThreePM());
-		fri16w1.setSelected(fridayWeek1.getFourPM());
-		fri17w1.setSelected(fridayWeek1.getFivePM());
-		fri18w1.setSelected(fridayWeek1.getSixPM());
-		fri19w1.setSelected(fridayWeek1.getSevenPM());
-		fri20w1.setSelected(fridayWeek1.getEightPM());
-		fri21w1.setSelected(fridayWeek1.getNinePM());
-
-		sat8w1.setSelected(saturdayWeek1.getEightAM());
-		sat9w1.setSelected(saturdayWeek1.getNineAM());
-		sat10w1.setSelected(saturdayWeek1.getTenAM());
-		sat11w1.setSelected(saturdayWeek1.getElevenAM());
-		sat12w1.setSelected(saturdayWeek1.getTwelvePM());
-		sat13w1.setSelected(saturdayWeek1.getOnePM());
-		sat14w1.setSelected(saturdayWeek1.getTwoPM());
-		sat15w1.setSelected(saturdayWeek1.getThreePM());
-		sat16w1.setSelected(saturdayWeek1.getFourPM());
-		sat17w1.setSelected(saturdayWeek1.getFivePM());
-		sat18w1.setSelected(saturdayWeek1.getSixPM());
-		sat19w1.setSelected(saturdayWeek1.getSevenPM());
-		sat20w1.setSelected(saturdayWeek1.getEightPM());
-		sat21w1.setSelected(saturdayWeek1.getNinePM());
-
-		sun8w1.setSelected(sundayWeek1.getEightAM());
-		sun9w1.setSelected(sundayWeek1.getNineAM());
-		sun10w1.setSelected(sundayWeek1.getTenAM());
-		sun11w1.setSelected(sundayWeek1.getElevenAM());
-		sun12w1.setSelected(sundayWeek1.getTwelvePM());
-		sun13w1.setSelected(sundayWeek1.getOnePM());
-		sun14w1.setSelected(sundayWeek1.getTwoPM());
-		sun15w1.setSelected(sundayWeek1.getThreePM());
-		sun16w1.setSelected(sundayWeek1.getFourPM());
-		sun17w1.setSelected(sundayWeek1.getFivePM());
-		sun18w1.setSelected(sundayWeek1.getSixPM());
-		sun19w1.setSelected(sundayWeek1.getSevenPM());
-		sun20w1.setSelected(sundayWeek1.getEightPM());
-		sun21w1.setSelected(sundayWeek1.getNinePM());
-
-		mon8w2.setSelected(mondayWeek2.getEightAM());
-		mon9w2.setSelected(mondayWeek2.getNineAM());
-		mon10w2.setSelected(mondayWeek2.getTenAM());
-		mon11w2.setSelected(mondayWeek2.getElevenAM());
-		mon12w2.setSelected(mondayWeek2.getTwelvePM());
-		mon13w2.setSelected(mondayWeek2.getOnePM());
-		mon14w2.setSelected(mondayWeek2.getTwoPM());
-		mon15w2.setSelected(mondayWeek2.getThreePM());
-		mon16w2.setSelected(mondayWeek2.getFourPM());
-		mon17w2.setSelected(mondayWeek2.getFivePM());
-		mon18w2.setSelected(mondayWeek2.getSixPM());
-		mon19w2.setSelected(mondayWeek2.getSevenPM());
-		mon20w2.setSelected(mondayWeek2.getEightPM());
-		mon21w2.setSelected(mondayWeek2.getNinePM());
-
-		tue8w2.setSelected(tuesdayWeek2.getEightAM());
-		tue9w2.setSelected(tuesdayWeek2.getNineAM());
-		tue10w2.setSelected(tuesdayWeek2.getTenAM());
-		tue11w2.setSelected(tuesdayWeek2.getElevenAM());
-		tue12w2.setSelected(tuesdayWeek2.getTwelvePM());
-		tue13w2.setSelected(tuesdayWeek2.getOnePM());
-		tue14w2.setSelected(tuesdayWeek2.getTwoPM());
-		tue15w2.setSelected(tuesdayWeek2.getThreePM());
-		tue16w2.setSelected(tuesdayWeek2.getFourPM());
-		tue17w2.setSelected(tuesdayWeek2.getFivePM());
-		tue18w2.setSelected(tuesdayWeek2.getSixPM());
-		tue19w2.setSelected(tuesdayWeek2.getSevenPM());
-		tue20w2.setSelected(tuesdayWeek2.getEightPM());
-		tue21w2.setSelected(tuesdayWeek2.getNinePM());
-
-		wed8w2.setSelected(wednesdayWeek2.getEightAM());
-		wed9w2.setSelected(wednesdayWeek2.getNineAM());
-		wed10w2.setSelected(wednesdayWeek2.getTenAM());
-		wed11w2.setSelected(wednesdayWeek2.getElevenAM());
-		wed12w2.setSelected(wednesdayWeek2.getTwelvePM());
-		wed13w2.setSelected(wednesdayWeek2.getOnePM());
-		wed14w2.setSelected(wednesdayWeek2.getTwoPM());
-		wed15w2.setSelected(wednesdayWeek2.getThreePM());
-		wed16w2.setSelected(wednesdayWeek2.getFourPM());
-		wed17w2.setSelected(wednesdayWeek2.getFivePM());
-		wed18w2.setSelected(wednesdayWeek2.getSixPM());
-		wed19w2.setSelected(wednesdayWeek2.getSevenPM());
-		wed20w2.setSelected(wednesdayWeek2.getEightPM());
-		wed21w2.setSelected(wednesdayWeek2.getNinePM());
-
-		thu8w2.setSelected(thursdayWeek2.getEightAM());
-		thu9w2.setSelected(thursdayWeek2.getNineAM());
-		thu10w2.setSelected(thursdayWeek2.getTenAM());
-		thu11w2.setSelected(thursdayWeek2.getElevenAM());
-		thu12w2.setSelected(thursdayWeek2.getTwelvePM());
-		thu13w2.setSelected(thursdayWeek2.getOnePM());
-		thu14w2.setSelected(thursdayWeek2.getTwoPM());
-		thu15w2.setSelected(thursdayWeek2.getThreePM());
-		thu16w2.setSelected(thursdayWeek2.getFourPM());
-		thu17w2.setSelected(thursdayWeek2.getFivePM());
-		thu18w2.setSelected(thursdayWeek2.getSixPM());
-		thu19w2.setSelected(thursdayWeek2.getSevenPM());
-		thu20w2.setSelected(thursdayWeek2.getEightPM());
-		thu21w2.setSelected(thursdayWeek2.getNinePM());
-
-		fri8w2.setSelected(fridayWeek2.getEightAM());
-		fri9w2.setSelected(fridayWeek2.getNineAM());
-		fri10w2.setSelected(fridayWeek2.getTenAM());
-		fri11w2.setSelected(fridayWeek2.getElevenAM());
-		fri12w2.setSelected(fridayWeek2.getTwelvePM());
-		fri13w2.setSelected(fridayWeek2.getOnePM());
-		fri14w2.setSelected(fridayWeek2.getTwoPM());
-		fri15w2.setSelected(fridayWeek2.getThreePM());
-		fri16w2.setSelected(fridayWeek2.getFourPM());
-		fri17w2.setSelected(fridayWeek2.getFivePM());
-		fri18w2.setSelected(fridayWeek2.getSixPM());
-		fri19w2.setSelected(fridayWeek2.getSevenPM());
-		fri20w2.setSelected(fridayWeek2.getEightPM());
-		fri21w2.setSelected(fridayWeek2.getNinePM());
-
-		sat8w2.setSelected(saturdayWeek2.getEightAM());
-		sat9w2.setSelected(saturdayWeek2.getNineAM());
-		sat10w2.setSelected(saturdayWeek2.getTenAM());
-		sat11w2.setSelected(saturdayWeek2.getElevenAM());
-		sat12w2.setSelected(saturdayWeek2.getTwelvePM());
-		sat13w2.setSelected(saturdayWeek2.getOnePM());
-		sat14w2.setSelected(saturdayWeek2.getTwoPM());
-		sat15w2.setSelected(saturdayWeek2.getThreePM());
-		sat16w2.setSelected(saturdayWeek2.getFourPM());
-		sat17w2.setSelected(saturdayWeek2.getFivePM());
-		sat18w2.setSelected(saturdayWeek2.getSixPM());
-		sat19w2.setSelected(saturdayWeek2.getSevenPM());
-		sat20w2.setSelected(saturdayWeek2.getEightPM());
-		sat21w2.setSelected(saturdayWeek2.getNinePM());
-
-		sun8w2.setSelected(sundayWeek2.getEightAM());
-		sun9w2.setSelected(sundayWeek2.getNineAM());
-		sun10w2.setSelected(sundayWeek2.getTenAM());
-		sun11w2.setSelected(sundayWeek2.getElevenAM());
-		sun12w2.setSelected(sundayWeek2.getTwelvePM());
-		sun13w2.setSelected(sundayWeek2.getOnePM());
-		sun14w2.setSelected(sundayWeek2.getTwoPM());
-		sun15w2.setSelected(sundayWeek2.getThreePM());
-		sun16w2.setSelected(sundayWeek2.getFourPM());
-		sun17w2.setSelected(sundayWeek2.getFivePM());
-		sun18w2.setSelected(sundayWeek2.getSixPM());
-		sun19w2.setSelected(sundayWeek2.getSevenPM());
-		sun20w2.setSelected(sundayWeek2.getEightPM());
-		sun21w2.setSelected(sundayWeek2.getNinePM());
-
 	}
 
 	/**

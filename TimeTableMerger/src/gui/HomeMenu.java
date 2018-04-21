@@ -3,13 +3,7 @@ package gui;
 import dao.TimetableDAO;
 import dao.UserStorageDAO;
 import java.awt.Window;
-
 import domain.Day;
-import domain.User;
-import java.awt.CardLayout;
-//import gui.helpers.SimpleListModel;
-import java.math.BigDecimal;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -36,6 +30,10 @@ public class HomeMenu extends javax.swing.JDialog {
 
 	/**
 	 * Creates new form Test
+	 * @param parent
+	 * @param modal
+	 * @param timetableDAO
+	 * @param userStorageDAO
 	 */
 	public HomeMenu(Window parent, boolean modal, TimetableDAO timetableDAO, UserStorageDAO userStorageDAO) {
 		super(parent);
@@ -182,7 +180,7 @@ public class HomeMenu extends javax.swing.JDialog {
 	Day saturdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Saturday");
 	Day sundayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Sunday");
 		
-		EnterTimetable dialog = new EnterTimetable(this, true, timetableDAO, userStorageDAO, mondayWeek1, tuesdayWeek1, wednesdayWeek1,
+		ViewTimetable dialog = new ViewTimetable(this, true, timetableDAO, userStorageDAO, mondayWeek1, tuesdayWeek1, wednesdayWeek1,
 		thursdayWeek1, fridayWeek1, saturdayWeek1, sundayWeek1, mondayWeek2, tuesdayWeek2, wednesdayWeek2, thursdayWeek2, fridayWeek2, 
 		saturdayWeek2, sundayWeek2);
 

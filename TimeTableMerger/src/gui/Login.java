@@ -179,12 +179,9 @@ public class Login extends javax.swing.JFrame {
 			} else {
 				JOptionPane.showConfirmDialog(this, "user not found");
 			}
-			//System.out.println(dao.getProducts());
-			//dispose();
 
 		} catch (DAOException ex) {
 			// message box 
-			//	throw new DAOException(ex.getMessage(), ex);
 			JOptionPane.showConfirmDialog(this, ex.getMessage());
 		}
    }//GEN-LAST:event_jButtonLoginActionPerformed

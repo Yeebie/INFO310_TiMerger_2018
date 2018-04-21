@@ -20,6 +20,9 @@ public class CreateAccount extends javax.swing.JFrame {
 
 	/**
 	 * Creates new form Test
+	 * @param userDAO
+	 * @param timetableDAO
+	 * @param userStorageDAO
 	 */
 	public CreateAccount(UserDAO userDAO, TimetableDAO timetableDAO, UserStorageDAO userStorageDAO) {
 		this.userDAO = userDAO;
@@ -244,25 +247,10 @@ public class CreateAccount extends javax.swing.JFrame {
 				 this.user.setLastName(lnameString);
 				 this.user.setPassword(passwordString);
 				 this.user.setEmail(email);
-
-//		
-//		if (validHelp.isObjectValid(product)){
-//		  if (txtId.isEditable() == true && dao.searchById(idString) != null) {
-//			// message 
-//			int result = JOptionPane.showConfirmDialog(
-//					  this, "Are you sure you want to overwrite this product with same ID?");
-//			// did the user click the yes button?
-//			if (result == JOptionPane.YES_OPTION) {
-//				return;
-//		    	}
-//			}
-//
-//		}
 				 userDAO.saveUser(this.user);
 			 } else {
 				 JOptionPane.showConfirmDialog(this, "Please enter the same password as above.");
 			 }
-			 //sSystem.out.println(dao.getProducts());
 			 dispose();
 
 			 Login frame = new Login(userDAO, timetableDAO, userStorageDAO);
@@ -273,7 +261,6 @@ public class CreateAccount extends javax.swing.JFrame {
 
 		 } catch (DAOException ex) {
 			 // message box 
-//	throw new DAOException(ex.getMessage(), ex);
 			 int result = JOptionPane.showConfirmDialog(
 						this, ex.getMessage());
 		 }
