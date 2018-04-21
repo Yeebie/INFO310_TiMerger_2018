@@ -2,6 +2,10 @@ package gui;
 
 import dao.UserDAO;
 import gui.helpers.SimpleListModel;
+import java.util.ArrayList;
+import static java.util.Arrays.asList;
+import java.util.List;
+import javax.swing.ComboBoxModel;
 
 /**
  *
@@ -11,6 +15,8 @@ public class ScheduleMeeting extends javax.swing.JFrame {
 	
 	private UserDAO userDAO;
 	private SimpleListModel myModel = new SimpleListModel();
+	private final List<String> times = new ArrayList<>(asList("1", "2", "3", "4"));
+
 
 	/**
 	 * Creates new form ScheduleMeeting
@@ -21,6 +27,7 @@ public class ScheduleMeeting extends javax.swing.JFrame {
 		
 		myModel.updateItems(userDAO.getUserList());
 		usersList.setModel(myModel);
+		durationCombo.setModel((ComboBoxModel<String>) times);
 	}
 
 	/**
@@ -56,7 +63,7 @@ public class ScheduleMeeting extends javax.swing.JFrame {
       jScrollPane1 = new javax.swing.JScrollPane();
       usersList = new javax.swing.JList<>();
 
-      setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+      setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
       mainPanel.setBackground(new java.awt.Color(255, 255, 255));
       mainPanel.setName("mainPanel"); // NOI18N
@@ -69,7 +76,6 @@ public class ScheduleMeeting extends javax.swing.JFrame {
       durationLabel.setText("Duration:");
       durationLabel.setName("durationLabel"); // NOI18N
 
-      durationCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
       durationCombo.setName("durationCombo"); // NOI18N
 
       monLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -155,11 +161,6 @@ public class ScheduleMeeting extends javax.swing.JFrame {
 
       jScrollPane1.setName("jScrollPane1"); // NOI18N
 
-      usersList.setModel(new javax.swing.AbstractListModel<String>() {
-         String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-         public int getSize() { return strings.length; }
-         public String getElementAt(int i) { return strings[i]; }
-      });
       usersList.setName("usersList"); // NOI18N
       jScrollPane1.setViewportView(usersList);
 
