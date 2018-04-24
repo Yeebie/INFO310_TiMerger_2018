@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  *
  * @author broma609
  */
-public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFrame
+public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFrame
 
 	private boolean userIDEditable = true;
 	private final TimetableDAO timetableDAO;
@@ -40,7 +40,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 	 * @param timetableDAO
 	 * @param userStorageDAO
 	 */
-	public EnterTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserStorageDAO userStorageDAO) {
+	public CreateTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserStorageDAO userStorageDAO) {
 		super(parent);
 		super.setModal(modal);
 		this.timetableDAO = timetableDAO;
@@ -52,7 +52,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
         
         
         
-        public EnterTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserStorageDAO userStorageDAO, 
+        public CreateTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserStorageDAO userStorageDAO, 
                         Day mondayWeek1, Day tuesdayWeek1, Day wednesdayWeek1, Day thursdayWeek1, Day fridayWeek1, Day saturdayWeek1,
                         Day sundayWeek1, Day mondayWeek2, Day tuesdayWeek2, Day wednesdayWeek2, Day thursdayWeek2, Day fridayWeek2,
                         Day saturdayWeek2, Day sundayWeek2){
@@ -540,7 +540,6 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
         buttonCancel = new javax.swing.JButton();
         buttonSaveTimetable = new javax.swing.JButton();
 
-        setPreferredSize(new java.awt.Dimension(715, 680));
         getContentPane().setLayout(null);
 
         secondaryPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -3456,7 +3455,7 @@ public class EnterTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
         );
 
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(0, 0, 700, 75);
+        jPanel2.setBounds(0, 0, 700, 0);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

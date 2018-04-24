@@ -155,7 +155,7 @@ public class HomeMenu extends javax.swing.JDialog {
 
    private void newButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newButtonActionPerformed
 		dispose();
-		EnterTimetable dialog = new EnterTimetable(this, true, timetableDAO, userStorageDAO);
+		CreateTimetable dialog = new CreateTimetable(this, true, timetableDAO, userStorageDAO);
 		dialog.setLocationRelativeTo(this);
 		dialog.setVisible(true);
    }//GEN-LAST:event_newButtonActionPerformed
