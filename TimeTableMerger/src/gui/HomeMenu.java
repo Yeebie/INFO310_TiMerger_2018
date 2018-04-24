@@ -184,7 +184,7 @@ public class HomeMenu extends javax.swing.JDialog {
 				  thursdayWeek1, fridayWeek1, saturdayWeek1, sundayWeek1, mondayWeek2, tuesdayWeek2, wednesdayWeek2, thursdayWeek2, fridayWeek2,
 				  saturdayWeek2, sundayWeek2);
 		dialog.pack();
-		// Edit: manually double its size:
+                //set size
 		dialog.setSize(715,677);	
 		// centre the dialog on the parent window
 		dialog.setLocationRelativeTo(this);
@@ -198,17 +198,7 @@ public class HomeMenu extends javax.swing.JDialog {
    }//GEN-LAST:event_exitButtonActionPerformed
 
    private void editButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButtonActionPerformed
-//                dispose();
-//                // create the dialog instance
-//                // the first parameter the parent window, and the second is the modal status
-//                EnterTimetable dialog = new EnterTimetable(this, true, timetableDAO, userStorageDAO);
-//                // centre the dialog on the parent window
-//                dialog.setLocationRelativeTo(this);
-//                // make the dialog visible
-//                dialog.setVisible(true);
-
-
-
+                dispose();
 		//initialise each day with the users data
 		Day mondayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Monday");
 		Day tuesdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Tuesday");
@@ -227,11 +217,11 @@ public class HomeMenu extends javax.swing.JDialog {
 
 		// create the dialog instance
 		// the first parameter the parent window, and the second is the modal status
-		EnterTimetable dialog = new EnterTimetable(this, true, timetableDAO, userStorageDAO, mondayWeek1, tuesdayWeek1, wednesdayWeek1,
+		EditTimetable dialog = new EditTimetable(this, true, timetableDAO, userStorageDAO, mondayWeek1, tuesdayWeek1, wednesdayWeek1,
 				  thursdayWeek1, fridayWeek1, saturdayWeek1, sundayWeek1, mondayWeek2, tuesdayWeek2, wednesdayWeek2, thursdayWeek2, fridayWeek2,
 				  saturdayWeek2, sundayWeek2);
 		dialog.pack();
-		// Edit: manually double its size:
+                //set size
 		dialog.setSize(715,677);	
 		// centre the dialog on the parent window
 		dialog.setLocationRelativeTo(this);
