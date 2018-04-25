@@ -4,6 +4,7 @@ import dao.TimetableDAO;
 import dao.UserStorageDAO;
 import domain.Day;
 import java.awt.CardLayout;
+import java.awt.Color;
 import java.awt.Window;
 
 /**
@@ -28,6 +29,8 @@ public class ViewTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
 	private Day fridayWeek2 = new Day();
 	private Day saturdayWeek2 = new Day();
 	private Day sundayWeek2 = new Day();
+	
+	public static final String TILE_URL = "images/greenTile.png";
 
 	/**
 	 * Saves a new Timetable
@@ -56,7 +59,7 @@ public class ViewTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
 		public ViewTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserStorageDAO userStorageDAO, 
                         Day mondayWeek1, Day tuesdayWeek1, Day wednesdayWeek1, Day thursdayWeek1, Day fridayWeek1, Day saturdayWeek1,
                         Day sundayWeek1, Day mondayWeek2, Day tuesdayWeek2, Day wednesdayWeek2, Day thursdayWeek2, Day fridayWeek2,
-                        Day saturdayWeek2, Day sundayWeek2){
+                        Day saturdayWeek2, Day sundayWeek2) {
                     
 		super(parent);
 		super.setModal(modal);
@@ -291,7 +294,11 @@ public class ViewTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
 		sun19w2.setSelected(sundayWeek2.getSevenPM());
 		sun20w2.setSelected(sundayWeek2.getEightPM());
 		sun21w2.setSelected(sundayWeek2.getNinePM());
-	}
+
+		//mon8w1.setBackground(Color.GREEN);
+      //mon8w1.setOpaque(true);
+		//mon8w1.setEnabled(false);
+}
 	/**
 	 * This method is called from within the constructor to initialize the form.
 	 * WARNING: Do NOT modify this code. The content of this method is always
@@ -580,6 +587,8 @@ public class ViewTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
 
       mon8w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
       mon8w1.setBorderPainted(true);
+      mon8w1.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      mon8w1.setDisabledSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
       mon8w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
       mon8w1.setIconTextGap(0);
       mon8w1.setName("mon8w1"); // NOI18N
@@ -3433,7 +3442,7 @@ public class ViewTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
    }//GEN-LAST:event_switchButtonActionPerformed
 
    private void tue8w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue8w1ActionPerformed
-		// TODO add your handling code here:
+		
    }//GEN-LAST:event_tue8w1ActionPerformed
 
    private void wed8w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed8w1ActionPerformed
