@@ -156,6 +156,9 @@ public class HomeMenu extends javax.swing.JDialog {
    private void newButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newButtonActionPerformed
 		dispose();
 		CreateTimetable dialog = new CreateTimetable(this, true, timetableDAO, userStorageDAO);
+		dialog.pack();
+		 //set size
+		dialog.setSize(715,677);
 		dialog.setLocationRelativeTo(this);
 		dialog.setVisible(true);
    }//GEN-LAST:event_newButtonActionPerformed
@@ -184,7 +187,7 @@ public class HomeMenu extends javax.swing.JDialog {
 				  thursdayWeek1, fridayWeek1, saturdayWeek1, sundayWeek1, mondayWeek2, tuesdayWeek2, wednesdayWeek2, thursdayWeek2, fridayWeek2,
 				  saturdayWeek2, sundayWeek2);
 		dialog.pack();
-                //set size
+      //set size
 		dialog.setSize(715,677);	
 		// centre the dialog on the parent window
 		dialog.setLocationRelativeTo(this);

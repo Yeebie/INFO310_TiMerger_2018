@@ -17,7 +17,7 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
 	private final TimetableDAO timetableDAO;
 	private final UserStorageDAO userStorageDAO;
         
-        private Day mondayWeek1 = new Day();
+   private Day mondayWeek1 = new Day();
 	private Day tuesdayWeek1 = new Day();
 	private Day wednesdayWeek1 = new Day();
 	private Day thursdayWeek1 = new Day();
@@ -41,7 +41,7 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
 	 * @param userStorageDAO
 	 */
         
-        public EditTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserStorageDAO userStorageDAO, 
+      public EditTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserStorageDAO userStorageDAO, 
                         Day mondayWeek1, Day tuesdayWeek1, Day wednesdayWeek1, Day thursdayWeek1, Day fridayWeek1, Day saturdayWeek1,
                         Day sundayWeek1, Day mondayWeek2, Day tuesdayWeek2, Day wednesdayWeek2, Day thursdayWeek2, Day fridayWeek2,
                         Day saturdayWeek2, Day sundayWeek2){
