@@ -7,7 +7,7 @@
 
 drop all objects;
 
-ceate table User (
+create table User (
 	UserName varchar(255) NOT NULL,
 	Password varchar(255) NOT NULL,
 	FirstName varchar(255) NOT NULL,
@@ -41,6 +41,8 @@ create table Day (
  * Notes:
  * False represents a free time slot
  * True represents a busy time slot
- * When re-entering the schema into H2, the schema will automatially
+ * When re-entering the schema into H2, the schema will automatically
  * remove the old database
+ * Inspect all data from database:
+ * select * from user; select * from day;
  */
