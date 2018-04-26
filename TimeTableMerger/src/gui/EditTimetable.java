@@ -1,6 +1,7 @@
 package gui;
 
 import dao.TimetableDAO;
+import dao.UserDAO;
 import dao.UserStorageDAO;
 import domain.Day;
 import java.awt.CardLayout;
@@ -15,6 +16,7 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
 
 	private boolean userIDEditable = true;
 	private final TimetableDAO timetableDAO;
+	private final UserDAO userDAO;
 	private final UserStorageDAO userStorageDAO;
         
    private Day mondayWeek1 = new Day();
@@ -41,7 +43,7 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
 	 * @param userStorageDAO
 	 */
         
-      public EditTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserStorageDAO userStorageDAO, 
+      public EditTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserDAO userDAO, UserStorageDAO userStorageDAO, 
                         Day mondayWeek1, Day tuesdayWeek1, Day wednesdayWeek1, Day thursdayWeek1, Day fridayWeek1, Day saturdayWeek1,
                         Day sundayWeek1, Day mondayWeek2, Day tuesdayWeek2, Day wednesdayWeek2, Day thursdayWeek2, Day fridayWeek2,
                         Day saturdayWeek2, Day sundayWeek2){
@@ -49,6 +51,7 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
 		super(parent);
 		super.setModal(modal);
 		this.timetableDAO = timetableDAO;
+		this.userDAO = userDAO;
 		this.userStorageDAO = userStorageDAO;
 		this.setName("Edit Timetable");
 		
@@ -4662,7 +4665,7 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
 
 		dispose();
 
-		HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userStorageDAO);
+		HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userDAO, userStorageDAO);
 		// centre the dialog on the parent window
 		dialog.setLocationRelativeTo(this);
 		// make the dialog visible
@@ -4699,7 +4702,7 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
 		if (result == JOptionPane.YES_OPTION) {
 			                
 		dispose();
-		HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userStorageDAO);
+		HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userDAO, userStorageDAO);
 		// centre the dialog on the parent window
 		dialog.setLocationRelativeTo(this);
 		// make the dialog visible

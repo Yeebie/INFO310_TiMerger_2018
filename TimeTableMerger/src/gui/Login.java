@@ -172,7 +172,7 @@ public class Login extends javax.swing.JFrame {
 
                userStorageDAO.setUserName(userNameString);
 
-               HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userStorageDAO);
+               HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userDAO, userStorageDAO);
                // centre the dialog on the parent window
                dialog.setLocationRelativeTo(this);
                // make the dialog visible

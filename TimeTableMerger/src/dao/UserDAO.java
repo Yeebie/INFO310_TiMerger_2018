@@ -7,7 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  *
@@ -108,7 +110,7 @@ public class UserDAO {
 		}
 	}
 
-	public Collection<User> getUserList() {
+	public Set<User> getUserList() {
 		String sql = "select * from User order by FirstName";
 
 		try (
@@ -116,7 +118,7 @@ public class UserDAO {
 				  PreparedStatement stmt = dbCon.prepareStatement(sql);) {
 
 			ResultSet rs = stmt.executeQuery();
-			List<User> users = new ArrayList<>();
+			Set<User> users = new HashSet<>();
 
 			while (rs.next()) {
 				String userName = rs.getString("UserName");

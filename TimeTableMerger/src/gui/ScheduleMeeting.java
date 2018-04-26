@@ -77,6 +77,11 @@ public class ScheduleMeeting extends javax.swing.JFrame {
       durationLabel.setName("durationLabel"); // NOI18N
 
       durationCombo.setName("durationCombo"); // NOI18N
+      durationCombo.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            durationComboActionPerformed(evt);
+         }
+      });
 
       monLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
       monLabel.setText("Monday");
@@ -100,6 +105,11 @@ public class ScheduleMeeting extends javax.swing.JFrame {
       tueCheckBox.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/unselectedCheckBox.png"))); // NOI18N
       tueCheckBox.setName("tueCheckBox"); // NOI18N
       tueCheckBox.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/selectedCheckBox.png"))); // NOI18N
+      tueCheckBox.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            tueCheckBoxActionPerformed(evt);
+         }
+      });
 
       wedLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
       wedLabel.setText("Wednesday");
@@ -109,6 +119,11 @@ public class ScheduleMeeting extends javax.swing.JFrame {
       wedCheckBox.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/unselectedCheckBox.png"))); // NOI18N
       wedCheckBox.setName("wedCheckBox"); // NOI18N
       wedCheckBox.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/selectedCheckBox.png"))); // NOI18N
+      wedCheckBox.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            wedCheckBoxActionPerformed(evt);
+         }
+      });
 
       thuLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
       thuLabel.setText("Thursday");
@@ -118,6 +133,11 @@ public class ScheduleMeeting extends javax.swing.JFrame {
       thuCheckBox.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/unselectedCheckBox.png"))); // NOI18N
       thuCheckBox.setName("thuCheckBox"); // NOI18N
       thuCheckBox.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/selectedCheckBox.png"))); // NOI18N
+      thuCheckBox.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            thuCheckBoxActionPerformed(evt);
+         }
+      });
 
       friLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
       friLabel.setText("Friday");
@@ -127,6 +147,11 @@ public class ScheduleMeeting extends javax.swing.JFrame {
       friCheckBox.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/unselectedCheckBox.png"))); // NOI18N
       friCheckBox.setName("friCheckBox"); // NOI18N
       friCheckBox.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/selectedCheckBox.png"))); // NOI18N
+      friCheckBox.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            friCheckBoxActionPerformed(evt);
+         }
+      });
 
       satLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
       satLabel.setText("Saturday");
@@ -136,6 +161,11 @@ public class ScheduleMeeting extends javax.swing.JFrame {
       satCheckBox.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/unselectedCheckBox.png"))); // NOI18N
       satCheckBox.setName("satCheckBox"); // NOI18N
       satCheckBox.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/selectedCheckBox.png"))); // NOI18N
+      satCheckBox.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            satCheckBoxActionPerformed(evt);
+         }
+      });
 
       sunLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
       sunLabel.setText("Sunday");
@@ -145,6 +175,11 @@ public class ScheduleMeeting extends javax.swing.JFrame {
       sunCheckBox.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/unselectedCheckBox.png"))); // NOI18N
       sunCheckBox.setName("sunCheckBox"); // NOI18N
       sunCheckBox.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/selectedCheckBox.png"))); // NOI18N
+      sunCheckBox.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sunCheckBoxActionPerformed(evt);
+         }
+      });
 
       searchField.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
       searchField.setText("Search");
@@ -303,6 +338,34 @@ public class ScheduleMeeting extends javax.swing.JFrame {
    private void monCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_monCheckBoxActionPerformed
       // TODO add your handling code here:
    }//GEN-LAST:event_monCheckBoxActionPerformed
+
+   private void tueCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tueCheckBoxActionPerformed
+      // TODO add your handling code here:
+   }//GEN-LAST:event_tueCheckBoxActionPerformed
+
+   private void wedCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wedCheckBoxActionPerformed
+      // TODO add your handling code here:
+   }//GEN-LAST:event_wedCheckBoxActionPerformed
+
+   private void thuCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thuCheckBoxActionPerformed
+      // TODO add your handling code here:
+   }//GEN-LAST:event_thuCheckBoxActionPerformed
+
+   private void friCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_friCheckBoxActionPerformed
+      // TODO add your handling code here:
+   }//GEN-LAST:event_friCheckBoxActionPerformed
+
+   private void satCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_satCheckBoxActionPerformed
+      // TODO add your handling code here:
+   }//GEN-LAST:event_satCheckBoxActionPerformed
+
+   private void sunCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sunCheckBoxActionPerformed
+      // TODO add your handling code here:
+   }//GEN-LAST:event_sunCheckBoxActionPerformed
+
+   private void durationComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_durationComboActionPerformed
+      // TODO add your handling code here:
+   }//GEN-LAST:event_durationComboActionPerformed
 
 	/**
 	 * @param args the command line arguments

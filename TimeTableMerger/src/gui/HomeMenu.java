@@ -13,6 +13,7 @@ import domain.Day;
 public class HomeMenu extends javax.swing.JDialog {
 
 	private final TimetableDAO timetableDAO;
+	private final UserDAO userDAO;
 	private final UserStorageDAO userStorageDAO;
 	private Day mondayWeek1;
 	private Day tuesdayWeek1;
@@ -37,10 +38,11 @@ public class HomeMenu extends javax.swing.JDialog {
 	 * @param timetableDAO
 	 * @param userStorageDAO
 	 */
-	public HomeMenu(Window parent, boolean modal, TimetableDAO timetableDAO, UserStorageDAO userStorageDAO) {
+	public HomeMenu(Window parent, boolean modal, TimetableDAO timetableDAO, UserDAO userDAO, UserStorageDAO userStorageDAO) {
 		super(parent);
 		setModal(modal);
 		this.timetableDAO = timetableDAO;
+		this.userDAO = userDAO;
 		this.userStorageDAO = userStorageDAO;
 		initComponents();
 	}
@@ -155,10 +157,10 @@ public class HomeMenu extends javax.swing.JDialog {
 
    private void newButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newButtonActionPerformed
 		dispose();
-		CreateTimetable dialog = new CreateTimetable(this, true, timetableDAO, userStorageDAO);
+		CreateTimetable dialog = new CreateTimetable(this, true, timetableDAO, userDAO, userStorageDAO);
 		dialog.pack();
-		 //set size
-		dialog.setSize(715,677);
+		//set size
+		dialog.setSize(715, 677);
 		dialog.setLocationRelativeTo(this);
 		dialog.setVisible(true);
    }//GEN-LAST:event_newButtonActionPerformed
@@ -183,12 +185,12 @@ public class HomeMenu extends javax.swing.JDialog {
 
 		// create the dialog instance
 		// the first parameter the parent window, and the second is the modal status
-		ViewTimetable dialog = new ViewTimetable(this, true, timetableDAO, userStorageDAO, mondayWeek1, tuesdayWeek1, wednesdayWeek1,
+		ViewTimetable dialog = new ViewTimetable(this, true, timetableDAO, userDAO, userStorageDAO, mondayWeek1, tuesdayWeek1, wednesdayWeek1,
 				  thursdayWeek1, fridayWeek1, saturdayWeek1, sundayWeek1, mondayWeek2, tuesdayWeek2, wednesdayWeek2, thursdayWeek2, fridayWeek2,
 				  saturdayWeek2, sundayWeek2);
 		dialog.pack();
-      //set size
-		dialog.setSize(715,677);	
+		//set size
+		dialog.setSize(715, 677);
 		// centre the dialog on the parent window
 		dialog.setLocationRelativeTo(this);
 		// make the dialog visible
@@ -201,7 +203,7 @@ public class HomeMenu extends javax.swing.JDialog {
    }//GEN-LAST:event_exitButtonActionPerformed
 
    private void editButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButtonActionPerformed
-                dispose();
+		dispose();
 		//initialise each day with the users data
 		Day mondayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Monday");
 		Day tuesdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Tuesday");
@@ -220,22 +222,29 @@ public class HomeMenu extends javax.swing.JDialog {
 
 		// create the dialog instance
 		// the first parameter the parent window, and the second is the modal status
-		EditTimetable dialog = new EditTimetable(this, true, timetableDAO, userStorageDAO, mondayWeek1, tuesdayWeek1, wednesdayWeek1,
+		EditTimetable dialog = new EditTimetable(this, true, timetableDAO, userDAO, userStorageDAO, mondayWeek1, tuesdayWeek1, wednesdayWeek1,
 				  thursdayWeek1, fridayWeek1, saturdayWeek1, sundayWeek1, mondayWeek2, tuesdayWeek2, wednesdayWeek2, thursdayWeek2, fridayWeek2,
 				  saturdayWeek2, sundayWeek2);
 		dialog.pack();
-                //set size
-		dialog.setSize(715,677);	
+		//set size
+		dialog.setSize(715, 677);
 		// centre the dialog on the parent window
 		dialog.setLocationRelativeTo(this);
 		// make the dialog visible
 		dialog.setVisible(true);
-                dispose();
-                
+		dispose();
+
    }//GEN-LAST:event_editButtonActionPerformed
 
    private void scheduleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_scheduleButtonActionPerformed
 		dispose();
+		ScheduleTimetable dialog = new ScheduleTimetable(this, true, timetableDAO, userDAO, userStorageDAO);
+		dialog.pack();
+		//set size
+		dialog.setSize(715, 677);
+		dialog.setLocationRelativeTo(this);
+		dialog.setVisible(true);
+		System.out.println("Sending to ScheduleTimetable");
    }//GEN-LAST:event_scheduleButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

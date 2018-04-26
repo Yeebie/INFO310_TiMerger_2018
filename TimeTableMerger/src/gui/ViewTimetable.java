@@ -1,6 +1,7 @@
 package gui;
 
 import dao.TimetableDAO;
+import dao.UserDAO;
 import dao.UserStorageDAO;
 import domain.Day;
 import java.awt.CardLayout;
@@ -14,6 +15,7 @@ import java.awt.Window;
 public class ViewTimetable extends javax.swing.JDialog { //Was javax.swing.JFrame
 
 	private final TimetableDAO timetableDAO;
+	private final UserDAO userDAO;
 	private final UserStorageDAO userStorageDAO;
 	private Day mondayWeek1 = new Day();
 	private Day tuesdayWeek1 = new Day();
@@ -56,7 +58,7 @@ public class ViewTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
 	 */
 
 
-		public ViewTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserStorageDAO userStorageDAO, 
+		public ViewTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserDAO userDAO, UserStorageDAO userStorageDAO, 
                         Day mondayWeek1, Day tuesdayWeek1, Day wednesdayWeek1, Day thursdayWeek1, Day fridayWeek1, Day saturdayWeek1,
                         Day sundayWeek1, Day mondayWeek2, Day tuesdayWeek2, Day wednesdayWeek2, Day thursdayWeek2, Day fridayWeek2,
                         Day saturdayWeek2, Day sundayWeek2) {
@@ -64,6 +66,7 @@ public class ViewTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
 		super(parent);
 		super.setModal(modal);
 		this.timetableDAO = timetableDAO;
+		this.userDAO = userDAO;
 		this.userStorageDAO = userStorageDAO;
 		this.setName("View Timetable");
 		
@@ -4225,7 +4228,7 @@ public class ViewTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
    private void buttonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonExitActionPerformed
 		// TODO add your handling code here:
 		dispose();
-		HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userStorageDAO);
+		HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userDAO, userStorageDAO);
 		// centre the dialog on the parent window
 		dialog.setLocationRelativeTo(this);
 		// make the dialog visible
