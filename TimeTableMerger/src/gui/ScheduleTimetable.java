@@ -24,7 +24,7 @@ public class ScheduleTimetable extends javax.swing.JDialog { //Was javax.swing.J
 	private final UserDAO userDAO;
 	private final UserStorageDAO userStorageDAO;
 	private Set<User> users = new HashSet<User>();
-	private Set<Day> dayss = new HashSet<Day>();
+	private Set<Day> days = new HashSet<Day>();
 
 	/**
 	 * Saves a new Timetable
@@ -3998,26 +3998,66 @@ public class ScheduleTimetable extends javax.swing.JDialog { //Was javax.swing.J
    }//GEN-LAST:event_buttonCancelActionPerformed
 
    private void buttonSaveTimetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSaveTimetableActionPerformed
-
+		/**
+		 * This will eventually turn into the mergeTimetables method, not sure
+		 * how, but it will.
+		 */
 		/**
 		 * This is temporary code, contact list & schedule meeting haven't been
-		 * completed yet, using getAll() instead of retrieved User List from
+		 * completed yet, using getUserList() instead of retrieved User List from
 		 * associated pages.
+		 */
+		/**
+		 * Does this need to be a sorted collection? What happens if it's all
+		 * jumbled up when we compare timetables? Probably need to maintain
+		 * traversal order.
 		 */
 		users = userDAO.getUserList();
 
 		System.out.println("Printing all users");
 		for (User aUser : users) {
-			System.out.println(aUser);
-//			Day aDay = new Day(aUser, dayName);
+			System.out.println("Printing Data for user: " + aUser);
+			Day aDay = new Day();
+			aDay = timetableDAO.getTimetable(aUser.getUserName(), "Week 1 Monday");
+			days.add(aDay);
+			aDay = timetableDAO.getTimetable(aUser.getUserName(), "Week 1 Tuesday");
+			days.add(aDay);
+			aDay = timetableDAO.getTimetable(aUser.getUserName(), "Week 1 Wednesday");
+			days.add(aDay);
+			aDay = timetableDAO.getTimetable(aUser.getUserName(), "Week 1 Thursday");
+			days.add(aDay);
+			aDay = timetableDAO.getTimetable(aUser.getUserName(), "Week 1 Friday");
+			days.add(aDay);
+			aDay = timetableDAO.getTimetable(aUser.getUserName(), "Week 1 Saturday");
+			days.add(aDay);
+			aDay = timetableDAO.getTimetable(aUser.getUserName(), "Week 1 Sunday");
+			days.add(aDay);
 
+			aDay = timetableDAO.getTimetable(aUser.getUserName(), "Week 2 Monday");
+			days.add(aDay);
+			aDay = timetableDAO.getTimetable(aUser.getUserName(), "Week 2 Tuesday");
+			days.add(aDay);
+			aDay = timetableDAO.getTimetable(aUser.getUserName(), "Week 2 Wednesday");
+			days.add(aDay);
+			aDay = timetableDAO.getTimetable(aUser.getUserName(), "Week 2 Thursday");
+			days.add(aDay);
+			aDay = timetableDAO.getTimetable(aUser.getUserName(), "Week 2 Friday");
+			days.add(aDay);
+			aDay = timetableDAO.getTimetable(aUser.getUserName(), "Week 2 Saturday");
+			days.add(aDay);
+			aDay = timetableDAO.getTimetable(aUser.getUserName(), "Week 2 Sunday");
+			days.add(aDay);
+
+			for (Day aDayP2 : days) {
+				System.out.println(aDayP2);
+			}
+			System.out.println("All done aDayP2");
 		}
-		System.out.println("All done");
+		System.out.println("All done super fun");
 
 //		for (User aUser : users) {
 //			aUser.getTimetable();
 //		}
-
 		/**
 		 * End temporary code
 		 */
