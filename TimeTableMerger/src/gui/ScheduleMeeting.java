@@ -15,7 +15,6 @@ public class ScheduleMeeting extends javax.swing.JFrame {
 	
 	private UserDAO userDAO;
 	private SimpleListModel myModel = new SimpleListModel();
-	private final List<String> times = new ArrayList<>(asList("1", "2", "3", "4"));
 
 
 	/**
@@ -27,7 +26,6 @@ public class ScheduleMeeting extends javax.swing.JFrame {
 		
 		myModel.updateItems(userDAO.getUserList());
 		usersList.setModel(myModel);
-		durationCombo.setModel((ComboBoxModel<String>) times);
 	}
 
 	/**
