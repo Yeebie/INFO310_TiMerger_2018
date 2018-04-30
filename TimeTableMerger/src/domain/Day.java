@@ -11,174 +11,193 @@ package domain;
  */
 public class Day {
 
-	private String userName;
-	private String dayName;
+    private String userName;
+    private String dayName;
 
-	private Boolean eightAM;
-	private Boolean nineAM;
-	private Boolean tenAM;
-	private Boolean elevenAM;
-	private Boolean twelvePM;
-	private Boolean onePM;
-	private Boolean twoPM;
-	private Boolean threePM;
-	private Boolean fourPM;
-	private Boolean fivePM;
-	private Boolean sixPM;
-	private Boolean sevenPM;
-	private Boolean eightPM;
-	private Boolean ninePM;
+    private Boolean eightAM;
+    private Boolean nineAM;
+    private Boolean tenAM;
+    private Boolean elevenAM;
+    private Boolean twelvePM;
+    private Boolean onePM;
+    private Boolean twoPM;
+    private Boolean threePM;
+    private Boolean fourPM;
+    private Boolean fivePM;
+    private Boolean sixPM;
+    private Boolean sevenPM;
+    private Boolean eightPM;
+    private Boolean ninePM;
+    
+    public Day() {
+        
+    }
 
-	public Day() {
+    public Day(String userName, String dayName) {
+        this.userName = userName;
+        this.dayName = dayName;
+        this.eightAM = false;
+        this.nineAM = false;
+        this.tenAM = false;
+        this.elevenAM = false;
+        this.twelvePM = false;
+        this.onePM = false;
+        this.twoPM = false;
+        this.threePM = false;
+        this.fourPM = false;
+        this.fivePM = false;
+        this.sixPM = false;
+        this.sevenPM = false;
+        this.eightPM = false;
+        this.ninePM = false;
+    }
 
-	}
+    public Day(String userName, String dayName, Boolean eightAM, Boolean nineAM, Boolean tenAM, Boolean elevenAM, Boolean twelvePM, Boolean onePM, Boolean twoPM, Boolean threePM, Boolean fourPM, Boolean fivePM, Boolean sixPM, Boolean sevenPM, Boolean eightPM, Boolean ninePM) {
+        this.userName = userName;
+        this.dayName = dayName;
+        this.eightAM = eightAM;
+        this.nineAM = nineAM;
+        this.tenAM = tenAM;
+        this.elevenAM = elevenAM;
+        this.twelvePM = twelvePM;
+        this.onePM = onePM;
+        this.twoPM = twoPM;
+        this.threePM = threePM;
+        this.fourPM = fourPM;
+        this.fivePM = fivePM;
+        this.sixPM = sixPM;
+        this.sevenPM = sevenPM;
+        this.eightPM = eightPM;
+        this.ninePM = ninePM;
+    }
 
-	public Day(String userName, String dayName, Boolean eightAM, Boolean nineAM, Boolean tenAM, Boolean elevenAM, Boolean twelvePM, Boolean onePM, Boolean twoPM, Boolean threePM, Boolean fourPM, Boolean fivePM, Boolean sixPM, Boolean sevenPM, Boolean eightPM, Boolean ninePM) {
-		this.userName = userName;
-		this.dayName = dayName;
-		this.eightAM = eightAM;
-		this.nineAM = nineAM;
-		this.tenAM = tenAM;
-		this.elevenAM = elevenAM;
-		this.twelvePM = twelvePM;
-		this.onePM = onePM;
-		this.twoPM = twoPM;
-		this.threePM = threePM;
-		this.fourPM = fourPM;
-		this.fivePM = fivePM;
-		this.sixPM = sixPM;
-		this.sevenPM = sevenPM;
-		this.eightPM = eightPM;
-		this.ninePM = ninePM;
-	}
+    public String getUserName() {
+        return userName;
+    }
 
-	public String getUserName() {
-		return userName;
-	}
+    public void setUser(String userName) {
+        this.userName = userName;
+    }
 
-	public void setUser(String userName) {
-		this.userName = userName;
-	}
+    public String getDayName() {
+        return dayName;
+    }
 
-	public String getDayName() {
-		return dayName;
-	}
+    public void setDayName(String dayName) {
+        this.dayName = dayName;
+    }
 
-	public void setDayName(String dayName) {
-		this.dayName = dayName;
-	}
+    public Boolean getEightAM() {
+        return eightAM;
+    }
 
-	public Boolean getEightAM() {
-		return eightAM;
-	}
+    public void setEightAM(Boolean eightAM) {
+        this.eightAM = eightAM;
+    }
 
-	public void setEightAM(Boolean eightAM) {
-		this.eightAM = eightAM;
-	}
+    public Boolean getNineAM() {
+        return nineAM;
+    }
 
-	public Boolean getNineAM() {
-		return nineAM;
-	}
+    public void setNineAM(Boolean nineAM) {
+        this.nineAM = nineAM;
+    }
 
-	public void setNineAM(Boolean nineAM) {
-		this.nineAM = nineAM;
-	}
+    public Boolean getTenAM() {
+        return tenAM;
+    }
 
-	public Boolean getTenAM() {
-		return tenAM;
-	}
+    public void setTenAM(Boolean tenAM) {
+        this.tenAM = tenAM;
+    }
 
-	public void setTenAM(Boolean tenAM) {
-		this.tenAM = tenAM;
-	}
+    public Boolean getElevenAM() {
+        return elevenAM;
+    }
 
-	public Boolean getElevenAM() {
-		return elevenAM;
-	}
+    public void setElevenAM(Boolean elevenAM) {
+        this.elevenAM = elevenAM;
+    }
 
-	public void setElevenAM(Boolean elevenAM) {
-		this.elevenAM = elevenAM;
-	}
+    public Boolean getTwelvePM() {
+        return twelvePM;
+    }
 
-	public Boolean getTwelvePM() {
-		return twelvePM;
-	}
+    public void setTwelvePM(Boolean twelvePM) {
+        this.twelvePM = twelvePM;
+    }
 
-	public void setTwelvePM(Boolean twelvePM) {
-		this.twelvePM = twelvePM;
-	}
+    public Boolean getOnePM() {
+        return onePM;
+    }
 
-	public Boolean getOnePM() {
-		return onePM;
-	}
+    public void setOnePM(Boolean onePM) {
+        this.onePM = onePM;
+    }
 
-	public void setOnePM(Boolean onePM) {
-		this.onePM = onePM;
-	}
+    public Boolean getTwoPM() {
+        return twoPM;
+    }
 
-	public Boolean getTwoPM() {
-		return twoPM;
-	}
+    public void setTwoPM(Boolean twoPM) {
+        this.twoPM = twoPM;
+    }
 
-	public void setTwoPM(Boolean twoPM) {
-		this.twoPM = twoPM;
-	}
+    public Boolean getThreePM() {
+        return threePM;
+    }
 
-	public Boolean getThreePM() {
-		return threePM;
-	}
+    public void setThreePM(Boolean threePM) {
+        this.threePM = threePM;
+    }
 
-	public void setThreePM(Boolean threePM) {
-		this.threePM = threePM;
-	}
+    public Boolean getFourPM() {
+        return fourPM;
+    }
 
-	public Boolean getFourPM() {
-		return fourPM;
-	}
+    public void setFourPM(Boolean fourPM) {
+        this.fourPM = fourPM;
+    }
 
-	public void setFourPM(Boolean fourPM) {
-		this.fourPM = fourPM;
-	}
+    public Boolean getFivePM() {
+        return fivePM;
+    }
 
-	public Boolean getFivePM() {
-		return fivePM;
-	}
+    public void setFivePM(Boolean fivePM) {
+        this.fivePM = fivePM;
+    }
 
-	public void setFivePM(Boolean fivePM) {
-		this.fivePM = fivePM;
-	}
+    public Boolean getSixPM() {
+        return sixPM;
+    }
 
-	public Boolean getSixPM() {
-		return sixPM;
-	}
+    public void setSixPM(Boolean sixPM) {
+        this.sixPM = sixPM;
+    }
 
-	public void setSixPM(Boolean sixPM) {
-		this.sixPM = sixPM;
-	}
+    public Boolean getSevenPM() {
+        return sevenPM;
+    }
 
-	public Boolean getSevenPM() {
-		return sevenPM;
-	}
+    public void setSevenPM(Boolean sevenPM) {
+        this.sevenPM = sevenPM;
+    }
 
-	public void setSevenPM(Boolean sevenPM) {
-		this.sevenPM = sevenPM;
-	}
+    public Boolean getEightPM() {
+        return eightPM;
+    }
 
-	public Boolean getEightPM() {
-		return eightPM;
-	}
+    public void setEightPM(Boolean eightPM) {
+        this.eightPM = eightPM;
+    }
 
-	public void setEightPM(Boolean eightPM) {
-		this.eightPM = eightPM;
-	}
+    public Boolean getNinePM() {
+        return ninePM;
+    }
 
-	public Boolean getNinePM() {
-		return ninePM;
-	}
-
-	public void setNinePM(Boolean ninePM) {
-		this.ninePM = ninePM;
-	}
+    public void setNinePM(Boolean ninePM) {
+        this.ninePM = ninePM;
+    }
 
     @Override
     public String toString() {
