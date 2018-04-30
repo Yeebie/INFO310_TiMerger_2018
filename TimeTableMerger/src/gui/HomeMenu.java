@@ -262,7 +262,7 @@ public class HomeMenu extends javax.swing.JDialog {
 
    private void contactButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactButtonActionPerformed
       dispose();
-		Contacts dialog = new Contacts(this, true, userDAO);
+		Contacts dialog = new Contacts(this, true, timetableDAO, userDAO, userStorageDAO);
 		dialog.pack();
 		//set size
 		dialog.setSize(715, 677);

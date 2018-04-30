@@ -176,7 +176,7 @@ public class UserDAO {
 	}
 
 	
-	/*public void searchByUserName(String UserName) {
+	public User searchByUserName(String userName) {
 		String sql = "select * from user where username = ?";
 		try (
 				  // get connection to database
@@ -190,17 +190,18 @@ public class UserDAO {
 			ResultSet rs = stmt.executeQuery();
 
 			if (rs.next()) {
-                String username2 = rs.getString("username");
+                String username = rs.getString("username");
                 String fname = rs.getString("firstname");
-                String email = rs.getString("email");
+					 String lname = rs.getString("lastname");
                 String password = rs.getString("password");
-                String lname = rs.getString("lastname");
-				return new User(userName, password, firstName, lastName, email);
+					 String email = rs.getString("email");
+				User u = new User(username, fname, email, password, lname);
+				return u; 
 			} else {
 				return null;
 			}
 		} catch (SQLException ex) {
 			throw new DAOException(ex.getMessage(), ex);
 		}
-	}*/
+	}
 }

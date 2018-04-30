@@ -44,26 +44,42 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace pref="145" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jScrollPane1" alignment="1" min="-2" pref="424" max="-2" attributes="0"/>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="addButton" min="-2" pref="110" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="exitButton" min="-2" pref="110" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="titleLabel" min="-2" max="-2" attributes="0"/>
-                              <Component id="searchField" min="-2" pref="370" max="-2" attributes="0"/>
+                              <Component id="jScrollPane2" alignment="1" min="-2" pref="424" max="-2" attributes="0"/>
+                              <Component id="jScrollPane1" alignment="1" min="-2" pref="424" max="-2" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="titleLabel" min="-2" max="-2" attributes="0"/>
+                                      <Component id="searchText" min="-2" pref="370" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="searchButton" min="-2" pref="48" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="searchButton" min="-2" pref="48" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="ContactList" min="-2" pref="137" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="exitButton" min="-2" pref="110" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="289" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="addButton" min="-2" pref="110" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="292" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
           </Group>
         </DimensionLayout>
@@ -74,17 +90,20 @@
                   <Component id="titleLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="searchField" min="-2" pref="49" max="-2" attributes="0"/>
+                      <Component id="searchText" min="-2" pref="49" max="-2" attributes="0"/>
                       <Component id="searchButton" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="addButton" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
-                      <Component id="exitButton" alignment="0" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" pref="340" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="117" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="addButton" min="-2" pref="31" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="ContactList" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="exitButton" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -99,13 +118,13 @@
             <Property name="name" type="java.lang.String" value="titleLabel" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="searchField">
+        <Component class="javax.swing.JTextField" name="searchText">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Search"/>
-            <Property name="name" type="java.lang.String" value="searchField" noResource="true"/>
+            <Property name="name" type="java.lang.String" value="searchText" noResource="true"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="searchButton">
@@ -117,6 +136,9 @@
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="name" type="java.lang.String" value="searchButton" noResource="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="addButton">
           <Properties>
@@ -168,6 +190,41 @@
             </Component>
           </SubComponents>
         </Container>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="jScrollPane2" noResource="true"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JList" name="contactsList">
+              <Properties>
+                <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+                  <StringArray count="5">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                    <StringItem index="4" value="Item 5"/>
+                  </StringArray>
+                </Property>
+                <Property name="name" type="java.lang.String" value="contactsList" noResource="true"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="ContactList">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Contact List: "/>
+            <Property name="name" type="java.lang.String" value="ContactList" noResource="true"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
   </SubComponents>

@@ -1,6 +1,8 @@
 package gui;
 
 import dao.UserDAO;
+import dao.TimetableDAO;
+import dao.UserStorageDAO;
 import gui.helpers.SimpleListModel;
 import java.awt.Window;
 
@@ -10,25 +12,36 @@ import java.awt.Window;
  */
 public class Contacts extends javax.swing.JFrame {
 	
-	private UserDAO userDAO;
-	private final SimpleListModel myModel = new SimpleListModel();
+	private final TimetableDAO timetableDAO;
+	private final UserDAO userDAO = new UserDAO();
+	private final UserStorageDAO userStorageDAO;
+	//private final SimpleListModel myModel = new SimpleListModel();
+	
+	SimpleListModel displayContacts = new SimpleListModel();
+	//SimpleListModel displayCategories = new SimpleListModel();
+	//private final ManageProductsDAO productDAO = new ManageProductsDAO();
 
 	/**
 	 * Creates new form Contacts
 	 * @param parent
 	 * @param modal
+	 * @param timetableDAO
 	 * @param userDAO
+	 * @param userStorageDAO
 	 */
-	public Contacts(Window parent, boolean modal, UserDAO userDAO) {
+	public Contacts(Window parent, boolean modal, TimetableDAO timetableDAO, UserDAO userDAO, UserStorageDAO userStorageDAO) {
+		this.timetableDAO = timetableDAO;
+		//this.userDAO = userDAO;
+		this.userStorageDAO = userStorageDAO;
+		
 		initComponents();
 		
-		myModel.updateItems(userDAO.getUserList());
-		usersList.setModel(myModel);
+
+		displayContacts.updateItems(userDAO.getUserList());
+		usersList.setModel(displayContacts);
 	}
 
-	private Contacts() {
-		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-	}
+	
 
 	/**
 	 * This method is called from within the constructor to initialize the form.
@@ -41,12 +54,15 @@ public class Contacts extends javax.swing.JFrame {
 
       mainPanel = new javax.swing.JPanel();
       titleLabel = new javax.swing.JLabel();
-      searchField = new javax.swing.JTextField();
+      searchText = new javax.swing.JTextField();
       searchButton = new javax.swing.JButton();
       addButton = new javax.swing.JButton();
       exitButton = new javax.swing.JButton();
       jScrollPane1 = new javax.swing.JScrollPane();
       usersList = new javax.swing.JList<>();
+      jScrollPane2 = new javax.swing.JScrollPane();
+      contactsList = new javax.swing.JList<>();
+      ContactList = new javax.swing.JLabel();
 
       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,14 +73,19 @@ public class Contacts extends javax.swing.JFrame {
       titleLabel.setText("Add Contacts");
       titleLabel.setName("titleLabel"); // NOI18N
 
-      searchField.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-      searchField.setText("Search");
-      searchField.setName("searchField"); // NOI18N
+      searchText.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+      searchText.setText("Search");
+      searchText.setName("searchText"); // NOI18N
 
       searchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/searchIcon.png"))); // NOI18N
       searchButton.setBorderPainted(false);
       searchButton.setContentAreaFilled(false);
       searchButton.setName("searchButton"); // NOI18N
+      searchButton.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            searchButtonActionPerformed(evt);
+         }
+      });
 
       addButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
       addButton.setText("Add");
@@ -89,26 +110,49 @@ public class Contacts extends javax.swing.JFrame {
       usersList.setName("usersList"); // NOI18N
       jScrollPane1.setViewportView(usersList);
 
+      jScrollPane2.setName("jScrollPane2"); // NOI18N
+
+      contactsList.setModel(new javax.swing.AbstractListModel<String>() {
+         String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+         public int getSize() { return strings.length; }
+         public String getElementAt(int i) { return strings[i]; }
+      });
+      contactsList.setName("contactsList"); // NOI18N
+      jScrollPane2.setViewportView(contactsList);
+
+      ContactList.setText("Contact List: ");
+      ContactList.setName("ContactList"); // NOI18N
+
       javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
       mainPanel.setLayout(mainPanelLayout);
       mainPanelLayout.setHorizontalGroup(
          mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
+         .addGroup(mainPanelLayout.createSequentialGroup()
             .addContainerGap(145, Short.MAX_VALUE)
-            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-               .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 424, javax.swing.GroupLayout.PREFERRED_SIZE)
-               .addGroup(mainPanelLayout.createSequentialGroup()
-                  .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                  .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addGap(112, 112, 112))
-               .addGroup(mainPanelLayout.createSequentialGroup()
+            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
                   .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                     .addComponent(titleLabel)
-                     .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
-                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                  .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addGap(131, 131, 131))
+                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 424, javax.swing.GroupLayout.PREFERRED_SIZE)
+                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 424, javax.swing.GroupLayout.PREFERRED_SIZE)
+                     .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                           .addComponent(titleLabel)
+                           .addComponent(searchText, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                  .addGap(131, 131, 131))
+               .addGroup(mainPanelLayout.createSequentialGroup()
+                  .addComponent(ContactList, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
+                  .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addGap(289, 289, 289))
+               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
+                  .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addGap(292, 292, 292))))
       );
       mainPanelLayout.setVerticalGroup(
          mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,15 +161,19 @@ public class Contacts extends javax.swing.JFrame {
             .addComponent(titleLabel)
             .addGap(27, 27, 27)
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-               .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+               .addComponent(searchText, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                .addComponent(searchButton))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-               .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-               .addComponent(exitButton))
-            .addGap(19, 19, 19)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(55, 55, 55))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(35, 35, 35)
+            .addComponent(ContactList)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(exitButton)
+            .addGap(74, 74, 74))
       );
 
       javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -144,50 +192,40 @@ public class Contacts extends javax.swing.JFrame {
 
    private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
       // TODO add your handling code here:
+		dispose();
+		HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userDAO, userStorageDAO);
+		// centre the dialog on the parent window
+		dialog.setLocationRelativeTo(this);
+		// make the dialog visible
+		dialog.setVisible(true);
    }//GEN-LAST:event_exitButtonActionPerformed
 
-	/**
-	 * @param args the command line arguments
-	 */
-	public static void main(String args[]) {
-		/* Set the Nimbus look and feel */
-		//<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-		/* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-		 */
-		try {
-			for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-				if ("Nimbus".equals(info.getName())) {
-					javax.swing.UIManager.setLookAndFeel(info.getClassName());
-					break;
-				}
-			}
-		} catch (ClassNotFoundException ex) {
-			java.util.logging.Logger.getLogger(Contacts.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-		} catch (InstantiationException ex) {
-			java.util.logging.Logger.getLogger(Contacts.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-		} catch (IllegalAccessException ex) {
-			java.util.logging.Logger.getLogger(Contacts.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-		} catch (javax.swing.UnsupportedLookAndFeelException ex) {
-			java.util.logging.Logger.getLogger(Contacts.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+   private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
+      // TODO add your handling code here:
+		String stringUserName = searchText.getText(); 
+		
+		if(stringUserName.equals("")){
+			displayContacts.updateItems(userDAO.getUserList());
+			usersList.setModel(displayContacts);
+		}else{
+			String userName = stringUserName; 		
+		
+			displayContacts.updateItems(userDAO.searchByUserName(userName));
+			usersList.setModel(displayContacts);
 		}
-		//</editor-fold>
+   }//GEN-LAST:event_searchButtonActionPerformed
 
-		/* Create and display the form */
-		java.awt.EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				new Contacts().setVisible(true);
-			}
-		});
-	}
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
+   private javax.swing.JLabel ContactList;
    private javax.swing.JButton addButton;
+   private javax.swing.JList<String> contactsList;
    private javax.swing.JButton exitButton;
    private javax.swing.JScrollPane jScrollPane1;
+   private javax.swing.JScrollPane jScrollPane2;
    private javax.swing.JPanel mainPanel;
    private javax.swing.JButton searchButton;
-   private javax.swing.JTextField searchField;
+   private javax.swing.JTextField searchText;
    private javax.swing.JLabel titleLabel;
    private javax.swing.JList<String> usersList;
    // End of variables declaration//GEN-END:variables
