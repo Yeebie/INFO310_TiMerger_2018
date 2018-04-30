@@ -81,6 +81,43 @@ public class UserDAO {
 			throw new DAOException(ex.getMessage(), ex);
 		}
 	}
+	
+	//Not fully implemented yet - needs fixing 
+	/*public User getContacts(String userName) {
+		String sql = "select * from contact where username = ?";
+
+		try (
+				  // get connection to database
+				  Connection connection = JdbcConnection.getConnection(this.url);
+				  // create the statement
+				  PreparedStatement stmt = connection.prepareStatement(sql);) {
+			// set the parameter
+			stmt.setString(1, userName);
+
+			// execute the query
+			ResultSet rs = stmt.executeQuery();
+
+			// query only returns a single result, so use 'if' instead of 'while'
+			if (rs.next()) {
+				String username2 = rs.getString("username");
+				String fname = rs.getString("firstname");
+				String email = rs.getString("email");
+				String password = rs.getString("password");
+				String lname = rs.getString("lastname");
+
+				User c = new User(username2,fname, lname, password, email);
+				return c;
+
+			} else {
+				// no student matches given ID so return null
+				return null;
+			}
+
+		} catch (SQLException ex) {  // we are forced to catch SQLException
+			// don't let the SQLException leak from our DAO encapsulation
+			throw new DAOException(ex.getMessage(), ex);
+		}
+	}*/
 
 	public Boolean validateCredentials(String userName, String password) {
 		String sql = "select * from user where username = ? and password = ? ";
@@ -138,8 +175,8 @@ public class UserDAO {
 		}
 	}
 
-	/*
-	public void searchByUserName(String UserName) {
+	
+	/*public void searchByUserName(String UserName) {
 		String sql = "select * from user where username = ?";
 		try (
 				  // get connection to database

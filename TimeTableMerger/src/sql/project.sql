@@ -16,6 +16,11 @@ create table User (
 	primary key (UserName),
 );
 
+create table Contact (
+	UserName varchar(255) NOT NULL,
+	foreign key (UserName) references User (UserName),
+);
+
 create table Day (
 	UserName varchar(255) NOT NULL,
 	DayName varchar(20) NOT NULL,

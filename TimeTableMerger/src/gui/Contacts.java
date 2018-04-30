@@ -2,6 +2,7 @@ package gui;
 
 import dao.UserDAO;
 import gui.helpers.SimpleListModel;
+import java.awt.Window;
 
 /**
  *
@@ -10,16 +11,23 @@ import gui.helpers.SimpleListModel;
 public class Contacts extends javax.swing.JFrame {
 	
 	private UserDAO userDAO;
-	private SimpleListModel myModel = new SimpleListModel();
+	private final SimpleListModel myModel = new SimpleListModel();
 
 	/**
 	 * Creates new form Contacts
+	 * @param parent
+	 * @param modal
+	 * @param userDAO
 	 */
-	public Contacts() {
+	public Contacts(Window parent, boolean modal, UserDAO userDAO) {
 		initComponents();
 		
 		myModel.updateItems(userDAO.getUserList());
 		usersList.setModel(myModel);
+	}
+
+	private Contacts() {
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
 
 	/**
