@@ -195,7 +195,7 @@ public class UserDAO {
 					 String lname = rs.getString("lastname");
                 String password = rs.getString("password");
 					 String email = rs.getString("email");
-				User u = new User(username, fname, email, password, lname);
+				User u = new User(username, fname, lname, password, email);
 				return u; 
 			} else {
 				return null;
