@@ -179,7 +179,7 @@ public class Login extends javax.swing.JFrame {
                dialog.setVisible(true);
 
            } else {
-               JOptionPane.showConfirmDialog(this, "user not found");
+               JOptionPane.showMessageDialog(null, "Either the user does not exist or details were entered incorrectly", "Error", JOptionPane.ERROR_MESSAGE);
            }
 
        } catch (DAOException ex) {
