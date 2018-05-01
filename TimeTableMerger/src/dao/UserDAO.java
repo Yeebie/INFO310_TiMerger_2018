@@ -210,9 +210,10 @@ public class UserDAO {
 		}
 	}
 	
+	//NEED TO EXECUTE THIS METHOD WITHOUT USING PREPARED STATEMENTS
 	//Add contact to the contact list and add a new column to the contacts database
 	public void addContact(String userName) {
-		String sql="alter table contacts add contact AUTO_INCREMENT(UserName) values (?)";
+		String sql= "alter table contact add " + userName + " varchar(255)";
 
     try (
         // get connection to database

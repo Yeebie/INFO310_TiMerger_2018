@@ -3,7 +3,7 @@ package gui;
 import dao.UserDAO;
 import dao.TimetableDAO;
 import dao.UserStorageDAO;
-//import domain.User;
+import domain.User;
 import gui.helpers.SimpleListModel;
 import java.awt.Window;
 
@@ -216,28 +216,24 @@ public class Contacts extends javax.swing.JFrame {
 
 	
    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
-     
-		/*try{
-		// TODO add your handling code here:
-		String name = usersList.getModel().getElementAt(0);
+     	String stringUserName = searchText.getText(); 
+		System.out.println("hello");
+		System.out.println(stringUserName);
+		/*if(stringUserName.equals("")){
+			displayContacts.updateItems(userDAO.getUserList());
+			usersList.setModel(displayContacts);
+		}else{
+			String userName = stringUserName; 		
 		
-		newContact.setUserName(name);
-	
-		System.out.println("UserName: " + newContact.getUserName());
+		displayContacts.updateItems(userDAO.searchByUserName(userName));
+		usersList.setModel(displayContacts);*/
+		
+		
+		//get the user first. and then when calling addcontact, 
+		//pass it the user's username. Need to get the user object first
 
 		
-			if(validHelp.isObjectValid(saveProduct)){	
-		if(txtID1.isEditable() && productDAO.searchByID(productID) != null){
-			JOptionPane.showMessageDialog(this, "You already have an item with the ID: " + productID + " . Please enter a new ID", "Confirmed", JOptionPane.INFORMATION_MESSAGE);
-			return;
-		}
-	
-			userDAO.addContact(newContact);
-			dispose();
-		}
-    } catch(DAOException ex) {  
-		  JOptionPane.showMessageDialog(this, ex.getMessage());
-    }*/
+		userDAO.addContact(stringUserName);	
    }//GEN-LAST:event_addButtonActionPerformed
 
 
