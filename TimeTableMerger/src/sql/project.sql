@@ -18,6 +18,7 @@ create table User (
 
 create table Contact (
 	UserName varchar(255) NOT NULL,
+	primary key (UserName),
 	foreign key (UserName) references User (UserName),
 );
 

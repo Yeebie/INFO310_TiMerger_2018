@@ -28,18 +28,23 @@ public class UserDAO {
 
 	public void saveUser(User user) {
 		String sql = "merge into User (UserName, Password, FirstName, LastName, Email) values (?,?,?,?,?)";
+		String sql2 = "merge into Contact (UserName) values (?)";
 
 		try (
 				  Connection dbCon = JdbcConnection.getConnection(url);
-				  PreparedStatement stmt = dbCon.prepareStatement(sql);) {
+				  PreparedStatement stmt = dbCon.prepareStatement(sql);
+				  PreparedStatement stmt2 = dbCon.prepareStatement(sql2)) {
 
 			stmt.setString(1, user.getUserName());
 			stmt.setString(2, user.getPassword());
 			stmt.setString(3, user.getFirstName());
 			stmt.setString(4, user.getLastName());
 			stmt.setString(5, user.getEmail());
+			
+			stmt2.setString(1, user.getUserName());
 
 			stmt.executeUpdate();
+			stmt2.executeUpdate(); 
 
 		} catch (SQLException ex) {
 			throw new DAOException(ex.getMessage(), ex);
@@ -203,5 +208,28 @@ public class UserDAO {
 		} catch (SQLException ex) {
 			throw new DAOException(ex.getMessage(), ex);
 		}
+	}
+	
+	//Add contact to the contact list and add a new column to the contacts database
+	public void addContact(String userName) {
+		String sql="alter table contacts add contact AUTO_INCREMENT(UserName) values (?)";
+
+    try (
+        // get connection to database
+        Connection dbCon = JdbcConnection.getConnection(url);
+
+        // create the statement
+        PreparedStatement stmt = dbCon.prepareStatement(sql);
+    ) {
+        // copy the data from the product domain object into the SQL parameters
+        stmt.setString(1, userName);
+
+        stmt.executeUpdate();  // execute the statement
+
+    } catch (SQLException ex) {  // we are forced to catch SQLException
+        // don't let the SQLException leak from our DAO encapsulation
+        //throw new RuntimeException(ex);
+		  throw new DAOException(ex.getMessage(), ex);
+    }
 	}
 }

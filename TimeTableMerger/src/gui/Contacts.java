@@ -3,6 +3,7 @@ package gui;
 import dao.UserDAO;
 import dao.TimetableDAO;
 import dao.UserStorageDAO;
+//import domain.User;
 import gui.helpers.SimpleListModel;
 import java.awt.Window;
 
@@ -18,6 +19,8 @@ public class Contacts extends javax.swing.JFrame {
 	//private final SimpleListModel myModel = new SimpleListModel();
 	
 	SimpleListModel displayContacts = new SimpleListModel();
+	//User newContact = new User();
+	
 	//SimpleListModel displayCategories = new SimpleListModel();
 	//private final ManageProductsDAO productDAO = new ManageProductsDAO();
 
@@ -90,6 +93,11 @@ public class Contacts extends javax.swing.JFrame {
       addButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
       addButton.setText("Add");
       addButton.setName("addButton"); // NOI18N
+      addButton.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            addButtonActionPerformed(evt);
+         }
+      });
 
       exitButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
       exitButton.setText("Exit");
@@ -205,6 +213,32 @@ public class Contacts extends javax.swing.JFrame {
 			usersList.setModel(displayContacts);
 		}
    }//GEN-LAST:event_searchButtonActionPerformed
+
+	
+   private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
+     
+		/*try{
+		// TODO add your handling code here:
+		String name = usersList.getModel().getElementAt(0);
+		
+		newContact.setUserName(name);
+	
+		System.out.println("UserName: " + newContact.getUserName());
+
+		
+			if(validHelp.isObjectValid(saveProduct)){	
+		if(txtID1.isEditable() && productDAO.searchByID(productID) != null){
+			JOptionPane.showMessageDialog(this, "You already have an item with the ID: " + productID + " . Please enter a new ID", "Confirmed", JOptionPane.INFORMATION_MESSAGE);
+			return;
+		}
+	
+			userDAO.addContact(newContact);
+			dispose();
+		}
+    } catch(DAOException ex) {  
+		  JOptionPane.showMessageDialog(this, ex.getMessage());
+    }*/
+   }//GEN-LAST:event_addButtonActionPerformed
 
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
