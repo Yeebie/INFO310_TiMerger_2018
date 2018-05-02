@@ -33,6 +33,8 @@ public class Contacts extends javax.swing.JFrame {
 		
 		initComponents();
 
+		displayContacts.updateItems(userDAO.getContactList(userStorageDAO.getUserName()));
+		contactsList.setModel(displayContacts);
 		//displaySelectedUser.updateItems(userDAO.getUserList());
 		//usersList.setModel(displaySelectedUser);
 		
