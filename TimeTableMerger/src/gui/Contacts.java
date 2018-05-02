@@ -216,24 +216,17 @@ public class Contacts extends javax.swing.JFrame {
 
 	
    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
-     	String stringUserName = searchText.getText(); 
-		System.out.println("hello");
-		System.out.println(stringUserName);
-		/*if(stringUserName.equals("")){
-			displayContacts.updateItems(userDAO.getUserList());
-			usersList.setModel(displayContacts);
-		}else{
-			String userName = stringUserName; 		
+     	//String stringUserName = searchText.getText(); 
 		
-		displayContacts.updateItems(userDAO.searchByUserName(userName));
-		usersList.setModel(displayContacts);*/
+		//getting the username and the contact name
+		String userName = userStorageDAO.getUserName();
+		String contactName = searchText.getText();
 		
+		//User newContact = new User(userName);
+		//newContact.setUserName(userName);
 		
-		//get the user first. and then when calling addcontact, 
-		//pass it the user's username. Need to get the user object first
-
-		
-		userDAO.addContact(stringUserName);	
+	
+		userDAO.addContact(userName, contactName);	
    }//GEN-LAST:event_addButtonActionPerformed
 
 

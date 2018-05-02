@@ -28,12 +28,13 @@ public class UserDAO {
 
 	public void saveUser(User user) {
 		String sql = "merge into User (UserName, Password, FirstName, LastName, Email) values (?,?,?,?,?)";
-		String sql2 = "merge into Contact (UserName) values (?)";
+		//String sql2 = "merge into Contact (UserName) values (?)";
 
 		try (
 				  Connection dbCon = JdbcConnection.getConnection(url);
 				  PreparedStatement stmt = dbCon.prepareStatement(sql);
-				  PreparedStatement stmt2 = dbCon.prepareStatement(sql2)) {
+				  //PreparedStatement stmt2 = dbCon.prepareStatement(sql2)
+				  ){
 
 			stmt.setString(1, user.getUserName());
 			stmt.setString(2, user.getPassword());
@@ -41,10 +42,10 @@ public class UserDAO {
 			stmt.setString(4, user.getLastName());
 			stmt.setString(5, user.getEmail());
 			
-			stmt2.setString(1, user.getUserName());
+			//stmt2.setString(1, user.getUserName());
 
 			stmt.executeUpdate();
-			stmt2.executeUpdate(); 
+			//stmt2.executeUpdate(); 
 
 		} catch (SQLException ex) {
 			throw new DAOException(ex.getMessage(), ex);
@@ -210,21 +211,21 @@ public class UserDAO {
 		}
 	}
 	
-	//NEED TO EXECUTE THIS METHOD WITHOUT USING PREPARED STATEMENTS
+	//Add this method similar to the day table
 	//Add contact to the contact list and add a new column to the contacts database
-	public void addContact(String userName) {
-		String sql= "alter table contact add " + userName + " varchar(255)";
+	public void addContact(String userName, String contactName) {
+		String sql= "merge into contact (UserName, ContactList) values (?, ?)";
 
     try (
         // get connection to database
         Connection dbCon = JdbcConnection.getConnection(url);
-
         // create the statement
         PreparedStatement stmt = dbCon.prepareStatement(sql);
     ) {
         // copy the data from the product domain object into the SQL parameters
         stmt.setString(1, userName);
-
+		  stmt.setString(2, contactName);
+		 
         stmt.executeUpdate();  // execute the statement
 
     } catch (SQLException ex) {  // we are forced to catch SQLException
