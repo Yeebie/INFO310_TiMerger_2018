@@ -60,7 +60,6 @@ public class HomeMenu extends javax.swing.JDialog {
 
       jPanel1 = new javax.swing.JPanel();
       newButton = new javax.swing.JButton();
-      viewButton = new javax.swing.JButton();
       exitButton = new javax.swing.JButton();
       editButton = new javax.swing.JButton();
       scheduleButton = new javax.swing.JButton();
@@ -75,15 +74,6 @@ public class HomeMenu extends javax.swing.JDialog {
       newButton.addActionListener(new java.awt.event.ActionListener() {
          public void actionPerformed(java.awt.event.ActionEvent evt) {
             newButtonActionPerformed(evt);
-         }
-      });
-
-      viewButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-      viewButton.setText("View");
-      viewButton.setName("viewButton"); // NOI18N
-      viewButton.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            viewButtonActionPerformed(evt);
          }
       });
 
@@ -134,7 +124,6 @@ public class HomeMenu extends javax.swing.JDialog {
                .addComponent(exitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                .addComponent(scheduleButton, javax.swing.GroupLayout.DEFAULT_SIZE, 362, Short.MAX_VALUE)
                .addComponent(editButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-               .addComponent(viewButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                .addComponent(newButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addContainerGap(171, Short.MAX_VALUE))
       );
@@ -144,8 +133,6 @@ public class HomeMenu extends javax.swing.JDialog {
             .addGap(27, 27, 27)
             .addComponent(newButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(viewButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(editButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(scheduleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -153,7 +140,7 @@ public class HomeMenu extends javax.swing.JDialog {
             .addComponent(contactButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(31, 31, 31))
+            .addGap(128, 128, 128))
       );
 
       javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -179,62 +166,6 @@ public class HomeMenu extends javax.swing.JDialog {
 		dialog.setLocationRelativeTo(this);
 		dialog.setVisible(true);
    }//GEN-LAST:event_newButtonActionPerformed
-
-   private void viewButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewButtonActionPerformed
-		
-		try{
-			
-		//initialise each day with the users data
-		Day mondayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Monday");
-		Day tuesdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Tuesday");
-		Day wednesdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Wednesday");
-		Day thursdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Thursday");
-		Day fridayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Friday");
-		Day saturdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Saturday");
-		Day sundayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Sunday");
-		Day mondayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Monday");
-		Day tuesdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Tuesday");
-		Day wednesdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Wednesday");
-		Day thursdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Thursday");
-		Day fridayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Friday");
-		Day saturdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Saturday");
-		Day sundayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Sunday");
-
-		// create the dialog instance
-		// the first parameter the parent window, and the second is the modal status
-		ViewTimetable dialog = new ViewTimetable(this, true, timetableDAO, userDAO, userStorageDAO, mondayWeek1, tuesdayWeek1, wednesdayWeek1,
-				  thursdayWeek1, fridayWeek1, saturdayWeek1, sundayWeek1, mondayWeek2, tuesdayWeek2, wednesdayWeek2, thursdayWeek2, fridayWeek2,
-				  saturdayWeek2, sundayWeek2);
-		dialog.pack();
-		//set size
-		dialog.setSize(715, 677);
-		// centre the dialog on the parent window
-		dialog.setLocationRelativeTo(this);
-		// make the dialog visible
-		dialog.setVisible(true);
-		} catch (NullPointerException ex) {
-			// gives the user an option to create a timetable if they haven't already
-			int result = JOptionPane.showOptionDialog(null, "No timetable information, would you like to create a timetable?", "Warning", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null,
-					  null, null);
-			dispose();
-			if (result == JOptionPane.OK_OPTION) {
-				CreateTimetable dialog = new CreateTimetable(this, true, timetableDAO, userDAO, userStorageDAO);
-				dialog.pack();
-				//set size
-				dialog.setSize(715, 677);
-				dialog.setLocationRelativeTo(this);
-				dialog.setVisible(true);
-
-			} else {
-				HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userDAO, userStorageDAO);
-				// centre the dialog on the parent window
-				dialog.setLocationRelativeTo(this);
-				// make the dialog visible
-				dialog.setVisible(true);
-			}
-
-		}
-   }//GEN-LAST:event_viewButtonActionPerformed
 
    private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
 		// TODO add your handling code here:
@@ -328,6 +259,5 @@ public class HomeMenu extends javax.swing.JDialog {
    private javax.swing.JPanel jPanel1;
    private javax.swing.JButton newButton;
    private javax.swing.JButton scheduleButton;
-   private javax.swing.JButton viewButton;
    // End of variables declaration//GEN-END:variables
 }

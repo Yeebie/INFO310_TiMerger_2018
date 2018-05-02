@@ -4172,7 +4172,7 @@ public class ScheduleTimetable extends javax.swing.JDialog { //Was javax.swing.J
 
 		// create the dialog instance
 		// the first parameter the parent window, and the second is the modal status
-		ViewTimetable dialog = new ViewTimetable(this, true, timetableDAO, userDAO, userStorageDAO, mondayWeek1, tuesdayWeek1, wednesdayWeek1,
+		EditTimetable dialog = new EditTimetable(this, true, timetableDAO, userDAO, userStorageDAO, mondayWeek1, tuesdayWeek1, wednesdayWeek1,
 				  thursdayWeek1, fridayWeek1, saturdayWeek1, sundayWeek1, mondayWeek2, tuesdayWeek2, wednesdayWeek2, thursdayWeek2, fridayWeek2,
 				  saturdayWeek2, sundayWeek2);
 		dialog.pack();
