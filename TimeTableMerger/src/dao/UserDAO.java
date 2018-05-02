@@ -152,7 +152,7 @@ public class UserDAO {
 	//the users table but using the names from the contact list
 	//Therefore, the rs.next() should only incl columns in the contact table
 	public Set<String> getContactList(String currentUser) {
-		String sql = "select contactList from contact where username = ?";
+		String sql = "select * from contact where username = ?";
 
 		try (Connection dbCon = JdbcConnection.getConnection(url);
 				  PreparedStatement stmt = dbCon.prepareStatement(sql);) {
@@ -165,9 +165,9 @@ public class UserDAO {
 			while (rs.next()) {
 				String userName = rs.getString("contactList");
 				contacts.add(userName);
-				return contacts;
+				
 			}
-			return null;
+			return contacts;
 
 		} catch (SQLException ex) {  // we are forced to catch SQLException
 			// don't let the SQLException leak from our DAO encapsulation
@@ -207,8 +207,8 @@ public class UserDAO {
 	}
 	
 	public void addContact(String userName, String contactName) {
-		String sql= "merge into contact (username, contactlist) values (?, ?)";
-
+		//String sql= "merge into contact (username, firstname, lastname, contactlist) values (?, ?, ?, ?)";
+      String sql= "merge into contact (username, contactlist) values (?, ?)";
     try (
         // get connection to database
         Connection dbCon = JdbcConnection.getConnection(url);
@@ -217,6 +217,8 @@ public class UserDAO {
     ) {
         // copy the data from the product domain object into the SQL parameters
         stmt.setString(1, userName);
+		  //stmt.setString(2, firstName);
+		  //stmt.setString(3, lastName);
 		  stmt.setString(2, contactName);
 		 
         stmt.executeUpdate();  // execute the statement
