@@ -3,7 +3,6 @@ package gui;
 import dao.UserDAO;
 import dao.TimetableDAO;
 import dao.UserStorageDAO;
-import domain.User;
 import gui.helpers.SimpleListModel;
 import java.awt.Window;
 
@@ -16,14 +15,10 @@ public class Contacts extends javax.swing.JFrame {
 	private final TimetableDAO timetableDAO;
 	private final UserDAO userDAO = new UserDAO();
 	private final UserStorageDAO userStorageDAO;
-	//private final SimpleListModel myModel = new SimpleListModel();
 	
+	SimpleListModel displaySelectedUser = new SimpleListModel();
 	SimpleListModel displayContacts = new SimpleListModel();
-	//User newContact = new User();
 	
-	//SimpleListModel displayCategories = new SimpleListModel();
-	//private final ManageProductsDAO productDAO = new ManageProductsDAO();
-
 	/**
 	 * Creates new form Contacts
 	 * @param parent
@@ -34,17 +29,16 @@ public class Contacts extends javax.swing.JFrame {
 	 */
 	public Contacts(Window parent, boolean modal, TimetableDAO timetableDAO, UserDAO userDAO, UserStorageDAO userStorageDAO) {
 		this.timetableDAO = timetableDAO;
-		//this.userDAO = userDAO;
 		this.userStorageDAO = userStorageDAO;
 		
 		initComponents();
+
+		//displaySelectedUser.updateItems(userDAO.getUserList());
+		//usersList.setModel(displaySelectedUser);
 		
-
-		displayContacts.updateItems(userDAO.getUserList());
-		usersList.setModel(displayContacts);
+		//displayContacts.updateItems(userDAO.getContactList(userStorageDAO.getUserName()));
+		//contactsList.setModel(displayContacts);
 	}
-
-	
 
 	/**
 	 * This method is called from within the constructor to initialize the form.
@@ -115,11 +109,6 @@ public class Contacts extends javax.swing.JFrame {
 
       jScrollPane2.setName("jScrollPane2"); // NOI18N
 
-      contactsList.setModel(new javax.swing.AbstractListModel<String>() {
-         String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-         public int getSize() { return strings.length; }
-         public String getElementAt(int i) { return strings[i]; }
-      });
       contactsList.setName("contactsList"); // NOI18N
       jScrollPane2.setViewportView(contactsList);
 
@@ -204,13 +193,12 @@ public class Contacts extends javax.swing.JFrame {
 		String stringUserName = searchText.getText(); 
 		
 		if(stringUserName.equals("")){
-			displayContacts.updateItems(userDAO.getUserList());
-			usersList.setModel(displayContacts);
+			displaySelectedUser.updateItems(userDAO.getUserList());
+			usersList.setModel(displaySelectedUser);
 		}else{
 			String userName = stringUserName; 		
-		
-			displayContacts.updateItems(userDAO.searchByUserName(userName));
-			usersList.setModel(displayContacts);
+			displaySelectedUser.updateItems(userDAO.searchByUserName(userName));
+			usersList.setModel(displaySelectedUser);
 		}
    }//GEN-LAST:event_searchButtonActionPerformed
 
@@ -220,13 +208,29 @@ public class Contacts extends javax.swing.JFrame {
 		
 		//getting the username and the contact name
 		String userName = userStorageDAO.getUserName();
+		System.out.println("Add Button - User active = " + userName);
 		String contactName = searchText.getText();
+	
+		userDAO.addContact(userName, contactName);
 		
-		//User newContact = new User(userName);
-		//newContact.setUserName(userName);
+		displayContacts.updateItems(userDAO.getContactList(userName));
+		contactsList.setModel(displayContacts);
+
 		
 	
-		userDAO.addContact(userName, contactName);	
+		/*
+		String stringUserName = searchText.getText(); 
+		
+		if(stringUserName.equals("")){
+			displaySelectedUser.updateItems(userDAO.getUserList());
+			usersList.setModel(displaySelectedUser);
+		}else{
+			String userName = stringUserName; 		
+		
+			displaySelectedUser.updateItems(userDAO.searchByUserName(userName));
+			usersList.setModel(displaySelectedUser);
+		}*/
+             
    }//GEN-LAST:event_addButtonActionPerformed
 
 

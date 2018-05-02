@@ -87,43 +87,6 @@ public class UserDAO {
 			throw new DAOException(ex.getMessage(), ex);
 		}
 	}
-	
-	//Not fully implemented yet - needs fixing 
-	/*public User getContacts(String userName) {
-		String sql = "select * from contact where username = ?";
-
-		try (
-				  // get connection to database
-				  Connection connection = JdbcConnection.getConnection(this.url);
-				  // create the statement
-				  PreparedStatement stmt = connection.prepareStatement(sql);) {
-			// set the parameter
-			stmt.setString(1, userName);
-
-			// execute the query
-			ResultSet rs = stmt.executeQuery();
-
-			// query only returns a single result, so use 'if' instead of 'while'
-			if (rs.next()) {
-				String username2 = rs.getString("username");
-				String fname = rs.getString("firstname");
-				String email = rs.getString("email");
-				String password = rs.getString("password");
-				String lname = rs.getString("lastname");
-
-				User c = new User(username2,fname, lname, password, email);
-				return c;
-
-			} else {
-				// no student matches given ID so return null
-				return null;
-			}
-
-		} catch (SQLException ex) {  // we are forced to catch SQLException
-			// don't let the SQLException leak from our DAO encapsulation
-			throw new DAOException(ex.getMessage(), ex);
-		}
-	}*/
 
 	public Boolean validateCredentials(String userName, String password) {
 		String sql = "select * from user where username = ? and password = ? ";
@@ -180,6 +143,45 @@ public class UserDAO {
 			throw new DAOException(ex.getMessage(), ex);
 		}
 	}
+		
+			
+	//Not fully implemented yet - needs fixing.
+	//Not working because we are currently trying to access the contact table 
+	//Contact table has Strings and no Users
+	//We need to access the Users timetables, and will therefore need to access the Users from
+	//the users table but using the names from the contact list
+	//Therefore, the rs.next() should only incl columns in the contact table
+	public Set<User> getContactList(String currentUser) {
+		String sql = "select contactList from contact where username = ?";
+
+		try (Connection dbCon = JdbcConnection.getConnection(url);
+				  PreparedStatement stmt = dbCon.prepareStatement(sql);) {
+			
+			stmt.setString(1, currentUser);
+
+			ResultSet rs = stmt.executeQuery();
+			Set<User> contacts = new HashSet<>();
+
+			while (rs.next()) {
+				String userName = rs.getString("UserName");
+				String firstName = rs.getString("FirstName");
+				String lastName = rs.getString("LastName");
+				String email = rs.getString("Email");
+				String password = rs.getString("Password");
+
+				User c = new User(userName, firstName, lastName, email, password);
+				//ArrayList<String> c = new 
+
+				contacts.add(c);
+			}
+			return contacts;
+
+		} catch (SQLException ex) {  // we are forced to catch SQLException
+			// don't let the SQLException leak from our DAO encapsulation
+			throw new DAOException(ex.getMessage(), ex);
+		}
+	}
+	
 
 	
 	public User searchByUserName(String userName) {
@@ -211,10 +213,8 @@ public class UserDAO {
 		}
 	}
 	
-	//Add this method similar to the day table
-	//Add contact to the contact list and add a new column to the contacts database
 	public void addContact(String userName, String contactName) {
-		String sql= "merge into contact (UserName, ContactList) values (?, ?)";
+		String sql= "merge into contact (username, contactlist) values (?, ?)";
 
     try (
         // get connection to database
@@ -234,4 +234,5 @@ public class UserDAO {
 		  throw new DAOException(ex.getMessage(), ex);
     }
 	}
+
 }
