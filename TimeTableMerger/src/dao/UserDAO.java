@@ -151,7 +151,7 @@ public class UserDAO {
 	//We need to access the Users timetables, and will therefore need to access the Users from
 	//the users table but using the names from the contact list
 	//Therefore, the rs.next() should only incl columns in the contact table
-	public Set<User> getContactList(String currentUser) {
+	public Set<String> getContactList(String currentUser) {
 		String sql = "select contactList from contact where username = ?";
 
 		try (Connection dbCon = JdbcConnection.getConnection(url);
@@ -160,21 +160,14 @@ public class UserDAO {
 			stmt.setString(1, currentUser);
 
 			ResultSet rs = stmt.executeQuery();
-			Set<User> contacts = new HashSet<>();
+			Set<String> contacts = new HashSet<>();
 
 			while (rs.next()) {
-				String userName = rs.getString("UserName");
-				String firstName = rs.getString("FirstName");
-				String lastName = rs.getString("LastName");
-				String email = rs.getString("Email");
-				String password = rs.getString("Password");
-
-				User c = new User(userName, firstName, lastName, email, password);
-				//ArrayList<String> c = new 
-
-				contacts.add(c);
+				String userName = rs.getString("contactList");
+				contacts.add(userName);
+				return contacts;
 			}
-			return contacts;
+			return null;
 
 		} catch (SQLException ex) {  // we are forced to catch SQLException
 			// don't let the SQLException leak from our DAO encapsulation
