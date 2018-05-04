@@ -42,13 +42,15 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="167" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="contactButton" max="32767" attributes="0"/>
-                      <Component id="exitButton" alignment="0" max="32767" attributes="0"/>
-                      <Component id="scheduleButton" alignment="0" pref="362" max="32767" attributes="0"/>
-                      <Component id="editButton" alignment="0" max="32767" attributes="0"/>
-                      <Component id="newButton" alignment="0" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="titleLabel" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="contactButton" max="32767" attributes="0"/>
+                          <Component id="exitButton" alignment="0" max="32767" attributes="0"/>
+                          <Component id="scheduleButton" alignment="0" pref="362" max="32767" attributes="0"/>
+                          <Component id="timetableButton" alignment="0" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace pref="171" max="32767" attributes="0"/>
               </Group>
@@ -57,10 +59,10 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                  <Component id="newButton" min="-2" pref="91" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="editButton" min="-2" pref="91" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="titleLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="39" max="32767" attributes="0"/>
+                  <Component id="timetableButton" min="-2" pref="91" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="scheduleButton" min="-2" pref="91" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -73,18 +75,6 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="newButton">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="18" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="New Timesheet"/>
-            <Property name="name" type="java.lang.String" value="newButton" noResource="true"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="newButtonActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JButton" name="exitButton">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -97,16 +87,16 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exitButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="editButton">
+        <Component class="javax.swing.JButton" name="timetableButton">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Edit"/>
-            <Property name="name" type="java.lang.String" value="editButton" noResource="true"/>
+            <Property name="text" type="java.lang.String" value="Manage Timetable"/>
+            <Property name="name" type="java.lang.String" value="timetableButton" noResource="true"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="timetableButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="scheduleButton">
@@ -132,6 +122,15 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="contactButtonActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="titleLabel">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tw Cen MT Condensed Extra Bold" size="48" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Timetable Merger"/>
+            <Property name="name" type="java.lang.String" value="titleLabel" noResource="true"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
