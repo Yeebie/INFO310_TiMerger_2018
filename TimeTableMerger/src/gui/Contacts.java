@@ -192,7 +192,7 @@ public class Contacts extends javax.swing.JFrame {
 
    private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
       // TODO add your handling code here:
-		String stringUserName = searchText.getText(); 
+		/*String stringUserName = searchText.getText(); 
 		
 		if(stringUserName.equals("")){
 			displaySelectedUser.updateItems(userDAO.getUserList());
@@ -200,6 +200,17 @@ public class Contacts extends javax.swing.JFrame {
 		}else{
 			String userName = stringUserName; 		
 			displaySelectedUser.updateItems(userDAO.searchByUserName(userName));
+			usersList.setModel(displaySelectedUser);
+		}*/
+		
+		String stringFirstName = searchText.getText(); 
+		
+		if(stringFirstName.equals("")){
+			displaySelectedUser.updateItems(userDAO.getUserList());
+			usersList.setModel(displaySelectedUser);
+		}else{
+			String firstName = stringFirstName; 		
+			displaySelectedUser.updateItems(userDAO.searchByUserName(firstName));
 			usersList.setModel(displaySelectedUser);
 		}
    }//GEN-LAST:event_searchButtonActionPerformed

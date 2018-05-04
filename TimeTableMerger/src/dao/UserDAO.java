@@ -206,6 +206,62 @@ public class UserDAO {
 		}
 	}
 	
+	
+	public Collection<User> searchByName(String firstName) {
+		String sql = "select * from user where firstname = ?";
+		try (
+				  // get connection to database
+				  Connection connection = JdbcConnection.getConnection(this.url);
+				  // create the statement
+				  PreparedStatement stmt = connection.prepareStatement(sql);) {
+			// set the parameter
+			stmt.setString(1, firstName);
+
+			// execute the query
+			ResultSet rs = stmt.executeQuery();
+			ArrayList<User> userList = new ArrayList<>();
+
+
+			while (rs.next()) {
+                String username = rs.getString("username");
+                String fname = rs.getString("firstname");
+					 String lname = rs.getString("lastname");
+                String password = rs.getString("password");
+					 String email = rs.getString("email");
+				User u = new User(username, fname, lname, password, email);
+				userList.add(u);
+			}
+			return userList;
+			
+		} catch (SQLException ex) {
+			throw new DAOException(ex.getMessage(), ex);
+		}
+	}
+	/*
+		public Set<String> getContactList(String currentUser) {
+		String sql = "select * from contact where username = ?";
+
+		try (Connection dbCon = JdbcConnection.getConnection(url);
+				  PreparedStatement stmt = dbCon.prepareStatement(sql);) {
+			
+			stmt.setString(1, currentUser);
+
+			ResultSet rs = stmt.executeQuery();
+			Set<String> contacts = new HashSet<>();
+
+			while (rs.next()) {
+				String userName = rs.getString("contactList");
+				contacts.add(userName);
+				
+			}
+			return contacts;
+
+		} catch (SQLException ex) {  // we are forced to catch SQLException
+			// don't let the SQLException leak from our DAO encapsulation
+			throw new DAOException(ex.getMessage(), ex);
+		}
+	}*/
+		
 	public void addContact(String userName, String contactName) {
 		//String sql= "merge into contact (username, firstname, lastname, contactlist) values (?, ?, ?, ?)";
       String sql= "merge into contact (username, contactlist) values (?, ?)";
