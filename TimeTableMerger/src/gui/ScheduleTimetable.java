@@ -3141,6 +3141,7 @@ public class ScheduleTimetable extends javax.swing.JDialog { //Was javax.swing.J
       titleLabel.setText("Schedule Timetable");
       titleLabel.setName("titleLabel"); // NOI18N
 
+      buttonCancel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
       buttonCancel.setText("Cancel");
       buttonCancel.setName("buttonCancel"); // NOI18N
       buttonCancel.addActionListener(new java.awt.event.ActionListener() {
@@ -3149,6 +3150,7 @@ public class ScheduleTimetable extends javax.swing.JDialog { //Was javax.swing.J
          }
       });
 
+      buttonSaveTimetable.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
       buttonSaveTimetable.setText("Check Users");
       buttonSaveTimetable.setName("buttonSaveTimetable"); // NOI18N
       buttonSaveTimetable.addActionListener(new java.awt.event.ActionListener() {

@@ -63,18 +63,18 @@ public class CreateAccount extends javax.swing.JFrame {
       jPanel1.setBackground(new java.awt.Color(255, 255, 255));
       jPanel1.setName("jPanel1"); // NOI18N
 
-      titleLabel.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 48)); // NOI18N
+      titleLabel.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 85)); // NOI18N
       titleLabel.setText("Create Account");
       titleLabel.setName("titleLabel"); // NOI18N
 
-      usernameLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+      usernameLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
       usernameLabel.setText("Username:");
       usernameLabel.setName("usernameLabel"); // NOI18N
 
       usernameField.setMinimumSize(new java.awt.Dimension(12, 40));
       usernameField.setName("usernameField"); // NOI18N
 
-      firstNameLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+      firstNameLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
       firstNameLabel.setText("First Name:");
       firstNameLabel.setName("firstNameLabel"); // NOI18N
 
@@ -86,22 +86,22 @@ public class CreateAccount extends javax.swing.JFrame {
          }
       });
 
-      lastNameLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+      lastNameLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
       lastNameLabel.setText("Last Name:");
       lastNameLabel.setName("lastNameLabel"); // NOI18N
 
       lastNameField.setMinimumSize(new java.awt.Dimension(12, 40));
       lastNameField.setName("lastNameField"); // NOI18N
 
-      passwordLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+      passwordLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
       passwordLabel.setText("Password:");
       passwordLabel.setName("passwordLabel"); // NOI18N
 
-      reenterLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+      reenterLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
       reenterLabel.setText("Re-enter Password:");
       reenterLabel.setName("reenterLabel"); // NOI18N
 
-      loginButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+      loginButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
       loginButton.setText("Submit");
       loginButton.setName("loginButton"); // NOI18N
       loginButton.addActionListener(new java.awt.event.ActionListener() {
@@ -110,7 +110,7 @@ public class CreateAccount extends javax.swing.JFrame {
          }
       });
 
-      cancelButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+      cancelButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
       cancelButton.setText("Cancel");
       cancelButton.setName("cancelButton"); // NOI18N
       cancelButton.addActionListener(new java.awt.event.ActionListener() {
@@ -119,7 +119,7 @@ public class CreateAccount extends javax.swing.JFrame {
          }
       });
 
-      emailLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+      emailLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
       emailLabel.setText("E-mail:");
       emailLabel.setName("emailLabel"); // NOI18N
 
@@ -135,77 +135,78 @@ public class CreateAccount extends javax.swing.JFrame {
       jPanel1Layout.setHorizontalGroup(
          jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(jPanel1Layout.createSequentialGroup()
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-               .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(jPanel1Layout.createSequentialGroup()
-                     .addGap(69, 69, 69)
-                     .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                     .addGap(18, 18, 18)
-                     .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                  .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addGroup(jPanel1Layout.createSequentialGroup()
+                  .addGap(75, 75, 75)
+                  .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                      .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(emailLabel)
-                        .addGap(18, 18, 18)
-                        .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(reenterLabel)
-                        .addGap(18, 18, 18)
-                        .addComponent(reenterfield, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(passwordLabel)
-                        .addGap(18, 18, 18)
-                        .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))))
-               .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(jPanel1Layout.createSequentialGroup()
-                     .addGap(188, 188, 188)
-                     .addComponent(titleLabel))
-                  .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                     .addGap(182, 182, 182)
+                        .addGap(9, 9, 9)
+                        .addComponent(titleLabel))
                      .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(firstNameLabel, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(usernameLabel, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(lastNameLabel, javax.swing.GroupLayout.Alignment.TRAILING))
-                     .addGap(18, 18, 18)
-                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(firstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-            .addContainerGap(180, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                           .addGap(86, 86, 86)
+                           .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                              .addComponent(firstNameLabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                              .addComponent(usernameLabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                              .addComponent(lastNameLabel, javax.swing.GroupLayout.Alignment.TRAILING))
+                           .addGap(18, 18, 18)
+                           .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                              .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                              .addComponent(firstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                              .addComponent(lastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                           .addComponent(emailLabel)
+                           .addGap(18, 18, 18)
+                           .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                           .addComponent(reenterLabel)
+                           .addGap(18, 18, 18)
+                           .addComponent(reenterfield, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                           .addComponent(passwordLabel)
+                           .addGap(18, 18, 18)
+                           .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+               .addGroup(jPanel1Layout.createSequentialGroup()
+                  .addGap(188, 188, 188)
+                  .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addGap(18, 18, 18)
+                  .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addContainerGap(79, Short.MAX_VALUE))
       );
       jPanel1Layout.setVerticalGroup(
          jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(jPanel1Layout.createSequentialGroup()
-            .addGap(69, 69, 69)
+            .addGap(46, 46, 46)
             .addComponent(titleLabel)
-            .addGap(64, 64, 64)
+            .addGap(44, 44, 44)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                .addComponent(usernameLabel)
-               .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+               .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGap(20, 20, 20)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                .addComponent(firstNameLabel)
-               .addComponent(firstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+               .addComponent(firstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGap(20, 20, 20)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                .addComponent(lastNameLabel)
-               .addComponent(lastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+               .addComponent(lastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGap(18, 18, 18)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                .addComponent(emailLabel)
-               .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+               .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGap(18, 18, 18)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-               .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+               .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                .addComponent(passwordLabel))
             .addGap(18, 18, 18)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-               .addComponent(reenterfield, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+               .addComponent(reenterfield, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
                .addComponent(reenterLabel))
-            .addGap(49, 49, 49)
+            .addGap(41, 41, 41)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(94, 94, 94))
+            .addGap(41, 41, 41))
       );
 
       javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

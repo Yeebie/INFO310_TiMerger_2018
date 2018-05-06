@@ -64,6 +64,9 @@ public class HomeMenu extends javax.swing.JDialog {
       scheduleButton = new javax.swing.JButton();
       contactButton = new javax.swing.JButton();
       titleLabel = new javax.swing.JLabel();
+      manageLabel = new javax.swing.JLabel();
+      contactsLabel = new javax.swing.JLabel();
+      editLabel = new javax.swing.JLabel();
 
       jPanel1.setBackground(new java.awt.Color(255, 255, 255));
       jPanel1.setName("jPanel1"); // NOI18N
@@ -78,8 +81,9 @@ public class HomeMenu extends javax.swing.JDialog {
       });
 
       timetableButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-      timetableButton.setText("Manage Timetable");
+      timetableButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/manageTimetable.png"))); // NOI18N
       timetableButton.setName("timetableButton"); // NOI18N
+      timetableButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
       timetableButton.addActionListener(new java.awt.event.ActionListener() {
          public void actionPerformed(java.awt.event.ActionEvent evt) {
             timetableButtonActionPerformed(evt);
@@ -87,7 +91,7 @@ public class HomeMenu extends javax.swing.JDialog {
       });
 
       scheduleButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-      scheduleButton.setText("Schedule Meeting");
+      scheduleButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/scheduleMeeting.png"))); // NOI18N
       scheduleButton.setName("scheduleButton"); // NOI18N
       scheduleButton.addActionListener(new java.awt.event.ActionListener() {
          public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,7 +100,7 @@ public class HomeMenu extends javax.swing.JDialog {
       });
 
       contactButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-      contactButton.setText("Add Contacts");
+      contactButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/addContacts.png"))); // NOI18N
       contactButton.setName("contactButton"); // NOI18N
       contactButton.addActionListener(new java.awt.event.ActionListener() {
          public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,39 +108,76 @@ public class HomeMenu extends javax.swing.JDialog {
          }
       });
 
-      titleLabel.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 48)); // NOI18N
+      titleLabel.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 85)); // NOI18N
       titleLabel.setText("Timetable Merger");
       titleLabel.setName("titleLabel"); // NOI18N
+
+      manageLabel.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 24)); // NOI18N
+      manageLabel.setText("Manage Timetable");
+      manageLabel.setName("manageLabel"); // NOI18N
+
+      contactsLabel.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 24)); // NOI18N
+      contactsLabel.setText("Add Contacts");
+      contactsLabel.setName("contactsLabel"); // NOI18N
+
+      editLabel.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 24)); // NOI18N
+      editLabel.setText("Schedule Timetable");
+      editLabel.setName("editLabel"); // NOI18N
 
       javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
       jPanel1.setLayout(jPanel1Layout);
       jPanel1Layout.setHorizontalGroup(
          jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(jPanel1Layout.createSequentialGroup()
-            .addGap(159, 159, 159)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-               .addComponent(titleLabel)
-               .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                  .addComponent(contactButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                  .addComponent(exitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                  .addComponent(scheduleButton, javax.swing.GroupLayout.DEFAULT_SIZE, 362, Short.MAX_VALUE)
-                  .addComponent(timetableButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addContainerGap(171, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addGroup(jPanel1Layout.createSequentialGroup()
+                  .addGap(42, 42, 42)
+                  .addComponent(titleLabel))
+               .addGroup(jPanel1Layout.createSequentialGroup()
+                  .addGap(66, 66, 66)
+                  .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                     .addComponent(manageLabel)
+                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                           .addGroup(jPanel1Layout.createSequentialGroup()
+                              .addComponent(timetableButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                              .addGap(69, 69, 69)
+                              .addComponent(scheduleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                              .addGap(55, 55, 55)
+                              .addComponent(contactButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                           .addGroup(jPanel1Layout.createSequentialGroup()
+                              .addGap(188, 188, 188)
+                              .addComponent(editLabel)
+                              .addGap(40, 40, 40)
+                              .addComponent(contactsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(184, 184, 184)
+                        .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+            .addContainerGap(42, Short.MAX_VALUE))
       );
       jPanel1Layout.setVerticalGroup(
          jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-            .addGap(32, 32, 32)
+            .addGap(49, 49, 49)
             .addComponent(titleLabel)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-            .addComponent(timetableButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(scheduleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(contactButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(128, 128, 128))
+            .addGap(57, 57, 57)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                  .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                     .addComponent(scheduleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                     .addComponent(contactButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                  .addGap(18, 18, 18)
+                  .addComponent(contactsLabel))
+               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                  .addComponent(timetableButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addGap(18, 18, 18)
+                  .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                     .addComponent(manageLabel)
+                     .addComponent(editLabel))))
+            .addGap(58, 58, 58)
+            .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap(162, Short.MAX_VALUE))
       );
 
       javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -240,8 +281,11 @@ public class HomeMenu extends javax.swing.JDialog {
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
    private javax.swing.JButton contactButton;
+   private javax.swing.JLabel contactsLabel;
+   private javax.swing.JLabel editLabel;
    private javax.swing.JButton exitButton;
    private javax.swing.JPanel jPanel1;
+   private javax.swing.JLabel manageLabel;
    private javax.swing.JButton scheduleButton;
    private javax.swing.JButton timetableButton;
    private javax.swing.JLabel titleLabel;
