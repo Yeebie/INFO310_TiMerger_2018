@@ -58,8 +58,8 @@ public class ScheduleMeeting extends javax.swing.JFrame {
       jScrollPane1 = new javax.swing.JScrollPane();
       usersList = new javax.swing.JList<>();
       jLabel1 = new javax.swing.JLabel();
-      jButton1 = new javax.swing.JButton();
-      jButton2 = new javax.swing.JButton();
+      confirmButton = new javax.swing.JButton();
+      cancelButton = new javax.swing.JButton();
 
       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -188,13 +188,13 @@ public class ScheduleMeeting extends javax.swing.JFrame {
       jLabel1.setText("Schedule Meeting");
       jLabel1.setName("jLabel1"); // NOI18N
 
-      jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-      jButton1.setText("Confirm");
-      jButton1.setName("jButton1"); // NOI18N
+      confirmButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+      confirmButton.setText("Confirm");
+      confirmButton.setName("confirmButton"); // NOI18N
 
-      jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-      jButton2.setText("Cancel");
-      jButton2.setName("jButton2"); // NOI18N
+      cancelButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+      cancelButton.setText("Cancel");
+      cancelButton.setName("cancelButton"); // NOI18N
 
       javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
       mainPanel.setLayout(mainPanelLayout);
@@ -250,9 +250,9 @@ public class ScheduleMeeting extends javax.swing.JFrame {
                      .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)))
                .addGroup(mainPanelLayout.createSequentialGroup()
                   .addGap(210, 210, 210)
-                  .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addComponent(confirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                   .addGap(36, 36, 36)
-                  .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                  .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
             .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
       );
       mainPanelLayout.setVerticalGroup(
@@ -312,8 +312,8 @@ public class ScheduleMeeting extends javax.swing.JFrame {
             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGap(33, 33, 33)
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-               .addComponent(jButton1)
-               .addComponent(jButton2))
+               .addComponent(confirmButton)
+               .addComponent(cancelButton))
             .addGap(32, 32, 32))
       );
 
@@ -369,12 +369,12 @@ public class ScheduleMeeting extends javax.swing.JFrame {
 
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
+   private javax.swing.JButton cancelButton;
+   private javax.swing.JButton confirmButton;
    private javax.swing.JComboBox<String> durationCombo;
    private javax.swing.JLabel durationLabel;
    private javax.swing.JCheckBox friCheckBox;
    private javax.swing.JLabel friLabel;
-   private javax.swing.JButton jButton1;
-   private javax.swing.JButton jButton2;
    private javax.swing.JLabel jLabel1;
    private javax.swing.JScrollPane jScrollPane1;
    private javax.swing.JPanel mainPanel;
