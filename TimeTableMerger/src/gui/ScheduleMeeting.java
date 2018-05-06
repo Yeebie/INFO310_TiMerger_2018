@@ -54,12 +54,12 @@ public class ScheduleMeeting extends javax.swing.JFrame {
       satCheckBox = new javax.swing.JCheckBox();
       sunLabel = new javax.swing.JLabel();
       sunCheckBox = new javax.swing.JCheckBox();
-      searchField = new javax.swing.JTextField();
-      searchButton = new javax.swing.JButton();
       searchLabel = new javax.swing.JLabel();
       jScrollPane1 = new javax.swing.JScrollPane();
       usersList = new javax.swing.JList<>();
       jLabel1 = new javax.swing.JLabel();
+      jButton1 = new javax.swing.JButton();
+      jButton2 = new javax.swing.JButton();
 
       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -175,15 +175,6 @@ public class ScheduleMeeting extends javax.swing.JFrame {
          }
       });
 
-      searchField.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-      searchField.setText("Search");
-      searchField.setName("searchField"); // NOI18N
-
-      searchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/searchIcon.png"))); // NOI18N
-      searchButton.setBorderPainted(false);
-      searchButton.setContentAreaFilled(false);
-      searchButton.setName("searchButton"); // NOI18N
-
       searchLabel.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 24)); // NOI18N
       searchLabel.setText("People:");
       searchLabel.setName("searchLabel"); // NOI18N
@@ -196,6 +187,14 @@ public class ScheduleMeeting extends javax.swing.JFrame {
       jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 85)); // NOI18N
       jLabel1.setText("Schedule Meeting");
       jLabel1.setName("jLabel1"); // NOI18N
+
+      jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+      jButton1.setText("Confirm");
+      jButton1.setName("jButton1"); // NOI18N
+
+      jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+      jButton2.setText("Cancel");
+      jButton2.setName("jButton2"); // NOI18N
 
       javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
       mainPanel.setLayout(mainPanelLayout);
@@ -243,14 +242,17 @@ public class ScheduleMeeting extends javax.swing.JFrame {
                                  .addComponent(sunCheckBox))))))))
             .addGap(0, 30, Short.MAX_VALUE))
          .addGroup(mainPanelLayout.createSequentialGroup()
-            .addGap(182, 182, 182)
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-               .addComponent(searchLabel)
                .addGroup(mainPanelLayout.createSequentialGroup()
-                  .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                  .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-               .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE))
+                  .addGap(182, 182, 182)
+                  .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                     .addComponent(searchLabel)
+                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)))
+               .addGroup(mainPanelLayout.createSequentialGroup()
+                  .addGap(210, 210, 210)
+                  .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addGap(36, 36, 36)
+                  .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
             .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
       );
       mainPanelLayout.setVerticalGroup(
@@ -304,15 +306,15 @@ public class ScheduleMeeting extends javax.swing.JFrame {
                               .addGap(37, 37, 37)
                               .addComponent(sunLabel)))))
                   .addGap(67, 67, 67)))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
             .addComponent(searchLabel)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-               .addComponent(searchField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-               .addComponent(searchButton, javax.swing.GroupLayout.Alignment.TRAILING))
             .addGap(18, 18, 18)
             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(21, 21, 21))
+            .addGap(33, 33, 33)
+            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+               .addComponent(jButton1)
+               .addComponent(jButton2))
+            .addGap(32, 32, 32))
       );
 
       javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -371,6 +373,8 @@ public class ScheduleMeeting extends javax.swing.JFrame {
    private javax.swing.JLabel durationLabel;
    private javax.swing.JCheckBox friCheckBox;
    private javax.swing.JLabel friLabel;
+   private javax.swing.JButton jButton1;
+   private javax.swing.JButton jButton2;
    private javax.swing.JLabel jLabel1;
    private javax.swing.JScrollPane jScrollPane1;
    private javax.swing.JPanel mainPanel;
@@ -378,8 +382,6 @@ public class ScheduleMeeting extends javax.swing.JFrame {
    private javax.swing.JLabel monLabel;
    private javax.swing.JCheckBox satCheckBox;
    private javax.swing.JLabel satLabel;
-   private javax.swing.JButton searchButton;
-   private javax.swing.JTextField searchField;
    private javax.swing.JLabel searchLabel;
    private javax.swing.JCheckBox sunCheckBox;
    private javax.swing.JLabel sunLabel;
