@@ -6,6 +6,7 @@ import dao.UserStorageDAO;
 import domain.User;
 import gui.helpers.SimpleListModel;
 import java.awt.Window;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -222,6 +223,7 @@ public class Contacts extends javax.swing.JFrame {
 	
    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
 
+		try{
 		//getting the username and the contact name
 		String userName = userStorageDAO.getUserName();
 		System.out.println("Add Button - User active = " + userName);
@@ -234,7 +236,10 @@ public class Contacts extends javax.swing.JFrame {
 		userDAO.addContact(userName, contactName, contactFirstName, contactLastName);
 		
 		displayContacts.updateItems(userDAO.getContactList(userName));
-		contactsList.setModel(displayContacts);       
+		contactsList.setModel(displayContacts); 
+		}catch(NullPointerException ex){
+			JOptionPane.showOptionDialog(null, "There is no contact with that username. Please retry.", "Warning", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null, null, null);
+		}
    }//GEN-LAST:event_addButtonActionPerformed
 
 
