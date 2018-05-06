@@ -143,15 +143,8 @@ public class UserDAO {
 			throw new DAOException(ex.getMessage(), ex);
 		}
 	}
-		
-			
-	//Not fully implemented yet - needs fixing.
-	//Not working because we are currently trying to access the contact table 
-	//Contact table has Strings and no Users
-	//We need to access the Users timetables, and will therefore need to access the Users from
-	//the users table but using the names from the contact list
-	//Therefore, the rs.next() should only incl columns in the contact table
-	public Set<String> getContactList(String currentUser) {
+	
+	public Collection<String> getContactList(String currentUser) {
 		String sql = "select * from contact where username = ?";
 
 		try (Connection dbCon = JdbcConnection.getConnection(url);
@@ -160,17 +153,18 @@ public class UserDAO {
 			stmt.setString(1, currentUser);
 
 			ResultSet rs = stmt.executeQuery();
-			Set<String> contacts = new HashSet<>();
+			ArrayList<String> contacts = new ArrayList<>();
 
 			while (rs.next()) {
 				String userName = rs.getString("contactList");
-				contacts.add(userName);
+				String firstName = rs.getString("contactFirstName");
+				String lastName = rs.getString("contactLastName");
+				contacts.add(firstName + " " + lastName + "       UserName: " + userName);
 				
 			}
 			return contacts;
 
-		} catch (SQLException ex) {  // we are forced to catch SQLException
-			// don't let the SQLException leak from our DAO encapsulation
+		} catch (SQLException ex) {
 			throw new DAOException(ex.getMessage(), ex);
 		}
 	}
@@ -262,20 +256,19 @@ public class UserDAO {
 		}
 	}*/
 		
-	public void addContact(String userName, String contactName) {
+	public void addContact(String userName, String contactUserName, String contactFirstName, String contactLastName) {
 		//String sql= "merge into contact (username, firstname, lastname, contactlist) values (?, ?, ?, ?)";
-      String sql= "merge into contact (username, contactlist) values (?, ?)";
+      String sql= "merge into contact (username, contactlist, contactfirstname, contactlastname) values (?, ?, ?, ?)";
     try (
         // get connection to database
         Connection dbCon = JdbcConnection.getConnection(url);
         // create the statement
         PreparedStatement stmt = dbCon.prepareStatement(sql);
-    ) {
-        // copy the data from the product domain object into the SQL parameters
-        stmt.setString(1, userName);
-		  //stmt.setString(2, firstName);
-		  //stmt.setString(3, lastName);
-		  stmt.setString(2, contactName);
+    ) {        
+		  stmt.setString(1, userName);
+		  stmt.setString(2, contactUserName);
+		  stmt.setString(3, contactFirstName);
+		  stmt.setString(4, contactLastName);
 		 
         stmt.executeUpdate();  // execute the statement
 

@@ -3,6 +3,7 @@ package gui;
 import dao.UserDAO;
 import dao.TimetableDAO;
 import dao.UserStorageDAO;
+import domain.User;
 import gui.helpers.SimpleListModel;
 import java.awt.Window;
 
@@ -32,10 +33,13 @@ public class Contacts extends javax.swing.JFrame {
 		this.userStorageDAO = userStorageDAO;
 		
 		initComponents();
-
-		displayContacts.updateItems(userDAO.getContactList(userStorageDAO.getUserName()));
+		
+		String currentUser = userStorageDAO.getUserName(); 
+		displayContacts.updateItems(userDAO.getContactList(currentUser));
 		contactsList.setModel(displayContacts);
-		//displaySelectedUser.updateItems(userDAO.getUserList());
+		
+
+//displaySelectedUser.updateItems(userDAO.getUserList());
 		//usersList.setModel(displaySelectedUser);
 		
 		//displayContacts.updateItems(userDAO.getContactList(userStorageDAO.getUserName()));
@@ -223,14 +227,16 @@ public class Contacts extends javax.swing.JFrame {
 		String userName = userStorageDAO.getUserName();
 		System.out.println("Add Button - User active = " + userName);
 		String contactName = searchText.getText();
+		
+		User contact = userDAO.getUser(contactName);
+		String contactFirstName = contact.getFirstName();
+		String contactLastName = contact.getLastName(); 
 	
-		userDAO.addContact(userName, contactName);
+		userDAO.addContact(userName, contactName, contactFirstName, contactLastName);
 		
 		displayContacts.updateItems(userDAO.getContactList(userName));
 		contactsList.setModel(displayContacts);
 
-		
-	
 		/*
 		String stringUserName = searchText.getText(); 
 		

@@ -18,13 +18,11 @@ create table User (
 
 create table Contact (
 	UserName varchar(255) NOT NULL,
-	FirstName varchar(255), 
-	LastName varchar(255), 
 	ContactList varchar(255) NOT NULL,
 	ContactFirstName varchar(255),
 	ContactLastName varchar(255), 
 	primary key (UserName, ContactList),
-	foreign key (UserName, FirstName, LastName) references User (UserName, FirstName, LastName),
+	foreign key (UserName) references User (UserName),
 );
 
 create table Day (
