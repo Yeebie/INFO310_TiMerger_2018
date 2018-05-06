@@ -221,8 +221,7 @@ public class Contacts extends javax.swing.JFrame {
 
 	
    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
-     	//String stringUserName = searchText.getText(); 
-		
+
 		//getting the username and the contact name
 		String userName = userStorageDAO.getUserName();
 		System.out.println("Add Button - User active = " + userName);
@@ -231,25 +230,11 @@ public class Contacts extends javax.swing.JFrame {
 		User contact = userDAO.getUser(contactName);
 		String contactFirstName = contact.getFirstName();
 		String contactLastName = contact.getLastName(); 
-	
+	   
 		userDAO.addContact(userName, contactName, contactFirstName, contactLastName);
 		
 		displayContacts.updateItems(userDAO.getContactList(userName));
-		contactsList.setModel(displayContacts);
-
-		/*
-		String stringUserName = searchText.getText(); 
-		
-		if(stringUserName.equals("")){
-			displaySelectedUser.updateItems(userDAO.getUserList());
-			usersList.setModel(displaySelectedUser);
-		}else{
-			String userName = stringUserName; 		
-		
-			displaySelectedUser.updateItems(userDAO.searchByUserName(userName));
-			usersList.setModel(displaySelectedUser);
-		}*/
-             
+		contactsList.setModel(displayContacts);       
    }//GEN-LAST:event_addButtonActionPerformed
 
 

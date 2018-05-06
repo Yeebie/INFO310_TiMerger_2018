@@ -272,9 +272,7 @@ public class UserDAO {
 		 
         stmt.executeUpdate();  // execute the statement
 
-    } catch (SQLException ex) {  // we are forced to catch SQLException
-        // don't let the SQLException leak from our DAO encapsulation
-        //throw new RuntimeException(ex);
+    } catch (SQLException ex) {  
 		  throw new DAOException(ex.getMessage(), ex);
     }
 	}
