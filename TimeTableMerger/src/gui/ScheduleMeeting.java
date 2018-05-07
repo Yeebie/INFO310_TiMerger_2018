@@ -498,22 +498,21 @@ public class ScheduleMeeting extends javax.swing.JFrame {
    }//GEN-LAST:event_cancelButtonActionPerformed
 
    private void RemoveArrowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveArrowActionPerformed
-      // TODO add your handling code here:
+     String selectedUserToDelete = selectedContacts.getSelectedValue(); 
+	  usersToCompare.removeElement(selectedUserToDelete); 
+	  selectedContacts.setModel(usersToCompare);
    }//GEN-LAST:event_RemoveArrowActionPerformed
 
    private void AddArrowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddArrowActionPerformed
-		//JList<String> usersToCompare = new JList<>(model); 
 		
 		String selectedUser = contactList1.getSelectedValue();
 		
-		usersToCompare.addElement(selectedUser); 
-		selectedContacts.setModel(usersToCompare); 
-		
-		/*
-		usersToCompare.add(selectedUser); 
-		//selectedContacts.(usersToCompare);
-     	contactsToCompare.updateItems(usersToCompare);
-		selectedContacts.setModel(usersToCompare); */
+		if(usersToCompare.contains(selectedUser)){
+			JOptionPane.showMessageDialog(null, "You have already added this user.");
+		}else{
+			usersToCompare.addElement(selectedUser); 
+			selectedContacts.setModel(usersToCompare); 
+		}
    }//GEN-LAST:event_AddArrowActionPerformed
 
 	/**
