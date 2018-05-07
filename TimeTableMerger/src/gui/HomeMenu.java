@@ -197,11 +197,12 @@ public class HomeMenu extends javax.swing.JDialog {
 
    private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
 		// TODO add your handling code here:
+                System.out.println("out");
 		System.exit(0);
    }//GEN-LAST:event_exitButtonActionPerformed
 
    private void timetableButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timetableButtonActionPerformed
-		dispose();
+		//dispose();
 		try {
 
 			//initialise each day with the users data
@@ -232,7 +233,7 @@ public class HomeMenu extends javax.swing.JDialog {
 			dialog.setLocationRelativeTo(this);
 			// make the dialog visible
 			dialog.setVisible(true);
-			dispose();
+			//dispose();
 
 		} catch (NullPointerException ex) {
 			// gives the user an option to create a timetable if they haven't already
