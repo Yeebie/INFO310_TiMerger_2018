@@ -36,8 +36,10 @@ public class Contacts extends javax.swing.JFrame {
 		initComponents();
 		
 		String currentUser = userStorageDAO.getUserName(); 
+		
 		displayContacts.updateItems(userDAO.getContactList(currentUser));
 		contactsList.setModel(displayContacts);
+		
 		
 
 //displaySelectedUser.updateItems(userDAO.getUserList());
