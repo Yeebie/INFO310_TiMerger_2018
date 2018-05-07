@@ -34,7 +34,9 @@ public class ScheduleMeeting extends javax.swing.JFrame {
 	/**
 	 * Creates new form ScheduleMeeting
 	 */
-	public ScheduleMeeting() {
+	public ScheduleMeeting(Window parent, boolean modal, TimetableDAO timetableDAO, UserDAO userDAO, UserStorageDAO userStorageDAO) {
+		this.timetableDAO = timetableDAO;
+		this.userStorageDAO = userStorageDAO;
 		this.setName("Schedule Meeting");
 		initComponents();
 		
