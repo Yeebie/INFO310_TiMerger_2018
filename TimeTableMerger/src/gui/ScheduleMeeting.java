@@ -21,7 +21,10 @@ public class ScheduleMeeting extends javax.swing.JFrame {
 	private final TimetableDAO timetableDAO;
 	private final UserStorageDAO userStorageDAO;
 	private SimpleListModel myModel = new SimpleListModel();
-	//not 100% sure these are needed yet
+	
+	private SimpleListModel displayContactList = new SimpleListModel(); 
+
+//not 100% sure these are needed yet
 	private boolean monday;
 	private boolean tuesday;
 	private boolean wednesday;
@@ -40,8 +43,12 @@ public class ScheduleMeeting extends javax.swing.JFrame {
 		this.setName("Schedule Meeting");
 		initComponents();
 		
-		myModel.updateItems(userDAO.getUserList());
-		usersList.setModel(myModel);
+		String currentUser = userStorageDAO.getUserName(); 
+		displayContactList.updateItems(userDAO.getContactList(currentUser));
+		contactList1.setModel(displayContactList);
+		
+		//myModel.updateItems(userDAO.getUserList());
+		//selectedContacts.setModel(myModel);
 		
 		//set all days to selected by default
 		monCheckBox.setSelected(true);
@@ -81,10 +88,15 @@ public class ScheduleMeeting extends javax.swing.JFrame {
       sunCheckBox = new javax.swing.JCheckBox();
       searchLabel = new javax.swing.JLabel();
       jScrollPane1 = new javax.swing.JScrollPane();
-      usersList = new javax.swing.JList<>();
+      selectedContacts = new javax.swing.JList<>();
       jLabel1 = new javax.swing.JLabel();
       confirmButton = new javax.swing.JButton();
       cancelButton = new javax.swing.JButton();
+      jScrollPane2 = new javax.swing.JScrollPane();
+      contactList1 = new javax.swing.JList<>();
+      searchLabel2 = new javax.swing.JLabel();
+      AddArrow = new javax.swing.JButton();
+      RemoveArrow = new javax.swing.JButton();
 
       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -201,13 +213,13 @@ public class ScheduleMeeting extends javax.swing.JFrame {
       });
 
       searchLabel.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 24)); // NOI18N
-      searchLabel.setText("People:");
+      searchLabel.setText("Contact List:");
       searchLabel.setName("searchLabel"); // NOI18N
 
       jScrollPane1.setName("jScrollPane1"); // NOI18N
 
-      usersList.setName("usersList"); // NOI18N
-      jScrollPane1.setViewportView(usersList);
+      selectedContacts.setName("selectedContacts"); // NOI18N
+      jScrollPane1.setViewportView(selectedContacts);
 
       jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 85)); // NOI18N
       jLabel1.setText("Schedule Meeting");
@@ -228,6 +240,31 @@ public class ScheduleMeeting extends javax.swing.JFrame {
       cancelButton.addActionListener(new java.awt.event.ActionListener() {
          public void actionPerformed(java.awt.event.ActionEvent evt) {
             cancelButtonActionPerformed(evt);
+         }
+      });
+
+      jScrollPane2.setName("jScrollPane2"); // NOI18N
+
+      contactList1.setName("contactList1"); // NOI18N
+      jScrollPane2.setViewportView(contactList1);
+
+      searchLabel2.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 24)); // NOI18N
+      searchLabel2.setText("Merge timetables with:");
+      searchLabel2.setName("searchLabel2"); // NOI18N
+
+      AddArrow.setText("Add");
+      AddArrow.setName("AddArrow"); // NOI18N
+      AddArrow.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            AddArrowActionPerformed(evt);
+         }
+      });
+
+      RemoveArrow.setText("Remove");
+      RemoveArrow.setName("RemoveArrow"); // NOI18N
+      RemoveArrow.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            RemoveArrowActionPerformed(evt);
          }
       });
 
@@ -254,41 +291,50 @@ public class ScheduleMeeting extends javax.swing.JFrame {
                      .addComponent(tueLabel)
                      .addComponent(wedLabel))
                   .addGap(18, 18, 18)
+                  .addComponent(thuCheckBox))
+               .addGroup(mainPanelLayout.createSequentialGroup()
+                  .addGap(262, 262, 262)
                   .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                     .addComponent(thuCheckBox)
+                     .addComponent(tueCheckBox)
+                     .addComponent(monCheckBox)
+                     .addComponent(wedCheckBox))
+                  .addGap(67, 67, 67)
+                  .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                      .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                           .addComponent(tueCheckBox)
-                           .addComponent(monCheckBox)
-                           .addComponent(wedCheckBox))
-                        .addGap(59, 59, 59)
+                        .addComponent(friLabel)
+                        .addGap(18, 18, 18)
+                        .addComponent(friCheckBox))
+                     .addGroup(mainPanelLayout.createSequentialGroup()
                         .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                           .addGroup(mainPanelLayout.createSequentialGroup()
-                              .addComponent(friLabel)
-                              .addGap(18, 18, 18)
-                              .addComponent(friCheckBox))
-                           .addGroup(mainPanelLayout.createSequentialGroup()
-                              .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                 .addComponent(satLabel)
-                                 .addComponent(sunLabel))
-                              .addGap(18, 18, 18)
-                              .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                 .addComponent(satCheckBox)
-                                 .addComponent(sunCheckBox))))))))
-            .addGap(0, 30, Short.MAX_VALUE))
+                           .addComponent(satLabel)
+                           .addComponent(sunLabel))
+                        .addGap(18, 18, 18)
+                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                           .addComponent(satCheckBox)
+                           .addComponent(sunCheckBox))))))
+            .addGap(0, 43, Short.MAX_VALUE))
          .addGroup(mainPanelLayout.createSequentialGroup()
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                .addGroup(mainPanelLayout.createSequentialGroup()
-                  .addGap(182, 182, 182)
-                  .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                     .addComponent(searchLabel)
-                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)))
-               .addGroup(mainPanelLayout.createSequentialGroup()
-                  .addGap(210, 210, 210)
+                  .addGap(228, 228, 228)
                   .addComponent(confirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addGap(36, 36, 36)
-                  .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                  .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+               .addGroup(mainPanelLayout.createSequentialGroup()
+                  .addGap(57, 57, 57)
+                  .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                     .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                           .addComponent(AddArrow, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                           .addComponent(RemoveArrow)))
+                     .addComponent(searchLabel))
+                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                  .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                     .addComponent(searchLabel2)
+                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addContainerGap(78, Short.MAX_VALUE))
       );
       mainPanelLayout.setVerticalGroup(
          mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -341,11 +387,22 @@ public class ScheduleMeeting extends javax.swing.JFrame {
                               .addGap(37, 37, 37)
                               .addComponent(sunLabel)))))
                   .addGap(67, 67, 67)))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-            .addComponent(searchLabel)
-            .addGap(18, 18, 18)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(33, 33, 33)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+               .addComponent(searchLabel)
+               .addComponent(searchLabel2))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addGroup(mainPanelLayout.createSequentialGroup()
+                  .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                  .addGap(66, 66, 66))
+               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
+                  .addComponent(AddArrow)
+                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                  .addComponent(RemoveArrow)
+                  .addGap(100, 100, 100)))
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                .addComponent(confirmButton)
                .addComponent(cancelButton))
@@ -424,33 +481,46 @@ public class ScheduleMeeting extends javax.swing.JFrame {
       }
    }//GEN-LAST:event_cancelButtonActionPerformed
 
+   private void RemoveArrowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveArrowActionPerformed
+      // TODO add your handling code here:
+   }//GEN-LAST:event_RemoveArrowActionPerformed
+
+   private void AddArrowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddArrowActionPerformed
+      // TODO add your handling code here:
+   }//GEN-LAST:event_AddArrowActionPerformed
+
 	/**
 	 * @param args the command line arguments
 	 */
 
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
+   private javax.swing.JButton AddArrow;
+   private javax.swing.JButton RemoveArrow;
    private javax.swing.JButton cancelButton;
    private javax.swing.JButton confirmButton;
+   private javax.swing.JList<String> contactList1;
    private javax.swing.JComboBox<String> durationCombo;
    private javax.swing.JLabel durationLabel;
    private javax.swing.JCheckBox friCheckBox;
    private javax.swing.JLabel friLabel;
    private javax.swing.JLabel jLabel1;
    private javax.swing.JScrollPane jScrollPane1;
+   private javax.swing.JScrollPane jScrollPane2;
    private javax.swing.JPanel mainPanel;
    private javax.swing.JCheckBox monCheckBox;
    private javax.swing.JLabel monLabel;
    private javax.swing.JCheckBox satCheckBox;
    private javax.swing.JLabel satLabel;
    private javax.swing.JLabel searchLabel;
+   private javax.swing.JLabel searchLabel2;
+   private javax.swing.JList<String> selectedContacts;
    private javax.swing.JCheckBox sunCheckBox;
    private javax.swing.JLabel sunLabel;
    private javax.swing.JCheckBox thuCheckBox;
    private javax.swing.JLabel thuLabel;
    private javax.swing.JCheckBox tueCheckBox;
    private javax.swing.JLabel tueLabel;
-   private javax.swing.JList<String> usersList;
    private javax.swing.JCheckBox wedCheckBox;
    private javax.swing.JLabel wedLabel;
    // End of variables declaration//GEN-END:variables
