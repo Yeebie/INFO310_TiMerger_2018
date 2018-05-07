@@ -261,7 +261,7 @@ public class HomeMenu extends javax.swing.JDialog {
 
    private void scheduleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_scheduleButtonActionPerformed
 		dispose();
-		ScheduleTimetable dialog = new ScheduleTimetable(this, true, timetableDAO, userDAO, userStorageDAO);
+		ScheduleMeeting dialog = new ScheduleMeeting(this, true, timetableDAO, userDAO, userStorageDAO);
 		dialog.pack();
 		//set size
 		dialog.setSize(715, 677);
