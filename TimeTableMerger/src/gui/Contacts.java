@@ -39,14 +39,7 @@ public class Contacts extends javax.swing.JFrame {
 		
 		displayContacts.updateItems(userDAO.getContactList(currentUser));
 		contactsList.setModel(displayContacts);
-		
-		
-
-//displaySelectedUser.updateItems(userDAO.getUserList());
-		//usersList.setModel(displaySelectedUser);
-		
-		//displayContacts.updateItems(userDAO.getContactList(userStorageDAO.getUserName()));
-		//contactsList.setModel(displayContacts);
+	
 	}
 
 	/**
