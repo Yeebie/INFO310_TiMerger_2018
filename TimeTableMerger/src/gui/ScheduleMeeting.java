@@ -1,11 +1,15 @@
 package gui;
 
+import dao.TimetableDAO;
 import dao.UserDAO;
+import dao.UserStorageDAO;
 import gui.helpers.SimpleListModel;
+import java.awt.Window;
 import java.util.ArrayList;
 import static java.util.Arrays.asList;
 import java.util.List;
 import javax.swing.ComboBoxModel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -14,7 +18,17 @@ import javax.swing.ComboBoxModel;
 public class ScheduleMeeting extends javax.swing.JFrame {
 	
 	private UserDAO userDAO;
+	private final TimetableDAO timetableDAO;
+	private final UserStorageDAO userStorageDAO;
 	private SimpleListModel myModel = new SimpleListModel();
+	//not 100% sure these are needed yet
+	private boolean monday;
+	private boolean tuesday;
+	private boolean wednesday;
+	private boolean thursday;
+	private boolean friday;
+	private boolean saturday;
+	private boolean sunday;
 
 
 	/**
@@ -26,6 +40,15 @@ public class ScheduleMeeting extends javax.swing.JFrame {
 		
 		myModel.updateItems(userDAO.getUserList());
 		usersList.setModel(myModel);
+		
+		//set all days to selected by default
+		monCheckBox.setSelected(true);
+		tueCheckBox.setSelected(true);
+		wedCheckBox.setSelected(true);
+		thuCheckBox.setSelected(true);
+		friCheckBox.setSelected(true);
+		satCheckBox.setSelected(true);
+		sunCheckBox.setSelected(true);
 	}
 
 	/**
@@ -191,10 +214,20 @@ public class ScheduleMeeting extends javax.swing.JFrame {
       confirmButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
       confirmButton.setText("Confirm");
       confirmButton.setName("confirmButton"); // NOI18N
+      confirmButton.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            confirmButtonActionPerformed(evt);
+         }
+      });
 
       cancelButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
       cancelButton.setText("Cancel");
       cancelButton.setName("cancelButton"); // NOI18N
+      cancelButton.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            cancelButtonActionPerformed(evt);
+         }
+      });
 
       javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
       mainPanel.setLayout(mainPanelLayout);
@@ -362,6 +395,32 @@ public class ScheduleMeeting extends javax.swing.JFrame {
    private void durationComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_durationComboActionPerformed
       // TODO add your handling code here:
    }//GEN-LAST:event_durationComboActionPerformed
+
+   private void confirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmButtonActionPerformed
+      //set day fields to true/false depending if check box has been unselected (chec kboxes are selected by default
+		monday = monCheckBox.isSelected();
+		tuesday = tueCheckBox.isSelected();
+		wednesday = wedCheckBox.isSelected();
+		thursday = thuCheckBox.isSelected();
+		friday = friCheckBox.isSelected();
+		saturday = satCheckBox.isSelected();
+		sunday = sunCheckBox.isSelected();
+   }//GEN-LAST:event_confirmButtonActionPerformed
+
+   private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
+            int result = JOptionPane.showConfirmDialog(
+         this, "Are you sure you want to cancel?","Confirmation Dialog",  JOptionPane.YES_NO_OPTION);
+      // did the user click the yes button?
+      if (result == JOptionPane.YES_OPTION) {
+
+         dispose();
+         HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userDAO, userStorageDAO);
+         // centre the dialog on the parent window
+         dialog.setLocationRelativeTo(this);
+         // make the dialog visible
+         dialog.setVisible(true);
+      }
+   }//GEN-LAST:event_cancelButtonActionPerformed
 
 	/**
 	 * @param args the command line arguments

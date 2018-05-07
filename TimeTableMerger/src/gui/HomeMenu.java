@@ -200,7 +200,7 @@ public class HomeMenu extends javax.swing.JDialog {
    }//GEN-LAST:event_exitButtonActionPerformed
 
    private void timetableButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timetableButtonActionPerformed
-
+		dispose();
 		try {
 
 			//initialise each day with the users data
