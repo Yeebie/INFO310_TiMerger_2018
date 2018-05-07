@@ -145,7 +145,7 @@ public class UserDAO {
 	}
 	
 	public Collection<String> getContactList(String currentUser) {
-		String sql = "select * from contact where username = ?";
+		String sql = "select * from contact where username = ? order by contactfirstname";
 
 		try (Connection dbCon = JdbcConnection.getConnection(url);
 				  PreparedStatement stmt = dbCon.prepareStatement(sql);) {
