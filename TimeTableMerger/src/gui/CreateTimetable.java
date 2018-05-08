@@ -17,262 +17,251 @@ import javax.swing.JOptionPane;
  */
 public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFrame
 
-	private boolean userIDEditable = true;
-	private final TimetableDAO timetableDAO;
-	private final UserDAO userDAO;
-	private final UserStorageDAO userStorageDAO;
-        private ArrayList<JCheckBox> weekDays1 = new ArrayList<JCheckBox> (); 
-        private ArrayList<JCheckBox> weekDays2 = new ArrayList<JCheckBox> (); 
+    private boolean userIDEditable = true;
+    private final TimetableDAO timetableDAO;
+    private final UserDAO userDAO;
+    private final UserStorageDAO userStorageDAO;
+    private ArrayList<JCheckBox> weekDays1 = new ArrayList<JCheckBox>();
+    private ArrayList<JCheckBox> weekDays2 = new ArrayList<JCheckBox>();
 
-	/**
-	 * Saves a new Timetable
-	 *
-	 * @param parent
-	 * @param modal
-	 * @param timetableDAO
-	 * @param userStorageDAO
-	 */
-        
-      public CreateTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserDAO userDAO, UserStorageDAO userStorageDAO){
-		super(parent);
-		super.setModal(modal);
-		this.timetableDAO = timetableDAO;
-		this.userDAO = userDAO;
-		this.userStorageDAO = userStorageDAO;
-		this.setName("Create Timetable");
-		
-		initComponents();
-                
-                // add to array list all the JcheckBoxes
-                weekDays1.add(mon8w1) ; 
-                weekDays1.add(mon9w1) ;
-                weekDays1.add(mon10w1) ;
-                weekDays1.add(mon11w1) ;
-                weekDays1.add(mon12w1) ;
-                weekDays1.add(mon13w1) ;
-                weekDays1.add(mon14w1) ;
-                weekDays1.add(mon15w1) ;
-                weekDays1.add(mon16w1) ;
-                weekDays1.add(mon17w1) ;
-                weekDays1.add(mon18w1) ;
-                weekDays1.add(mon19w1) ;
-                weekDays1.add(mon20w1) ;
-                weekDays1.add(mon21w1) ;
-                
-                weekDays1.add(tue8w1) ;
-                weekDays1.add(tue9w1) ;
-                weekDays1.add(tue10w1) ;
-                weekDays1.add(tue11w1) ;
-                weekDays1.add(tue12w1) ;
-                weekDays1.add(tue13w1) ;
-                weekDays1.add(tue14w1) ;
-                weekDays1.add(tue15w1) ;
-                weekDays1.add(tue16w1) ;
-                weekDays1.add(tue17w1) ;
-                weekDays1.add(tue18w1) ;
-                weekDays1.add(tue19w1) ;
-                weekDays1.add(tue20w1) ;
-                weekDays1.add(tue21w1) ;
-                
-                weekDays1.add(wed8w1) ;
-                weekDays1.add(wed9w1) ;
-                weekDays1.add(wed10w1) ;
-                weekDays1.add(wed11w1) ;
-                weekDays1.add(wed12w1) ;
-                weekDays1.add(wed13w1) ;
-                weekDays1.add(wed14w1) ;
-                weekDays1.add(wed15w1) ;
-                weekDays1.add(wed16w1) ;
-                weekDays1.add(wed17w1) ;
-                weekDays1.add(wed18w1) ;
-                weekDays1.add(wed19w1) ;
-                weekDays1.add(wed20w1) ;
-                weekDays1.add(wed21w1) ;
-                
-                weekDays1.add(thu8w1) ;
-                weekDays1.add(thu9w1) ;
-                weekDays1.add(thu10w1) ;
-                weekDays1.add(thu11w1) ;
-                weekDays1.add(thu12w1) ;
-                weekDays1.add(thu13w1) ;
-                weekDays1.add(thu14w1) ;
-                weekDays1.add(thu15w1) ;
-                weekDays1.add(thu16w1) ;
-                weekDays1.add(thu17w1) ;
-                weekDays1.add(thu18w1) ;
-                weekDays1.add(thu19w1) ;
-                weekDays1.add(thu20w1) ;
-                weekDays1.add(thu21w1) ;
-                
-                weekDays1.add(fri8w1) ;
-                weekDays1.add(fri9w1) ;
-                weekDays1.add(fri10w1) ;
-                weekDays1.add(fri11w1) ;
-                weekDays1.add(fri12w1) ;
-                weekDays1.add(fri13w1) ;
-                weekDays1.add(fri14w1) ;
-                weekDays1.add(fri15w1) ;
-                weekDays1.add(fri16w1) ;
-                weekDays1.add(fri17w1) ;
-                weekDays1.add(fri18w1) ;
-                weekDays1.add(fri19w1) ;
-                weekDays1.add(fri20w1) ;
-                weekDays1.add(fri21w1) ;
-                
-                weekDays1.add(sat8w1) ;
-                weekDays1.add(sat9w1) ;
-                weekDays1.add(sat10w1) ;
-                weekDays1.add(sat11w1) ;
-                weekDays1.add(sat12w1) ;
-                weekDays1.add(sat13w1) ;
-                weekDays1.add(sat14w1) ;
-                weekDays1.add(sat15w1) ;
-                weekDays1.add(sat16w1) ;
-                weekDays1.add(sat17w1) ;
-                weekDays1.add(sat18w1) ;
-                weekDays1.add(sat19w1) ;
-                weekDays1.add(sat20w1) ;
-                weekDays1.add(sat21w1) ;
-                
-                weekDays1.add(sun8w1) ;
-                weekDays1.add(sun9w1) ;
-                weekDays1.add(sun10w1) ;
-                weekDays1.add(sun11w1) ;
-                weekDays1.add(sun12w1) ;
-                weekDays1.add(sun13w1) ;
-                weekDays1.add(sun14w1) ;
-                weekDays1.add(sun15w1) ;
-                weekDays1.add(sun16w1) ;
-                weekDays1.add(sun17w1) ;
-                weekDays1.add(sun18w1) ;
-                weekDays1.add(sun19w1) ;
-                weekDays1.add(sun20w1) ;
-                weekDays1.add(sun21w1) ;
-                
-                weekDays2.add(mon8w2) ; 
-                weekDays2.add(mon9w2) ;
-                weekDays2.add(mon10w2) ;
-                weekDays2.add(mon11w2) ;
-                weekDays2.add(mon12w2) ;
-                weekDays2.add(mon13w2) ;
-                weekDays2.add(mon14w2) ;
-                weekDays2.add(mon15w2) ;
-                weekDays2.add(mon16w2) ;
-                weekDays2.add(mon17w2) ;
-                weekDays2.add(mon18w2) ;
-                weekDays2.add(mon19w2) ;
-                weekDays2.add(mon20w2) ;
-                weekDays2.add(mon21w2) ;
-                
-                weekDays2.add(tue8w2) ;
-                weekDays2.add(tue9w2) ;
-                weekDays2.add(tue10w2) ;
-                weekDays2.add(tue11w2) ;
-                weekDays2.add(tue12w2) ;
-                weekDays2.add(tue13w2) ;
-                weekDays2.add(tue14w2) ;
-                weekDays2.add(tue15w2) ;
-                weekDays2.add(tue16w2) ;
-                weekDays2.add(tue17w2) ;
-                weekDays2.add(tue18w2) ;
-                weekDays2.add(tue19w2) ;
-                weekDays2.add(tue20w2) ;
-                weekDays2.add(tue21w2) ;
-                
-                weekDays2.add(wed8w2) ;
-                weekDays2.add(wed9w2) ;
-                weekDays2.add(wed10w2) ;
-                weekDays2.add(wed11w2) ;
-                weekDays2.add(wed12w2) ;
-                weekDays2.add(wed13w2) ;
-                weekDays2.add(wed14w2) ;
-                weekDays2.add(wed15w2) ;
-                weekDays2.add(wed16w2) ;
-                weekDays2.add(wed17w2) ;
-                weekDays2.add(wed18w2) ;
-                weekDays2.add(wed19w2) ;
-                weekDays2.add(wed20w2) ;
-                weekDays2.add(wed21w2) ;
-               
-                weekDays2.add(thu8w2) ;
-                weekDays2.add(thu9w2) ;
-                weekDays2.add(thu10w2) ;
-                weekDays2.add(thu11w2) ;
-                weekDays2.add(thu12w2) ;
-                weekDays2.add(thu13w2) ;
-                weekDays2.add(thu14w2) ;
-                weekDays2.add(thu15w2) ;
-                weekDays2.add(thu16w2) ;
-                weekDays2.add(thu17w2) ;
-                weekDays2.add(thu18w2) ;
-                weekDays2.add(thu19w2) ;
-                weekDays2.add(thu20w2) ;
-                weekDays2.add(thu21w2) ;
-                
-                weekDays2.add(fri8w2) ;
-                weekDays2.add(fri9w2) ;
-                weekDays2.add(fri10w2) ;
-                weekDays2.add(fri11w2) ;
-                weekDays2.add(fri12w2) ;
-                weekDays2.add(fri13w2) ;
-                weekDays2.add(fri14w2) ;
-                weekDays2.add(fri15w2) ;
-                weekDays2.add(fri16w2) ;
-                weekDays2.add(fri17w2) ;
-                weekDays2.add(fri18w2) ;
-                weekDays2.add(fri19w2) ;
-                weekDays2.add(fri20w2) ;
-                weekDays2.add(fri21w2) ;
-               
-                weekDays2.add(sat8w2) ;
-                weekDays2.add(sat9w2) ;
-                weekDays2.add(sat10w2) ;
-                weekDays2.add(sat11w2) ;
-                weekDays2.add(sat12w2) ;
-                weekDays2.add(sat13w2) ;
-                weekDays2.add(sat14w2) ;
-                weekDays2.add(sat15w2) ;
-                weekDays2.add(sat16w2) ;
-                weekDays2.add(sat17w2) ;
-                weekDays2.add(sat18w2) ;
-                weekDays2.add(sat19w2) ;
-                weekDays2.add(sat20w2) ;
-                weekDays2.add(sat21w2) ;
-              
-                weekDays2.add(sun8w2) ;
-                weekDays2.add(sun9w2) ;
-                weekDays2.add(sun10w2) ;
-                weekDays2.add(sun11w2) ;
-                weekDays2.add(sun12w2) ;
-                weekDays2.add(sun13w2) ;
-                weekDays2.add(sun14w2) ;
-                weekDays2.add(sun15w2) ;
-                weekDays2.add(sun16w2) ;
-                weekDays2.add(sun17w2) ;
-                weekDays2.add(sun18w2) ;
-                weekDays2.add(sun19w2) ;
-                weekDays2.add(sun20w2) ;
-                weekDays2.add(sun21w2) ;
-      
-    
+    /**
+     * Saves a new Timetable
+     *
+     * @param parent
+     * @param modal
+     * @param timetableDAO
+     * @param userStorageDAO
+     */
+    public CreateTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserDAO userDAO, UserStorageDAO userStorageDAO) {
+        super(parent);
+        super.setModal(modal);
+        this.timetableDAO = timetableDAO;
+        this.userDAO = userDAO;
+        this.userStorageDAO = userStorageDAO;
+        this.setName("Create Timetable");
 
+        initComponents();
 
+        // add to array list all the JcheckBoxes
+        weekDays1.add(mon8w1);
+        weekDays1.add(mon9w1);
+        weekDays1.add(mon10w1);
+        weekDays1.add(mon11w1);
+        weekDays1.add(mon12w1);
+        weekDays1.add(mon13w1);
+        weekDays1.add(mon14w1);
+        weekDays1.add(mon15w1);
+        weekDays1.add(mon16w1);
+        weekDays1.add(mon17w1);
+        weekDays1.add(mon18w1);
+        weekDays1.add(mon19w1);
+        weekDays1.add(mon20w1);
+        weekDays1.add(mon21w1);
 
-      
+        weekDays1.add(tue8w1);
+        weekDays1.add(tue9w1);
+        weekDays1.add(tue10w1);
+        weekDays1.add(tue11w1);
+        weekDays1.add(tue12w1);
+        weekDays1.add(tue13w1);
+        weekDays1.add(tue14w1);
+        weekDays1.add(tue15w1);
+        weekDays1.add(tue16w1);
+        weekDays1.add(tue17w1);
+        weekDays1.add(tue18w1);
+        weekDays1.add(tue19w1);
+        weekDays1.add(tue20w1);
+        weekDays1.add(tue21w1);
 
-      
+        weekDays1.add(wed8w1);
+        weekDays1.add(wed9w1);
+        weekDays1.add(wed10w1);
+        weekDays1.add(wed11w1);
+        weekDays1.add(wed12w1);
+        weekDays1.add(wed13w1);
+        weekDays1.add(wed14w1);
+        weekDays1.add(wed15w1);
+        weekDays1.add(wed16w1);
+        weekDays1.add(wed17w1);
+        weekDays1.add(wed18w1);
+        weekDays1.add(wed19w1);
+        weekDays1.add(wed20w1);
+        weekDays1.add(wed21w1);
 
-                
-                /// end adding to array
+        weekDays1.add(thu8w1);
+        weekDays1.add(thu9w1);
+        weekDays1.add(thu10w1);
+        weekDays1.add(thu11w1);
+        weekDays1.add(thu12w1);
+        weekDays1.add(thu13w1);
+        weekDays1.add(thu14w1);
+        weekDays1.add(thu15w1);
+        weekDays1.add(thu16w1);
+        weekDays1.add(thu17w1);
+        weekDays1.add(thu18w1);
+        weekDays1.add(thu19w1);
+        weekDays1.add(thu20w1);
+        weekDays1.add(thu21w1);
 
-		}
-		
-	/**
-	 * This method is called from within the constructor to initialize the form.
-	 * WARNING: Do NOT modify this code. The content of this method is always
-	 * regenerated by the Form Editor.
-	 */
-	@SuppressWarnings("unchecked")
+        weekDays1.add(fri8w1);
+        weekDays1.add(fri9w1);
+        weekDays1.add(fri10w1);
+        weekDays1.add(fri11w1);
+        weekDays1.add(fri12w1);
+        weekDays1.add(fri13w1);
+        weekDays1.add(fri14w1);
+        weekDays1.add(fri15w1);
+        weekDays1.add(fri16w1);
+        weekDays1.add(fri17w1);
+        weekDays1.add(fri18w1);
+        weekDays1.add(fri19w1);
+        weekDays1.add(fri20w1);
+        weekDays1.add(fri21w1);
+
+        weekDays1.add(sat8w1);
+        weekDays1.add(sat9w1);
+        weekDays1.add(sat10w1);
+        weekDays1.add(sat11w1);
+        weekDays1.add(sat12w1);
+        weekDays1.add(sat13w1);
+        weekDays1.add(sat14w1);
+        weekDays1.add(sat15w1);
+        weekDays1.add(sat16w1);
+        weekDays1.add(sat17w1);
+        weekDays1.add(sat18w1);
+        weekDays1.add(sat19w1);
+        weekDays1.add(sat20w1);
+        weekDays1.add(sat21w1);
+
+        weekDays1.add(sun8w1);
+        weekDays1.add(sun9w1);
+        weekDays1.add(sun10w1);
+        weekDays1.add(sun11w1);
+        weekDays1.add(sun12w1);
+        weekDays1.add(sun13w1);
+        weekDays1.add(sun14w1);
+        weekDays1.add(sun15w1);
+        weekDays1.add(sun16w1);
+        weekDays1.add(sun17w1);
+        weekDays1.add(sun18w1);
+        weekDays1.add(sun19w1);
+        weekDays1.add(sun20w1);
+        weekDays1.add(sun21w1);
+
+        weekDays2.add(mon8w2);
+        weekDays2.add(mon9w2);
+        weekDays2.add(mon10w2);
+        weekDays2.add(mon11w2);
+        weekDays2.add(mon12w2);
+        weekDays2.add(mon13w2);
+        weekDays2.add(mon14w2);
+        weekDays2.add(mon15w2);
+        weekDays2.add(mon16w2);
+        weekDays2.add(mon17w2);
+        weekDays2.add(mon18w2);
+        weekDays2.add(mon19w2);
+        weekDays2.add(mon20w2);
+        weekDays2.add(mon21w2);
+
+        weekDays2.add(tue8w2);
+        weekDays2.add(tue9w2);
+        weekDays2.add(tue10w2);
+        weekDays2.add(tue11w2);
+        weekDays2.add(tue12w2);
+        weekDays2.add(tue13w2);
+        weekDays2.add(tue14w2);
+        weekDays2.add(tue15w2);
+        weekDays2.add(tue16w2);
+        weekDays2.add(tue17w2);
+        weekDays2.add(tue18w2);
+        weekDays2.add(tue19w2);
+        weekDays2.add(tue20w2);
+        weekDays2.add(tue21w2);
+
+        weekDays2.add(wed8w2);
+        weekDays2.add(wed9w2);
+        weekDays2.add(wed10w2);
+        weekDays2.add(wed11w2);
+        weekDays2.add(wed12w2);
+        weekDays2.add(wed13w2);
+        weekDays2.add(wed14w2);
+        weekDays2.add(wed15w2);
+        weekDays2.add(wed16w2);
+        weekDays2.add(wed17w2);
+        weekDays2.add(wed18w2);
+        weekDays2.add(wed19w2);
+        weekDays2.add(wed20w2);
+        weekDays2.add(wed21w2);
+
+        weekDays2.add(thu8w2);
+        weekDays2.add(thu9w2);
+        weekDays2.add(thu10w2);
+        weekDays2.add(thu11w2);
+        weekDays2.add(thu12w2);
+        weekDays2.add(thu13w2);
+        weekDays2.add(thu14w2);
+        weekDays2.add(thu15w2);
+        weekDays2.add(thu16w2);
+        weekDays2.add(thu17w2);
+        weekDays2.add(thu18w2);
+        weekDays2.add(thu19w2);
+        weekDays2.add(thu20w2);
+        weekDays2.add(thu21w2);
+
+        weekDays2.add(fri8w2);
+        weekDays2.add(fri9w2);
+        weekDays2.add(fri10w2);
+        weekDays2.add(fri11w2);
+        weekDays2.add(fri12w2);
+        weekDays2.add(fri13w2);
+        weekDays2.add(fri14w2);
+        weekDays2.add(fri15w2);
+        weekDays2.add(fri16w2);
+        weekDays2.add(fri17w2);
+        weekDays2.add(fri18w2);
+        weekDays2.add(fri19w2);
+        weekDays2.add(fri20w2);
+        weekDays2.add(fri21w2);
+
+        weekDays2.add(sat8w2);
+        weekDays2.add(sat9w2);
+        weekDays2.add(sat10w2);
+        weekDays2.add(sat11w2);
+        weekDays2.add(sat12w2);
+        weekDays2.add(sat13w2);
+        weekDays2.add(sat14w2);
+        weekDays2.add(sat15w2);
+        weekDays2.add(sat16w2);
+        weekDays2.add(sat17w2);
+        weekDays2.add(sat18w2);
+        weekDays2.add(sat19w2);
+        weekDays2.add(sat20w2);
+        weekDays2.add(sat21w2);
+
+        weekDays2.add(sun8w2);
+        weekDays2.add(sun9w2);
+        weekDays2.add(sun10w2);
+        weekDays2.add(sun11w2);
+        weekDays2.add(sun12w2);
+        weekDays2.add(sun13w2);
+        weekDays2.add(sun14w2);
+        weekDays2.add(sun15w2);
+        weekDays2.add(sun16w2);
+        weekDays2.add(sun17w2);
+        weekDays2.add(sun18w2);
+        weekDays2.add(sun19w2);
+        weekDays2.add(sun20w2);
+        weekDays2.add(sun21w2);
+
+        /// end adding to array
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
    private void initComponents() {
 
@@ -3412,830 +3401,829 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
    }// </editor-fold>//GEN-END:initComponents
 
    private void mon8w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon8w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon8w1ActionPerformed
 
    private void switchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_switchButtonActionPerformed
-		CardLayout cl = (CardLayout) (mainPanel.getLayout());
-		cl.next(mainPanel);
-		CardLayout cl2 = (CardLayout) (secondaryPanel.getLayout());
-		cl2.next(secondaryPanel);
+       CardLayout cl = (CardLayout) (mainPanel.getLayout());
+       cl.next(mainPanel);
+       CardLayout cl2 = (CardLayout) (secondaryPanel.getLayout());
+       cl2.next(secondaryPanel);
    }//GEN-LAST:event_switchButtonActionPerformed
 
    private void tue8w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue8w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue8w1ActionPerformed
 
    private void wed8w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed8w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed8w1ActionPerformed
 
    private void thu8w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu8w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu8w1ActionPerformed
 
    private void fri8w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri8w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri8w1ActionPerformed
 
    private void sat8w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat8w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat8w1ActionPerformed
 
    private void sun8w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun8w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun8w1ActionPerformed
 
    private void sun9w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun9w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun9w1ActionPerformed
 
    private void sat9w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat9w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat9w1ActionPerformed
 
    private void fri9w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri9w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri9w1ActionPerformed
 
    private void thu9w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu9w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu9w1ActionPerformed
 
    private void wed9w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed9w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed9w1ActionPerformed
 
    private void tue9w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue9w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue9w1ActionPerformed
 
    private void mon9w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon9w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon9w1ActionPerformed
 
    private void mon10w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon10w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon10w1ActionPerformed
 
    private void tue10w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue10w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue10w1ActionPerformed
 
    private void wed10w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed10w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed10w1ActionPerformed
 
    private void thu10w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu10w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu10w1ActionPerformed
 
    private void fri10w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri10w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri10w1ActionPerformed
 
    private void sat10w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat10w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat10w1ActionPerformed
 
    private void sun10w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun10w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun10w1ActionPerformed
 
    private void mon11w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon11w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon11w1ActionPerformed
 
    private void tue11w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue11w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue11w1ActionPerformed
 
    private void wed11w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed11w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed11w1ActionPerformed
 
    private void thu11w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu11w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu11w1ActionPerformed
 
    private void fri11w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri11w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri11w1ActionPerformed
 
    private void sat11w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat11w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat11w1ActionPerformed
 
    private void sun11w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun11w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun11w1ActionPerformed
 
    private void mon12w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon12w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon12w1ActionPerformed
 
    private void tue12w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue12w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue12w1ActionPerformed
 
    private void wed12w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed12w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed12w1ActionPerformed
 
    private void thu12w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu12w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu12w1ActionPerformed
 
    private void fri12w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri12w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri12w1ActionPerformed
 
    private void sat12w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat12w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat12w1ActionPerformed
 
    private void sun12w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun12w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun12w1ActionPerformed
 
    private void mon13w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon13w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon13w1ActionPerformed
 
    private void tue13w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue13w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue13w1ActionPerformed
 
    private void wed13w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed13w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed13w1ActionPerformed
 
    private void thu13w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu13w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu13w1ActionPerformed
 
    private void fri13w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri13w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri13w1ActionPerformed
 
    private void sat13w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat13w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat13w1ActionPerformed
 
    private void sun13w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun13w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun13w1ActionPerformed
 
    private void mon14w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon14w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon14w1ActionPerformed
 
    private void tue14w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue14w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue14w1ActionPerformed
 
    private void wed14w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed14w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed14w1ActionPerformed
 
    private void thu14w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu14w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu14w1ActionPerformed
 
    private void fri14w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri14w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri14w1ActionPerformed
 
    private void sat14w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat14w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat14w1ActionPerformed
 
    private void sun14w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun14w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun14w1ActionPerformed
 
    private void mon15w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon15w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon15w1ActionPerformed
 
    private void tue15w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue15w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue15w1ActionPerformed
 
    private void wed15w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed15w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed15w1ActionPerformed
 
    private void thu15w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu15w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu15w1ActionPerformed
 
    private void fri15w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri15w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri15w1ActionPerformed
 
    private void sat15w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat15w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat15w1ActionPerformed
 
    private void sun15w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun15w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun15w1ActionPerformed
 
    private void mon16w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon16w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon16w1ActionPerformed
 
    private void tue16w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue16w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue16w1ActionPerformed
 
    private void wed16w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed16w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed16w1ActionPerformed
 
    private void thu16w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu16w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu16w1ActionPerformed
 
    private void fri16w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri16w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri16w1ActionPerformed
 
    private void sat16w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat16w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat16w1ActionPerformed
 
    private void sun16w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun16w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun16w1ActionPerformed
 
    private void mon17w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon17w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon17w1ActionPerformed
 
    private void tue17w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue17w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue17w1ActionPerformed
 
    private void wed17w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed17w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed17w1ActionPerformed
 
    private void thu17w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu17w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu17w1ActionPerformed
 
    private void fri17w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri17w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri17w1ActionPerformed
 
    private void sat17w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat17w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat17w1ActionPerformed
 
    private void sun17w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun17w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun17w1ActionPerformed
 
    private void mon18w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon18w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon18w1ActionPerformed
 
    private void tue18w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue18w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue18w1ActionPerformed
 
    private void wed18w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed18w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed18w1ActionPerformed
 
    private void thu18w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu18w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu18w1ActionPerformed
 
    private void fri18w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri18w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri18w1ActionPerformed
 
    private void sat18w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat18w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat18w1ActionPerformed
 
    private void sun18w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun18w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun18w1ActionPerformed
 
    private void mon19w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon19w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon19w1ActionPerformed
 
    private void tue19w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue19w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue19w1ActionPerformed
 
    private void wed19w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed19w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed19w1ActionPerformed
 
    private void thu19w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu19w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu19w1ActionPerformed
 
    private void fri19w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri19w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri19w1ActionPerformed
 
    private void sat19w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat19w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat19w1ActionPerformed
 
    private void sun19w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun19w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun19w1ActionPerformed
 
    private void mon20w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon20w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon20w1ActionPerformed
 
    private void tue20w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue20w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue20w1ActionPerformed
 
    private void wed20w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed20w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed20w1ActionPerformed
 
    private void thu20w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu20w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu20w1ActionPerformed
 
    private void fri20w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri20w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri20w1ActionPerformed
 
    private void sat20w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat20w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat20w1ActionPerformed
 
    private void sun20w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun20w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun20w1ActionPerformed
 
    private void mon21w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon21w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon21w1ActionPerformed
 
    private void tue21w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue21w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue21w1ActionPerformed
 
    private void wed21w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed21w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed21w1ActionPerformed
 
    private void thu21w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu21w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu21w1ActionPerformed
 
    private void fri21w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri21w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri21w1ActionPerformed
 
    private void sat21w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat21w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat21w1ActionPerformed
 
    private void sun21w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun21w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun21w1ActionPerformed
 
    private void mon8w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon8w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon8w2ActionPerformed
 
    private void tue8w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue8w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue8w2ActionPerformed
 
    private void wed8w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed8w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed8w2ActionPerformed
 
    private void thu8w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu8w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu8w2ActionPerformed
 
    private void fri8w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri8w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri8w2ActionPerformed
 
    private void sat8w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat8w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat8w2ActionPerformed
 
    private void sun8w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun8w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun8w2ActionPerformed
 
    private void mon9w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon9w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon9w2ActionPerformed
 
    private void tue9w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue9w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue9w2ActionPerformed
 
    private void wed9w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed9w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed9w2ActionPerformed
 
    private void thu9w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu9w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu9w2ActionPerformed
 
    private void fri9w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri9w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri9w2ActionPerformed
 
    private void sat9w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat9w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat9w2ActionPerformed
 
    private void sun9w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun9w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun9w2ActionPerformed
 
    private void mon10w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon10w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon10w2ActionPerformed
 
    private void tue10w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue10w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue10w2ActionPerformed
 
    private void wed10w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed10w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed10w2ActionPerformed
 
    private void thu10w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu10w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu10w2ActionPerformed
 
    private void fri10w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri10w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri10w2ActionPerformed
 
    private void sat10w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat10w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat10w2ActionPerformed
 
    private void sun10w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun10w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun10w2ActionPerformed
 
    private void mon11w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon11w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon11w2ActionPerformed
 
    private void tue11w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue11w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue11w2ActionPerformed
 
    private void wed11w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed11w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed11w2ActionPerformed
 
    private void thu11w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu11w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu11w2ActionPerformed
 
    private void fri11w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri11w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri11w2ActionPerformed
 
    private void sat11w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat11w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat11w2ActionPerformed
 
    private void sun11w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun11w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun11w2ActionPerformed
 
    private void mon12w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon12w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon12w2ActionPerformed
 
    private void tue12w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue12w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue12w2ActionPerformed
 
    private void wed12w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed12w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed12w2ActionPerformed
 
    private void thu12w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu12w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu12w2ActionPerformed
 
    private void fri12w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri12w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri12w2ActionPerformed
 
    private void sat12w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat12w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat12w2ActionPerformed
 
    private void sun12w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun12w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun12w2ActionPerformed
 
    private void mon13w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon13w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon13w2ActionPerformed
 
    private void tue13w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue13w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue13w2ActionPerformed
 
    private void wed13w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed13w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed13w2ActionPerformed
 
    private void thu13w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu13w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu13w2ActionPerformed
 
    private void fri13w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri13w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri13w2ActionPerformed
 
    private void sat13w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat13w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat13w2ActionPerformed
 
    private void sun13w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun13w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun13w2ActionPerformed
 
    private void mon14w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon14w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon14w2ActionPerformed
 
    private void tue14w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue14w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue14w2ActionPerformed
 
    private void wed14w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed14w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed14w2ActionPerformed
 
    private void thu14w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu14w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu14w2ActionPerformed
 
    private void fri14w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri14w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri14w2ActionPerformed
 
    private void sat14w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat14w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat14w2ActionPerformed
 
    private void sun14w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun14w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun14w2ActionPerformed
 
    private void mon15w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon15w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon15w2ActionPerformed
 
    private void tue15w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue15w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue15w2ActionPerformed
 
    private void wed15w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed15w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed15w2ActionPerformed
 
    private void thu15w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu15w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu15w2ActionPerformed
 
    private void fri15w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri15w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri15w2ActionPerformed
 
    private void sat15w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat15w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat15w2ActionPerformed
 
    private void sun15w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun15w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun15w2ActionPerformed
 
    private void mon16w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon16w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon16w2ActionPerformed
 
    private void tue16w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue16w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue16w2ActionPerformed
 
    private void wed16w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed16w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed16w2ActionPerformed
 
    private void thu16w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu16w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu16w2ActionPerformed
 
    private void fri16w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri16w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri16w2ActionPerformed
 
    private void sat16w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat16w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat16w2ActionPerformed
 
    private void sun16w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun16w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun16w2ActionPerformed
 
    private void mon17w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon17w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon17w2ActionPerformed
 
    private void tue17w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue17w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue17w2ActionPerformed
 
    private void wed17w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed17w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed17w2ActionPerformed
 
    private void thu17w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu17w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu17w2ActionPerformed
 
    private void fri17w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri17w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri17w2ActionPerformed
 
    private void sat17w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat17w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat17w2ActionPerformed
 
    private void sun17w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun17w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun17w2ActionPerformed
 
    private void mon18w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon18w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon18w2ActionPerformed
 
    private void tue18w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue18w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue18w2ActionPerformed
 
    private void wed18w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed18w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed18w2ActionPerformed
 
    private void thu18w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu18w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu18w2ActionPerformed
 
    private void fri18w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri18w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri18w2ActionPerformed
 
    private void sat18w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat18w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat18w2ActionPerformed
 
    private void sun18w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun18w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun18w2ActionPerformed
 
    private void mon19w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon19w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon19w2ActionPerformed
 
    private void tue19w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue19w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue19w2ActionPerformed
 
    private void wed19w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed19w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed19w2ActionPerformed
 
    private void thu19w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu19w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu19w2ActionPerformed
 
    private void fri19w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri19w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri19w2ActionPerformed
 
    private void sat19w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat19w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat19w2ActionPerformed
 
    private void sun19w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun19w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun19w2ActionPerformed
 
    private void mon20w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon20w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon20w2ActionPerformed
 
    private void tue20w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue20w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue20w2ActionPerformed
 
    private void wed20w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed20w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed20w2ActionPerformed
 
    private void thu20w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu20w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu20w2ActionPerformed
 
    private void fri20w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri20w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri20w2ActionPerformed
 
    private void sat20w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat20w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat20w2ActionPerformed
 
    private void sun20w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun20w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun20w2ActionPerformed
 
    private void mon21w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon21w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon21w2ActionPerformed
 
    private void tue21w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue21w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue21w2ActionPerformed
 
    private void wed21w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed21w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed21w2ActionPerformed
 
    private void thu21w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu21w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu21w2ActionPerformed
 
    private void fri21w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri21w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri21w2ActionPerformed
 
    private void sat21w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat21w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat21w2ActionPerformed
 
    private void sun21w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun21w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun21w2ActionPerformed
 
    private void buttonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelActionPerformed
-      // TODO add your handling code here:
+       // TODO add your handling code here:
 
-      int result = JOptionPane.showConfirmDialog(
-         this, "Are you sure you want to cancel without saving?","Confirmation Dialog",  JOptionPane.YES_NO_OPTION);
-      // did the user click the yes button?
-      if (result == JOptionPane.YES_OPTION) {
+       int result = JOptionPane.showConfirmDialog(
+               this, "Are you sure you want to cancel without saving?", "Confirmation Dialog", JOptionPane.YES_NO_OPTION);
+       // did the user click the yes button?
+       if (result == JOptionPane.YES_OPTION) {
 
-         dispose();
-         HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userDAO, userStorageDAO);
-         // centre the dialog on the parent window
-         dialog.setLocationRelativeTo(this);
-         // make the dialog visible
-         dialog.setVisible(true);
-      }
+           dispose();
+           HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userDAO, userStorageDAO);
+           // centre the dialog on the parent window
+           dialog.setLocationRelativeTo(this);
+           // make the dialog visible
+           dialog.setVisible(true);
+       }
    }//GEN-LAST:event_buttonCancelActionPerformed
 
    private void buttonSaveTimetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSaveTimetableActionPerformed
 
-        ArrayList<Boolean> week1 = new ArrayList<Boolean>();
-        ArrayList<Boolean> week2 = new ArrayList<Boolean>();
-      
-      
-      for (JCheckBox element: this.weekDays1){
-          //System.out.println(element);
-          week1.add(element.isSelected()) ; 
-      }
-      Boolean value = true ; 
-      for (JCheckBox element: this.weekDays2){
-          week2.add(element.isSelected()) ; 
-          if ( element.isSelected() == false ) {
-              value = false ; 
-          }
-      }
+       ArrayList<Boolean> week1 = new ArrayList<Boolean>();
+       ArrayList<Boolean> week2 = new ArrayList<Boolean>();
+
+       for (JCheckBox element : this.weekDays1) {
+           //System.out.println(element);
+           week1.add(element.isSelected());
+       }
+       Boolean value = true;
+       for (JCheckBox element : this.weekDays2) {
+           week2.add(element.isSelected());
+           if (element.isSelected() == false) {
+               value = false;
+           }
+       }
 //      /**
 //      * Can we turn this into a loop? Probably, wouldn't be suprised This code
 //      * will be temporary, it'll probably be turned into a loop
@@ -4450,37 +4438,35 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
 //      Boolean storeSun20w2 = sun20w2.isSelected();
 //      Boolean storeSun21w2 = sun21w2.isSelected();
 
-String userName = userStorageDAO.getUserName();
+       String userName = userStorageDAO.getUserName();
 
-      
-      
-      Day mondayWeek1 = new Day(userName, "Week 1 Monday",  new ArrayList<Boolean>( week1.subList(0,14)));
+       Day mondayWeek1 = new Day(userName, "Week 1 Monday", new ArrayList<Boolean>(week1.subList(0, 14)));
 
-      Day tuesdayWeek1 = new Day(userName, "Week 1 Tuesday", new ArrayList<Boolean>( week1.subList(14,28)));
+       Day tuesdayWeek1 = new Day(userName, "Week 1 Tuesday", new ArrayList<Boolean>(week1.subList(14, 28)));
 
-      Day wednesdayWeek1 = new Day(userName, "Week 1 Wednesday", new ArrayList<Boolean>( week1.subList(28,42)));
+       Day wednesdayWeek1 = new Day(userName, "Week 1 Wednesday", new ArrayList<Boolean>(week1.subList(28, 42)));
 
-      Day thursdayWeek1 = new Day(userName, "Week 1 Thursday", new ArrayList<Boolean> ( week1.subList(42,56)));
+       Day thursdayWeek1 = new Day(userName, "Week 1 Thursday", new ArrayList<Boolean>(week1.subList(42, 56)));
 
-      Day fridayWeek1 = new Day(userName, "Week 1 Friday", new ArrayList<Boolean>  (week1.subList(56,70)));
-      
-      Day saturdayWeek1 = new Day(userName, "Week 1 Saturday",new ArrayList<Boolean> ( week1.subList(70,84)));
+       Day fridayWeek1 = new Day(userName, "Week 1 Friday", new ArrayList<Boolean>(week1.subList(56, 70)));
 
-      Day sundayWeek1 = new Day(userName, "Week 1 Sunday", new ArrayList<Boolean> ( week1.subList(84,98)));
+       Day saturdayWeek1 = new Day(userName, "Week 1 Saturday", new ArrayList<Boolean>(week1.subList(70, 84)));
 
-      Day mondayWeek2 = new Day(userName, "Week 2 Monday", new ArrayList<Boolean>( week1.subList(0,14)));
+       Day sundayWeek1 = new Day(userName, "Week 1 Sunday", new ArrayList<Boolean>(week1.subList(84, 98)));
 
-      Day tuesdayWeek2 = new Day(userName, "Week 2 Tuesday",new ArrayList<Boolean> ( week1.subList(14,28)));
+       Day mondayWeek2 = new Day(userName, "Week 2 Monday", new ArrayList<Boolean>(week1.subList(0, 14)));
 
-      Day wednesdayWeek2 = new Day(userName, "Week 2 Wednesday", new ArrayList<Boolean> ( week1.subList(28,42)));
+       Day tuesdayWeek2 = new Day(userName, "Week 2 Tuesday", new ArrayList<Boolean>(week1.subList(14, 28)));
 
-      Day thursdayWeek2 = new Day(userName, "Week 2 Thursday", new ArrayList<Boolean>( week1.subList(42,56)));
+       Day wednesdayWeek2 = new Day(userName, "Week 2 Wednesday", new ArrayList<Boolean>(week1.subList(28, 42)));
 
-      Day fridayWeek2 = new Day(userName, "Week 2 Friday", new ArrayList<Boolean>( week1.subList(56,70)));
+       Day thursdayWeek2 = new Day(userName, "Week 2 Thursday", new ArrayList<Boolean>(week1.subList(42, 56)));
 
-      Day saturdayWeek2 = new Day(userName, "Week 2 Saturday", new ArrayList<Boolean> ( week1.subList(70,84)));
+       Day fridayWeek2 = new Day(userName, "Week 2 Friday", new ArrayList<Boolean>(week1.subList(56, 70)));
 
-      Day sundayWeek2 = new Day(userName, "Week 2 Sunday", new ArrayList<Boolean> ( week1.subList(84,98)));
+       Day saturdayWeek2 = new Day(userName, "Week 2 Saturday", new ArrayList<Boolean>(week1.subList(70, 84)));
+
+       Day sundayWeek2 = new Day(userName, "Week 2 Sunday", new ArrayList<Boolean>(week1.subList(84, 98)));
 //
 //      String userName = userStorageDAO.getUserName();
 //
@@ -4539,7 +4525,7 @@ String userName = userStorageDAO.getUserName();
 //      Day sundayWeek2 = new Day(userName, "Week 2 Sunday", storeSun8w2, storeSun9w2, storeSun10w2, storeSun11w2, storeSun12w2,
 //         storeSun13w2, storeSun14w2, storeSun15w2, storeSun16w2, storeSun17w2, storeSun18w2, storeSun19w2,
 //         storeSun20w2, storeSun21w2);
-     if ( value == false ) {
+       if (value == false) {
 //      if (storeMon8w2 == false && storeMon9w2 == false && storeMon10w2 == false && storeMon11w2 == false && storeMon12w2
 //         == false && storeMon13w2 == false && storeMon14w2 == false && storeMon15w2 == false && storeMon16w2 == false && storeMon17w2 == false && storeMon18w2 == false && storeMon19w2
 //         == false && storeMon20w2 == false && storeMon21w2 == false && storeTue8w2 == false && storeTue9w2 == false && storeTue10w2 == false && storeTue11w2 == false && storeTue12w2
@@ -4571,8 +4557,8 @@ String userName = userStorageDAO.getUserName();
 //         mondayWeek2.setEightPM(storeMon20w1);
 //         mondayWeek2.setNinePM(storeMon21w1);
 //         mondayWeek2.setDayName("Week 2 Monday");
-mondayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(0,14)));
-         mondayWeek2.setDayName("Week 2 Monday");
+           mondayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(0, 14)));
+           mondayWeek2.setDayName("Week 2 Monday");
 //
 //         tuesdayWeek2.setEightAM(storeTue8w1);
 //         tuesdayWeek2.setNineAM(storeTue9w1);
@@ -4589,8 +4575,8 @@ mondayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(0,14)));
 //         tuesdayWeek2.setEightPM(storeTue20w1);
 //         tuesdayWeek2.setNinePM(storeTue21w1);
 //         tuesdayWeek2.setDayName("Week 2 Tuesday");
-tuesdayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(14,28)));
-         tuesdayWeek2.setDayName("Week 2 Tuesday");
+           tuesdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(14, 28)));
+           tuesdayWeek2.setDayName("Week 2 Tuesday");
 //
 //         wednesdayWeek2.setEightAM(storeWed8w1);
 //         wednesdayWeek2.setNineAM(storeWed9w1);
@@ -4607,8 +4593,8 @@ tuesdayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(14,28)));
 //         wednesdayWeek2.setEightPM(storeWed20w1);
 //         wednesdayWeek2.setNinePM(storeWed21w1);
 //         wednesdayWeek2.setDayName("Week 2 Wednesday");
-wednesdayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(28,42)));
-         wednesdayWeek2.setDayName("Week 2 Wednesday");
+           wednesdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(28, 42)));
+           wednesdayWeek2.setDayName("Week 2 Wednesday");
 //
 //         thursdayWeek2.setEightAM(storeThu8w1);
 //         thursdayWeek2.setNineAM(storeThu9w1);
@@ -4625,8 +4611,8 @@ wednesdayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(28,42)));
 //         thursdayWeek2.setEightPM(storeThu20w1);
 //         thursdayWeek2.setNinePM(storeThu21w1);
 //         thursdayWeek2.setDayName("Week 2 Thursday");
-thursdayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(42,56)));
-         thursdayWeek2.setDayName("Week 2 Thursday");
+           thursdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(42, 56)));
+           thursdayWeek2.setDayName("Week 2 Thursday");
 
 //
 //         fridayWeek2.setEightAM(storeFri8w1);
@@ -4644,8 +4630,8 @@ thursdayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(42,56)));
 //         fridayWeek2.setEightPM(storeFri20w1);
 //         fridayWeek2.setNinePM(storeFri21w1);
 //         fridayWeek2.setDayName("Week 2 Friday");
-fridayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(56,70)));
-         fridayWeek2.setDayName("Week 2 Friday");
+           fridayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(56, 70)));
+           fridayWeek2.setDayName("Week 2 Friday");
 //
 //         saturdayWeek2.setEightAM(storeSat8w1);
 //         saturdayWeek2.setNineAM(storeSat9w1);
@@ -4662,8 +4648,8 @@ fridayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(56,70)));
 //         saturdayWeek2.setEightPM(storeSat20w1);
 //         saturdayWeek2.setNinePM(storeSat21w1);
 //         saturdayWeek2.setDayName("Week 2 Saturday
-saturdayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(70,84)));
-          saturdayWeek2.setDayName("Week 2 Saturday");
+           saturdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(70, 84)));
+           saturdayWeek2.setDayName("Week 2 Saturday");
 //
 //         sundayWeek2.setEightAM(storeSun8w1);
 //         sundayWeek2.setNineAM(storeSun9w1);
@@ -4680,38 +4666,37 @@ saturdayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(70,84)));
 //         sundayWeek2.setEightPM(storeSun20w1);
 //         sundayWeek2.setNinePM(storeSun21w1);
 //         sundayWeek2.setDayName("Week 2 Sunday");
-sundayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(84,98)));
-         sundayWeek2.setDayName("Week 2 Sunday");
+           sundayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(84, 98)));
+           sundayWeek2.setDayName("Week 2 Sunday");
 //
 //      }
 //
-      saveTimetable(mondayWeek1);
-      saveTimetable(tuesdayWeek1);
-      saveTimetable(wednesdayWeek1);
-      saveTimetable(thursdayWeek1);
-      saveTimetable(fridayWeek1);
-      saveTimetable(saturdayWeek1);
-      saveTimetable(sundayWeek1);
+           saveTimetable(mondayWeek1);
+           saveTimetable(tuesdayWeek1);
+           saveTimetable(wednesdayWeek1);
+           saveTimetable(thursdayWeek1);
+           saveTimetable(fridayWeek1);
+           saveTimetable(saturdayWeek1);
+           saveTimetable(sundayWeek1);
 
-      saveTimetable(mondayWeek2);
-      saveTimetable(tuesdayWeek2);
-      saveTimetable(wednesdayWeek2);
-      saveTimetable(thursdayWeek2);
-      saveTimetable(fridayWeek2);
-      saveTimetable(saturdayWeek2);
-      saveTimetable(sundayWeek2);
+           saveTimetable(mondayWeek2);
+           saveTimetable(tuesdayWeek2);
+           saveTimetable(wednesdayWeek2);
+           saveTimetable(thursdayWeek2);
+           saveTimetable(fridayWeek2);
+           saveTimetable(saturdayWeek2);
+           saveTimetable(sundayWeek2);
 
-      dispose();
-      
-     }
-     
+           dispose();
 
-//      HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userDAO, userStorageDAO);
-//       centre the dialog on the parent window
-//      dialog.setLocationRelativeTo(this);
-//       make the dialog visible
-//      dialog.setVisible(true);
-//
+       }
+
+       HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userDAO, userStorageDAO);
+       //centre the dialog on the parent window
+       dialog.setLocationRelativeTo(this);
+       //make the dialog visible
+       dialog.setVisible(true);
+
 //      /**
 //      * See if we can use this to make sure nothing is overwritten, use both
 //      * userName and dayName
@@ -4728,9 +4713,9 @@ sundayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(84,98)));
 //      } */
    }//GEN-LAST:event_buttonSaveTimetableActionPerformed
 
-	private void saveTimetable(Day day) {
-		timetableDAO.createTimetable(day);
-	}
+    private void saveTimetable(Day day) {
+        timetableDAO.createTimetable(day);
+    }
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
    private javax.swing.JButton buttonCancel;

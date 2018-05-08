@@ -17,750 +17,749 @@ import javax.swing.JOptionPane;
  */
 public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFrame
 
-	private boolean userIDEditable = true;
-	private final TimetableDAO timetableDAO;
-	private final UserDAO userDAO;
-	private final UserStorageDAO userStorageDAO;
+    private boolean userIDEditable = true;
+    private final TimetableDAO timetableDAO;
+    private final UserDAO userDAO;
+    private final UserStorageDAO userStorageDAO;
 
-                private ArrayList<JCheckBox> weekDays1 = new ArrayList<JCheckBox> (); 
-        private ArrayList<JCheckBox> weekDays2 = new ArrayList<JCheckBox> (); 
-        
-	private Day mondayWeek1 = new Day();
-	private Day tuesdayWeek1 = new Day();
-	private Day wednesdayWeek1 = new Day();
-	private Day thursdayWeek1 = new Day();
-	private Day fridayWeek1 = new Day();
-	private Day saturdayWeek1 = new Day();
-	private Day sundayWeek1 = new Day();
-	private Day mondayWeek2 = new Day();
-	private Day tuesdayWeek2 = new Day();
-	private Day wednesdayWeek2 = new Day();
-	private Day thursdayWeek2 = new Day();
-	private Day fridayWeek2 = new Day();
-	private Day saturdayWeek2 = new Day();
-	private Day sundayWeek2 = new Day();
+    private ArrayList<JCheckBox> weekDays1 = new ArrayList<JCheckBox>();
+    private ArrayList<JCheckBox> weekDays2 = new ArrayList<JCheckBox>();
 
-	private MergedDay mondayWeek1Merged = new MergedDay();
-	private MergedDay tuesdayWeek1Merged = new MergedDay();
-	private MergedDay wednesdayWeek1Merged = new MergedDay();
-	private MergedDay thursdayWeek1Merged = new MergedDay();
-	private MergedDay fridayWeek1Merged = new MergedDay();
-	private MergedDay saturdayWeek1Merged = new MergedDay();
-	private MergedDay sundayWeek1Merged = new MergedDay();
-	private MergedDay mondayWeek2Merged = new MergedDay();
-	private MergedDay tuesdayWeek2Merged = new MergedDay();
-	private MergedDay wednesdayWeek2Merged = new MergedDay();
-	private MergedDay thursdayWeek2Merged = new MergedDay();
-	private MergedDay fridayWeek2Merged = new MergedDay();
-	private MergedDay saturdayWeek2Merged = new MergedDay();
-	private MergedDay sundayWeek2Merged = new MergedDay();
+    private Day mondayWeek1 = new Day();
+    private Day tuesdayWeek1 = new Day();
+    private Day wednesdayWeek1 = new Day();
+    private Day thursdayWeek1 = new Day();
+    private Day fridayWeek1 = new Day();
+    private Day saturdayWeek1 = new Day();
+    private Day sundayWeek1 = new Day();
+    private Day mondayWeek2 = new Day();
+    private Day tuesdayWeek2 = new Day();
+    private Day wednesdayWeek2 = new Day();
+    private Day thursdayWeek2 = new Day();
+    private Day fridayWeek2 = new Day();
+    private Day saturdayWeek2 = new Day();
+    private Day sundayWeek2 = new Day();
 
-	/**
-	 * Saves a new Timetable
-	 *
-	 * @param parent
-	 * @param modal
-	 * @param timetableDAO
-	 * @param userStorageDAO
-	 */
-	public EditTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserDAO userDAO, UserStorageDAO userStorageDAO,
-			  Day mondayWeek1, Day tuesdayWeek1, Day wednesdayWeek1, Day thursdayWeek1, Day fridayWeek1, Day saturdayWeek1,
-			  Day sundayWeek1, Day mondayWeek2, Day tuesdayWeek2, Day wednesdayWeek2, Day thursdayWeek2, Day fridayWeek2,
-			  Day saturdayWeek2, Day sundayWeek2) {
+    private MergedDay mondayWeek1Merged = new MergedDay();
+    private MergedDay tuesdayWeek1Merged = new MergedDay();
+    private MergedDay wednesdayWeek1Merged = new MergedDay();
+    private MergedDay thursdayWeek1Merged = new MergedDay();
+    private MergedDay fridayWeek1Merged = new MergedDay();
+    private MergedDay saturdayWeek1Merged = new MergedDay();
+    private MergedDay sundayWeek1Merged = new MergedDay();
+    private MergedDay mondayWeek2Merged = new MergedDay();
+    private MergedDay tuesdayWeek2Merged = new MergedDay();
+    private MergedDay wednesdayWeek2Merged = new MergedDay();
+    private MergedDay thursdayWeek2Merged = new MergedDay();
+    private MergedDay fridayWeek2Merged = new MergedDay();
+    private MergedDay saturdayWeek2Merged = new MergedDay();
+    private MergedDay sundayWeek2Merged = new MergedDay();
 
-		super(parent);
-		super.setModal(modal);
-		this.timetableDAO = timetableDAO;
-		this.userDAO = userDAO;
-		this.userStorageDAO = userStorageDAO;
-		this.setName("Edit Timetable");
+    /**
+     * Saves a new Timetable
+     *
+     * @param parent
+     * @param modal
+     * @param timetableDAO
+     * @param userStorageDAO
+     */
+    public EditTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserDAO userDAO, UserStorageDAO userStorageDAO,
+            Day mondayWeek1, Day tuesdayWeek1, Day wednesdayWeek1, Day thursdayWeek1, Day fridayWeek1, Day saturdayWeek1,
+            Day sundayWeek1, Day mondayWeek2, Day tuesdayWeek2, Day wednesdayWeek2, Day thursdayWeek2, Day fridayWeek2,
+            Day saturdayWeek2, Day sundayWeek2) {
 
-		initComponents();
+        super(parent);
+        super.setModal(modal);
+        this.timetableDAO = timetableDAO;
+        this.userDAO = userDAO;
+        this.userStorageDAO = userStorageDAO;
+        this.setName("Edit Timetable");
 
-		this.mondayWeek1 = mondayWeek1;
-		this.tuesdayWeek1 = tuesdayWeek1;
-		this.wednesdayWeek1 = wednesdayWeek1;
-		this.thursdayWeek1 = thursdayWeek1;
-		this.fridayWeek1 = fridayWeek1;
-		this.saturdayWeek1 = saturdayWeek1;
-		this.sundayWeek1 = sundayWeek1;
-		this.mondayWeek2 = mondayWeek2;
-		this.tuesdayWeek2 = tuesdayWeek2;
-		this.wednesdayWeek2 = wednesdayWeek2;
-		this.thursdayWeek2 = thursdayWeek2;
-		this.fridayWeek2 = fridayWeek2;
-		this.saturdayWeek2 = saturdayWeek2;
-		this.sundayWeek2 = sundayWeek2;
+        initComponents();
 
-		//set checkbox values 
-		mon8w1.setSelected(mondayWeek1.getEightAM());
-		mon9w1.setSelected(mondayWeek1.getNineAM());
-		mon10w1.setSelected(mondayWeek1.getTenAM());
-		mon11w1.setSelected(mondayWeek1.getElevenAM());
-		mon12w1.setSelected(mondayWeek1.getTwelvePM());
-		mon13w1.setSelected(mondayWeek1.getOnePM());
-		mon14w1.setSelected(mondayWeek1.getTwoPM());
-		mon15w1.setSelected(mondayWeek1.getThreePM());
-		mon16w1.setSelected(mondayWeek1.getFourPM());
-		mon17w1.setSelected(mondayWeek1.getFivePM());
-		mon18w1.setSelected(mondayWeek1.getSixPM());
-		mon19w1.setSelected(mondayWeek1.getSevenPM());
-		mon20w1.setSelected(mondayWeek1.getEightPM());
-		mon21w1.setSelected(mondayWeek1.getNinePM());
+        this.mondayWeek1 = mondayWeek1;
+        this.tuesdayWeek1 = tuesdayWeek1;
+        this.wednesdayWeek1 = wednesdayWeek1;
+        this.thursdayWeek1 = thursdayWeek1;
+        this.fridayWeek1 = fridayWeek1;
+        this.saturdayWeek1 = saturdayWeek1;
+        this.sundayWeek1 = sundayWeek1;
+        this.mondayWeek2 = mondayWeek2;
+        this.tuesdayWeek2 = tuesdayWeek2;
+        this.wednesdayWeek2 = wednesdayWeek2;
+        this.thursdayWeek2 = thursdayWeek2;
+        this.fridayWeek2 = fridayWeek2;
+        this.saturdayWeek2 = saturdayWeek2;
+        this.sundayWeek2 = sundayWeek2;
 
-		tue8w1.setSelected(tuesdayWeek1.getEightAM());
-		tue9w1.setSelected(tuesdayWeek1.getNineAM());
-		tue10w1.setSelected(tuesdayWeek1.getTenAM());
-		tue11w1.setSelected(tuesdayWeek1.getElevenAM());
-		tue12w1.setSelected(tuesdayWeek1.getTwelvePM());
-		tue13w1.setSelected(tuesdayWeek1.getOnePM());
-		tue14w1.setSelected(tuesdayWeek1.getTwoPM());
-		tue15w1.setSelected(tuesdayWeek1.getThreePM());
-		tue16w1.setSelected(tuesdayWeek1.getFourPM());
-		tue17w1.setSelected(tuesdayWeek1.getFivePM());
-		tue18w1.setSelected(tuesdayWeek1.getSixPM());
-		tue19w1.setSelected(tuesdayWeek1.getSevenPM());
-		tue20w1.setSelected(tuesdayWeek1.getEightPM());
-		tue21w1.setSelected(tuesdayWeek1.getNinePM());
+        //set checkbox values 
+        mon8w1.setSelected(mondayWeek1.getEightAM());
+        mon9w1.setSelected(mondayWeek1.getNineAM());
+        mon10w1.setSelected(mondayWeek1.getTenAM());
+        mon11w1.setSelected(mondayWeek1.getElevenAM());
+        mon12w1.setSelected(mondayWeek1.getTwelvePM());
+        mon13w1.setSelected(mondayWeek1.getOnePM());
+        mon14w1.setSelected(mondayWeek1.getTwoPM());
+        mon15w1.setSelected(mondayWeek1.getThreePM());
+        mon16w1.setSelected(mondayWeek1.getFourPM());
+        mon17w1.setSelected(mondayWeek1.getFivePM());
+        mon18w1.setSelected(mondayWeek1.getSixPM());
+        mon19w1.setSelected(mondayWeek1.getSevenPM());
+        mon20w1.setSelected(mondayWeek1.getEightPM());
+        mon21w1.setSelected(mondayWeek1.getNinePM());
 
-		wed8w1.setSelected(wednesdayWeek1.getEightAM());
-		wed9w1.setSelected(wednesdayWeek1.getNineAM());
-		wed10w1.setSelected(wednesdayWeek1.getTenAM());
-		wed11w1.setSelected(wednesdayWeek1.getElevenAM());
-		wed12w1.setSelected(wednesdayWeek1.getTwelvePM());
-		wed13w1.setSelected(wednesdayWeek1.getOnePM());
-		wed14w1.setSelected(wednesdayWeek1.getTwoPM());
-		wed15w1.setSelected(wednesdayWeek1.getThreePM());
-		wed16w1.setSelected(wednesdayWeek1.getFourPM());
-		wed17w1.setSelected(wednesdayWeek1.getFivePM());
-		wed18w1.setSelected(wednesdayWeek1.getSixPM());
-		wed19w1.setSelected(wednesdayWeek1.getSevenPM());
-		wed20w1.setSelected(wednesdayWeek1.getEightPM());
-		wed21w1.setSelected(wednesdayWeek1.getNinePM());
+        tue8w1.setSelected(tuesdayWeek1.getEightAM());
+        tue9w1.setSelected(tuesdayWeek1.getNineAM());
+        tue10w1.setSelected(tuesdayWeek1.getTenAM());
+        tue11w1.setSelected(tuesdayWeek1.getElevenAM());
+        tue12w1.setSelected(tuesdayWeek1.getTwelvePM());
+        tue13w1.setSelected(tuesdayWeek1.getOnePM());
+        tue14w1.setSelected(tuesdayWeek1.getTwoPM());
+        tue15w1.setSelected(tuesdayWeek1.getThreePM());
+        tue16w1.setSelected(tuesdayWeek1.getFourPM());
+        tue17w1.setSelected(tuesdayWeek1.getFivePM());
+        tue18w1.setSelected(tuesdayWeek1.getSixPM());
+        tue19w1.setSelected(tuesdayWeek1.getSevenPM());
+        tue20w1.setSelected(tuesdayWeek1.getEightPM());
+        tue21w1.setSelected(tuesdayWeek1.getNinePM());
 
-		thu8w1.setSelected(thursdayWeek1.getEightAM());
-		thu9w1.setSelected(thursdayWeek1.getNineAM());
-		thu10w1.setSelected(thursdayWeek1.getTenAM());
-		thu11w1.setSelected(thursdayWeek1.getElevenAM());
-		thu12w1.setSelected(thursdayWeek1.getTwelvePM());
-		thu13w1.setSelected(thursdayWeek1.getOnePM());
-		thu14w1.setSelected(thursdayWeek1.getTwoPM());
-		thu15w1.setSelected(thursdayWeek1.getThreePM());
-		thu16w1.setSelected(thursdayWeek1.getFourPM());
-		thu17w1.setSelected(thursdayWeek1.getFivePM());
-		thu18w1.setSelected(thursdayWeek1.getSixPM());
-		thu19w1.setSelected(thursdayWeek1.getSevenPM());
-		thu20w1.setSelected(thursdayWeek1.getEightPM());
-		thu21w1.setSelected(thursdayWeek1.getNinePM());
+        wed8w1.setSelected(wednesdayWeek1.getEightAM());
+        wed9w1.setSelected(wednesdayWeek1.getNineAM());
+        wed10w1.setSelected(wednesdayWeek1.getTenAM());
+        wed11w1.setSelected(wednesdayWeek1.getElevenAM());
+        wed12w1.setSelected(wednesdayWeek1.getTwelvePM());
+        wed13w1.setSelected(wednesdayWeek1.getOnePM());
+        wed14w1.setSelected(wednesdayWeek1.getTwoPM());
+        wed15w1.setSelected(wednesdayWeek1.getThreePM());
+        wed16w1.setSelected(wednesdayWeek1.getFourPM());
+        wed17w1.setSelected(wednesdayWeek1.getFivePM());
+        wed18w1.setSelected(wednesdayWeek1.getSixPM());
+        wed19w1.setSelected(wednesdayWeek1.getSevenPM());
+        wed20w1.setSelected(wednesdayWeek1.getEightPM());
+        wed21w1.setSelected(wednesdayWeek1.getNinePM());
 
-		fri8w1.setSelected(fridayWeek1.getEightAM());
-		fri9w1.setSelected(fridayWeek1.getNineAM());
-		fri10w1.setSelected(fridayWeek1.getTenAM());
-		fri11w1.setSelected(fridayWeek1.getElevenAM());
-		fri12w1.setSelected(fridayWeek1.getTwelvePM());
-		fri13w1.setSelected(fridayWeek1.getOnePM());
-		fri14w1.setSelected(fridayWeek1.getTwoPM());
-		fri15w1.setSelected(fridayWeek1.getThreePM());
-		fri16w1.setSelected(fridayWeek1.getFourPM());
-		fri17w1.setSelected(fridayWeek1.getFivePM());
-		fri18w1.setSelected(fridayWeek1.getSixPM());
-		fri19w1.setSelected(fridayWeek1.getSevenPM());
-		fri20w1.setSelected(fridayWeek1.getEightPM());
-		fri21w1.setSelected(fridayWeek1.getNinePM());
+        thu8w1.setSelected(thursdayWeek1.getEightAM());
+        thu9w1.setSelected(thursdayWeek1.getNineAM());
+        thu10w1.setSelected(thursdayWeek1.getTenAM());
+        thu11w1.setSelected(thursdayWeek1.getElevenAM());
+        thu12w1.setSelected(thursdayWeek1.getTwelvePM());
+        thu13w1.setSelected(thursdayWeek1.getOnePM());
+        thu14w1.setSelected(thursdayWeek1.getTwoPM());
+        thu15w1.setSelected(thursdayWeek1.getThreePM());
+        thu16w1.setSelected(thursdayWeek1.getFourPM());
+        thu17w1.setSelected(thursdayWeek1.getFivePM());
+        thu18w1.setSelected(thursdayWeek1.getSixPM());
+        thu19w1.setSelected(thursdayWeek1.getSevenPM());
+        thu20w1.setSelected(thursdayWeek1.getEightPM());
+        thu21w1.setSelected(thursdayWeek1.getNinePM());
 
-		sat8w1.setSelected(saturdayWeek1.getEightAM());
-		sat9w1.setSelected(saturdayWeek1.getNineAM());
-		sat10w1.setSelected(saturdayWeek1.getTenAM());
-		sat11w1.setSelected(saturdayWeek1.getElevenAM());
-		sat12w1.setSelected(saturdayWeek1.getTwelvePM());
-		sat13w1.setSelected(saturdayWeek1.getOnePM());
-		sat14w1.setSelected(saturdayWeek1.getTwoPM());
-		sat15w1.setSelected(saturdayWeek1.getThreePM());
-		sat16w1.setSelected(saturdayWeek1.getFourPM());
-		sat17w1.setSelected(saturdayWeek1.getFivePM());
-		sat18w1.setSelected(saturdayWeek1.getSixPM());
-		sat19w1.setSelected(saturdayWeek1.getSevenPM());
-		sat20w1.setSelected(saturdayWeek1.getEightPM());
-		sat21w1.setSelected(saturdayWeek1.getNinePM());
+        fri8w1.setSelected(fridayWeek1.getEightAM());
+        fri9w1.setSelected(fridayWeek1.getNineAM());
+        fri10w1.setSelected(fridayWeek1.getTenAM());
+        fri11w1.setSelected(fridayWeek1.getElevenAM());
+        fri12w1.setSelected(fridayWeek1.getTwelvePM());
+        fri13w1.setSelected(fridayWeek1.getOnePM());
+        fri14w1.setSelected(fridayWeek1.getTwoPM());
+        fri15w1.setSelected(fridayWeek1.getThreePM());
+        fri16w1.setSelected(fridayWeek1.getFourPM());
+        fri17w1.setSelected(fridayWeek1.getFivePM());
+        fri18w1.setSelected(fridayWeek1.getSixPM());
+        fri19w1.setSelected(fridayWeek1.getSevenPM());
+        fri20w1.setSelected(fridayWeek1.getEightPM());
+        fri21w1.setSelected(fridayWeek1.getNinePM());
 
-		sun8w1.setSelected(sundayWeek1.getEightAM());
-		sun9w1.setSelected(sundayWeek1.getNineAM());
-		sun10w1.setSelected(sundayWeek1.getTenAM());
-		sun11w1.setSelected(sundayWeek1.getElevenAM());
-		sun12w1.setSelected(sundayWeek1.getTwelvePM());
-		sun13w1.setSelected(sundayWeek1.getOnePM());
-		sun14w1.setSelected(sundayWeek1.getTwoPM());
-		sun15w1.setSelected(sundayWeek1.getThreePM());
-		sun16w1.setSelected(sundayWeek1.getFourPM());
-		sun17w1.setSelected(sundayWeek1.getFivePM());
-		sun18w1.setSelected(sundayWeek1.getSixPM());
-		sun19w1.setSelected(sundayWeek1.getSevenPM());
-		sun20w1.setSelected(sundayWeek1.getEightPM());
-		sun21w1.setSelected(sundayWeek1.getNinePM());
+        sat8w1.setSelected(saturdayWeek1.getEightAM());
+        sat9w1.setSelected(saturdayWeek1.getNineAM());
+        sat10w1.setSelected(saturdayWeek1.getTenAM());
+        sat11w1.setSelected(saturdayWeek1.getElevenAM());
+        sat12w1.setSelected(saturdayWeek1.getTwelvePM());
+        sat13w1.setSelected(saturdayWeek1.getOnePM());
+        sat14w1.setSelected(saturdayWeek1.getTwoPM());
+        sat15w1.setSelected(saturdayWeek1.getThreePM());
+        sat16w1.setSelected(saturdayWeek1.getFourPM());
+        sat17w1.setSelected(saturdayWeek1.getFivePM());
+        sat18w1.setSelected(saturdayWeek1.getSixPM());
+        sat19w1.setSelected(saturdayWeek1.getSevenPM());
+        sat20w1.setSelected(saturdayWeek1.getEightPM());
+        sat21w1.setSelected(saturdayWeek1.getNinePM());
 
-		mon8w2.setSelected(mondayWeek2.getEightAM());
-		mon9w2.setSelected(mondayWeek2.getNineAM());
-		mon10w2.setSelected(mondayWeek2.getTenAM());
-		mon11w2.setSelected(mondayWeek2.getElevenAM());
-		mon12w2.setSelected(mondayWeek2.getTwelvePM());
-		mon13w2.setSelected(mondayWeek2.getOnePM());
-		mon14w2.setSelected(mondayWeek2.getTwoPM());
-		mon15w2.setSelected(mondayWeek2.getThreePM());
-		mon16w2.setSelected(mondayWeek2.getFourPM());
-		mon17w2.setSelected(mondayWeek2.getFivePM());
-		mon18w2.setSelected(mondayWeek2.getSixPM());
-		mon19w2.setSelected(mondayWeek2.getSevenPM());
-		mon20w2.setSelected(mondayWeek2.getEightPM());
-		mon21w2.setSelected(mondayWeek2.getNinePM());
+        sun8w1.setSelected(sundayWeek1.getEightAM());
+        sun9w1.setSelected(sundayWeek1.getNineAM());
+        sun10w1.setSelected(sundayWeek1.getTenAM());
+        sun11w1.setSelected(sundayWeek1.getElevenAM());
+        sun12w1.setSelected(sundayWeek1.getTwelvePM());
+        sun13w1.setSelected(sundayWeek1.getOnePM());
+        sun14w1.setSelected(sundayWeek1.getTwoPM());
+        sun15w1.setSelected(sundayWeek1.getThreePM());
+        sun16w1.setSelected(sundayWeek1.getFourPM());
+        sun17w1.setSelected(sundayWeek1.getFivePM());
+        sun18w1.setSelected(sundayWeek1.getSixPM());
+        sun19w1.setSelected(sundayWeek1.getSevenPM());
+        sun20w1.setSelected(sundayWeek1.getEightPM());
+        sun21w1.setSelected(sundayWeek1.getNinePM());
 
-		tue8w2.setSelected(tuesdayWeek2.getEightAM());
-		tue9w2.setSelected(tuesdayWeek2.getNineAM());
-		tue10w2.setSelected(tuesdayWeek2.getTenAM());
-		tue11w2.setSelected(tuesdayWeek2.getElevenAM());
-		tue12w2.setSelected(tuesdayWeek2.getTwelvePM());
-		tue13w2.setSelected(tuesdayWeek2.getOnePM());
-		tue14w2.setSelected(tuesdayWeek2.getTwoPM());
-		tue15w2.setSelected(tuesdayWeek2.getThreePM());
-		tue16w2.setSelected(tuesdayWeek2.getFourPM());
-		tue17w2.setSelected(tuesdayWeek2.getFivePM());
-		tue18w2.setSelected(tuesdayWeek2.getSixPM());
-		tue19w2.setSelected(tuesdayWeek2.getSevenPM());
-		tue20w2.setSelected(tuesdayWeek2.getEightPM());
-		tue21w2.setSelected(tuesdayWeek2.getNinePM());
+        mon8w2.setSelected(mondayWeek2.getEightAM());
+        mon9w2.setSelected(mondayWeek2.getNineAM());
+        mon10w2.setSelected(mondayWeek2.getTenAM());
+        mon11w2.setSelected(mondayWeek2.getElevenAM());
+        mon12w2.setSelected(mondayWeek2.getTwelvePM());
+        mon13w2.setSelected(mondayWeek2.getOnePM());
+        mon14w2.setSelected(mondayWeek2.getTwoPM());
+        mon15w2.setSelected(mondayWeek2.getThreePM());
+        mon16w2.setSelected(mondayWeek2.getFourPM());
+        mon17w2.setSelected(mondayWeek2.getFivePM());
+        mon18w2.setSelected(mondayWeek2.getSixPM());
+        mon19w2.setSelected(mondayWeek2.getSevenPM());
+        mon20w2.setSelected(mondayWeek2.getEightPM());
+        mon21w2.setSelected(mondayWeek2.getNinePM());
 
-		wed8w2.setSelected(wednesdayWeek2.getEightAM());
-		wed9w2.setSelected(wednesdayWeek2.getNineAM());
-		wed10w2.setSelected(wednesdayWeek2.getTenAM());
-		wed11w2.setSelected(wednesdayWeek2.getElevenAM());
-		wed12w2.setSelected(wednesdayWeek2.getTwelvePM());
-		wed13w2.setSelected(wednesdayWeek2.getOnePM());
-		wed14w2.setSelected(wednesdayWeek2.getTwoPM());
-		wed15w2.setSelected(wednesdayWeek2.getThreePM());
-		wed16w2.setSelected(wednesdayWeek2.getFourPM());
-		wed17w2.setSelected(wednesdayWeek2.getFivePM());
-		wed18w2.setSelected(wednesdayWeek2.getSixPM());
-		wed19w2.setSelected(wednesdayWeek2.getSevenPM());
-		wed20w2.setSelected(wednesdayWeek2.getEightPM());
-		wed21w2.setSelected(wednesdayWeek2.getNinePM());
+        tue8w2.setSelected(tuesdayWeek2.getEightAM());
+        tue9w2.setSelected(tuesdayWeek2.getNineAM());
+        tue10w2.setSelected(tuesdayWeek2.getTenAM());
+        tue11w2.setSelected(tuesdayWeek2.getElevenAM());
+        tue12w2.setSelected(tuesdayWeek2.getTwelvePM());
+        tue13w2.setSelected(tuesdayWeek2.getOnePM());
+        tue14w2.setSelected(tuesdayWeek2.getTwoPM());
+        tue15w2.setSelected(tuesdayWeek2.getThreePM());
+        tue16w2.setSelected(tuesdayWeek2.getFourPM());
+        tue17w2.setSelected(tuesdayWeek2.getFivePM());
+        tue18w2.setSelected(tuesdayWeek2.getSixPM());
+        tue19w2.setSelected(tuesdayWeek2.getSevenPM());
+        tue20w2.setSelected(tuesdayWeek2.getEightPM());
+        tue21w2.setSelected(tuesdayWeek2.getNinePM());
 
-		thu8w2.setSelected(thursdayWeek2.getEightAM());
-		thu9w2.setSelected(thursdayWeek2.getNineAM());
-		thu10w2.setSelected(thursdayWeek2.getTenAM());
-		thu11w2.setSelected(thursdayWeek2.getElevenAM());
-		thu12w2.setSelected(thursdayWeek2.getTwelvePM());
-		thu13w2.setSelected(thursdayWeek2.getOnePM());
-		thu14w2.setSelected(thursdayWeek2.getTwoPM());
-		thu15w2.setSelected(thursdayWeek2.getThreePM());
-		thu16w2.setSelected(thursdayWeek2.getFourPM());
-		thu17w2.setSelected(thursdayWeek2.getFivePM());
-		thu18w2.setSelected(thursdayWeek2.getSixPM());
-		thu19w2.setSelected(thursdayWeek2.getSevenPM());
-		thu20w2.setSelected(thursdayWeek2.getEightPM());
-		thu21w2.setSelected(thursdayWeek2.getNinePM());
+        wed8w2.setSelected(wednesdayWeek2.getEightAM());
+        wed9w2.setSelected(wednesdayWeek2.getNineAM());
+        wed10w2.setSelected(wednesdayWeek2.getTenAM());
+        wed11w2.setSelected(wednesdayWeek2.getElevenAM());
+        wed12w2.setSelected(wednesdayWeek2.getTwelvePM());
+        wed13w2.setSelected(wednesdayWeek2.getOnePM());
+        wed14w2.setSelected(wednesdayWeek2.getTwoPM());
+        wed15w2.setSelected(wednesdayWeek2.getThreePM());
+        wed16w2.setSelected(wednesdayWeek2.getFourPM());
+        wed17w2.setSelected(wednesdayWeek2.getFivePM());
+        wed18w2.setSelected(wednesdayWeek2.getSixPM());
+        wed19w2.setSelected(wednesdayWeek2.getSevenPM());
+        wed20w2.setSelected(wednesdayWeek2.getEightPM());
+        wed21w2.setSelected(wednesdayWeek2.getNinePM());
 
-		fri8w2.setSelected(fridayWeek2.getEightAM());
-		fri9w2.setSelected(fridayWeek2.getNineAM());
-		fri10w2.setSelected(fridayWeek2.getTenAM());
-		fri11w2.setSelected(fridayWeek2.getElevenAM());
-		fri12w2.setSelected(fridayWeek2.getTwelvePM());
-		fri13w2.setSelected(fridayWeek2.getOnePM());
-		fri14w2.setSelected(fridayWeek2.getTwoPM());
-		fri15w2.setSelected(fridayWeek2.getThreePM());
-		fri16w2.setSelected(fridayWeek2.getFourPM());
-		fri17w2.setSelected(fridayWeek2.getFivePM());
-		fri18w2.setSelected(fridayWeek2.getSixPM());
-		fri19w2.setSelected(fridayWeek2.getSevenPM());
-		fri20w2.setSelected(fridayWeek2.getEightPM());
-		fri21w2.setSelected(fridayWeek2.getNinePM());
+        thu8w2.setSelected(thursdayWeek2.getEightAM());
+        thu9w2.setSelected(thursdayWeek2.getNineAM());
+        thu10w2.setSelected(thursdayWeek2.getTenAM());
+        thu11w2.setSelected(thursdayWeek2.getElevenAM());
+        thu12w2.setSelected(thursdayWeek2.getTwelvePM());
+        thu13w2.setSelected(thursdayWeek2.getOnePM());
+        thu14w2.setSelected(thursdayWeek2.getTwoPM());
+        thu15w2.setSelected(thursdayWeek2.getThreePM());
+        thu16w2.setSelected(thursdayWeek2.getFourPM());
+        thu17w2.setSelected(thursdayWeek2.getFivePM());
+        thu18w2.setSelected(thursdayWeek2.getSixPM());
+        thu19w2.setSelected(thursdayWeek2.getSevenPM());
+        thu20w2.setSelected(thursdayWeek2.getEightPM());
+        thu21w2.setSelected(thursdayWeek2.getNinePM());
 
-		sat8w2.setSelected(saturdayWeek2.getEightAM());
-		sat9w2.setSelected(saturdayWeek2.getNineAM());
-		sat10w2.setSelected(saturdayWeek2.getTenAM());
-		sat11w2.setSelected(saturdayWeek2.getElevenAM());
-		sat12w2.setSelected(saturdayWeek2.getTwelvePM());
-		sat13w2.setSelected(saturdayWeek2.getOnePM());
-		sat14w2.setSelected(saturdayWeek2.getTwoPM());
-		sat15w2.setSelected(saturdayWeek2.getThreePM());
-		sat16w2.setSelected(saturdayWeek2.getFourPM());
-		sat17w2.setSelected(saturdayWeek2.getFivePM());
-		sat18w2.setSelected(saturdayWeek2.getSixPM());
-		sat19w2.setSelected(saturdayWeek2.getSevenPM());
-		sat20w2.setSelected(saturdayWeek2.getEightPM());
-		sat21w2.setSelected(saturdayWeek2.getNinePM());
+        fri8w2.setSelected(fridayWeek2.getEightAM());
+        fri9w2.setSelected(fridayWeek2.getNineAM());
+        fri10w2.setSelected(fridayWeek2.getTenAM());
+        fri11w2.setSelected(fridayWeek2.getElevenAM());
+        fri12w2.setSelected(fridayWeek2.getTwelvePM());
+        fri13w2.setSelected(fridayWeek2.getOnePM());
+        fri14w2.setSelected(fridayWeek2.getTwoPM());
+        fri15w2.setSelected(fridayWeek2.getThreePM());
+        fri16w2.setSelected(fridayWeek2.getFourPM());
+        fri17w2.setSelected(fridayWeek2.getFivePM());
+        fri18w2.setSelected(fridayWeek2.getSixPM());
+        fri19w2.setSelected(fridayWeek2.getSevenPM());
+        fri20w2.setSelected(fridayWeek2.getEightPM());
+        fri21w2.setSelected(fridayWeek2.getNinePM());
 
-		sun8w2.setSelected(sundayWeek2.getEightAM());
-		sun9w2.setSelected(sundayWeek2.getNineAM());
-		sun10w2.setSelected(sundayWeek2.getTenAM());
-		sun11w2.setSelected(sundayWeek2.getElevenAM());
-		sun12w2.setSelected(sundayWeek2.getTwelvePM());
-		sun13w2.setSelected(sundayWeek2.getOnePM());
-		sun14w2.setSelected(sundayWeek2.getTwoPM());
-		sun15w2.setSelected(sundayWeek2.getThreePM());
-		sun16w2.setSelected(sundayWeek2.getFourPM());
-		sun17w2.setSelected(sundayWeek2.getFivePM());
-		sun18w2.setSelected(sundayWeek2.getSixPM());
-		sun19w2.setSelected(sundayWeek2.getSevenPM());
-		sun20w2.setSelected(sundayWeek2.getEightPM());
-		sun21w2.setSelected(sundayWeek2.getNinePM());
-                
-                // add to ArrayList
-                
-                 weekDays1.add(mon8w1) ; 
-                weekDays1.add(mon9w1) ;
-                weekDays1.add(mon10w1) ;
-                weekDays1.add(mon11w1) ;
-                weekDays1.add(mon12w1) ;
-                weekDays1.add(mon13w1) ;
-                weekDays1.add(mon14w1) ;
-                weekDays1.add(mon15w1) ;
-                weekDays1.add(mon16w1) ;
-                weekDays1.add(mon17w1) ;
-                weekDays1.add(mon18w1) ;
-                weekDays1.add(mon19w1) ;
-                weekDays1.add(mon20w1) ;
-                weekDays1.add(mon21w1) ;
-                
-                weekDays1.add(tue8w1) ;
-                weekDays1.add(tue9w1) ;
-                weekDays1.add(tue10w1) ;
-                weekDays1.add(tue11w1) ;
-                weekDays1.add(tue12w1) ;
-                weekDays1.add(tue13w1) ;
-                weekDays1.add(tue14w1) ;
-                weekDays1.add(tue15w1) ;
-                weekDays1.add(tue16w1) ;
-                weekDays1.add(tue17w1) ;
-                weekDays1.add(tue18w1) ;
-                weekDays1.add(tue19w1) ;
-                weekDays1.add(tue20w1) ;
-                weekDays1.add(tue21w1) ;
-                
-                weekDays1.add(wed8w1) ;
-                weekDays1.add(wed9w1) ;
-                weekDays1.add(wed10w1) ;
-                weekDays1.add(wed11w1) ;
-                weekDays1.add(wed12w1) ;
-                weekDays1.add(wed13w1) ;
-                weekDays1.add(wed14w1) ;
-                weekDays1.add(wed15w1) ;
-                weekDays1.add(wed16w1) ;
-                weekDays1.add(wed17w1) ;
-                weekDays1.add(wed18w1) ;
-                weekDays1.add(wed19w1) ;
-                weekDays1.add(wed20w1) ;
-                weekDays1.add(wed21w1) ;
-                
-                weekDays1.add(thu8w1) ;
-                weekDays1.add(thu9w1) ;
-                weekDays1.add(thu10w1) ;
-                weekDays1.add(thu11w1) ;
-                weekDays1.add(thu12w1) ;
-                weekDays1.add(thu13w1) ;
-                weekDays1.add(thu14w1) ;
-                weekDays1.add(thu15w1) ;
-                weekDays1.add(thu16w1) ;
-                weekDays1.add(thu17w1) ;
-                weekDays1.add(thu18w1) ;
-                weekDays1.add(thu19w1) ;
-                weekDays1.add(thu20w1) ;
-                weekDays1.add(thu21w1) ;
-                
-                weekDays1.add(fri8w1) ;
-                weekDays1.add(fri9w1) ;
-                weekDays1.add(fri10w1) ;
-                weekDays1.add(fri11w1) ;
-                weekDays1.add(fri12w1) ;
-                weekDays1.add(fri13w1) ;
-                weekDays1.add(fri14w1) ;
-                weekDays1.add(fri15w1) ;
-                weekDays1.add(fri16w1) ;
-                weekDays1.add(fri17w1) ;
-                weekDays1.add(fri18w1) ;
-                weekDays1.add(fri19w1) ;
-                weekDays1.add(fri20w1) ;
-                weekDays1.add(fri21w1) ;
-                
-                weekDays1.add(sat8w1) ;
-                weekDays1.add(sat9w1) ;
-                weekDays1.add(sat10w1) ;
-                weekDays1.add(sat11w1) ;
-                weekDays1.add(sat12w1) ;
-                weekDays1.add(sat13w1) ;
-                weekDays1.add(sat14w1) ;
-                weekDays1.add(sat15w1) ;
-                weekDays1.add(sat16w1) ;
-                weekDays1.add(sat17w1) ;
-                weekDays1.add(sat18w1) ;
-                weekDays1.add(sat19w1) ;
-                weekDays1.add(sat20w1) ;
-                weekDays1.add(sat21w1) ;
-                
-                weekDays1.add(sun8w1) ;
-                weekDays1.add(sun9w1) ;
-                weekDays1.add(sun10w1) ;
-                weekDays1.add(sun11w1) ;
-                weekDays1.add(sun12w1) ;
-                weekDays1.add(sun13w1) ;
-                weekDays1.add(sun14w1) ;
-                weekDays1.add(sun15w1) ;
-                weekDays1.add(sun16w1) ;
-                weekDays1.add(sun17w1) ;
-                weekDays1.add(sun18w1) ;
-                weekDays1.add(sun19w1) ;
-                weekDays1.add(sun20w1) ;
-                weekDays1.add(sun21w1) ;
-                
-                weekDays2.add(mon8w2) ; 
-                weekDays2.add(mon9w2) ;
-                weekDays2.add(mon10w2) ;
-                weekDays2.add(mon11w2) ;
-                weekDays2.add(mon12w2) ;
-                weekDays2.add(mon13w2) ;
-                weekDays2.add(mon14w2) ;
-                weekDays2.add(mon15w2) ;
-                weekDays2.add(mon16w2) ;
-                weekDays2.add(mon17w2) ;
-                weekDays2.add(mon18w2) ;
-                weekDays2.add(mon19w2) ;
-                weekDays2.add(mon20w2) ;
-                weekDays2.add(mon21w2) ;
-                
-                weekDays2.add(tue8w2) ;
-                weekDays2.add(tue9w2) ;
-                weekDays2.add(tue10w2) ;
-                weekDays2.add(tue11w2) ;
-                weekDays2.add(tue12w2) ;
-                weekDays2.add(tue13w2) ;
-                weekDays2.add(tue14w2) ;
-                weekDays2.add(tue15w2) ;
-                weekDays2.add(tue16w2) ;
-                weekDays2.add(tue17w2) ;
-                weekDays2.add(tue18w2) ;
-                weekDays2.add(tue19w2) ;
-                weekDays2.add(tue20w2) ;
-                weekDays2.add(tue21w2) ;
-                
-                weekDays2.add(wed8w2) ;
-                weekDays2.add(wed9w2) ;
-                weekDays2.add(wed10w2) ;
-                weekDays2.add(wed11w2) ;
-                weekDays2.add(wed12w2) ;
-                weekDays2.add(wed13w2) ;
-                weekDays2.add(wed14w2) ;
-                weekDays2.add(wed15w2) ;
-                weekDays2.add(wed16w2) ;
-                weekDays2.add(wed17w2) ;
-                weekDays2.add(wed18w2) ;
-                weekDays2.add(wed19w2) ;
-                weekDays2.add(wed20w2) ;
-                weekDays2.add(wed21w2) ;
-               
-                weekDays2.add(thu8w2) ;
-                weekDays2.add(thu9w2) ;
-                weekDays2.add(thu10w2) ;
-                weekDays2.add(thu11w2) ;
-                weekDays2.add(thu12w2) ;
-                weekDays2.add(thu13w2) ;
-                weekDays2.add(thu14w2) ;
-                weekDays2.add(thu15w2) ;
-                weekDays2.add(thu16w2) ;
-                weekDays2.add(thu17w2) ;
-                weekDays2.add(thu18w2) ;
-                weekDays2.add(thu19w2) ;
-                weekDays2.add(thu20w2) ;
-                weekDays2.add(thu21w2) ;
-                
-                weekDays2.add(fri8w2) ;
-                weekDays2.add(fri9w2) ;
-                weekDays2.add(fri10w2) ;
-                weekDays2.add(fri11w2) ;
-                weekDays2.add(fri12w2) ;
-                weekDays2.add(fri13w2) ;
-                weekDays2.add(fri14w2) ;
-                weekDays2.add(fri15w2) ;
-                weekDays2.add(fri16w2) ;
-                weekDays2.add(fri17w2) ;
-                weekDays2.add(fri18w2) ;
-                weekDays2.add(fri19w2) ;
-                weekDays2.add(fri20w2) ;
-                weekDays2.add(fri21w2) ;
-               
-                weekDays2.add(sat8w2) ;
-                weekDays2.add(sat9w2) ;
-                weekDays2.add(sat10w2) ;
-                weekDays2.add(sat11w2) ;
-                weekDays2.add(sat12w2) ;
-                weekDays2.add(sat13w2) ;
-                weekDays2.add(sat14w2) ;
-                weekDays2.add(sat15w2) ;
-                weekDays2.add(sat16w2) ;
-                weekDays2.add(sat17w2) ;
-                weekDays2.add(sat18w2) ;
-                weekDays2.add(sat19w2) ;
-                weekDays2.add(sat20w2) ;
-                weekDays2.add(sat21w2) ;
-              
-                weekDays2.add(sun8w2) ;
-                weekDays2.add(sun9w2) ;
-                weekDays2.add(sun10w2) ;
-                weekDays2.add(sun11w2) ;
-                weekDays2.add(sun12w2) ;
-                weekDays2.add(sun13w2) ;
-                weekDays2.add(sun14w2) ;
-                weekDays2.add(sun15w2) ;
-                weekDays2.add(sun16w2) ;
-                weekDays2.add(sun17w2) ;
-                weekDays2.add(sun18w2) ;
-                weekDays2.add(sun19w2) ;
-                weekDays2.add(sun20w2) ;
-                weekDays2.add(sun21w2) ;
-	}
+        sat8w2.setSelected(saturdayWeek2.getEightAM());
+        sat9w2.setSelected(saturdayWeek2.getNineAM());
+        sat10w2.setSelected(saturdayWeek2.getTenAM());
+        sat11w2.setSelected(saturdayWeek2.getElevenAM());
+        sat12w2.setSelected(saturdayWeek2.getTwelvePM());
+        sat13w2.setSelected(saturdayWeek2.getOnePM());
+        sat14w2.setSelected(saturdayWeek2.getTwoPM());
+        sat15w2.setSelected(saturdayWeek2.getThreePM());
+        sat16w2.setSelected(saturdayWeek2.getFourPM());
+        sat17w2.setSelected(saturdayWeek2.getFivePM());
+        sat18w2.setSelected(saturdayWeek2.getSixPM());
+        sat19w2.setSelected(saturdayWeek2.getSevenPM());
+        sat20w2.setSelected(saturdayWeek2.getEightPM());
+        sat21w2.setSelected(saturdayWeek2.getNinePM());
 
-	public EditTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserDAO userDAO, UserStorageDAO userStorageDAO,
-			  MergedDay mondayWeek1, MergedDay tuesdayWeek1, MergedDay wednesdayWeek1, MergedDay thursdayWeek1, MergedDay fridayWeek1, MergedDay saturdayWeek1,
-			  MergedDay sundayWeek1, MergedDay mondayWeek2, MergedDay tuesdayWeek2, MergedDay wednesdayWeek2, MergedDay thursdayWeek2, MergedDay fridayWeek2,
-			  MergedDay saturdayWeek2, MergedDay sundayWeek2) {
+        sun8w2.setSelected(sundayWeek2.getEightAM());
+        sun9w2.setSelected(sundayWeek2.getNineAM());
+        sun10w2.setSelected(sundayWeek2.getTenAM());
+        sun11w2.setSelected(sundayWeek2.getElevenAM());
+        sun12w2.setSelected(sundayWeek2.getTwelvePM());
+        sun13w2.setSelected(sundayWeek2.getOnePM());
+        sun14w2.setSelected(sundayWeek2.getTwoPM());
+        sun15w2.setSelected(sundayWeek2.getThreePM());
+        sun16w2.setSelected(sundayWeek2.getFourPM());
+        sun17w2.setSelected(sundayWeek2.getFivePM());
+        sun18w2.setSelected(sundayWeek2.getSixPM());
+        sun19w2.setSelected(sundayWeek2.getSevenPM());
+        sun20w2.setSelected(sundayWeek2.getEightPM());
+        sun21w2.setSelected(sundayWeek2.getNinePM());
 
-		super(parent);
-		super.setModal(modal);
-		this.timetableDAO = timetableDAO;
-		this.userDAO = userDAO;
-		this.userStorageDAO = userStorageDAO;
-		this.setName("Edit Timetable");
+        // add to ArrayList
+        weekDays1.add(mon8w1);
+        weekDays1.add(mon9w1);
+        weekDays1.add(mon10w1);
+        weekDays1.add(mon11w1);
+        weekDays1.add(mon12w1);
+        weekDays1.add(mon13w1);
+        weekDays1.add(mon14w1);
+        weekDays1.add(mon15w1);
+        weekDays1.add(mon16w1);
+        weekDays1.add(mon17w1);
+        weekDays1.add(mon18w1);
+        weekDays1.add(mon19w1);
+        weekDays1.add(mon20w1);
+        weekDays1.add(mon21w1);
 
-		initComponents();
+        weekDays1.add(tue8w1);
+        weekDays1.add(tue9w1);
+        weekDays1.add(tue10w1);
+        weekDays1.add(tue11w1);
+        weekDays1.add(tue12w1);
+        weekDays1.add(tue13w1);
+        weekDays1.add(tue14w1);
+        weekDays1.add(tue15w1);
+        weekDays1.add(tue16w1);
+        weekDays1.add(tue17w1);
+        weekDays1.add(tue18w1);
+        weekDays1.add(tue19w1);
+        weekDays1.add(tue20w1);
+        weekDays1.add(tue21w1);
 
-		this.mondayWeek1Merged = mondayWeek1;
-		this.tuesdayWeek1Merged = tuesdayWeek1;
-		this.wednesdayWeek1Merged = wednesdayWeek1;
-		this.thursdayWeek1Merged = thursdayWeek1;
-		this.fridayWeek1Merged = fridayWeek1;
-		this.saturdayWeek1Merged = saturdayWeek1;
-		this.sundayWeek1Merged = sundayWeek1;
-		this.mondayWeek2Merged = mondayWeek2;
-		this.tuesdayWeek2Merged = tuesdayWeek2;
-		this.wednesdayWeek2Merged = wednesdayWeek2;
-		this.thursdayWeek2Merged = thursdayWeek2;
-		this.fridayWeek2Merged = fridayWeek2;
-		this.saturdayWeek2Merged = saturdayWeek2;
-		this.sundayWeek2Merged = sundayWeek2;
+        weekDays1.add(wed8w1);
+        weekDays1.add(wed9w1);
+        weekDays1.add(wed10w1);
+        weekDays1.add(wed11w1);
+        weekDays1.add(wed12w1);
+        weekDays1.add(wed13w1);
+        weekDays1.add(wed14w1);
+        weekDays1.add(wed15w1);
+        weekDays1.add(wed16w1);
+        weekDays1.add(wed17w1);
+        weekDays1.add(wed18w1);
+        weekDays1.add(wed19w1);
+        weekDays1.add(wed20w1);
+        weekDays1.add(wed21w1);
 
-		//set checkbox values 
-		mon8w1.setSelected(mondayWeek1.getEightAM());
-		mon9w1.setSelected(mondayWeek1.getNineAM());
-		mon10w1.setSelected(mondayWeek1.getTenAM());
-		mon11w1.setSelected(mondayWeek1.getElevenAM());
-		mon12w1.setSelected(mondayWeek1.getTwelvePM());
-		mon13w1.setSelected(mondayWeek1.getOnePM());
-		mon14w1.setSelected(mondayWeek1.getTwoPM());
-		mon15w1.setSelected(mondayWeek1.getThreePM());
-		mon16w1.setSelected(mondayWeek1.getFourPM());
-		mon17w1.setSelected(mondayWeek1.getFivePM());
-		mon18w1.setSelected(mondayWeek1.getSixPM());
-		mon19w1.setSelected(mondayWeek1.getSevenPM());
-		mon20w1.setSelected(mondayWeek1.getEightPM());
-		mon21w1.setSelected(mondayWeek1.getNinePM());
+        weekDays1.add(thu8w1);
+        weekDays1.add(thu9w1);
+        weekDays1.add(thu10w1);
+        weekDays1.add(thu11w1);
+        weekDays1.add(thu12w1);
+        weekDays1.add(thu13w1);
+        weekDays1.add(thu14w1);
+        weekDays1.add(thu15w1);
+        weekDays1.add(thu16w1);
+        weekDays1.add(thu17w1);
+        weekDays1.add(thu18w1);
+        weekDays1.add(thu19w1);
+        weekDays1.add(thu20w1);
+        weekDays1.add(thu21w1);
 
-		tue8w1.setSelected(tuesdayWeek1.getEightAM());
-		tue9w1.setSelected(tuesdayWeek1.getNineAM());
-		tue10w1.setSelected(tuesdayWeek1.getTenAM());
-		tue11w1.setSelected(tuesdayWeek1.getElevenAM());
-		tue12w1.setSelected(tuesdayWeek1.getTwelvePM());
-		tue13w1.setSelected(tuesdayWeek1.getOnePM());
-		tue14w1.setSelected(tuesdayWeek1.getTwoPM());
-		tue15w1.setSelected(tuesdayWeek1.getThreePM());
-		tue16w1.setSelected(tuesdayWeek1.getFourPM());
-		tue17w1.setSelected(tuesdayWeek1.getFivePM());
-		tue18w1.setSelected(tuesdayWeek1.getSixPM());
-		tue19w1.setSelected(tuesdayWeek1.getSevenPM());
-		tue20w1.setSelected(tuesdayWeek1.getEightPM());
-		tue21w1.setSelected(tuesdayWeek1.getNinePM());
+        weekDays1.add(fri8w1);
+        weekDays1.add(fri9w1);
+        weekDays1.add(fri10w1);
+        weekDays1.add(fri11w1);
+        weekDays1.add(fri12w1);
+        weekDays1.add(fri13w1);
+        weekDays1.add(fri14w1);
+        weekDays1.add(fri15w1);
+        weekDays1.add(fri16w1);
+        weekDays1.add(fri17w1);
+        weekDays1.add(fri18w1);
+        weekDays1.add(fri19w1);
+        weekDays1.add(fri20w1);
+        weekDays1.add(fri21w1);
 
-		wed8w1.setSelected(wednesdayWeek1.getEightAM());
-		wed9w1.setSelected(wednesdayWeek1.getNineAM());
-		wed10w1.setSelected(wednesdayWeek1.getTenAM());
-		wed11w1.setSelected(wednesdayWeek1.getElevenAM());
-		wed12w1.setSelected(wednesdayWeek1.getTwelvePM());
-		wed13w1.setSelected(wednesdayWeek1.getOnePM());
-		wed14w1.setSelected(wednesdayWeek1.getTwoPM());
-		wed15w1.setSelected(wednesdayWeek1.getThreePM());
-		wed16w1.setSelected(wednesdayWeek1.getFourPM());
-		wed17w1.setSelected(wednesdayWeek1.getFivePM());
-		wed18w1.setSelected(wednesdayWeek1.getSixPM());
-		wed19w1.setSelected(wednesdayWeek1.getSevenPM());
-		wed20w1.setSelected(wednesdayWeek1.getEightPM());
-		wed21w1.setSelected(wednesdayWeek1.getNinePM());
+        weekDays1.add(sat8w1);
+        weekDays1.add(sat9w1);
+        weekDays1.add(sat10w1);
+        weekDays1.add(sat11w1);
+        weekDays1.add(sat12w1);
+        weekDays1.add(sat13w1);
+        weekDays1.add(sat14w1);
+        weekDays1.add(sat15w1);
+        weekDays1.add(sat16w1);
+        weekDays1.add(sat17w1);
+        weekDays1.add(sat18w1);
+        weekDays1.add(sat19w1);
+        weekDays1.add(sat20w1);
+        weekDays1.add(sat21w1);
 
-		thu8w1.setSelected(thursdayWeek1.getEightAM());
-		thu9w1.setSelected(thursdayWeek1.getNineAM());
-		thu10w1.setSelected(thursdayWeek1.getTenAM());
-		thu11w1.setSelected(thursdayWeek1.getElevenAM());
-		thu12w1.setSelected(thursdayWeek1.getTwelvePM());
-		thu13w1.setSelected(thursdayWeek1.getOnePM());
-		thu14w1.setSelected(thursdayWeek1.getTwoPM());
-		thu15w1.setSelected(thursdayWeek1.getThreePM());
-		thu16w1.setSelected(thursdayWeek1.getFourPM());
-		thu17w1.setSelected(thursdayWeek1.getFivePM());
-		thu18w1.setSelected(thursdayWeek1.getSixPM());
-		thu19w1.setSelected(thursdayWeek1.getSevenPM());
-		thu20w1.setSelected(thursdayWeek1.getEightPM());
-		thu21w1.setSelected(thursdayWeek1.getNinePM());
+        weekDays1.add(sun8w1);
+        weekDays1.add(sun9w1);
+        weekDays1.add(sun10w1);
+        weekDays1.add(sun11w1);
+        weekDays1.add(sun12w1);
+        weekDays1.add(sun13w1);
+        weekDays1.add(sun14w1);
+        weekDays1.add(sun15w1);
+        weekDays1.add(sun16w1);
+        weekDays1.add(sun17w1);
+        weekDays1.add(sun18w1);
+        weekDays1.add(sun19w1);
+        weekDays1.add(sun20w1);
+        weekDays1.add(sun21w1);
 
-		fri8w1.setSelected(fridayWeek1.getEightAM());
-		fri9w1.setSelected(fridayWeek1.getNineAM());
-		fri10w1.setSelected(fridayWeek1.getTenAM());
-		fri11w1.setSelected(fridayWeek1.getElevenAM());
-		fri12w1.setSelected(fridayWeek1.getTwelvePM());
-		fri13w1.setSelected(fridayWeek1.getOnePM());
-		fri14w1.setSelected(fridayWeek1.getTwoPM());
-		fri15w1.setSelected(fridayWeek1.getThreePM());
-		fri16w1.setSelected(fridayWeek1.getFourPM());
-		fri17w1.setSelected(fridayWeek1.getFivePM());
-		fri18w1.setSelected(fridayWeek1.getSixPM());
-		fri19w1.setSelected(fridayWeek1.getSevenPM());
-		fri20w1.setSelected(fridayWeek1.getEightPM());
-		fri21w1.setSelected(fridayWeek1.getNinePM());
+        weekDays2.add(mon8w2);
+        weekDays2.add(mon9w2);
+        weekDays2.add(mon10w2);
+        weekDays2.add(mon11w2);
+        weekDays2.add(mon12w2);
+        weekDays2.add(mon13w2);
+        weekDays2.add(mon14w2);
+        weekDays2.add(mon15w2);
+        weekDays2.add(mon16w2);
+        weekDays2.add(mon17w2);
+        weekDays2.add(mon18w2);
+        weekDays2.add(mon19w2);
+        weekDays2.add(mon20w2);
+        weekDays2.add(mon21w2);
 
-		sat8w1.setSelected(saturdayWeek1.getEightAM());
-		sat9w1.setSelected(saturdayWeek1.getNineAM());
-		sat10w1.setSelected(saturdayWeek1.getTenAM());
-		sat11w1.setSelected(saturdayWeek1.getElevenAM());
-		sat12w1.setSelected(saturdayWeek1.getTwelvePM());
-		sat13w1.setSelected(saturdayWeek1.getOnePM());
-		sat14w1.setSelected(saturdayWeek1.getTwoPM());
-		sat15w1.setSelected(saturdayWeek1.getThreePM());
-		sat16w1.setSelected(saturdayWeek1.getFourPM());
-		sat17w1.setSelected(saturdayWeek1.getFivePM());
-		sat18w1.setSelected(saturdayWeek1.getSixPM());
-		sat19w1.setSelected(saturdayWeek1.getSevenPM());
-		sat20w1.setSelected(saturdayWeek1.getEightPM());
-		sat21w1.setSelected(saturdayWeek1.getNinePM());
+        weekDays2.add(tue8w2);
+        weekDays2.add(tue9w2);
+        weekDays2.add(tue10w2);
+        weekDays2.add(tue11w2);
+        weekDays2.add(tue12w2);
+        weekDays2.add(tue13w2);
+        weekDays2.add(tue14w2);
+        weekDays2.add(tue15w2);
+        weekDays2.add(tue16w2);
+        weekDays2.add(tue17w2);
+        weekDays2.add(tue18w2);
+        weekDays2.add(tue19w2);
+        weekDays2.add(tue20w2);
+        weekDays2.add(tue21w2);
 
-		sun8w1.setSelected(sundayWeek1.getEightAM());
-		sun9w1.setSelected(sundayWeek1.getNineAM());
-		sun10w1.setSelected(sundayWeek1.getTenAM());
-		sun11w1.setSelected(sundayWeek1.getElevenAM());
-		sun12w1.setSelected(sundayWeek1.getTwelvePM());
-		sun13w1.setSelected(sundayWeek1.getOnePM());
-		sun14w1.setSelected(sundayWeek1.getTwoPM());
-		sun15w1.setSelected(sundayWeek1.getThreePM());
-		sun16w1.setSelected(sundayWeek1.getFourPM());
-		sun17w1.setSelected(sundayWeek1.getFivePM());
-		sun18w1.setSelected(sundayWeek1.getSixPM());
-		sun19w1.setSelected(sundayWeek1.getSevenPM());
-		sun20w1.setSelected(sundayWeek1.getEightPM());
-		sun21w1.setSelected(sundayWeek1.getNinePM());
+        weekDays2.add(wed8w2);
+        weekDays2.add(wed9w2);
+        weekDays2.add(wed10w2);
+        weekDays2.add(wed11w2);
+        weekDays2.add(wed12w2);
+        weekDays2.add(wed13w2);
+        weekDays2.add(wed14w2);
+        weekDays2.add(wed15w2);
+        weekDays2.add(wed16w2);
+        weekDays2.add(wed17w2);
+        weekDays2.add(wed18w2);
+        weekDays2.add(wed19w2);
+        weekDays2.add(wed20w2);
+        weekDays2.add(wed21w2);
 
-		mon8w2.setSelected(mondayWeek2.getEightAM());
-		mon9w2.setSelected(mondayWeek2.getNineAM());
-		mon10w2.setSelected(mondayWeek2.getTenAM());
-		mon11w2.setSelected(mondayWeek2.getElevenAM());
-		mon12w2.setSelected(mondayWeek2.getTwelvePM());
-		mon13w2.setSelected(mondayWeek2.getOnePM());
-		mon14w2.setSelected(mondayWeek2.getTwoPM());
-		mon15w2.setSelected(mondayWeek2.getThreePM());
-		mon16w2.setSelected(mondayWeek2.getFourPM());
-		mon17w2.setSelected(mondayWeek2.getFivePM());
-		mon18w2.setSelected(mondayWeek2.getSixPM());
-		mon19w2.setSelected(mondayWeek2.getSevenPM());
-		mon20w2.setSelected(mondayWeek2.getEightPM());
-		mon21w2.setSelected(mondayWeek2.getNinePM());
+        weekDays2.add(thu8w2);
+        weekDays2.add(thu9w2);
+        weekDays2.add(thu10w2);
+        weekDays2.add(thu11w2);
+        weekDays2.add(thu12w2);
+        weekDays2.add(thu13w2);
+        weekDays2.add(thu14w2);
+        weekDays2.add(thu15w2);
+        weekDays2.add(thu16w2);
+        weekDays2.add(thu17w2);
+        weekDays2.add(thu18w2);
+        weekDays2.add(thu19w2);
+        weekDays2.add(thu20w2);
+        weekDays2.add(thu21w2);
 
-		tue8w2.setSelected(tuesdayWeek2.getEightAM());
-		tue9w2.setSelected(tuesdayWeek2.getNineAM());
-		tue10w2.setSelected(tuesdayWeek2.getTenAM());
-		tue11w2.setSelected(tuesdayWeek2.getElevenAM());
-		tue12w2.setSelected(tuesdayWeek2.getTwelvePM());
-		tue13w2.setSelected(tuesdayWeek2.getOnePM());
-		tue14w2.setSelected(tuesdayWeek2.getTwoPM());
-		tue15w2.setSelected(tuesdayWeek2.getThreePM());
-		tue16w2.setSelected(tuesdayWeek2.getFourPM());
-		tue17w2.setSelected(tuesdayWeek2.getFivePM());
-		tue18w2.setSelected(tuesdayWeek2.getSixPM());
-		tue19w2.setSelected(tuesdayWeek2.getSevenPM());
-		tue20w2.setSelected(tuesdayWeek2.getEightPM());
-		tue21w2.setSelected(tuesdayWeek2.getNinePM());
+        weekDays2.add(fri8w2);
+        weekDays2.add(fri9w2);
+        weekDays2.add(fri10w2);
+        weekDays2.add(fri11w2);
+        weekDays2.add(fri12w2);
+        weekDays2.add(fri13w2);
+        weekDays2.add(fri14w2);
+        weekDays2.add(fri15w2);
+        weekDays2.add(fri16w2);
+        weekDays2.add(fri17w2);
+        weekDays2.add(fri18w2);
+        weekDays2.add(fri19w2);
+        weekDays2.add(fri20w2);
+        weekDays2.add(fri21w2);
 
-		wed8w2.setSelected(wednesdayWeek2.getEightAM());
-		wed9w2.setSelected(wednesdayWeek2.getNineAM());
-		wed10w2.setSelected(wednesdayWeek2.getTenAM());
-		wed11w2.setSelected(wednesdayWeek2.getElevenAM());
-		wed12w2.setSelected(wednesdayWeek2.getTwelvePM());
-		wed13w2.setSelected(wednesdayWeek2.getOnePM());
-		wed14w2.setSelected(wednesdayWeek2.getTwoPM());
-		wed15w2.setSelected(wednesdayWeek2.getThreePM());
-		wed16w2.setSelected(wednesdayWeek2.getFourPM());
-		wed17w2.setSelected(wednesdayWeek2.getFivePM());
-		wed18w2.setSelected(wednesdayWeek2.getSixPM());
-		wed19w2.setSelected(wednesdayWeek2.getSevenPM());
-		wed20w2.setSelected(wednesdayWeek2.getEightPM());
-		wed21w2.setSelected(wednesdayWeek2.getNinePM());
+        weekDays2.add(sat8w2);
+        weekDays2.add(sat9w2);
+        weekDays2.add(sat10w2);
+        weekDays2.add(sat11w2);
+        weekDays2.add(sat12w2);
+        weekDays2.add(sat13w2);
+        weekDays2.add(sat14w2);
+        weekDays2.add(sat15w2);
+        weekDays2.add(sat16w2);
+        weekDays2.add(sat17w2);
+        weekDays2.add(sat18w2);
+        weekDays2.add(sat19w2);
+        weekDays2.add(sat20w2);
+        weekDays2.add(sat21w2);
 
-		thu8w2.setSelected(thursdayWeek2.getEightAM());
-		thu9w2.setSelected(thursdayWeek2.getNineAM());
-		thu10w2.setSelected(thursdayWeek2.getTenAM());
-		thu11w2.setSelected(thursdayWeek2.getElevenAM());
-		thu12w2.setSelected(thursdayWeek2.getTwelvePM());
-		thu13w2.setSelected(thursdayWeek2.getOnePM());
-		thu14w2.setSelected(thursdayWeek2.getTwoPM());
-		thu15w2.setSelected(thursdayWeek2.getThreePM());
-		thu16w2.setSelected(thursdayWeek2.getFourPM());
-		thu17w2.setSelected(thursdayWeek2.getFivePM());
-		thu18w2.setSelected(thursdayWeek2.getSixPM());
-		thu19w2.setSelected(thursdayWeek2.getSevenPM());
-		thu20w2.setSelected(thursdayWeek2.getEightPM());
-		thu21w2.setSelected(thursdayWeek2.getNinePM());
+        weekDays2.add(sun8w2);
+        weekDays2.add(sun9w2);
+        weekDays2.add(sun10w2);
+        weekDays2.add(sun11w2);
+        weekDays2.add(sun12w2);
+        weekDays2.add(sun13w2);
+        weekDays2.add(sun14w2);
+        weekDays2.add(sun15w2);
+        weekDays2.add(sun16w2);
+        weekDays2.add(sun17w2);
+        weekDays2.add(sun18w2);
+        weekDays2.add(sun19w2);
+        weekDays2.add(sun20w2);
+        weekDays2.add(sun21w2);
+    }
 
-		fri8w2.setSelected(fridayWeek2.getEightAM());
-		fri9w2.setSelected(fridayWeek2.getNineAM());
-		fri10w2.setSelected(fridayWeek2.getTenAM());
-		fri11w2.setSelected(fridayWeek2.getElevenAM());
-		fri12w2.setSelected(fridayWeek2.getTwelvePM());
-		fri13w2.setSelected(fridayWeek2.getOnePM());
-		fri14w2.setSelected(fridayWeek2.getTwoPM());
-		fri15w2.setSelected(fridayWeek2.getThreePM());
-		fri16w2.setSelected(fridayWeek2.getFourPM());
-		fri17w2.setSelected(fridayWeek2.getFivePM());
-		fri18w2.setSelected(fridayWeek2.getSixPM());
-		fri19w2.setSelected(fridayWeek2.getSevenPM());
-		fri20w2.setSelected(fridayWeek2.getEightPM());
-		fri21w2.setSelected(fridayWeek2.getNinePM());
+    public EditTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserDAO userDAO, UserStorageDAO userStorageDAO,
+            MergedDay mondayWeek1, MergedDay tuesdayWeek1, MergedDay wednesdayWeek1, MergedDay thursdayWeek1, MergedDay fridayWeek1, MergedDay saturdayWeek1,
+            MergedDay sundayWeek1, MergedDay mondayWeek2, MergedDay tuesdayWeek2, MergedDay wednesdayWeek2, MergedDay thursdayWeek2, MergedDay fridayWeek2,
+            MergedDay saturdayWeek2, MergedDay sundayWeek2) {
 
-		sat8w2.setSelected(saturdayWeek2.getEightAM());
-		sat9w2.setSelected(saturdayWeek2.getNineAM());
-		sat10w2.setSelected(saturdayWeek2.getTenAM());
-		sat11w2.setSelected(saturdayWeek2.getElevenAM());
-		sat12w2.setSelected(saturdayWeek2.getTwelvePM());
-		sat13w2.setSelected(saturdayWeek2.getOnePM());
-		sat14w2.setSelected(saturdayWeek2.getTwoPM());
-		sat15w2.setSelected(saturdayWeek2.getThreePM());
-		sat16w2.setSelected(saturdayWeek2.getFourPM());
-		sat17w2.setSelected(saturdayWeek2.getFivePM());
-		sat18w2.setSelected(saturdayWeek2.getSixPM());
-		sat19w2.setSelected(saturdayWeek2.getSevenPM());
-		sat20w2.setSelected(saturdayWeek2.getEightPM());
-		sat21w2.setSelected(saturdayWeek2.getNinePM());
+        super(parent);
+        super.setModal(modal);
+        this.timetableDAO = timetableDAO;
+        this.userDAO = userDAO;
+        this.userStorageDAO = userStorageDAO;
+        this.setName("Edit Timetable");
 
-		sun8w2.setSelected(sundayWeek2.getEightAM());
-		sun9w2.setSelected(sundayWeek2.getNineAM());
-		sun10w2.setSelected(sundayWeek2.getTenAM());
-		sun11w2.setSelected(sundayWeek2.getElevenAM());
-		sun12w2.setSelected(sundayWeek2.getTwelvePM());
-		sun13w2.setSelected(sundayWeek2.getOnePM());
-		sun14w2.setSelected(sundayWeek2.getTwoPM());
-		sun15w2.setSelected(sundayWeek2.getThreePM());
-		sun16w2.setSelected(sundayWeek2.getFourPM());
-		sun17w2.setSelected(sundayWeek2.getFivePM());
-		sun18w2.setSelected(sundayWeek2.getSixPM());
-		sun19w2.setSelected(sundayWeek2.getSevenPM());
-		sun20w2.setSelected(sundayWeek2.getEightPM());
-		sun21w2.setSelected(sundayWeek2.getNinePM());
-	}
+        initComponents();
 
-	/**
-	 * Editing an existing Timetable
-	 */
-	/*public ProductEditorGUI(Window parent, boolean modal, Product product, ProductDAOInterface dao) {
+        this.mondayWeek1Merged = mondayWeek1;
+        this.tuesdayWeek1Merged = tuesdayWeek1;
+        this.wednesdayWeek1Merged = wednesdayWeek1;
+        this.thursdayWeek1Merged = thursdayWeek1;
+        this.fridayWeek1Merged = fridayWeek1;
+        this.saturdayWeek1Merged = saturdayWeek1;
+        this.sundayWeek1Merged = sundayWeek1;
+        this.mondayWeek2Merged = mondayWeek2;
+        this.tuesdayWeek2Merged = tuesdayWeek2;
+        this.wednesdayWeek2Merged = wednesdayWeek2;
+        this.thursdayWeek2Merged = thursdayWeek2;
+        this.fridayWeek2Merged = fridayWeek2;
+        this.saturdayWeek2Merged = saturdayWeek2;
+        this.sundayWeek2Merged = sundayWeek2;
+
+        //set checkbox values 
+        mon8w1.setSelected(mondayWeek1.getEightAM());
+        mon9w1.setSelected(mondayWeek1.getNineAM());
+        mon10w1.setSelected(mondayWeek1.getTenAM());
+        mon11w1.setSelected(mondayWeek1.getElevenAM());
+        mon12w1.setSelected(mondayWeek1.getTwelvePM());
+        mon13w1.setSelected(mondayWeek1.getOnePM());
+        mon14w1.setSelected(mondayWeek1.getTwoPM());
+        mon15w1.setSelected(mondayWeek1.getThreePM());
+        mon16w1.setSelected(mondayWeek1.getFourPM());
+        mon17w1.setSelected(mondayWeek1.getFivePM());
+        mon18w1.setSelected(mondayWeek1.getSixPM());
+        mon19w1.setSelected(mondayWeek1.getSevenPM());
+        mon20w1.setSelected(mondayWeek1.getEightPM());
+        mon21w1.setSelected(mondayWeek1.getNinePM());
+
+        tue8w1.setSelected(tuesdayWeek1.getEightAM());
+        tue9w1.setSelected(tuesdayWeek1.getNineAM());
+        tue10w1.setSelected(tuesdayWeek1.getTenAM());
+        tue11w1.setSelected(tuesdayWeek1.getElevenAM());
+        tue12w1.setSelected(tuesdayWeek1.getTwelvePM());
+        tue13w1.setSelected(tuesdayWeek1.getOnePM());
+        tue14w1.setSelected(tuesdayWeek1.getTwoPM());
+        tue15w1.setSelected(tuesdayWeek1.getThreePM());
+        tue16w1.setSelected(tuesdayWeek1.getFourPM());
+        tue17w1.setSelected(tuesdayWeek1.getFivePM());
+        tue18w1.setSelected(tuesdayWeek1.getSixPM());
+        tue19w1.setSelected(tuesdayWeek1.getSevenPM());
+        tue20w1.setSelected(tuesdayWeek1.getEightPM());
+        tue21w1.setSelected(tuesdayWeek1.getNinePM());
+
+        wed8w1.setSelected(wednesdayWeek1.getEightAM());
+        wed9w1.setSelected(wednesdayWeek1.getNineAM());
+        wed10w1.setSelected(wednesdayWeek1.getTenAM());
+        wed11w1.setSelected(wednesdayWeek1.getElevenAM());
+        wed12w1.setSelected(wednesdayWeek1.getTwelvePM());
+        wed13w1.setSelected(wednesdayWeek1.getOnePM());
+        wed14w1.setSelected(wednesdayWeek1.getTwoPM());
+        wed15w1.setSelected(wednesdayWeek1.getThreePM());
+        wed16w1.setSelected(wednesdayWeek1.getFourPM());
+        wed17w1.setSelected(wednesdayWeek1.getFivePM());
+        wed18w1.setSelected(wednesdayWeek1.getSixPM());
+        wed19w1.setSelected(wednesdayWeek1.getSevenPM());
+        wed20w1.setSelected(wednesdayWeek1.getEightPM());
+        wed21w1.setSelected(wednesdayWeek1.getNinePM());
+
+        thu8w1.setSelected(thursdayWeek1.getEightAM());
+        thu9w1.setSelected(thursdayWeek1.getNineAM());
+        thu10w1.setSelected(thursdayWeek1.getTenAM());
+        thu11w1.setSelected(thursdayWeek1.getElevenAM());
+        thu12w1.setSelected(thursdayWeek1.getTwelvePM());
+        thu13w1.setSelected(thursdayWeek1.getOnePM());
+        thu14w1.setSelected(thursdayWeek1.getTwoPM());
+        thu15w1.setSelected(thursdayWeek1.getThreePM());
+        thu16w1.setSelected(thursdayWeek1.getFourPM());
+        thu17w1.setSelected(thursdayWeek1.getFivePM());
+        thu18w1.setSelected(thursdayWeek1.getSixPM());
+        thu19w1.setSelected(thursdayWeek1.getSevenPM());
+        thu20w1.setSelected(thursdayWeek1.getEightPM());
+        thu21w1.setSelected(thursdayWeek1.getNinePM());
+
+        fri8w1.setSelected(fridayWeek1.getEightAM());
+        fri9w1.setSelected(fridayWeek1.getNineAM());
+        fri10w1.setSelected(fridayWeek1.getTenAM());
+        fri11w1.setSelected(fridayWeek1.getElevenAM());
+        fri12w1.setSelected(fridayWeek1.getTwelvePM());
+        fri13w1.setSelected(fridayWeek1.getOnePM());
+        fri14w1.setSelected(fridayWeek1.getTwoPM());
+        fri15w1.setSelected(fridayWeek1.getThreePM());
+        fri16w1.setSelected(fridayWeek1.getFourPM());
+        fri17w1.setSelected(fridayWeek1.getFivePM());
+        fri18w1.setSelected(fridayWeek1.getSixPM());
+        fri19w1.setSelected(fridayWeek1.getSevenPM());
+        fri20w1.setSelected(fridayWeek1.getEightPM());
+        fri21w1.setSelected(fridayWeek1.getNinePM());
+
+        sat8w1.setSelected(saturdayWeek1.getEightAM());
+        sat9w1.setSelected(saturdayWeek1.getNineAM());
+        sat10w1.setSelected(saturdayWeek1.getTenAM());
+        sat11w1.setSelected(saturdayWeek1.getElevenAM());
+        sat12w1.setSelected(saturdayWeek1.getTwelvePM());
+        sat13w1.setSelected(saturdayWeek1.getOnePM());
+        sat14w1.setSelected(saturdayWeek1.getTwoPM());
+        sat15w1.setSelected(saturdayWeek1.getThreePM());
+        sat16w1.setSelected(saturdayWeek1.getFourPM());
+        sat17w1.setSelected(saturdayWeek1.getFivePM());
+        sat18w1.setSelected(saturdayWeek1.getSixPM());
+        sat19w1.setSelected(saturdayWeek1.getSevenPM());
+        sat20w1.setSelected(saturdayWeek1.getEightPM());
+        sat21w1.setSelected(saturdayWeek1.getNinePM());
+
+        sun8w1.setSelected(sundayWeek1.getEightAM());
+        sun9w1.setSelected(sundayWeek1.getNineAM());
+        sun10w1.setSelected(sundayWeek1.getTenAM());
+        sun11w1.setSelected(sundayWeek1.getElevenAM());
+        sun12w1.setSelected(sundayWeek1.getTwelvePM());
+        sun13w1.setSelected(sundayWeek1.getOnePM());
+        sun14w1.setSelected(sundayWeek1.getTwoPM());
+        sun15w1.setSelected(sundayWeek1.getThreePM());
+        sun16w1.setSelected(sundayWeek1.getFourPM());
+        sun17w1.setSelected(sundayWeek1.getFivePM());
+        sun18w1.setSelected(sundayWeek1.getSixPM());
+        sun19w1.setSelected(sundayWeek1.getSevenPM());
+        sun20w1.setSelected(sundayWeek1.getEightPM());
+        sun21w1.setSelected(sundayWeek1.getNinePM());
+
+        mon8w2.setSelected(mondayWeek2.getEightAM());
+        mon9w2.setSelected(mondayWeek2.getNineAM());
+        mon10w2.setSelected(mondayWeek2.getTenAM());
+        mon11w2.setSelected(mondayWeek2.getElevenAM());
+        mon12w2.setSelected(mondayWeek2.getTwelvePM());
+        mon13w2.setSelected(mondayWeek2.getOnePM());
+        mon14w2.setSelected(mondayWeek2.getTwoPM());
+        mon15w2.setSelected(mondayWeek2.getThreePM());
+        mon16w2.setSelected(mondayWeek2.getFourPM());
+        mon17w2.setSelected(mondayWeek2.getFivePM());
+        mon18w2.setSelected(mondayWeek2.getSixPM());
+        mon19w2.setSelected(mondayWeek2.getSevenPM());
+        mon20w2.setSelected(mondayWeek2.getEightPM());
+        mon21w2.setSelected(mondayWeek2.getNinePM());
+
+        tue8w2.setSelected(tuesdayWeek2.getEightAM());
+        tue9w2.setSelected(tuesdayWeek2.getNineAM());
+        tue10w2.setSelected(tuesdayWeek2.getTenAM());
+        tue11w2.setSelected(tuesdayWeek2.getElevenAM());
+        tue12w2.setSelected(tuesdayWeek2.getTwelvePM());
+        tue13w2.setSelected(tuesdayWeek2.getOnePM());
+        tue14w2.setSelected(tuesdayWeek2.getTwoPM());
+        tue15w2.setSelected(tuesdayWeek2.getThreePM());
+        tue16w2.setSelected(tuesdayWeek2.getFourPM());
+        tue17w2.setSelected(tuesdayWeek2.getFivePM());
+        tue18w2.setSelected(tuesdayWeek2.getSixPM());
+        tue19w2.setSelected(tuesdayWeek2.getSevenPM());
+        tue20w2.setSelected(tuesdayWeek2.getEightPM());
+        tue21w2.setSelected(tuesdayWeek2.getNinePM());
+
+        wed8w2.setSelected(wednesdayWeek2.getEightAM());
+        wed9w2.setSelected(wednesdayWeek2.getNineAM());
+        wed10w2.setSelected(wednesdayWeek2.getTenAM());
+        wed11w2.setSelected(wednesdayWeek2.getElevenAM());
+        wed12w2.setSelected(wednesdayWeek2.getTwelvePM());
+        wed13w2.setSelected(wednesdayWeek2.getOnePM());
+        wed14w2.setSelected(wednesdayWeek2.getTwoPM());
+        wed15w2.setSelected(wednesdayWeek2.getThreePM());
+        wed16w2.setSelected(wednesdayWeek2.getFourPM());
+        wed17w2.setSelected(wednesdayWeek2.getFivePM());
+        wed18w2.setSelected(wednesdayWeek2.getSixPM());
+        wed19w2.setSelected(wednesdayWeek2.getSevenPM());
+        wed20w2.setSelected(wednesdayWeek2.getEightPM());
+        wed21w2.setSelected(wednesdayWeek2.getNinePM());
+
+        thu8w2.setSelected(thursdayWeek2.getEightAM());
+        thu9w2.setSelected(thursdayWeek2.getNineAM());
+        thu10w2.setSelected(thursdayWeek2.getTenAM());
+        thu11w2.setSelected(thursdayWeek2.getElevenAM());
+        thu12w2.setSelected(thursdayWeek2.getTwelvePM());
+        thu13w2.setSelected(thursdayWeek2.getOnePM());
+        thu14w2.setSelected(thursdayWeek2.getTwoPM());
+        thu15w2.setSelected(thursdayWeek2.getThreePM());
+        thu16w2.setSelected(thursdayWeek2.getFourPM());
+        thu17w2.setSelected(thursdayWeek2.getFivePM());
+        thu18w2.setSelected(thursdayWeek2.getSixPM());
+        thu19w2.setSelected(thursdayWeek2.getSevenPM());
+        thu20w2.setSelected(thursdayWeek2.getEightPM());
+        thu21w2.setSelected(thursdayWeek2.getNinePM());
+
+        fri8w2.setSelected(fridayWeek2.getEightAM());
+        fri9w2.setSelected(fridayWeek2.getNineAM());
+        fri10w2.setSelected(fridayWeek2.getTenAM());
+        fri11w2.setSelected(fridayWeek2.getElevenAM());
+        fri12w2.setSelected(fridayWeek2.getTwelvePM());
+        fri13w2.setSelected(fridayWeek2.getOnePM());
+        fri14w2.setSelected(fridayWeek2.getTwoPM());
+        fri15w2.setSelected(fridayWeek2.getThreePM());
+        fri16w2.setSelected(fridayWeek2.getFourPM());
+        fri17w2.setSelected(fridayWeek2.getFivePM());
+        fri18w2.setSelected(fridayWeek2.getSixPM());
+        fri19w2.setSelected(fridayWeek2.getSevenPM());
+        fri20w2.setSelected(fridayWeek2.getEightPM());
+        fri21w2.setSelected(fridayWeek2.getNinePM());
+
+        sat8w2.setSelected(saturdayWeek2.getEightAM());
+        sat9w2.setSelected(saturdayWeek2.getNineAM());
+        sat10w2.setSelected(saturdayWeek2.getTenAM());
+        sat11w2.setSelected(saturdayWeek2.getElevenAM());
+        sat12w2.setSelected(saturdayWeek2.getTwelvePM());
+        sat13w2.setSelected(saturdayWeek2.getOnePM());
+        sat14w2.setSelected(saturdayWeek2.getTwoPM());
+        sat15w2.setSelected(saturdayWeek2.getThreePM());
+        sat16w2.setSelected(saturdayWeek2.getFourPM());
+        sat17w2.setSelected(saturdayWeek2.getFivePM());
+        sat18w2.setSelected(saturdayWeek2.getSixPM());
+        sat19w2.setSelected(saturdayWeek2.getSevenPM());
+        sat20w2.setSelected(saturdayWeek2.getEightPM());
+        sat21w2.setSelected(saturdayWeek2.getNinePM());
+
+        sun8w2.setSelected(sundayWeek2.getEightAM());
+        sun9w2.setSelected(sundayWeek2.getNineAM());
+        sun10w2.setSelected(sundayWeek2.getTenAM());
+        sun11w2.setSelected(sundayWeek2.getElevenAM());
+        sun12w2.setSelected(sundayWeek2.getTwelvePM());
+        sun13w2.setSelected(sundayWeek2.getOnePM());
+        sun14w2.setSelected(sundayWeek2.getTwoPM());
+        sun15w2.setSelected(sundayWeek2.getThreePM());
+        sun16w2.setSelected(sundayWeek2.getFourPM());
+        sun17w2.setSelected(sundayWeek2.getFivePM());
+        sun18w2.setSelected(sundayWeek2.getSixPM());
+        sun19w2.setSelected(sundayWeek2.getSevenPM());
+        sun20w2.setSelected(sundayWeek2.getEightPM());
+        sun21w2.setSelected(sundayWeek2.getNinePM());
+    }
+
+    /**
+     * Editing an existing Timetable
+     */
+    /*public ProductEditorGUI(Window parent, boolean modal, Product product, ProductDAOInterface dao) {
 		//Calls the other constructor
 		this(parent, modal, dao);
 
@@ -783,12 +782,12 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
 		txtBoxID.setEditable(false);
 		productIDEditable = false;
 	} */
-	/**
-	 * This method is called from within the constructor to initialize the form.
-	 * WARNING: Do NOT modify this code. The content of this method is always
-	 * regenerated by the Form Editor.
-	 */
-	@SuppressWarnings("unchecked")
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
    private void initComponents() {
 
@@ -3928,818 +3927,817 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
    }// </editor-fold>//GEN-END:initComponents
 
    private void mon8w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon8w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon8w1ActionPerformed
 
    private void switchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_switchButtonActionPerformed
-		CardLayout cl = (CardLayout) (mainPanel.getLayout());
-		cl.next(mainPanel);
-		CardLayout cl2 = (CardLayout) (secondaryPanel.getLayout());
-		cl2.next(secondaryPanel);
+       CardLayout cl = (CardLayout) (mainPanel.getLayout());
+       cl.next(mainPanel);
+       CardLayout cl2 = (CardLayout) (secondaryPanel.getLayout());
+       cl2.next(secondaryPanel);
    }//GEN-LAST:event_switchButtonActionPerformed
 
    private void tue8w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue8w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue8w1ActionPerformed
 
    private void wed8w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed8w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed8w1ActionPerformed
 
    private void thu8w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu8w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu8w1ActionPerformed
 
    private void fri8w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri8w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri8w1ActionPerformed
 
    private void sat8w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat8w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat8w1ActionPerformed
 
    private void sun8w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun8w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun8w1ActionPerformed
 
    private void sun9w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun9w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun9w1ActionPerformed
 
    private void sat9w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat9w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat9w1ActionPerformed
 
    private void fri9w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri9w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri9w1ActionPerformed
 
    private void thu9w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu9w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu9w1ActionPerformed
 
    private void wed9w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed9w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed9w1ActionPerformed
 
    private void tue9w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue9w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue9w1ActionPerformed
 
    private void mon9w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon9w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon9w1ActionPerformed
 
    private void mon10w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon10w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon10w1ActionPerformed
 
    private void tue10w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue10w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue10w1ActionPerformed
 
    private void wed10w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed10w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed10w1ActionPerformed
 
    private void thu10w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu10w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu10w1ActionPerformed
 
    private void fri10w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri10w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri10w1ActionPerformed
 
    private void sat10w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat10w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat10w1ActionPerformed
 
    private void sun10w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun10w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun10w1ActionPerformed
 
    private void mon11w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon11w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon11w1ActionPerformed
 
    private void tue11w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue11w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue11w1ActionPerformed
 
    private void wed11w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed11w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed11w1ActionPerformed
 
    private void thu11w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu11w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu11w1ActionPerformed
 
    private void fri11w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri11w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri11w1ActionPerformed
 
    private void sat11w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat11w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat11w1ActionPerformed
 
    private void sun11w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun11w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun11w1ActionPerformed
 
    private void mon12w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon12w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon12w1ActionPerformed
 
    private void tue12w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue12w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue12w1ActionPerformed
 
    private void wed12w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed12w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed12w1ActionPerformed
 
    private void thu12w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu12w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu12w1ActionPerformed
 
    private void fri12w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri12w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri12w1ActionPerformed
 
    private void sat12w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat12w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat12w1ActionPerformed
 
    private void sun12w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun12w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun12w1ActionPerformed
 
    private void mon13w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon13w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon13w1ActionPerformed
 
    private void tue13w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue13w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue13w1ActionPerformed
 
    private void wed13w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed13w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed13w1ActionPerformed
 
    private void thu13w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu13w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu13w1ActionPerformed
 
    private void fri13w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri13w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri13w1ActionPerformed
 
    private void sat13w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat13w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat13w1ActionPerformed
 
    private void sun13w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun13w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun13w1ActionPerformed
 
    private void mon14w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon14w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon14w1ActionPerformed
 
    private void tue14w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue14w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue14w1ActionPerformed
 
    private void wed14w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed14w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed14w1ActionPerformed
 
    private void thu14w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu14w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu14w1ActionPerformed
 
    private void fri14w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri14w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri14w1ActionPerformed
 
    private void sat14w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat14w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat14w1ActionPerformed
 
    private void sun14w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun14w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun14w1ActionPerformed
 
    private void mon15w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon15w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon15w1ActionPerformed
 
    private void tue15w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue15w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue15w1ActionPerformed
 
    private void wed15w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed15w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed15w1ActionPerformed
 
    private void thu15w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu15w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu15w1ActionPerformed
 
    private void fri15w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri15w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri15w1ActionPerformed
 
    private void sat15w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat15w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat15w1ActionPerformed
 
    private void sun15w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun15w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun15w1ActionPerformed
 
    private void mon16w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon16w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon16w1ActionPerformed
 
    private void tue16w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue16w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue16w1ActionPerformed
 
    private void wed16w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed16w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed16w1ActionPerformed
 
    private void thu16w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu16w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu16w1ActionPerformed
 
    private void fri16w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri16w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri16w1ActionPerformed
 
    private void sat16w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat16w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat16w1ActionPerformed
 
    private void sun16w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun16w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun16w1ActionPerformed
 
    private void mon17w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon17w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon17w1ActionPerformed
 
    private void tue17w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue17w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue17w1ActionPerformed
 
    private void wed17w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed17w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed17w1ActionPerformed
 
    private void thu17w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu17w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu17w1ActionPerformed
 
    private void fri17w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri17w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri17w1ActionPerformed
 
    private void sat17w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat17w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat17w1ActionPerformed
 
    private void sun17w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun17w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun17w1ActionPerformed
 
    private void mon18w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon18w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon18w1ActionPerformed
 
    private void tue18w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue18w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue18w1ActionPerformed
 
    private void wed18w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed18w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed18w1ActionPerformed
 
    private void thu18w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu18w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu18w1ActionPerformed
 
    private void fri18w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri18w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri18w1ActionPerformed
 
    private void sat18w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat18w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat18w1ActionPerformed
 
    private void sun18w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun18w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun18w1ActionPerformed
 
    private void mon19w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon19w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon19w1ActionPerformed
 
    private void tue19w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue19w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue19w1ActionPerformed
 
    private void wed19w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed19w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed19w1ActionPerformed
 
    private void thu19w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu19w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu19w1ActionPerformed
 
    private void fri19w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri19w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri19w1ActionPerformed
 
    private void sat19w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat19w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat19w1ActionPerformed
 
    private void sun19w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun19w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun19w1ActionPerformed
 
    private void mon20w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon20w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon20w1ActionPerformed
 
    private void tue20w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue20w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue20w1ActionPerformed
 
    private void wed20w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed20w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed20w1ActionPerformed
 
    private void thu20w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu20w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu20w1ActionPerformed
 
    private void fri20w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri20w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri20w1ActionPerformed
 
    private void sat20w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat20w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat20w1ActionPerformed
 
    private void sun20w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun20w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun20w1ActionPerformed
 
    private void mon21w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon21w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon21w1ActionPerformed
 
    private void tue21w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue21w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue21w1ActionPerformed
 
    private void wed21w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed21w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed21w1ActionPerformed
 
    private void thu21w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu21w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu21w1ActionPerformed
 
    private void fri21w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri21w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri21w1ActionPerformed
 
    private void sat21w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat21w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat21w1ActionPerformed
 
    private void sun21w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun21w1ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun21w1ActionPerformed
 
    private void mon8w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon8w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon8w2ActionPerformed
 
    private void tue8w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue8w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue8w2ActionPerformed
 
    private void wed8w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed8w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed8w2ActionPerformed
 
    private void thu8w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu8w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu8w2ActionPerformed
 
    private void fri8w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri8w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri8w2ActionPerformed
 
    private void sat8w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat8w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat8w2ActionPerformed
 
    private void sun8w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun8w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun8w2ActionPerformed
 
    private void mon9w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon9w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon9w2ActionPerformed
 
    private void tue9w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue9w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue9w2ActionPerformed
 
    private void wed9w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed9w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed9w2ActionPerformed
 
    private void thu9w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu9w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu9w2ActionPerformed
 
    private void fri9w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri9w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri9w2ActionPerformed
 
    private void sat9w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat9w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat9w2ActionPerformed
 
    private void sun9w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun9w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun9w2ActionPerformed
 
    private void mon10w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon10w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon10w2ActionPerformed
 
    private void tue10w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue10w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue10w2ActionPerformed
 
    private void wed10w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed10w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed10w2ActionPerformed
 
    private void thu10w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu10w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu10w2ActionPerformed
 
    private void fri10w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri10w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri10w2ActionPerformed
 
    private void sat10w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat10w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat10w2ActionPerformed
 
    private void sun10w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun10w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun10w2ActionPerformed
 
    private void mon11w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon11w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon11w2ActionPerformed
 
    private void tue11w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue11w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue11w2ActionPerformed
 
    private void wed11w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed11w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed11w2ActionPerformed
 
    private void thu11w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu11w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu11w2ActionPerformed
 
    private void fri11w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri11w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri11w2ActionPerformed
 
    private void sat11w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat11w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat11w2ActionPerformed
 
    private void sun11w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun11w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun11w2ActionPerformed
 
    private void mon12w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon12w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon12w2ActionPerformed
 
    private void tue12w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue12w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue12w2ActionPerformed
 
    private void wed12w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed12w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed12w2ActionPerformed
 
    private void thu12w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu12w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu12w2ActionPerformed
 
    private void fri12w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri12w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri12w2ActionPerformed
 
    private void sat12w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat12w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat12w2ActionPerformed
 
    private void sun12w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun12w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun12w2ActionPerformed
 
    private void mon13w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon13w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon13w2ActionPerformed
 
    private void tue13w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue13w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue13w2ActionPerformed
 
    private void wed13w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed13w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed13w2ActionPerformed
 
    private void thu13w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu13w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu13w2ActionPerformed
 
    private void fri13w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri13w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri13w2ActionPerformed
 
    private void sat13w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat13w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat13w2ActionPerformed
 
    private void sun13w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun13w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun13w2ActionPerformed
 
    private void mon14w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon14w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon14w2ActionPerformed
 
    private void tue14w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue14w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue14w2ActionPerformed
 
    private void wed14w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed14w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed14w2ActionPerformed
 
    private void thu14w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu14w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu14w2ActionPerformed
 
    private void fri14w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri14w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri14w2ActionPerformed
 
    private void sat14w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat14w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat14w2ActionPerformed
 
    private void sun14w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun14w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun14w2ActionPerformed
 
    private void mon15w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon15w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon15w2ActionPerformed
 
    private void tue15w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue15w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue15w2ActionPerformed
 
    private void wed15w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed15w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed15w2ActionPerformed
 
    private void thu15w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu15w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu15w2ActionPerformed
 
    private void fri15w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri15w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri15w2ActionPerformed
 
    private void sat15w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat15w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat15w2ActionPerformed
 
    private void sun15w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun15w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun15w2ActionPerformed
 
    private void mon16w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon16w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon16w2ActionPerformed
 
    private void tue16w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue16w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue16w2ActionPerformed
 
    private void wed16w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed16w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed16w2ActionPerformed
 
    private void thu16w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu16w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu16w2ActionPerformed
 
    private void fri16w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri16w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri16w2ActionPerformed
 
    private void sat16w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat16w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat16w2ActionPerformed
 
    private void sun16w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun16w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun16w2ActionPerformed
 
    private void mon17w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon17w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon17w2ActionPerformed
 
    private void tue17w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue17w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue17w2ActionPerformed
 
    private void wed17w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed17w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed17w2ActionPerformed
 
    private void thu17w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu17w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu17w2ActionPerformed
 
    private void fri17w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri17w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri17w2ActionPerformed
 
    private void sat17w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat17w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat17w2ActionPerformed
 
    private void sun17w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun17w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun17w2ActionPerformed
 
    private void mon18w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon18w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon18w2ActionPerformed
 
    private void tue18w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue18w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue18w2ActionPerformed
 
    private void wed18w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed18w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed18w2ActionPerformed
 
    private void thu18w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu18w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu18w2ActionPerformed
 
    private void fri18w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri18w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri18w2ActionPerformed
 
    private void sat18w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat18w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat18w2ActionPerformed
 
    private void sun18w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun18w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun18w2ActionPerformed
 
    private void mon19w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon19w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon19w2ActionPerformed
 
    private void tue19w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue19w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue19w2ActionPerformed
 
    private void wed19w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed19w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed19w2ActionPerformed
 
    private void thu19w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu19w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu19w2ActionPerformed
 
    private void fri19w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri19w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri19w2ActionPerformed
 
    private void sat19w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat19w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat19w2ActionPerformed
 
    private void sun19w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun19w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun19w2ActionPerformed
 
    private void mon20w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon20w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon20w2ActionPerformed
 
    private void tue20w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue20w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue20w2ActionPerformed
 
    private void wed20w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed20w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed20w2ActionPerformed
 
    private void thu20w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu20w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu20w2ActionPerformed
 
    private void fri20w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri20w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri20w2ActionPerformed
 
    private void sat20w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat20w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat20w2ActionPerformed
 
    private void sun20w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun20w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun20w2ActionPerformed
 
    private void mon21w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mon21w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_mon21w2ActionPerformed
 
    private void tue21w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tue21w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_tue21w2ActionPerformed
 
    private void wed21w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wed21w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_wed21w2ActionPerformed
 
    private void thu21w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thu21w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_thu21w2ActionPerformed
 
    private void fri21w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fri21w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_fri21w2ActionPerformed
 
    private void sat21w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sat21w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sat21w2ActionPerformed
 
    private void sun21w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sun21w2ActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_sun21w2ActionPerformed
 
    private void buttonSaveTimetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSaveTimetableActionPerformed
 
-		/**
-		 * Can we turn this into a loop? Probably, wouldn't be suprised This code
-		 * will be temporary, it'll probably be turned into a loop
-		 */
-                        ArrayList<Boolean> week1 = new ArrayList<Boolean>();
-        ArrayList<Boolean> week2 = new ArrayList<Boolean>();
-      
-      
-      for (JCheckBox element: this.weekDays1){
-          //System.out.println(element);
-          week1.add(element.isSelected()) ; 
-      }
-      Boolean value = true ; 
-      for (JCheckBox element: this.weekDays2){
-          week2.add(element.isSelected()) ; 
-          if ( element.isSelected() == false ) {
-              value = false ; 
-          }
-      }
-      
+       /**
+        * Can we turn this into a loop? Probably, wouldn't be suprised This code
+        * will be temporary, it'll probably be turned into a loop
+        */
+       ArrayList<Boolean> week1 = new ArrayList<Boolean>();
+       ArrayList<Boolean> week2 = new ArrayList<Boolean>();
+
+       for (JCheckBox element : this.weekDays1) {
+           //System.out.println(element);
+           week1.add(element.isSelected());
+       }
+       Boolean value = true;
+       for (JCheckBox element : this.weekDays2) {
+           week2.add(element.isSelected());
+           if (element.isSelected() == false) {
+               value = false;
+           }
+       }
+
 //		Boolean storeMon8w1 = mon8w1.isSelected();
 //		Boolean storeMon9w1 = mon9w1.isSelected();
 //		Boolean storeMon10w1 = mon10w1.isSelected();
@@ -4949,39 +4947,23 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
 //		Boolean storeSun19w2 = sun19w2.isSelected();
 //		Boolean storeSun20w2 = sun20w2.isSelected();
 //		Boolean storeSun21w2 = sun21w2.isSelected();
+       String userName = userStorageDAO.getUserName();
 
-		String userName = userStorageDAO.getUserName();
+       Day mondayWeek1 = new Day(userName, "Week 1 Monday", new ArrayList<Boolean>(week1.subList(0, 14)));
+       Day tuesdayWeek1 = new Day(userName, "Week 1 Tuesday", new ArrayList<Boolean>(week1.subList(14, 28)));
+       Day wednesdayWeek1 = new Day(userName, "Week 1 Wednesday", new ArrayList<Boolean>(week1.subList(28, 42)));
+       Day thursdayWeek1 = new Day(userName, "Week 1 Thursday", new ArrayList<Boolean>(week1.subList(42, 56)));
+       Day fridayWeek1 = new Day(userName, "Week 1 Friday", new ArrayList<Boolean>(week1.subList(56, 70)));
+       Day saturdayWeek1 = new Day(userName, "Week 1 Saturday", new ArrayList<Boolean>(week1.subList(70, 84)));
+       Day sundayWeek1 = new Day(userName, "Week 1 Sunday", new ArrayList<Boolean>(week1.subList(84, 98)));
+       Day mondayWeek2 = new Day(userName, "Week 2 Monday", new ArrayList<Boolean>(week1.subList(0, 14)));
+       Day tuesdayWeek2 = new Day(userName, "Week 2 Tuesday", new ArrayList<Boolean>(week1.subList(14, 28)));
+       Day wednesdayWeek2 = new Day(userName, "Week 2 Wednesday", new ArrayList<Boolean>(week1.subList(28, 42)));
+       Day thursdayWeek2 = new Day(userName, "Week 2 Thursday", new ArrayList<Boolean>(week1.subList(42, 56)));
+       Day fridayWeek2 = new Day(userName, "Week 2 Friday", new ArrayList<Boolean>(week1.subList(56, 70)));
+       Day saturdayWeek2 = new Day(userName, "Week 2 Saturday", new ArrayList<Boolean>(week1.subList(70, 84)));
+       Day sundayWeek2 = new Day(userName, "Week 2 Sunday", new ArrayList<Boolean>(week1.subList(84, 98)));
 
-                
-                  
-      Day mondayWeek1 = new Day(userName, "Week 1 Monday",  new ArrayList<Boolean>( week1.subList(0,14)));
-
-      Day tuesdayWeek1 = new Day(userName, "Week 1 Tuesday", new ArrayList<Boolean>( week1.subList(14,28)));
-
-      Day wednesdayWeek1 = new Day(userName, "Week 1 Wednesday", new ArrayList<Boolean>( week1.subList(28,42)));
-
-      Day thursdayWeek1 = new Day(userName, "Week 1 Thursday", new ArrayList<Boolean> ( week1.subList(42,56)));
-
-      Day fridayWeek1 = new Day(userName, "Week 1 Friday", new ArrayList<Boolean>  (week1.subList(56,70)));
-      
-      Day saturdayWeek1 = new Day(userName, "Week 1 Saturday",new ArrayList<Boolean> ( week1.subList(70,84)));
-
-      Day sundayWeek1 = new Day(userName, "Week 1 Sunday", new ArrayList<Boolean> ( week1.subList(84,98)));
-
-      Day mondayWeek2 = new Day(userName, "Week 2 Monday", new ArrayList<Boolean>( week1.subList(0,14)));
-
-      Day tuesdayWeek2 = new Day(userName, "Week 2 Tuesday",new ArrayList<Boolean> ( week1.subList(14,28)));
-
-      Day wednesdayWeek2 = new Day(userName, "Week 2 Wednesday", new ArrayList<Boolean> ( week1.subList(28,42)));
-
-      Day thursdayWeek2 = new Day(userName, "Week 2 Thursday", new ArrayList<Boolean>( week1.subList(42,56)));
-
-      Day fridayWeek2 = new Day(userName, "Week 2 Friday", new ArrayList<Boolean>( week1.subList(56,70)));
-
-      Day saturdayWeek2 = new Day(userName, "Week 2 Saturday", new ArrayList<Boolean> ( week1.subList(70,84)));
-
-      Day sundayWeek2 = new Day(userName, "Week 2 Sunday", new ArrayList<Boolean> ( week1.subList(84,98)));
-      
 //		Day mondayWeek1 = new Day(userName, "Week 1 Monday", storeMon8w1, storeMon9w1, storeMon10w1, storeMon11w1, storeMon12w1,
 //				  storeMon13w1, storeMon14w1, storeMon15w1, storeMon16w1, storeMon17w1, storeMon18w1, storeMon19w1,
 //				  storeMon20w1, storeMon21w1);
@@ -5037,7 +5019,7 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
 //		Day sundayWeek2 = new Day(userName, "Week 2 Sunday", storeSun8w2, storeSun9w2, storeSun10w2, storeSun11w2, storeSun12w2,
 //				  storeSun13w2, storeSun14w2, storeSun15w2, storeSun16w2, storeSun17w2, storeSun18w2, storeSun19w2,
 //				  storeSun20w2, storeSun21w2);
-   if ( value == false ) {
+       if (value == false) {
 //		if (storeMon8w2 == false && storeMon9w2 == false && storeMon10w2 == false && storeMon11w2 == false && storeMon12w2
 //				  == false && storeMon13w2 == false && storeMon14w2 == false && storeMon15w2 == false && storeMon16w2 == false && storeMon17w2 == false && storeMon18w2 == false && storeMon19w2
 //				  == false && storeMon20w2 == false && storeMon21w2 == false && storeTue8w2 == false && storeTue9w2 == false && storeTue10w2 == false && storeTue11w2 == false && storeTue12w2
@@ -5069,8 +5051,8 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
 //			mondayWeek2.setEightPM(storeMon20w1);
 //			mondayWeek2.setNinePM(storeMon21w1);
 //			mondayWeek2.setDayName("Week 2 Monday");
-mondayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(0,14)));
-         mondayWeek2.setDayName("Week 2 Monday");
+           mondayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(0, 14)));
+           mondayWeek2.setDayName("Week 2 Monday");
 
 //			tuesdayWeek2.setEightAM(storeTue8w1);
 //			tuesdayWeek2.setNineAM(storeTue9w1);
@@ -5087,8 +5069,8 @@ mondayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(0,14)));
 //			tuesdayWeek2.setEightPM(storeTue20w1);
 //			tuesdayWeek2.setNinePM(storeTue21w1);
 //			tuesdayWeek2.setDayName("Week 2 Tuesday");
-tuesdayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(14,28)));
-         tuesdayWeek2.setDayName("Week 2 Tuesday");
+           tuesdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(14, 28)));
+           tuesdayWeek2.setDayName("Week 2 Tuesday");
 
 //			wednesdayWeek2.setEightAM(storeWed8w1);
 //			wednesdayWeek2.setNineAM(storeWed9w1);
@@ -5105,9 +5087,8 @@ tuesdayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(14,28)));
 //			wednesdayWeek2.setEightPM(storeWed20w1);
 //			wednesdayWeek2.setNinePM(storeWed21w1);
 //			wednesdayWeek2.setDayName("Week 2 Wednesday");
-wednesdayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(28,42)));
-         wednesdayWeek2.setDayName("Week 2 Wednesday");
-         
+           wednesdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(28, 42)));
+           wednesdayWeek2.setDayName("Week 2 Wednesday");
 
 //			thursdayWeek2.setEightAM(storeThu8w1);
 //			thursdayWeek2.setNineAM(storeThu9w1);
@@ -5124,9 +5105,8 @@ wednesdayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(28,42)));
 //			thursdayWeek2.setEightPM(storeThu20w1);
 //			thursdayWeek2.setNinePM(storeThu21w1);
 //			thursdayWeek2.setDayName("Week 2 Thursday");
-thursdayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(42,56)));
-         thursdayWeek2.setDayName("Week 2 Thursday");
-         
+           thursdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(42, 56)));
+           thursdayWeek2.setDayName("Week 2 Thursday");
 
 //			fridayWeek2.setEightAM(storeFri8w1);
 //			fridayWeek2.setNineAM(storeFri9w1);
@@ -5143,9 +5123,8 @@ thursdayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(42,56)));
 //			fridayWeek2.setEightPM(storeFri20w1);
 //			fridayWeek2.setNinePM(storeFri21w1);
 //			fridayWeek2.setDayName("Week 2 Friday");
-fridayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(56,70)));
-         fridayWeek2.setDayName("Week 2 Friday");
-         
+           fridayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(56, 70)));
+           fridayWeek2.setDayName("Week 2 Friday");
 
 //			saturdayWeek2.setEightAM(storeSat8w1);
 //			saturdayWeek2.setNineAM(storeSat9w1);
@@ -5162,9 +5141,9 @@ fridayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(56,70)));
 //			saturdayWeek2.setEightPM(storeSat20w1);
 //			saturdayWeek2.setNinePM(storeSat21w1);
 //			saturdayWeek2.setDayName("Week 2 Saturday");
-saturdayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(70,84)));
-          saturdayWeek2.setDayName("Week 2 Saturday");
-          
+           saturdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(70, 84)));
+           saturdayWeek2.setDayName("Week 2 Saturday");
+
 //
 //			sundayWeek2.setEightAM(storeSun8w1);
 //			sundayWeek2.setNineAM(storeSun9w1);
@@ -5181,41 +5160,40 @@ saturdayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(70,84)));
 //			sundayWeek2.setEightPM(storeSun20w1);
 //			sundayWeek2.setNinePM(storeSun21w1);
 //			sundayWeek2.setDayName("Week 2 Sunday");
+           sundayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(84, 98)));
+           sundayWeek2.setDayName("Week 2 Sunday");
 
-sundayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(84,98)));
-         sundayWeek2.setDayName("Week 2 Sunday");
-         
-		}
+       }
 
-		saveTimetable(mondayWeek1);
-		saveTimetable(tuesdayWeek1);
-		saveTimetable(wednesdayWeek1);
-		saveTimetable(thursdayWeek1);
-		saveTimetable(fridayWeek1);
-		saveTimetable(saturdayWeek1);
-		saveTimetable(sundayWeek1);
+       saveTimetable(mondayWeek1);
+       saveTimetable(tuesdayWeek1);
+       saveTimetable(wednesdayWeek1);
+       saveTimetable(thursdayWeek1);
+       saveTimetable(fridayWeek1);
+       saveTimetable(saturdayWeek1);
+       saveTimetable(sundayWeek1);
 
-		saveTimetable(mondayWeek2);
-		saveTimetable(tuesdayWeek2);
-		saveTimetable(wednesdayWeek2);
-		saveTimetable(thursdayWeek2);
-		saveTimetable(fridayWeek2);
-		saveTimetable(saturdayWeek2);
-		saveTimetable(sundayWeek2);
+       saveTimetable(mondayWeek2);
+       saveTimetable(tuesdayWeek2);
+       saveTimetable(wednesdayWeek2);
+       saveTimetable(thursdayWeek2);
+       saveTimetable(fridayWeek2);
+       saveTimetable(saturdayWeek2);
+       saveTimetable(sundayWeek2);
 
-		dispose();
+       dispose();
 
-		HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userDAO, userStorageDAO);
-		// centre the dialog on the parent window
-		dialog.setLocationRelativeTo(this);
-		// make the dialog visible
-		dialog.setVisible(true);
+       HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userDAO, userStorageDAO);
+       // centre the dialog on the parent window
+       dialog.setLocationRelativeTo(this);
+       // make the dialog visible
+       dialog.setVisible(true);
 
-		/**
-		 * See if we can use this to make sure nothing is overwritten, use both
-		 * userName and dayName
-		 */
-		/* if (dao.findByProductID(storeID) != null) { //If the ID already exists
+       /**
+        * See if we can use this to make sure nothing is overwritten, use both
+        * userName and dayName
+        */
+       /* if (dao.findByProductID(storeID) != null) { //If the ID already exists
 			if (productIDEditable == true) { //If it can be edited
 				JOptionPane.showMessageDialog(this, "This Product ID is already being used by the \"" + dao.findByProductID(storeID).getName() + "\" product.", "Conflicting Product IDs", JOptionPane.WARNING_MESSAGE);
 			} else {
@@ -5228,25 +5206,25 @@ sundayWeek2.SetArrayList(new ArrayList<Boolean>( week1.subList(84,98)));
 
    }//GEN-LAST:event_buttonSaveTimetableActionPerformed
 
-	private void saveTimetable(Day day) {
-		timetableDAO.createTimetable(day);
-	}
+    private void saveTimetable(Day day) {
+        timetableDAO.createTimetable(day);
+    }
 
    private void buttonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelActionPerformed
-		// TODO add your handling code here:
+       // TODO add your handling code here:
 
-		int result = JOptionPane.showConfirmDialog(
-				  this, "Are you sure you want to cancel without saving?", "Confirmation Dialog", JOptionPane.YES_NO_OPTION);
-		// did the user click the yes button?
-		if (result == JOptionPane.YES_OPTION) {
+       int result = JOptionPane.showConfirmDialog(
+               this, "Are you sure you want to cancel without saving?", "Confirmation Dialog", JOptionPane.YES_NO_OPTION);
+       // did the user click the yes button?
+       if (result == JOptionPane.YES_OPTION) {
 
-			dispose();
-			HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userDAO, userStorageDAO);
-			// centre the dialog on the parent window
-			dialog.setLocationRelativeTo(this);
-			// make the dialog visible
-			dialog.setVisible(true);
-		}
+           dispose();
+           HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userDAO, userStorageDAO);
+           // centre the dialog on the parent window
+           dialog.setLocationRelativeTo(this);
+           // make the dialog visible
+           dialog.setVisible(true);
+       }
    }//GEN-LAST:event_buttonCancelActionPerformed
 
    // Variables declaration - do not modify//GEN-BEGIN:variables

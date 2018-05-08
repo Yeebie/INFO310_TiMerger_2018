@@ -24,8 +24,8 @@ public class MainClass {
         // create the frame instance
         UserDAO userDAO = new UserDAO();
         TimetableDAO timetableDAO = new TimetableDAO();
-		  UserStorageDAO userStorageDAO = new UserStorageDAO();
-		  
+        UserStorageDAO userStorageDAO = new UserStorageDAO();
+
         Login frame = new Login(userDAO, timetableDAO, userStorageDAO);
         // centre the frame on the screen
         frame.setLocationRelativeTo(null);
