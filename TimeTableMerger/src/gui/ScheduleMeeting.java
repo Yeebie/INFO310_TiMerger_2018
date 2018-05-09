@@ -471,8 +471,8 @@ public class ScheduleMeeting extends javax.swing.JDialog {
    }//GEN-LAST:event_durationComboActionPerformed
 
    private void confirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmButtonActionPerformed
-       Set<User> users = new HashSet<>();
-       users = userDAO.getUserList();
+//       Set<User> users = new HashSet<>();
+//       users = userDAO.getUserList();
 
 //set day fields to true/false depending if check box has been unselected (chec kboxes are selected by default
        monday = monCheckBox.isSelected();
@@ -487,72 +487,76 @@ public class ScheduleMeeting extends javax.swing.JDialog {
 
        System.out.println("Selected Duration: " + storeDuration);
 
-       /**
-        * Rust Experimental.
-        *
-        * This will eventually turn into the mergeTimetables method, not sure
-        * how, but it will. This is temporary code, contact list & schedule
-        * meeting haven't been completed yet, using getUserList() instead of
-        * retrieved User List from associated pages. Does this need to be a
-        * sorted collection? What happens if it's all jumbled up when we compare
-        * timetables? Probably need to maintain traversal order.
-        */
-       //mergeTimetables method
-       /**
-        * Grabbing ALL the users and adding them to a list, this will change
-        * from all users to an allocated list of users later on
-        */
-//       Set<User> users = new HashSet<>();
-//       users = userDAO.getUserList();
-       /**
-        * Specifying Day Names for handy loop
-        */
-       ArrayList<String> timetableDays = new ArrayList<>();
+       //Compare a user's day with the master timetable's day
+       try {
+           /**
+            * Rust Experimental.
+            *
+            * This will eventually turn into the mergeTimetables method, not
+            * sure how, but it will. This is temporary code, contact list &
+            * schedule meeting haven't been completed yet, using getUserList()
+            * instead of retrieved User List from associated pages. Does this
+            * need to be a sorted collection? What happens if it's all jumbled
+            * up when we compare timetables? Probably need to maintain traversal
+            * order.
+            */
 
-       //Week 1
-       timetableDays.add("Week 1 Monday");
-       timetableDays.add("Week 1 Tuesday");
-       timetableDays.add("Week 1 Wednesday");
-       timetableDays.add("Week 1 Thursday");
-       timetableDays.add("Week 1 Friday");
-       timetableDays.add("Week 1 Saturday");
-       timetableDays.add("Week 1 Sunday");
+           //mergeTimetables method
+           /**
+            * Grabbing ALL the users and adding them to a list, this will change
+            * from all users to an allocated list of users later on
+            */
+           Set<User> users = new HashSet<>();
+           users = userDAO.getUserList();
 
-       //Week 2
-       timetableDays.add("Week 2 Monday");
-       timetableDays.add("Week 2 Tuesday");
-       timetableDays.add("Week 2 Wednesday");
-       timetableDays.add("Week 2 Thursday");
-       timetableDays.add("Week 2 Friday");
-       timetableDays.add("Week 2 Saturday");
-       timetableDays.add("Week 2 Sunday");
+           /**
+            * Specifying Day Names for handy loop
+            */
+           ArrayList<String> timetableDays = new ArrayList<>();
 
-       /**
-        * Setting up the mergedTimetableDays collection so it has 14 days with
-        * all data set to false
-        */
-       Map<String, MergedDay> mergedTimetableDays = new HashMap<>();
-       for (String aTimetableDay : timetableDays) {
-           MergedDay aUsersDay = new MergedDay("&e0", aTimetableDay);
-           mergedTimetableDays.put(aTimetableDay, aUsersDay);
-       }
+           //Week 1
+           timetableDays.add("Week 1 Monday");
+           timetableDays.add("Week 1 Tuesday");
+           timetableDays.add("Week 1 Wednesday");
+           timetableDays.add("Week 1 Thursday");
+           timetableDays.add("Week 1 Friday");
+           timetableDays.add("Week 1 Saturday");
+           timetableDays.add("Week 1 Sunday");
 
-       /**
-        * Retrieves every user's timetable and adds the true values to the
-        * master timetable
-        */
-       for (User aUser : users) {
-           //Compile a user's timetable into a local collection
-           Set<Day> usersTimetableDays = new HashSet<>();
+           //Week 2
+           timetableDays.add("Week 2 Monday");
+           timetableDays.add("Week 2 Tuesday");
+           timetableDays.add("Week 2 Wednesday");
+           timetableDays.add("Week 2 Thursday");
+           timetableDays.add("Week 2 Friday");
+           timetableDays.add("Week 2 Saturday");
+           timetableDays.add("Week 2 Sunday");
+
+           /**
+            * Setting up the mergedTimetableDays collection so it has 14 days
+            * with all data set to false
+            */
+           Map<String, MergedDay> mergedTimetableDays = new HashMap<>();
            for (String aTimetableDay : timetableDays) {
-               Day aUsersDay = new Day();
-               aUsersDay = timetableDAO.getTimetable(aUser.getUserName(), aTimetableDay);
-               //Add the day to usersTimetableDays
-               usersTimetableDays.add(aUsersDay);
+               MergedDay aUsersDay = new MergedDay("&e0", aTimetableDay);
+               mergedTimetableDays.put(aTimetableDay, aUsersDay);
            }
-           //Compare a user's day with the master timetable's day
-           for (Day aDay : usersTimetableDays) {
-               try {
+
+           /**
+            * Retrieves every user's timetable and adds the true values to the
+            * master timetable
+            */
+           for (User aUser : users) {
+               //Compile a user's timetable into a local collection
+               Set<Day> usersTimetableDays = new HashSet<>();
+               for (String aTimetableDay : timetableDays) {
+                   Day aUsersDay = new Day();
+                   aUsersDay = timetableDAO.getTimetable(aUser.getUserName(), aTimetableDay);
+                   //Add the day to usersTimetableDays
+                   usersTimetableDays.add(aUsersDay);
+               }
+               //Compare a user's day with the master timetable's day
+               for (Day aDay : usersTimetableDays) {
                    String dayName = aDay.getDayName();
                    MergedDay compareMergedDay = mergedTimetableDays.get(dayName); //Use old or new?
                    //Iterate over each hour in a timetable day
@@ -640,236 +644,237 @@ public class ScheduleMeeting extends javax.swing.JDialog {
                        compareMergedDay.setNinePM(false);
                    }
                    mergedTimetableDays.put("&e0", compareMergedDay);
-               } catch (NullPointerException ex) {
-                   // gives the user an option to create a timetable if they haven't already
-                   int result = JOptionPane.showOptionDialog(null, "One of the users in your group (Or in the entire database if this is Sprint 2) have not set their timetable up.", "Warning", JOptionPane.OK_OPTION, JOptionPane.PLAIN_MESSAGE, null,
-                           null, null);
-                   if (result == JOptionPane.OK_OPTION) {
-                       dispose();
-                       ScheduleMeeting dialog = new ScheduleMeeting(this, true, timetableDAO, userDAO, userStorageDAO);
-                       dialog.pack();
-                       //set size
-                       dialog.setSize(715, 677);
-                       dialog.setLocationRelativeTo(this);
-                       dialog.setVisible(true);
+               }
+           }
 
-                   } else {
-                       dispose();
-                       ScheduleMeeting dialog = new ScheduleMeeting(this, true, timetableDAO, userDAO, userStorageDAO);
-                       dialog.pack();
-                       //set size
-                       dialog.setSize(715, 677);
-                       dialog.setLocationRelativeTo(this);
-                       dialog.setVisible(true);
+           //initialise each day with the users data
+           MergedDay mondayWeek1 = mergedTimetableDays.get("Week 1 Monday");
+           MergedDay tuesdayWeek1 = mergedTimetableDays.get("Week 1 Tuesday");
+           MergedDay wednesdayWeek1 = mergedTimetableDays.get("Week 1 Wednesday");
+           MergedDay thursdayWeek1 = mergedTimetableDays.get("Week 1 Thursday");
+           MergedDay fridayWeek1 = mergedTimetableDays.get("Week 1 Friday");
+           MergedDay saturdayWeek1 = mergedTimetableDays.get("Week 1 Saturday");
+           MergedDay sundayWeek1 = mergedTimetableDays.get("Week 1 Sunday");
+           MergedDay mondayWeek2 = mergedTimetableDays.get("Week 2 Monday");
+           MergedDay tuesdayWeek2 = mergedTimetableDays.get("Week 2 Tuesday");
+           MergedDay wednesdayWeek2 = mergedTimetableDays.get("Week 2 Wednesday");
+           MergedDay thursdayWeek2 = mergedTimetableDays.get("Week 2 Thursday");
+           MergedDay fridayWeek2 = mergedTimetableDays.get("Week 2 Friday");
+           MergedDay saturdayWeek2 = mergedTimetableDays.get("Week 2 Saturday");
+           MergedDay sundayWeek2 = mergedTimetableDays.get("Week 2 Sunday");
+           /**
+            * End mergeTimetables
+            */
+
+           /**
+            * Rust Experimental.
+            *
+            * This will eventually turn into the calculateMeetingTimes method
+            */
+           //calculateMeetingTimes
+           /**
+            * Load the Merged Timetable into local variables
+            */
+           mondayWeek1 = mergedTimetableDays.get("Week 1 Monday");
+           tuesdayWeek1 = mergedTimetableDays.get("Week 1 Tuesday");
+           wednesdayWeek1 = mergedTimetableDays.get("Week 1 Wednesday");
+           thursdayWeek1 = mergedTimetableDays.get("Week 1 Thursday");
+           fridayWeek1 = mergedTimetableDays.get("Week 1 Friday");
+           saturdayWeek1 = mergedTimetableDays.get("Week 1 Saturday");
+           sundayWeek1 = mergedTimetableDays.get("Week 1 Sunday");
+           mondayWeek2 = mergedTimetableDays.get("Week 2 Monday");
+           tuesdayWeek2 = mergedTimetableDays.get("Week 2 Tuesday");
+           wednesdayWeek2 = mergedTimetableDays.get("Week 2 Wednesday");
+           thursdayWeek2 = mergedTimetableDays.get("Week 2 Thursday");
+           fridayWeek2 = mergedTimetableDays.get("Week 2 Friday");
+           saturdayWeek2 = mergedTimetableDays.get("Week 2 Saturday");
+           sundayWeek2 = mergedTimetableDays.get("Week 2 Sunday");
+
+           /**
+            * Add the days into a local collection for iterating over
+            */
+           Collection<MergedDay> mergedTimetable = new ArrayList<>();
+           //Week 1
+           mergedTimetable.add(mondayWeek1);
+           mergedTimetable.add(tuesdayWeek1);
+           mergedTimetable.add(wednesdayWeek1);
+           mergedTimetable.add(thursdayWeek1);
+           mergedTimetable.add(fridayWeek1);
+           mergedTimetable.add(saturdayWeek1);
+           mergedTimetable.add(sundayWeek1);
+           //Week 2
+           mergedTimetable.add(mondayWeek2);
+           mergedTimetable.add(tuesdayWeek2);
+           mergedTimetable.add(wednesdayWeek2);
+           mergedTimetable.add(thursdayWeek2);
+           mergedTimetable.add(fridayWeek2);
+           mergedTimetable.add(saturdayWeek2);
+           mergedTimetable.add(sundayWeek2);
+
+           /**
+            * For each day in a timetable
+            */
+           ArrayList<Boolean> day = new ArrayList<>();
+           ArrayList<Integer> gapDurations = new ArrayList<>();
+           for (MergedDay aMergedDay : mergedTimetable) {
+               /**
+                * Load the day's times into a temporary array
+                */
+               day.clear();
+               day.add(aMergedDay.getEightAM());
+               day.add(aMergedDay.getNineAM());
+               day.add(aMergedDay.getTenAM());
+               day.add(aMergedDay.getElevenAM());
+               day.add(aMergedDay.getTwelvePM());
+               day.add(aMergedDay.getOnePM());
+               day.add(aMergedDay.getTwoPM());
+               day.add(aMergedDay.getThreePM());
+               day.add(aMergedDay.getFourPM());
+               day.add(aMergedDay.getFivePM());
+               day.add(aMergedDay.getSixPM());
+               day.add(aMergedDay.getSevenPM());
+               day.add(aMergedDay.getEightPM());
+               day.add(aMergedDay.getNinePM());
+
+               /**
+                * Load the day's gapDurations into a temporary array
+                */
+               gapDurations.clear();
+               gapDurations.add(aMergedDay.getEightAMDuration());
+               gapDurations.add(aMergedDay.getNineAMDuration());
+               gapDurations.add(aMergedDay.getTenAMDuration());
+               gapDurations.add(aMergedDay.getElevenAMDuration());
+               gapDurations.add(aMergedDay.getTwelvePMDuration());
+               gapDurations.add(aMergedDay.getOnePMDuration());
+               gapDurations.add(aMergedDay.getTwoPMDuration());
+               gapDurations.add(aMergedDay.getThreePMDuration());
+               gapDurations.add(aMergedDay.getFourPMDuration());
+               gapDurations.add(aMergedDay.getFivePMDuration());
+               gapDurations.add(aMergedDay.getSixPMDuration());
+               gapDurations.add(aMergedDay.getSevenPMDuration());
+               gapDurations.add(aMergedDay.getEightPMDuration());
+               gapDurations.add(aMergedDay.getNinePMDuration());
+
+               /**
+                * Start iterating over the two arrays
+                */
+               //Make a Duration Array with all setDurations?
+               for (int i = 0; i < day.size(); i++) {
+                   System.out.println("i: " + i);
+                   if (day.get(i) == true) {
+                       gapDurations.set(i, 0);
+                   }
+
+                   if (day.get(i) == false) {
+                       gapDurations.set(i, 1);
+                   }
+
+                   if ((i + 1) < day.size()) {
+                       if (day.get(i) == false && day.get((i + 1)) == false) {
+                           gapDurations.set(i, 2);
+                       }
+                   }
+
+                   if ((i + 2) < day.size()) {
+                       if (day.get(i) == false && day.get((i + 1)) == false && day.get((i + 2)) == false) {
+                           gapDurations.set(i, 3);
+                       }
                    }
                }
+               System.out.println("Day: " + day);
+               System.out.println("Gap Durations in Day: " + gapDurations);
+               System.out.println("Day Array Size: " + day.size());
+               System.out.println("Gap Duration Array Size: " + gapDurations.size());
+               System.out.println();
+               System.out.println();
+
+               aMergedDay.setEightAMDuration(gapDurations.get(0));
+               aMergedDay.setNineAMDuration(gapDurations.get(1));
+               aMergedDay.setTenAMDuration(gapDurations.get(2));
+               aMergedDay.setElevenAMDuration(gapDurations.get(3));
+               aMergedDay.setTwelvePMDuration(gapDurations.get(4));
+               aMergedDay.setOnePMDuration(gapDurations.get(5));
+               aMergedDay.setTwoPMDuration(gapDurations.get(6));
+               aMergedDay.setThreePMDuration(gapDurations.get(7));
+               aMergedDay.setFourPMDuration(gapDurations.get(8));
+               aMergedDay.setFivePMDuration(gapDurations.get(9));
+               aMergedDay.setSixPMDuration(gapDurations.get(10));
+               aMergedDay.setSevenPMDuration(gapDurations.get(11));
+               aMergedDay.setEightPMDuration(gapDurations.get(12));
+               aMergedDay.setNinePMDuration(gapDurations.get(13));
+
+               /**
+                * Sanity Check
+                */
+               ArrayList<Integer> check = new ArrayList<>();
+               check.add(aMergedDay.getEightAMDuration());
+               check.add(aMergedDay.getNineAMDuration());
+               check.add(aMergedDay.getTenAMDuration());
+               check.add(aMergedDay.getElevenAMDuration());
+               check.add(aMergedDay.getTwelvePMDuration());
+               check.add(aMergedDay.getOnePMDuration());
+               check.add(aMergedDay.getTwoPMDuration());
+               check.add(aMergedDay.getThreePMDuration());
+               check.add(aMergedDay.getFourPMDuration());
+               check.add(aMergedDay.getFivePMDuration());
+               check.add(aMergedDay.getSixPMDuration());
+               check.add(aMergedDay.getSevenPMDuration());
+               check.add(aMergedDay.getEightPMDuration());
+               check.add(aMergedDay.getNinePMDuration());
+
+               System.out.println("Sanity Check Start");
+               for (Integer inte : check) {
+                   System.out.println(inte);
+               }
+               System.out.println("Sanity Check End");
+               System.out.println();
+               System.out.println();
+           }
+           /**
+            * End caculateMeetingTimes
+            */
+           /**
+            * Load up an instance of the View Timetable page to visualize
+            * timetable merge
+            */
+           dispose();
+           EditTimetable dialog = new EditTimetable(this, true, timetableDAO, userDAO, userStorageDAO, mondayWeek1, tuesdayWeek1, wednesdayWeek1,
+                   thursdayWeek1, fridayWeek1, saturdayWeek1, sundayWeek1, mondayWeek2, tuesdayWeek2, wednesdayWeek2, thursdayWeek2, fridayWeek2,
+                   saturdayWeek2, sundayWeek2);
+
+           dialog.pack();
+           //set size
+
+           dialog.setSize(715, 677);
+           // centre the dialog on the parent window
+           dialog.setLocationRelativeTo(this);
+           // make the dialog visible
+           dialog.setVisible(true);
+
+       } catch (NullPointerException ex) {
+           // gives the user an option to create a timetable if they haven't already
+           int result = JOptionPane.showOptionDialog(null, "One of the users in your group (Or in the entire database if this is Sprint 2) have not set their timetable up.", "Warning", JOptionPane.OK_OPTION, JOptionPane.PLAIN_MESSAGE, null,
+                   null, null);
+           if (result == JOptionPane.OK_OPTION) {
+               dispose();
+               ScheduleMeeting dialog = new ScheduleMeeting(this, true, timetableDAO, userDAO, userStorageDAO);
+               dialog.pack();
+               //set size
+               dialog.setSize(715, 677);
+               dialog.setLocationRelativeTo(this);
+               dialog.setVisible(true);
+
+           } else {
+               dispose();
+               ScheduleMeeting dialog = new ScheduleMeeting(this, true, timetableDAO, userDAO, userStorageDAO);
+               dialog.pack();
+               //set size
+               dialog.setSize(715, 677);
+               dialog.setLocationRelativeTo(this);
+               dialog.setVisible(true);
            }
        }
 
-       //initialise each day with the users data
-       MergedDay mondayWeek1 = mergedTimetableDays.get("Week 1 Monday");
-       MergedDay tuesdayWeek1 = mergedTimetableDays.get("Week 1 Tuesday");
-       MergedDay wednesdayWeek1 = mergedTimetableDays.get("Week 1 Wednesday");
-       MergedDay thursdayWeek1 = mergedTimetableDays.get("Week 1 Thursday");
-       MergedDay fridayWeek1 = mergedTimetableDays.get("Week 1 Friday");
-       MergedDay saturdayWeek1 = mergedTimetableDays.get("Week 1 Saturday");
-       MergedDay sundayWeek1 = mergedTimetableDays.get("Week 1 Sunday");
-       MergedDay mondayWeek2 = mergedTimetableDays.get("Week 2 Monday");
-       MergedDay tuesdayWeek2 = mergedTimetableDays.get("Week 2 Tuesday");
-       MergedDay wednesdayWeek2 = mergedTimetableDays.get("Week 2 Wednesday");
-       MergedDay thursdayWeek2 = mergedTimetableDays.get("Week 2 Thursday");
-       MergedDay fridayWeek2 = mergedTimetableDays.get("Week 2 Friday");
-       MergedDay saturdayWeek2 = mergedTimetableDays.get("Week 2 Saturday");
-       MergedDay sundayWeek2 = mergedTimetableDays.get("Week 2 Sunday");
-       /**
-        * End mergeTimetables
-        */
-
-       /**
-        * Rust Experimental.
-        *
-        * This will eventually turn into the calculateMeetingTimes method
-        */
-       //calculateMeetingTimes
-       /**
-        * Load the Merged Timetable into local variables
-        */
-       mondayWeek1 = mergedTimetableDays.get("Week 1 Monday");
-       tuesdayWeek1 = mergedTimetableDays.get("Week 1 Tuesday");
-       wednesdayWeek1 = mergedTimetableDays.get("Week 1 Wednesday");
-       thursdayWeek1 = mergedTimetableDays.get("Week 1 Thursday");
-       fridayWeek1 = mergedTimetableDays.get("Week 1 Friday");
-       saturdayWeek1 = mergedTimetableDays.get("Week 1 Saturday");
-       sundayWeek1 = mergedTimetableDays.get("Week 1 Sunday");
-       mondayWeek2 = mergedTimetableDays.get("Week 2 Monday");
-       tuesdayWeek2 = mergedTimetableDays.get("Week 2 Tuesday");
-       wednesdayWeek2 = mergedTimetableDays.get("Week 2 Wednesday");
-       thursdayWeek2 = mergedTimetableDays.get("Week 2 Thursday");
-       fridayWeek2 = mergedTimetableDays.get("Week 2 Friday");
-       saturdayWeek2 = mergedTimetableDays.get("Week 2 Saturday");
-       sundayWeek2 = mergedTimetableDays.get("Week 2 Sunday");
-
-       /**
-        * Add the days into a local collection for iterating over
-        */
-       Collection<MergedDay> mergedTimetable = new ArrayList<>();
-       //Week 1
-       mergedTimetable.add(mondayWeek1);
-       mergedTimetable.add(tuesdayWeek1);
-       mergedTimetable.add(wednesdayWeek1);
-       mergedTimetable.add(thursdayWeek1);
-       mergedTimetable.add(fridayWeek1);
-       mergedTimetable.add(saturdayWeek1);
-       mergedTimetable.add(sundayWeek1);
-       //Week 2
-       mergedTimetable.add(mondayWeek2);
-       mergedTimetable.add(tuesdayWeek2);
-       mergedTimetable.add(wednesdayWeek2);
-       mergedTimetable.add(thursdayWeek2);
-       mergedTimetable.add(fridayWeek2);
-       mergedTimetable.add(saturdayWeek2);
-       mergedTimetable.add(sundayWeek2);
-
-       /**
-        * For each day in a timetable
-        */
-       ArrayList<Boolean> day = new ArrayList<>();
-       ArrayList<Integer> gapDurations = new ArrayList<>();
-       for (MergedDay aMergedDay : mergedTimetable) {
-           /**
-            * Load the day's times into a temporary array
-            */
-           day.clear();
-           day.add(aMergedDay.getEightAM());
-           day.add(aMergedDay.getNineAM());
-           day.add(aMergedDay.getTenAM());
-           day.add(aMergedDay.getElevenAM());
-           day.add(aMergedDay.getTwelvePM());
-           day.add(aMergedDay.getOnePM());
-           day.add(aMergedDay.getTwoPM());
-           day.add(aMergedDay.getThreePM());
-           day.add(aMergedDay.getFourPM());
-           day.add(aMergedDay.getFivePM());
-           day.add(aMergedDay.getSixPM());
-           day.add(aMergedDay.getSevenPM());
-           day.add(aMergedDay.getEightPM());
-           day.add(aMergedDay.getNinePM());
-
-           /**
-            * Load the day's gapDurations into a temporary array
-            */
-           gapDurations.clear();
-           gapDurations.add(aMergedDay.getEightAMDuration());
-           gapDurations.add(aMergedDay.getNineAMDuration());
-           gapDurations.add(aMergedDay.getTenAMDuration());
-           gapDurations.add(aMergedDay.getElevenAMDuration());
-           gapDurations.add(aMergedDay.getTwelvePMDuration());
-           gapDurations.add(aMergedDay.getOnePMDuration());
-           gapDurations.add(aMergedDay.getTwoPMDuration());
-           gapDurations.add(aMergedDay.getThreePMDuration());
-           gapDurations.add(aMergedDay.getFourPMDuration());
-           gapDurations.add(aMergedDay.getFivePMDuration());
-           gapDurations.add(aMergedDay.getSixPMDuration());
-           gapDurations.add(aMergedDay.getSevenPMDuration());
-           gapDurations.add(aMergedDay.getEightPMDuration());
-           gapDurations.add(aMergedDay.getNinePMDuration());
-
-           /**
-            * Start iterating over the two arrays
-            */
-           //Make a Duration Array with all setDurations?
-           for (int i = 0; i < day.size(); i++) {
-               System.out.println("i: " + i);
-               if (day.get(i) == true) {
-                   gapDurations.set(i, 0);
-               }
-
-               if (day.get(i) == false) {
-                   gapDurations.set(i, 1);
-               }
-
-               if ((i + 1) < day.size()) {
-                   if (day.get(i) == false && day.get((i + 1)) == false) {
-                       gapDurations.set(i, 2);
-                   }
-               }
-
-               if ((i + 2) < day.size()) {
-                   if (day.get(i) == false && day.get((i + 1)) == false && day.get((i + 2)) == false) {
-                       gapDurations.set(i, 3);
-                   }
-               }
-           }
-           System.out.println("Day: " + day);
-           System.out.println("Gap Durations in Day: " + gapDurations);
-           System.out.println("Day Array Size: " + day.size());
-           System.out.println("Gap Duration Array Size: " + gapDurations.size());
-           System.out.println();
-           System.out.println();
-
-           aMergedDay.setEightAMDuration(gapDurations.get(0));
-           aMergedDay.setNineAMDuration(gapDurations.get(1));
-           aMergedDay.setTenAMDuration(gapDurations.get(2));
-           aMergedDay.setElevenAMDuration(gapDurations.get(3));
-           aMergedDay.setTwelvePMDuration(gapDurations.get(4));
-           aMergedDay.setOnePMDuration(gapDurations.get(5));
-           aMergedDay.setTwoPMDuration(gapDurations.get(6));
-           aMergedDay.setThreePMDuration(gapDurations.get(7));
-           aMergedDay.setFourPMDuration(gapDurations.get(8));
-           aMergedDay.setFivePMDuration(gapDurations.get(9));
-           aMergedDay.setSixPMDuration(gapDurations.get(10));
-           aMergedDay.setSevenPMDuration(gapDurations.get(11));
-           aMergedDay.setEightPMDuration(gapDurations.get(12));
-           aMergedDay.setNinePMDuration(gapDurations.get(13));
-
-           /**
-            * Sanity Check
-            */
-           ArrayList<Integer> check = new ArrayList<>();
-           check.add(aMergedDay.getEightAMDuration());
-           check.add(aMergedDay.getNineAMDuration());
-           check.add(aMergedDay.getTenAMDuration());
-           check.add(aMergedDay.getElevenAMDuration());
-           check.add(aMergedDay.getTwelvePMDuration());
-           check.add(aMergedDay.getOnePMDuration());
-           check.add(aMergedDay.getTwoPMDuration());
-           check.add(aMergedDay.getThreePMDuration());
-           check.add(aMergedDay.getFourPMDuration());
-           check.add(aMergedDay.getFivePMDuration());
-           check.add(aMergedDay.getSixPMDuration());
-           check.add(aMergedDay.getSevenPMDuration());
-           check.add(aMergedDay.getEightPMDuration());
-           check.add(aMergedDay.getNinePMDuration());
-
-           System.out.println("Making sure the data can actually be worked with");
-           System.out.println("Sanity Check Start");
-           for (Integer inte : check) {
-               System.out.println(inte);
-           }
-           System.out.println("Sanity Check End");
-           System.out.println();
-           System.out.println();
-       }
-       /**
-        * End caculateMeetingTimes
-        */
-       /**
-        * Load up an instance of the View Timetable page to visualize timetable
-        * merge
-        */
-       dispose();
-       EditTimetable dialog = new EditTimetable(this, true, timetableDAO, userDAO, userStorageDAO, mondayWeek1, tuesdayWeek1, wednesdayWeek1,
-               thursdayWeek1, fridayWeek1, saturdayWeek1, sundayWeek1, mondayWeek2, tuesdayWeek2, wednesdayWeek2, thursdayWeek2, fridayWeek2,
-               saturdayWeek2, sundayWeek2);
-
-       dialog.pack();
-       //set size
-
-       dialog.setSize(715, 677);
-       // centre the dialog on the parent window
-       dialog.setLocationRelativeTo(this);
-       // make the dialog visible
-       dialog.setVisible(true);
    }//GEN-LAST:event_confirmButtonActionPerformed
 
    private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed

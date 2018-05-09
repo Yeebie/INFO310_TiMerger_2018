@@ -30,9 +30,9 @@ public class Day {
     private Boolean sevenPM;
     private Boolean eightPM;
     private Boolean ninePM;
-    
+
     public Day() {
-        
+
     }
 
     public Day(String userName, String dayName) {
@@ -53,9 +53,8 @@ public class Day {
         this.eightPM = false;
         this.ninePM = false;
     }
-    
-        private ArrayList<Boolean> dayTime = new ArrayList<Boolean>(); 
 
+    private ArrayList<Boolean> dayTime = new ArrayList<Boolean>();
 
     public Day(String userName, String dayName, Boolean eightAM, Boolean nineAM, Boolean tenAM, Boolean elevenAM, Boolean twelvePM, Boolean onePM, Boolean twoPM, Boolean threePM, Boolean fourPM, Boolean fivePM, Boolean sixPM, Boolean sevenPM, Boolean eightPM, Boolean ninePM) {
         this.userName = userName;
@@ -75,11 +74,11 @@ public class Day {
         this.eightPM = eightPM;
         this.ninePM = ninePM;
     }
-    
-    public Day(String userName , String dayName , ArrayList<Boolean> dayArray ){
-              this.userName = userName;
+
+    public Day(String userName, String dayName, ArrayList<Boolean> dayArray) {
+        this.userName = userName;
         this.dayName = dayName;
-        this.dayTime = dayArray ; 
+        this.dayTime = dayArray;
         this.eightAM = this.dayTime.get(0);
         this.nineAM = this.dayTime.get(1);
         this.tenAM = this.dayTime.get(2);
@@ -94,11 +93,11 @@ public class Day {
         this.sevenPM = this.dayTime.get(11);
         this.eightPM = this.dayTime.get(12);
         this.ninePM = this.dayTime.get(13);
-        
+
     }
-    
-    public void SetArrayList(ArrayList<Boolean> dayArray ) {
-                this.dayTime = dayArray ; 
+
+    public void SetArrayList(ArrayList<Boolean> dayArray) {
+        this.dayTime = dayArray;
         this.eightAM = this.dayTime.get(0);
         this.nineAM = this.dayTime.get(1);
         this.tenAM = this.dayTime.get(2);
@@ -113,7 +112,7 @@ public class Day {
         this.sevenPM = this.dayTime.get(11);
         this.eightPM = this.dayTime.get(12);
         this.ninePM = this.dayTime.get(13);
-        
+
     }
 
     public String getUserName() {
