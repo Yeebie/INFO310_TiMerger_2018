@@ -4211,7 +4211,7 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
 
    private void buttonSaveTimetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSaveTimetableActionPerformed
 
-		/**
+		/** 
        ArrayList<Boolean> week1 = new ArrayList<Boolean>();
        ArrayList<Boolean> week2 = new ArrayList<Boolean>();
 
@@ -4226,7 +4226,52 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
                value = false;
            }
        }
+		 
+		 Day mondayWeek1 = new Day(userName, "Week 1 Monday", new ArrayList<Boolean>(week1.subList(0, 14)));
+
+       Day tuesdayWeek1 = new Day(userName, "Week 1 Tuesday", new ArrayList<Boolean>(week1.subList(14, 28)));
+
+       Day wednesdayWeek1 = new Day(userName, "Week 1 Wednesday", new ArrayList<Boolean>(week1.subList(28, 42)));
+
+       Day thursdayWeek1 = new Day(userName, "Week 1 Thursday", new ArrayList<Boolean>(week1.subList(42, 56)));
+
+       Day fridayWeek1 = new Day(userName, "Week 1 Friday", new ArrayList<Boolean>(week1.subList(56, 70)));
+
+       Day saturdayWeek1 = new Day(userName, "Week 1 Saturday", new ArrayList<Boolean>(week1.subList(70, 84)));
+
+       Day sundayWeek1 = new Day(userName, "Week 1 Sunday", new ArrayList<Boolean>(week1.subList(84, 98)));
+
+       Day mondayWeek2 = new Day(userName, "Week 2 Monday", new ArrayList<Boolean>(week1.subList(0, 14)));
+
+       Day tuesdayWeek2 = new Day(userName, "Week 2 Tuesday", new ArrayList<Boolean>(week1.subList(14, 28)));
+
+       Day wednesdayWeek2 = new Day(userName, "Week 2 Wednesday", new ArrayList<Boolean>(week1.subList(28, 42)));
+
+       Day thursdayWeek2 = new Day(userName, "Week 2 Thursday", new ArrayList<Boolean>(week1.subList(42, 56)));
+
+       Day fridayWeek2 = new Day(userName, "Week 2 Friday", new ArrayList<Boolean>(week1.subList(56, 70)));
+
+       Day saturdayWeek2 = new Day(userName, "Week 2 Saturday", new ArrayList<Boolean>(week1.subList(70, 84)));
+
+       Day sundayWeek2 = new Day(userName, "Week 2 Sunday", new ArrayList<Boolean>(week1.subList(84, 98)));
+		 
+		 if (value == false) {
+		     mondayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(0, 14)));
+           mondayWeek2.setDayName("Week 2 Monday");
+			  tuesdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(14, 28)));
+           tuesdayWeek2.setDayName("Week 2 Tuesday");
+			  wednesdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(28, 42)));
+           wednesdayWeek2.setDayName("Week 2 Wednesday");
+			  thursdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(42, 56)));
+           thursdayWeek2.setDayName("Week 2 Thursday");
+			  fridayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(56, 70)));
+           fridayWeek2.setDayName("Week 2 Friday");
+			  saturdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(70, 84)));
+           saturdayWeek2.setDayName("Week 2 Saturday");
+			  sundayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(84, 98)));
+           sundayWeek2.setDayName("Week 2 Sunday");
 		 */
+		
       /**
       * Can we turn this into a loop? Probably, wouldn't be suprised This code
       * will be temporary, it'll probably be turned into a loop
@@ -4443,38 +4488,6 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
 
        String userName = userStorageDAO.getUserName();
 
-		 /**
-       Day mondayWeek1 = new Day(userName, "Week 1 Monday", new ArrayList<Boolean>(week1.subList(0, 14)));
-
-       Day tuesdayWeek1 = new Day(userName, "Week 1 Tuesday", new ArrayList<Boolean>(week1.subList(14, 28)));
-
-       Day wednesdayWeek1 = new Day(userName, "Week 1 Wednesday", new ArrayList<Boolean>(week1.subList(28, 42)));
-
-       Day thursdayWeek1 = new Day(userName, "Week 1 Thursday", new ArrayList<Boolean>(week1.subList(42, 56)));
-
-       Day fridayWeek1 = new Day(userName, "Week 1 Friday", new ArrayList<Boolean>(week1.subList(56, 70)));
-
-       Day saturdayWeek1 = new Day(userName, "Week 1 Saturday", new ArrayList<Boolean>(week1.subList(70, 84)));
-
-       Day sundayWeek1 = new Day(userName, "Week 1 Sunday", new ArrayList<Boolean>(week1.subList(84, 98)));
-
-       Day mondayWeek2 = new Day(userName, "Week 2 Monday", new ArrayList<Boolean>(week1.subList(0, 14)));
-
-       Day tuesdayWeek2 = new Day(userName, "Week 2 Tuesday", new ArrayList<Boolean>(week1.subList(14, 28)));
-
-       Day wednesdayWeek2 = new Day(userName, "Week 2 Wednesday", new ArrayList<Boolean>(week1.subList(28, 42)));
-
-       Day thursdayWeek2 = new Day(userName, "Week 2 Thursday", new ArrayList<Boolean>(week1.subList(42, 56)));
-
-       Day fridayWeek2 = new Day(userName, "Week 2 Friday", new ArrayList<Boolean>(week1.subList(56, 70)));
-
-       Day saturdayWeek2 = new Day(userName, "Week 2 Saturday", new ArrayList<Boolean>(week1.subList(70, 84)));
-
-       Day sundayWeek2 = new Day(userName, "Week 2 Sunday", new ArrayList<Boolean>(week1.subList(84, 98)));
-
-      String userName = userStorageDAO.getUserName();
-		*/
-
       Day mondayWeek1 = new Day(userName, "Week 1 Monday", storeMon8w1, storeMon9w1, storeMon10w1, storeMon11w1, storeMon12w1,
          storeMon13w1, storeMon14w1, storeMon15w1, storeMon16w1, storeMon17w1, storeMon18w1, storeMon19w1,
          storeMon20w1, storeMon21w1);
@@ -4531,10 +4544,6 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
          storeSun13w2, storeSun14w2, storeSun15w2, storeSun16w2, storeSun17w2, storeSun18w2, storeSun19w2,
          storeSun20w2, storeSun21w2);
 		
-		/**
-       if (value == false) {
-		 */
-		
       if (storeMon8w2 == false && storeMon9w2 == false && storeMon10w2 == false && storeMon11w2 == false && storeMon12w2
          == false && storeMon13w2 == false && storeMon14w2 == false && storeMon15w2 == false && storeMon16w2 == false && storeMon17w2 == false && storeMon18w2 == false && storeMon19w2
          == false && storeMon20w2 == false && storeMon21w2 == false && storeTue8w2 == false && storeTue9w2 == false && storeTue10w2 == false && storeTue11w2 == false && storeTue12w2
@@ -4566,11 +4575,6 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
          mondayWeek2.setEightPM(storeMon20w1);
          mondayWeek2.setNinePM(storeMon21w1);
          mondayWeek2.setDayName("Week 2 Monday");
-			
-			/**
-           mondayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(0, 14)));
-           mondayWeek2.setDayName("Week 2 Monday");
-			  */
 
          tuesdayWeek2.setEightAM(storeTue8w1);
          tuesdayWeek2.setNineAM(storeTue9w1);
@@ -4587,11 +4591,6 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
          tuesdayWeek2.setEightPM(storeTue20w1);
          tuesdayWeek2.setNinePM(storeTue21w1);
          tuesdayWeek2.setDayName("Week 2 Tuesday");
-			
-			/**
-           tuesdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(14, 28)));
-           tuesdayWeek2.setDayName("Week 2 Tuesday");
-			  */
 
          wednesdayWeek2.setEightAM(storeWed8w1);
          wednesdayWeek2.setNineAM(storeWed9w1);
@@ -4608,11 +4607,6 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
          wednesdayWeek2.setEightPM(storeWed20w1);
          wednesdayWeek2.setNinePM(storeWed21w1);
          wednesdayWeek2.setDayName("Week 2 Wednesday");
-			
-			/**
-           wednesdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(28, 42)));
-           wednesdayWeek2.setDayName("Week 2 Wednesday");
-			  */
 
          thursdayWeek2.setEightAM(storeThu8w1);
          thursdayWeek2.setNineAM(storeThu9w1);
@@ -4629,11 +4623,6 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
          thursdayWeek2.setEightPM(storeThu20w1);
          thursdayWeek2.setNinePM(storeThu21w1);
 			thursdayWeek2.setDayName("Week 2 Thursday");
-			
-			/**
-           thursdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(42, 56)));
-           thursdayWeek2.setDayName("Week 2 Thursday");
-			  */
 
          fridayWeek2.setEightAM(storeFri8w1);
          fridayWeek2.setNineAM(storeFri9w1);
@@ -4650,11 +4639,6 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
          fridayWeek2.setEightPM(storeFri20w1);
          fridayWeek2.setNinePM(storeFri21w1);
          fridayWeek2.setDayName("Week 2 Friday");
-			
-			/**
-           fridayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(56, 70)));
-           fridayWeek2.setDayName("Week 2 Friday");
-			  */
 
          saturdayWeek2.setEightAM(storeSat8w1);
          saturdayWeek2.setNineAM(storeSat9w1);
@@ -4671,11 +4655,6 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
          saturdayWeek2.setEightPM(storeSat20w1);
          saturdayWeek2.setNinePM(storeSat21w1);
          saturdayWeek2.setDayName("Week 2 Saturday");
-			
-			/**
-           saturdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(70, 84)));
-           saturdayWeek2.setDayName("Week 2 Saturday");
-			  */
 
          sundayWeek2.setEightAM(storeSun8w1);
          sundayWeek2.setNineAM(storeSun9w1);
@@ -4693,11 +4672,6 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
          sundayWeek2.setNinePM(storeSun21w1);
          sundayWeek2.setDayName("Week 2 Sunday");
 		}
-			
-			/**
-           sundayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(84, 98)));
-           sundayWeek2.setDayName("Week 2 Sunday");
-			  */
 
            saveTimetable(mondayWeek1);
            saveTimetable(tuesdayWeek1);
@@ -4722,21 +4696,6 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
        dialog.setLocationRelativeTo(this);
        //make the dialog visible
        dialog.setVisible(true);
-
-//      /**
-//      * See if we can use this to make sure nothing is overwritten, use both
-//      * userName and dayName
-//      */
-//      /* if (dao.findByProductID(storeID) != null) { //If the ID already exists
-//         if (productIDEditable == true) { //If it can be edited
-//            JOptionPane.showMessageDialog(this, "This Product ID is already being used by the \"" + dao.findByProductID(storeID).getName() + "\" product.", "Conflicting Product IDs", JOptionPane.WARNING_MESSAGE);
-//         } else {
-//            saveProduct(product);
-//         }
-//      } else { //If the ID doesn't exist
-//         saveProduct(product);
-//
-//      } */
    }//GEN-LAST:event_buttonSaveTimetableActionPerformed
 
     private void saveTimetable(Day day) {
