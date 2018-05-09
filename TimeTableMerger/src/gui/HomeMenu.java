@@ -259,10 +259,7 @@ public class HomeMenu extends javax.swing.JDialog {
            dialog.setVisible(true); //dispose();
 
        } catch (NullPointerException ex) {
-           // gives the user an option to create a timetable if they haven't already
-           int result = JOptionPane.showOptionDialog(null, "No timetable information, would you like to create a timetable?", "Warning", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null,
-                   null, null);
-           if (result == JOptionPane.OK_OPTION) {
+          
                dispose();
                CreateTimetable dialog = new CreateTimetable(this, true, timetableDAO, userDAO, userStorageDAO);
                dialog.pack();
@@ -270,14 +267,6 @@ public class HomeMenu extends javax.swing.JDialog {
                dialog.setSize(715, 677);
                dialog.setLocationRelativeTo(this);
                dialog.setVisible(true);
-
-           } else {
-               HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userDAO, userStorageDAO);
-               // centre the dialog on the parent window
-               dialog.setLocationRelativeTo(this);
-               // make the dialog visible
-               dialog.setVisible(true);
-           }
        }
 
    }//GEN-LAST:event_timetableButtonActionPerformed
