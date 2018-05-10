@@ -101,4 +101,19 @@ public class TimetableDAO {
 			throw new DAOException(ex.getMessage(), ex);
 		}
 	}
+	
+		public void deleteDay(Day day) {
+		String sql = "delete from Day where DayName = ?";
+
+		try (
+				  Connection connection = JdbcConnection.getConnection(url);
+				  PreparedStatement stmt = connection.prepareStatement(sql);) {
+
+			stmt.setString(1, day.getDayName());
+
+			stmt.executeUpdate();
+		} catch (SQLException ex) {
+			throw new DAOException(ex.getMessage(), ex);
+		}
+	}
 }
