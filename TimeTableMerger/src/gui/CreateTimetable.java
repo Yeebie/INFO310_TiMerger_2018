@@ -4699,7 +4699,7 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
    }//GEN-LAST:event_buttonSaveTimetableActionPerformed
 
     private void saveTimetable(Day day) {
-        timetableDAO.createTimetable(day);
+        timetableDAO.saveDay(day);
     }
 
    // Variables declaration - do not modify//GEN-BEGIN:variables

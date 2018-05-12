@@ -27,7 +27,7 @@ public class TimetableDAO {
 		this.url = url;
 	}
 
-	public Day getTimetable(String uName, String dName) {
+	public Day getDay(String uName, String dName) {
 
 		String sql = "select * from Day where UserName = ? AND DayName = ?";
 
@@ -68,7 +68,7 @@ public class TimetableDAO {
 		}
 	}
 
-	public void createTimetable(Day day) {
+	public void saveDay(Day day) {
 		String sql = "merge into day (UserName, DayName, eightAM, nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM, sixPM, sevenPM, eightPM, ninePM) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		try (
 				  // get connection to database

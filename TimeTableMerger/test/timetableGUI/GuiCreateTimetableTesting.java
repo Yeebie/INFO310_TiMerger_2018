@@ -62,11 +62,12 @@ public class GuiCreateTimetableTesting {
 		fixture = new DialogFixture(robot, create);
 		fixture.show().requireVisible();
 		
+		//somehow need to capture username and day name in order to save day
 		fixture.checkBox("mon8w1").check(true);
 		fixture.checkBox("mon9w1").check(true);
 		fixture.checkBox("mon10w1").check(true);
 		fixture.checkBox("mon11w1").check(true);
-		fixture.checkBox("mon12wi").check(true);
+		fixture.checkBox("mon12w1").check(true);
 		fixture.checkBox("mon13w1").check(true);
 		fixture.checkBox("mon14w1").check(true);
 		fixture.checkBox("mon15w1").check(false);
@@ -81,7 +82,7 @@ public class GuiCreateTimetableTesting {
 
 		ArgumentCaptor<Day> argument = ArgumentCaptor.forClass(Day.class);
 
-		verify(timetableDao).createTimetable(argument.capture());
+		verify(timetableDao).saveDay(argument.capture());
 
 		Day savedDay = argument.getValue();
 

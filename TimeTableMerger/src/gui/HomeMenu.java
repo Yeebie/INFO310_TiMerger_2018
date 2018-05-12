@@ -229,20 +229,20 @@ public class HomeMenu extends javax.swing.JDialog {
        try {
 
            //initialise each day with the users data
-           Day mondayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Monday");
-           Day tuesdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Tuesday");
-           Day wednesdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Wednesday");
-           Day thursdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Thursday");
-           Day fridayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Friday");
-           Day saturdayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Saturday");
-           Day sundayWeek1 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 1 Sunday");
-           Day mondayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Monday");
-           Day tuesdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Tuesday");
-           Day wednesdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Wednesday");
-           Day thursdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Thursday");
-           Day fridayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Friday");
-           Day saturdayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Saturday");
-           Day sundayWeek2 = timetableDAO.getTimetable(userStorageDAO.getUserName(), "Week 2 Sunday");
+           Day mondayWeek1 = timetableDAO.getDay(userStorageDAO.getUserName(), "Week 1 Monday");
+           Day tuesdayWeek1 = timetableDAO.getDay(userStorageDAO.getUserName(), "Week 1 Tuesday");
+           Day wednesdayWeek1 = timetableDAO.getDay(userStorageDAO.getUserName(), "Week 1 Wednesday");
+           Day thursdayWeek1 = timetableDAO.getDay(userStorageDAO.getUserName(), "Week 1 Thursday");
+           Day fridayWeek1 = timetableDAO.getDay(userStorageDAO.getUserName(), "Week 1 Friday");
+           Day saturdayWeek1 = timetableDAO.getDay(userStorageDAO.getUserName(), "Week 1 Saturday");
+           Day sundayWeek1 = timetableDAO.getDay(userStorageDAO.getUserName(), "Week 1 Sunday");
+           Day mondayWeek2 = timetableDAO.getDay(userStorageDAO.getUserName(), "Week 2 Monday");
+           Day tuesdayWeek2 = timetableDAO.getDay(userStorageDAO.getUserName(), "Week 2 Tuesday");
+           Day wednesdayWeek2 = timetableDAO.getDay(userStorageDAO.getUserName(), "Week 2 Wednesday");
+           Day thursdayWeek2 = timetableDAO.getDay(userStorageDAO.getUserName(), "Week 2 Thursday");
+           Day fridayWeek2 = timetableDAO.getDay(userStorageDAO.getUserName(), "Week 2 Friday");
+           Day saturdayWeek2 = timetableDAO.getDay(userStorageDAO.getUserName(), "Week 2 Saturday");
+           Day sundayWeek2 = timetableDAO.getDay(userStorageDAO.getUserName(), "Week 2 Sunday");
 
            // create the dialog instance
            // the first parameter the parent window, and the second is the modal status

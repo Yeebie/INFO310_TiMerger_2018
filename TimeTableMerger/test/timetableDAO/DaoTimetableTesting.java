@@ -35,8 +35,8 @@ public class DaoTimetableTesting {
 		
 		userDAO.saveUser(testUser);
 		
-		timetableDAO.createTimetable(monday);
-		timetableDAO.createTimetable(tuesday);
+		timetableDAO.saveDay(monday);
+		timetableDAO.saveDay(tuesday);
 	}
 	
 	@After
@@ -48,21 +48,21 @@ public class DaoTimetableTesting {
 	
 		@Test
 	public void testDaoCreate() {
-		timetableDAO.createTimetable(wednesday);
-		Day retrieved = timetableDAO.getTimetable("testU","Wednesday");
+		timetableDAO.saveDay(wednesday);
+		Day retrieved = timetableDAO.getDay("testU","Wednesday");
 		assertEquals("Retrieved day should be the same", wednesday, retrieved);
 	}
 	
 		@Test
 	public void testDaoDelete() {
 		timetableDAO.deleteDay(monday);
-		Day retrieved = timetableDAO.getTimetable("testU","Monday");
+		Day retrieved = timetableDAO.getDay("testU","Monday");
 		assertNull("Day should no longer exist", retrieved);
 	}
 	
 	@Test
 	public void testDaoFindDay() {
-		Day retrieved = timetableDAO.getTimetable("testU","Tuesday");
+		Day retrieved = timetableDAO.getDay("testU","Tuesday");
 		//assertEquals("Retrieved day should be the same", tuesday, retrieved);
 
 		assertEquals("Retrieved username should be the same", tuesday.getUserName(), retrieved.getUserName());
@@ -82,14 +82,14 @@ public class DaoTimetableTesting {
 		assertEquals("Retrieved eightPM should be the same", tuesday.getEightPM(), retrieved.getEightPM());
 		assertEquals("Retrieved ninePM should be the same", tuesday.getNinePM(), retrieved.getNinePM());
 
-		Day testDay = timetableDAO.getTimetable("test","thursday");
+		Day testDay = timetableDAO.getDay("test","thursday");
 
 		assertNull("Day should not exist", testDay);
 	}
 	
 		@Test
 	public void testEdit() {
-		Day dayToEdit = timetableDAO.getTimetable("testU", "Monday");
+		Day dayToEdit = timetableDAO.getDay("testU", "Monday");
 
 		dayToEdit.setUser("testU");
 		dayToEdit.setDayName("Friday");
@@ -108,9 +108,9 @@ public class DaoTimetableTesting {
 		dayToEdit.setEightPM(false);
 		dayToEdit.setNinePM(true);
 
-		timetableDAO.createTimetable(dayToEdit);
+		timetableDAO.saveDay(dayToEdit);
 
-		Day retrieved = timetableDAO.getTimetable("testU", "Monday");
+		Day retrieved = timetableDAO.getDay("testU", "Monday");
 
 		assertEquals("Retrieved username should be the same", monday.getUserName(), retrieved.getUserName());
 		assertEquals("Retrieved day name should be the same", monday.getDayName(), retrieved.getDayName());

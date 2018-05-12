@@ -551,7 +551,7 @@ public class ScheduleMeeting extends javax.swing.JDialog {
                Set<Day> usersTimetableDays = new HashSet<>();
                for (String aTimetableDay : timetableDays) {
                    Day aUsersDay = new Day();
-                   aUsersDay = timetableDAO.getTimetable(aUser.getUserName(), aTimetableDay);
+                   aUsersDay = timetableDAO.getDay(aUser.getUserName(), aTimetableDay);
                    //Add the day to usersTimetableDays
                    usersTimetableDays.add(aUsersDay);
                }

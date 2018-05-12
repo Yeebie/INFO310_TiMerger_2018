@@ -23,8 +23,8 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 	private final UserDAO userDAO;
 	private final UserStorageDAO userStorageDAO;
 
-                private ArrayList<JCheckBox> weekDays1 = new ArrayList<JCheckBox> (); 
-        private ArrayList<JCheckBox> weekDays2 = new ArrayList<JCheckBox> (); 
+   //private ArrayList<JCheckBox> weekDays1 = new ArrayList<JCheckBox> (); 
+   //private ArrayList<JCheckBox> weekDays2 = new ArrayList<JCheckBox> (); 
         
 	private Day mondayWeek1 = new Day();
 	private Day tuesdayWeek1 = new Day();
@@ -304,9 +304,9 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 		sun20w2.setSelected(sundayWeek2.getEightPM());
 		sun21w2.setSelected(sundayWeek2.getNinePM());
                 
-                // add to ArrayList
+                /**add to ArrayList
                 
-                 weekDays1.add(mon8w1) ; 
+                weekDays1.add(mon8w1) ; 
                 weekDays1.add(mon9w1) ;
                 weekDays1.add(mon10w1) ;
                 weekDays1.add(mon11w1) ;
@@ -515,6 +515,7 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
                 weekDays2.add(sun19w2) ;
                 weekDays2.add(sun20w2) ;
                 weekDays2.add(sun21w2) ;
+					 */
 	}
 
 	public CheckTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserDAO userDAO, UserStorageDAO userStorageDAO,
@@ -757,33 +758,6 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 		sun20w2.setSelected(sundayWeek2.getEightPM());
 		sun21w2.setSelected(sundayWeek2.getNinePM());
 	}
-
-	/**
-	 * Editing an existing Timetable
-	 */
-	/*public ProductEditorGUI(Window parent, boolean modal, Product product, ProductDAOInterface dao) {
-		//Calls the other constructor
-		this(parent, modal, dao);
-
-		//Assigns the product we are editing to the product field
-		this.product = product;
-
-		//Storing converted numbers into Strings
-		String storePrice = (product.getPrice()).toString();
-		String storeQuantity = Integer.toString(product.getQuantityInStock());
-
-		//Setting the text boxes so they already have these details inside them
-		txtBoxID.setText(product.getProductID());
-		txtBoxName.setText(product.getName());
-		txtBoxDescription.setText(product.getDescription());
-		comboBoxCategory.setSelectedItem(product.getCategory());
-		txtBoxPrice.setValue(storePrice);
-		txtBoxQuantityInStock.setValue(storeQuantity);
-
-		//ID can't be changed
-		txtBoxID.setEditable(false);
-		productIDEditable = false;
-	} */
 	/**
 	 * This method is called from within the constructor to initialize the form.
 	 * WARNING: Do NOT modify this code. The content of this method is always
@@ -4712,7 +4686,7 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
    }//GEN-LAST:event_sun21w2ActionPerformed
 
 	private void saveTimetable(Day day) {
-		timetableDAO.createTimetable(day);
+		timetableDAO.saveDay(day);
 	}
 
    private void buttonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelActionPerformed

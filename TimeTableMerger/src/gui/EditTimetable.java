@@ -5182,7 +5182,7 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
    }//GEN-LAST:event_buttonSaveTimetableActionPerformed
 
     private void saveTimetable(Day day) {
-        timetableDAO.createTimetable(day);
+        timetableDAO.saveDay(day);
     }
 
    private void buttonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelActionPerformed
