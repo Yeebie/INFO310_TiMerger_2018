@@ -5718,7 +5718,9 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="switchButton" min="-2" pref="36" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="284" max="32767" attributes="0"/>
+                  <EmptySpace pref="235" max="32767" attributes="0"/>
+                  <Component id="helpButton" min="-2" pref="25" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -5726,7 +5728,11 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="switchButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="9" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Component id="helpButton" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -5748,6 +5754,15 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="switchButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="java.awt.Button" name="helpButton">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="?"/>
+            <Property name="name" type="java.lang.String" value="helpButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="helpButtonActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
