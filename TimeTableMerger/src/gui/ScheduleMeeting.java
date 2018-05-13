@@ -507,10 +507,44 @@ public class ScheduleMeeting extends javax.swing.JDialog {
             * from all users to an allocated list of users later on
             */
            Set<User> users = new HashSet<>();
-           users = userDAO.getUserList();
+           String user;
+           Integer userNameStart;
+           List<String> userNames = new ArrayList<>();
+           userNames.add(userStorageDAO.getUserName());
+           System.out.println();
 
            /**
-            * Specifying Day Names for handy loop
+            * Gets input from selectedContacts and Substrings it, assumes that
+            * the user won't use ":" in their name, do we need to add input
+            * validation?
+            */
+           for (int i = 0; i < selectedContacts.getModel().getSize(); i++) {
+               user = (selectedContacts.getModel().getElementAt(i));
+               userNameStart = (user.indexOf(58)) + 2;
+               userNames.add(user.substring(userNameStart));
+           }
+
+           /**
+            * Gets all usernames, turns them into basic users
+            */
+           for (String userCheck : userNames) {
+               User retrievedUser = new User();
+               retrievedUser.setUserName(userCheck);
+               users.add(retrievedUser);
+           }
+
+           /**
+            * Making sure all users appear in the HashSet
+            */
+           System.out.println("Checking final User Loop");
+           for (User aUser : users) {
+               System.out.println(aUser.getUserName());
+           }
+
+           System.out.println();
+
+           /**
+            * Specifying day names for handy loop
             */
            ArrayList<String> timetableDays = new ArrayList<>();
 
@@ -760,7 +794,6 @@ public class ScheduleMeeting extends javax.swing.JDialog {
                 */
                //Make a Duration Array with all setDurations?
                for (int i = 0; i < day.size(); i++) {
-                   System.out.println("i: " + i);
                    if (day.get(i) == true) {
                        gapDurations.set(i, 0);
                    }
@@ -785,7 +818,6 @@ public class ScheduleMeeting extends javax.swing.JDialog {
                System.out.println("Gap Durations in Day: " + gapDurations);
                System.out.println("Day Array Size: " + day.size());
                System.out.println("Gap Duration Array Size: " + gapDurations.size());
-               System.out.println();
                System.out.println();
 
                aMergedDay.setEightAMDuration(gapDurations.get(0));
@@ -838,7 +870,7 @@ public class ScheduleMeeting extends javax.swing.JDialog {
             * timetable merge
             */
            dispose();
-           EditTimetable dialog = new EditTimetable(this, true, timetableDAO, userDAO, userStorageDAO, mondayWeek1, tuesdayWeek1, wednesdayWeek1,
+           CheckTimetable dialog = new CheckTimetable(this, true, timetableDAO, userDAO, userStorageDAO, mondayWeek1, tuesdayWeek1, wednesdayWeek1,
                    thursdayWeek1, fridayWeek1, saturdayWeek1, sundayWeek1, mondayWeek2, tuesdayWeek2, wednesdayWeek2, thursdayWeek2, fridayWeek2,
                    saturdayWeek2, sundayWeek2);
 
