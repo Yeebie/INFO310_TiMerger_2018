@@ -37,7 +37,7 @@ public class ScheduleMeeting extends javax.swing.JDialog {
     DefaultListModel<String> usersToCompare = new DefaultListModel<>();
 
     //private SimpleListModel contactsToCompare = new SimpleListModel();
-//not 100% sure these are needed yet
+    //not 100% sure these are needed yet
     private boolean monday;
     private boolean tuesday;
     private boolean wednesday;
@@ -45,6 +45,12 @@ public class ScheduleMeeting extends javax.swing.JDialog {
     private boolean friday;
     private boolean saturday;
     private boolean sunday;
+
+    /**
+     * Keeps track of users that have been iterated over, if a null timetable
+     * appears, the last user in this list would have caused it
+     */
+    private List<String> iteratedUsers = new ArrayList<>();
 
     /**
      * Creates new form ScheduleMeeting
@@ -583,6 +589,7 @@ public class ScheduleMeeting extends javax.swing.JDialog {
            for (User aUser : users) {
                //Compile a user's timetable into a local collection
                Set<Day> usersTimetableDays = new HashSet<>();
+               iteratedUsers.add(aUser.getUserName());
                for (String aTimetableDay : timetableDays) {
                    Day aUsersDay = new Day();
                    aUsersDay = timetableDAO.getDay(aUser.getUserName(), aTimetableDay);
@@ -884,29 +891,16 @@ public class ScheduleMeeting extends javax.swing.JDialog {
            dialog.setVisible(true);
 
        } catch (NullPointerException ex) {
-           // gives the user an option to create a timetable if they haven't already
-           int result = JOptionPane.showOptionDialog(null, "One of the users in your group (Or in the entire database if this is Sprint 2) have not set their timetable up.", "Warning", JOptionPane.OK_OPTION, JOptionPane.PLAIN_MESSAGE, null,
-                   null, null);
-           if (result == JOptionPane.OK_OPTION) {
-               dispose();
-               ScheduleMeeting dialog = new ScheduleMeeting(this, true, timetableDAO, userDAO, userStorageDAO);
-               dialog.pack();
-               //set size
-               dialog.setSize(715, 677);
-               dialog.setLocationRelativeTo(this);
-               dialog.setVisible(true);
-
-           } else {
-               dispose();
-               ScheduleMeeting dialog = new ScheduleMeeting(this, true, timetableDAO, userDAO, userStorageDAO);
-               dialog.pack();
-               //set size
-               dialog.setSize(715, 677);
-               dialog.setLocationRelativeTo(this);
-               dialog.setVisible(true);
-           }
+           // If Null values are found, prevent the program from crashing
+           JOptionPane.showMessageDialog(null, "''" + iteratedUsers.get(iteratedUsers.size() - 1) + "'' has not set their timetable up.", "Error", JOptionPane.ERROR_MESSAGE);
+           dispose();
+           ScheduleMeeting dialog = new ScheduleMeeting(this, true, timetableDAO, userDAO, userStorageDAO);
+           dialog.pack();
+           //set size
+           dialog.setSize(715, 677);
+           dialog.setLocationRelativeTo(this);
+           dialog.setVisible(true);
        }
-
    }//GEN-LAST:event_confirmButtonActionPerformed
 
    private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed

@@ -250,6 +250,8 @@ public class CreateAccount extends javax.swing.JFrame {
             Set<User> users = new HashSet<>();
             users = userDAO.getUserList();
             Boolean userNameUsed = false;
+            Boolean userNameEmpty = false;
+            Boolean passwordEmpty = false;
 
             for (User aUser : users) {
                 System.out.println("New User: " + idString);
@@ -257,35 +259,55 @@ public class CreateAccount extends javax.swing.JFrame {
 
                 if (idString.equals(aUser.getUserName()) == true || userNameUsed == true) {
                     userNameUsed = true;
-                    System.out.println("Caught!");
+                    System.out.println("Caught conflicting username!");
                 } else {
                     userNameUsed = false;
+                }
 
+                if (idString.equals("")) {
+                    userNameEmpty = true;
+                    System.out.println("Caught empty username!");
+                } else {
+                    userNameEmpty = false;
+                }
+
+                if (passwordString.equals("")) {
+                    passwordEmpty = true;
+                    System.out.println("Caught empty password!");
+                } else {
+                    passwordEmpty = false;
                 }
             }
             if (userNameUsed == false) {
+                if (userNameEmpty == false) {
+                    if (passwordEmpty == false) {
+                        if (passwordString.equals(passwordString2)) {
+                            this.user.setUserName(idString);
+                            this.user.setFirstName(fnameString);
+                            this.user.setLastName(lnameString);
+                            this.user.setPassword(passwordString);
+                            this.user.setEmail(email);
+                            userDAO.saveUser(this.user);
 
-                if (passwordString.equals(passwordString2)) {
-                    this.user.setUserName(idString);
-                    this.user.setFirstName(fnameString);
-                    this.user.setLastName(lnameString);
-                    this.user.setPassword(passwordString);
-                    this.user.setEmail(email);
-                    userDAO.saveUser(this.user);
+                            dispose();
+                            Login frame = new Login(userDAO, timetableDAO, userStorageDAO);
+                            // centre the frame on the screen
+                            frame.setLocationRelativeTo(null);
+                            // show the frame
+                            frame.setVisible(true);
 
-                    dispose();
-                    Login frame = new Login(userDAO, timetableDAO, userStorageDAO);
-                    // centre the frame on the screen
-                    frame.setLocationRelativeTo(null);
-                    // show the frame
-                    frame.setVisible(true);
-
+                        } else {
+                            JOptionPane.showMessageDialog(null, "Please enter the same password as above.", "Error", JOptionPane.ERROR_MESSAGE);
+                        }
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Please enter a password.", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
                 } else {
-                    JOptionPane.showConfirmDialog(this, "Please enter the same password as above.");
+                    JOptionPane.showMessageDialog(null, "Please enter a username.", "Error", JOptionPane.ERROR_MESSAGE);
                 }
 
             } else {
-                JOptionPane.showConfirmDialog(this, "Username is already being used.");
+                JOptionPane.showMessageDialog(null, "Username is already being used.", "Error", JOptionPane.ERROR_MESSAGE);
             }
 
         } catch (DAOException ex) {

@@ -23,8 +23,7 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
     private final UserStorageDAO userStorageDAO;
 
     //private ArrayList<JCheckBox> weekDays1 = new ArrayList<JCheckBox>();
-   // private ArrayList<JCheckBox> weekDays2 = new ArrayList<JCheckBox>();
-
+    // private ArrayList<JCheckBox> weekDays2 = new ArrayList<JCheckBox>();
     private Day mondayWeek1 = new Day();
     private Day tuesdayWeek1 = new Day();
     private Day wednesdayWeek1 = new Day();
@@ -303,217 +302,119 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
         sun20w2.setSelected(sundayWeek2.getEightPM());
         sun21w2.setSelected(sundayWeek2.getNinePM());
 
-        /**add to ArrayList
-        weekDays1.add(mon8w1);
-        weekDays1.add(mon9w1);
-        weekDays1.add(mon10w1);
-        weekDays1.add(mon11w1);
-        weekDays1.add(mon12w1);
-        weekDays1.add(mon13w1);
-        weekDays1.add(mon14w1);
-        weekDays1.add(mon15w1);
-        weekDays1.add(mon16w1);
-        weekDays1.add(mon17w1);
-        weekDays1.add(mon18w1);
-        weekDays1.add(mon19w1);
-        weekDays1.add(mon20w1);
-        weekDays1.add(mon21w1);
-
-        weekDays1.add(tue8w1);
-        weekDays1.add(tue9w1);
-        weekDays1.add(tue10w1);
-        weekDays1.add(tue11w1);
-        weekDays1.add(tue12w1);
-        weekDays1.add(tue13w1);
-        weekDays1.add(tue14w1);
-        weekDays1.add(tue15w1);
-        weekDays1.add(tue16w1);
-        weekDays1.add(tue17w1);
-        weekDays1.add(tue18w1);
-        weekDays1.add(tue19w1);
-        weekDays1.add(tue20w1);
-        weekDays1.add(tue21w1);
-
-        weekDays1.add(wed8w1);
-        weekDays1.add(wed9w1);
-        weekDays1.add(wed10w1);
-        weekDays1.add(wed11w1);
-        weekDays1.add(wed12w1);
-        weekDays1.add(wed13w1);
-        weekDays1.add(wed14w1);
-        weekDays1.add(wed15w1);
-        weekDays1.add(wed16w1);
-        weekDays1.add(wed17w1);
-        weekDays1.add(wed18w1);
-        weekDays1.add(wed19w1);
-        weekDays1.add(wed20w1);
-        weekDays1.add(wed21w1);
-
-        weekDays1.add(thu8w1);
-        weekDays1.add(thu9w1);
-        weekDays1.add(thu10w1);
-        weekDays1.add(thu11w1);
-        weekDays1.add(thu12w1);
-        weekDays1.add(thu13w1);
-        weekDays1.add(thu14w1);
-        weekDays1.add(thu15w1);
-        weekDays1.add(thu16w1);
-        weekDays1.add(thu17w1);
-        weekDays1.add(thu18w1);
-        weekDays1.add(thu19w1);
-        weekDays1.add(thu20w1);
-        weekDays1.add(thu21w1);
-
-        weekDays1.add(fri8w1);
-        weekDays1.add(fri9w1);
-        weekDays1.add(fri10w1);
-        weekDays1.add(fri11w1);
-        weekDays1.add(fri12w1);
-        weekDays1.add(fri13w1);
-        weekDays1.add(fri14w1);
-        weekDays1.add(fri15w1);
-        weekDays1.add(fri16w1);
-        weekDays1.add(fri17w1);
-        weekDays1.add(fri18w1);
-        weekDays1.add(fri19w1);
-        weekDays1.add(fri20w1);
-        weekDays1.add(fri21w1);
-
-        weekDays1.add(sat8w1);
-        weekDays1.add(sat9w1);
-        weekDays1.add(sat10w1);
-        weekDays1.add(sat11w1);
-        weekDays1.add(sat12w1);
-        weekDays1.add(sat13w1);
-        weekDays1.add(sat14w1);
-        weekDays1.add(sat15w1);
-        weekDays1.add(sat16w1);
-        weekDays1.add(sat17w1);
-        weekDays1.add(sat18w1);
-        weekDays1.add(sat19w1);
-        weekDays1.add(sat20w1);
-        weekDays1.add(sat21w1);
-
-        weekDays1.add(sun8w1);
-        weekDays1.add(sun9w1);
-        weekDays1.add(sun10w1);
-        weekDays1.add(sun11w1);
-        weekDays1.add(sun12w1);
-        weekDays1.add(sun13w1);
-        weekDays1.add(sun14w1);
-        weekDays1.add(sun15w1);
-        weekDays1.add(sun16w1);
-        weekDays1.add(sun17w1);
-        weekDays1.add(sun18w1);
-        weekDays1.add(sun19w1);
-        weekDays1.add(sun20w1);
-        weekDays1.add(sun21w1);
-
-        weekDays2.add(mon8w2);
-        weekDays2.add(mon9w2);
-        weekDays2.add(mon10w2);
-        weekDays2.add(mon11w2);
-        weekDays2.add(mon12w2);
-        weekDays2.add(mon13w2);
-        weekDays2.add(mon14w2);
-        weekDays2.add(mon15w2);
-        weekDays2.add(mon16w2);
-        weekDays2.add(mon17w2);
-        weekDays2.add(mon18w2);
-        weekDays2.add(mon19w2);
-        weekDays2.add(mon20w2);
-        weekDays2.add(mon21w2);
-
-        weekDays2.add(tue8w2);
-        weekDays2.add(tue9w2);
-        weekDays2.add(tue10w2);
-        weekDays2.add(tue11w2);
-        weekDays2.add(tue12w2);
-        weekDays2.add(tue13w2);
-        weekDays2.add(tue14w2);
-        weekDays2.add(tue15w2);
-        weekDays2.add(tue16w2);
-        weekDays2.add(tue17w2);
-        weekDays2.add(tue18w2);
-        weekDays2.add(tue19w2);
-        weekDays2.add(tue20w2);
-        weekDays2.add(tue21w2);
-
-        weekDays2.add(wed8w2);
-        weekDays2.add(wed9w2);
-        weekDays2.add(wed10w2);
-        weekDays2.add(wed11w2);
-        weekDays2.add(wed12w2);
-        weekDays2.add(wed13w2);
-        weekDays2.add(wed14w2);
-        weekDays2.add(wed15w2);
-        weekDays2.add(wed16w2);
-        weekDays2.add(wed17w2);
-        weekDays2.add(wed18w2);
-        weekDays2.add(wed19w2);
-        weekDays2.add(wed20w2);
-        weekDays2.add(wed21w2);
-
-        weekDays2.add(thu8w2);
-        weekDays2.add(thu9w2);
-        weekDays2.add(thu10w2);
-        weekDays2.add(thu11w2);
-        weekDays2.add(thu12w2);
-        weekDays2.add(thu13w2);
-        weekDays2.add(thu14w2);
-        weekDays2.add(thu15w2);
-        weekDays2.add(thu16w2);
-        weekDays2.add(thu17w2);
-        weekDays2.add(thu18w2);
-        weekDays2.add(thu19w2);
-        weekDays2.add(thu20w2);
-        weekDays2.add(thu21w2);
-
-        weekDays2.add(fri8w2);
-        weekDays2.add(fri9w2);
-        weekDays2.add(fri10w2);
-        weekDays2.add(fri11w2);
-        weekDays2.add(fri12w2);
-        weekDays2.add(fri13w2);
-        weekDays2.add(fri14w2);
-        weekDays2.add(fri15w2);
-        weekDays2.add(fri16w2);
-        weekDays2.add(fri17w2);
-        weekDays2.add(fri18w2);
-        weekDays2.add(fri19w2);
-        weekDays2.add(fri20w2);
-        weekDays2.add(fri21w2);
-
-        weekDays2.add(sat8w2);
-        weekDays2.add(sat9w2);
-        weekDays2.add(sat10w2);
-        weekDays2.add(sat11w2);
-        weekDays2.add(sat12w2);
-        weekDays2.add(sat13w2);
-        weekDays2.add(sat14w2);
-        weekDays2.add(sat15w2);
-        weekDays2.add(sat16w2);
-        weekDays2.add(sat17w2);
-        weekDays2.add(sat18w2);
-        weekDays2.add(sat19w2);
-        weekDays2.add(sat20w2);
-        weekDays2.add(sat21w2);
-
-        weekDays2.add(sun8w2);
-        weekDays2.add(sun9w2);
-        weekDays2.add(sun10w2);
-        weekDays2.add(sun11w2);
-        weekDays2.add(sun12w2);
-        weekDays2.add(sun13w2);
-        weekDays2.add(sun14w2);
-        weekDays2.add(sun15w2);
-        weekDays2.add(sun16w2);
-        weekDays2.add(sun17w2);
-        weekDays2.add(sun18w2);
-        weekDays2.add(sun19w2);
-        weekDays2.add(sun20w2);
-        weekDays2.add(sun21w2);
-		  */
+        /**
+         * add to ArrayList weekDays1.add(mon8w1); weekDays1.add(mon9w1);
+         * weekDays1.add(mon10w1); weekDays1.add(mon11w1);
+         * weekDays1.add(mon12w1); weekDays1.add(mon13w1);
+         * weekDays1.add(mon14w1); weekDays1.add(mon15w1);
+         * weekDays1.add(mon16w1); weekDays1.add(mon17w1);
+         * weekDays1.add(mon18w1); weekDays1.add(mon19w1);
+         * weekDays1.add(mon20w1); weekDays1.add(mon21w1);
+         *
+         * weekDays1.add(tue8w1); weekDays1.add(tue9w1); weekDays1.add(tue10w1);
+         * weekDays1.add(tue11w1); weekDays1.add(tue12w1);
+         * weekDays1.add(tue13w1); weekDays1.add(tue14w1);
+         * weekDays1.add(tue15w1); weekDays1.add(tue16w1);
+         * weekDays1.add(tue17w1); weekDays1.add(tue18w1);
+         * weekDays1.add(tue19w1); weekDays1.add(tue20w1);
+         * weekDays1.add(tue21w1);
+         *
+         * weekDays1.add(wed8w1); weekDays1.add(wed9w1); weekDays1.add(wed10w1);
+         * weekDays1.add(wed11w1); weekDays1.add(wed12w1);
+         * weekDays1.add(wed13w1); weekDays1.add(wed14w1);
+         * weekDays1.add(wed15w1); weekDays1.add(wed16w1);
+         * weekDays1.add(wed17w1); weekDays1.add(wed18w1);
+         * weekDays1.add(wed19w1); weekDays1.add(wed20w1);
+         * weekDays1.add(wed21w1);
+         *
+         * weekDays1.add(thu8w1); weekDays1.add(thu9w1); weekDays1.add(thu10w1);
+         * weekDays1.add(thu11w1); weekDays1.add(thu12w1);
+         * weekDays1.add(thu13w1); weekDays1.add(thu14w1);
+         * weekDays1.add(thu15w1); weekDays1.add(thu16w1);
+         * weekDays1.add(thu17w1); weekDays1.add(thu18w1);
+         * weekDays1.add(thu19w1); weekDays1.add(thu20w1);
+         * weekDays1.add(thu21w1);
+         *
+         * weekDays1.add(fri8w1); weekDays1.add(fri9w1); weekDays1.add(fri10w1);
+         * weekDays1.add(fri11w1); weekDays1.add(fri12w1);
+         * weekDays1.add(fri13w1); weekDays1.add(fri14w1);
+         * weekDays1.add(fri15w1); weekDays1.add(fri16w1);
+         * weekDays1.add(fri17w1); weekDays1.add(fri18w1);
+         * weekDays1.add(fri19w1); weekDays1.add(fri20w1);
+         * weekDays1.add(fri21w1);
+         *
+         * weekDays1.add(sat8w1); weekDays1.add(sat9w1); weekDays1.add(sat10w1);
+         * weekDays1.add(sat11w1); weekDays1.add(sat12w1);
+         * weekDays1.add(sat13w1); weekDays1.add(sat14w1);
+         * weekDays1.add(sat15w1); weekDays1.add(sat16w1);
+         * weekDays1.add(sat17w1); weekDays1.add(sat18w1);
+         * weekDays1.add(sat19w1); weekDays1.add(sat20w1);
+         * weekDays1.add(sat21w1);
+         *
+         * weekDays1.add(sun8w1); weekDays1.add(sun9w1); weekDays1.add(sun10w1);
+         * weekDays1.add(sun11w1); weekDays1.add(sun12w1);
+         * weekDays1.add(sun13w1); weekDays1.add(sun14w1);
+         * weekDays1.add(sun15w1); weekDays1.add(sun16w1);
+         * weekDays1.add(sun17w1); weekDays1.add(sun18w1);
+         * weekDays1.add(sun19w1); weekDays1.add(sun20w1);
+         * weekDays1.add(sun21w1);
+         *
+         * weekDays2.add(mon8w2); weekDays2.add(mon9w2); weekDays2.add(mon10w2);
+         * weekDays2.add(mon11w2); weekDays2.add(mon12w2);
+         * weekDays2.add(mon13w2); weekDays2.add(mon14w2);
+         * weekDays2.add(mon15w2); weekDays2.add(mon16w2);
+         * weekDays2.add(mon17w2); weekDays2.add(mon18w2);
+         * weekDays2.add(mon19w2); weekDays2.add(mon20w2);
+         * weekDays2.add(mon21w2);
+         *
+         * weekDays2.add(tue8w2); weekDays2.add(tue9w2); weekDays2.add(tue10w2);
+         * weekDays2.add(tue11w2); weekDays2.add(tue12w2);
+         * weekDays2.add(tue13w2); weekDays2.add(tue14w2);
+         * weekDays2.add(tue15w2); weekDays2.add(tue16w2);
+         * weekDays2.add(tue17w2); weekDays2.add(tue18w2);
+         * weekDays2.add(tue19w2); weekDays2.add(tue20w2);
+         * weekDays2.add(tue21w2);
+         *
+         * weekDays2.add(wed8w2); weekDays2.add(wed9w2); weekDays2.add(wed10w2);
+         * weekDays2.add(wed11w2); weekDays2.add(wed12w2);
+         * weekDays2.add(wed13w2); weekDays2.add(wed14w2);
+         * weekDays2.add(wed15w2); weekDays2.add(wed16w2);
+         * weekDays2.add(wed17w2); weekDays2.add(wed18w2);
+         * weekDays2.add(wed19w2); weekDays2.add(wed20w2);
+         * weekDays2.add(wed21w2);
+         *
+         * weekDays2.add(thu8w2); weekDays2.add(thu9w2); weekDays2.add(thu10w2);
+         * weekDays2.add(thu11w2); weekDays2.add(thu12w2);
+         * weekDays2.add(thu13w2); weekDays2.add(thu14w2);
+         * weekDays2.add(thu15w2); weekDays2.add(thu16w2);
+         * weekDays2.add(thu17w2); weekDays2.add(thu18w2);
+         * weekDays2.add(thu19w2); weekDays2.add(thu20w2);
+         * weekDays2.add(thu21w2);
+         *
+         * weekDays2.add(fri8w2); weekDays2.add(fri9w2); weekDays2.add(fri10w2);
+         * weekDays2.add(fri11w2); weekDays2.add(fri12w2);
+         * weekDays2.add(fri13w2); weekDays2.add(fri14w2);
+         * weekDays2.add(fri15w2); weekDays2.add(fri16w2);
+         * weekDays2.add(fri17w2); weekDays2.add(fri18w2);
+         * weekDays2.add(fri19w2); weekDays2.add(fri20w2);
+         * weekDays2.add(fri21w2);
+         *
+         * weekDays2.add(sat8w2); weekDays2.add(sat9w2); weekDays2.add(sat10w2);
+         * weekDays2.add(sat11w2); weekDays2.add(sat12w2);
+         * weekDays2.add(sat13w2); weekDays2.add(sat14w2);
+         * weekDays2.add(sat15w2); weekDays2.add(sat16w2);
+         * weekDays2.add(sat17w2); weekDays2.add(sat18w2);
+         * weekDays2.add(sat19w2); weekDays2.add(sat20w2);
+         * weekDays2.add(sat21w2);
+         *
+         * weekDays2.add(sun8w2); weekDays2.add(sun9w2); weekDays2.add(sun10w2);
+         * weekDays2.add(sun11w2); weekDays2.add(sun12w2);
+         * weekDays2.add(sun13w2); weekDays2.add(sun14w2);
+         * weekDays2.add(sun15w2); weekDays2.add(sun16w2);
+         * weekDays2.add(sun17w2); weekDays2.add(sun18w2);
+         * weekDays2.add(sun19w2); weekDays2.add(sun20w2);
+         * weekDays2.add(sun21w2);
+         */
     }
 
     public EditTimetable(Window parent, boolean modal, TimetableDAO timetableDAO, UserDAO userDAO, UserStorageDAO userStorageDAO,
@@ -756,7 +657,7 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
         sun20w2.setSelected(sundayWeek2.getEightPM());
         sun21w2.setSelected(sundayWeek2.getNinePM());
     }
-	 
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -4708,485 +4609,624 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
 
    private void buttonSaveTimetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSaveTimetableActionPerformed
 
-		/** 
-       ArrayList<Boolean> week1 = new ArrayList<Boolean>();
-       ArrayList<Boolean> week2 = new ArrayList<Boolean>();
+       /**
+        * ArrayList<Boolean> week1 = new ArrayList<Boolean>();
+        * ArrayList<Boolean> week2 = new ArrayList<Boolean>();
+        *
+        * for (JCheckBox element : this.weekDays1) {
+        * //System.out.println(element); week1.add(element.isSelected()); }
+        * Boolean value = true; for (JCheckBox element : this.weekDays2) {
+        * week2.add(element.isSelected()); if (element.isSelected() == false) {
+        * value = false; } }
+        *
+        * Day mondayWeek1 = new Day(userName, "Week 1 Monday", new
+        * ArrayList<Boolean>(week1.subList(0, 14)));
+        *
+        * Day tuesdayWeek1 = new Day(userName, "Week 1 Tuesday", new
+        * ArrayList<Boolean>(week1.subList(14, 28)));
+        *
+        * Day wednesdayWeek1 = new Day(userName, "Week 1 Wednesday", new
+        * ArrayList<Boolean>(week1.subList(28, 42)));
+        *
+        * Day thursdayWeek1 = new Day(userName, "Week 1 Thursday", new
+        * ArrayList<Boolean>(week1.subList(42, 56)));
+        *
+        * Day fridayWeek1 = new Day(userName, "Week 1 Friday", new
+        * ArrayList<Boolean>(week1.subList(56, 70)));
+        *
+        * Day saturdayWeek1 = new Day(userName, "Week 1 Saturday", new
+        * ArrayList<Boolean>(week1.subList(70, 84)));
+        *
+        * Day sundayWeek1 = new Day(userName, "Week 1 Sunday", new
+        * ArrayList<Boolean>(week1.subList(84, 98)));
+        *
+        * Day mondayWeek2 = new Day(userName, "Week 2 Monday", new
+        * ArrayList<Boolean>(week1.subList(0, 14)));
+        *
+        * Day tuesdayWeek2 = new Day(userName, "Week 2 Tuesday", new
+        * ArrayList<Boolean>(week1.subList(14, 28)));
+        *
+        * Day wednesdayWeek2 = new Day(userName, "Week 2 Wednesday", new
+        * ArrayList<Boolean>(week1.subList(28, 42)));
+        *
+        * Day thursdayWeek2 = new Day(userName, "Week 2 Thursday", new
+        * ArrayList<Boolean>(week1.subList(42, 56)));
+        *
+        * Day fridayWeek2 = new Day(userName, "Week 2 Friday", new
+        * ArrayList<Boolean>(week1.subList(56, 70)));
+        *
+        * Day saturdayWeek2 = new Day(userName, "Week 2 Saturday", new
+        * ArrayList<Boolean>(week1.subList(70, 84)));
+        *
+        * Day sundayWeek2 = new Day(userName, "Week 2 Sunday", new
+        * ArrayList<Boolean>(week1.subList(84, 98)));
+        *
+        * if (value == false) { mondayWeek2.SetArrayList(new
+        * ArrayList<Boolean>(week1.subList(0, 14)));
+        * mondayWeek2.setDayName("Week 2 Monday"); tuesdayWeek2.SetArrayList(new
+        * ArrayList<Boolean>(week1.subList(14, 28)));
+        * tuesdayWeek2.setDayName("Week 2 Tuesday");
+        * wednesdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(28,
+        * 42))); wednesdayWeek2.setDayName("Week 2 Wednesday");
+        * thursdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(42,
+        * 56))); thursdayWeek2.setDayName("Week 2 Thursday");
+        * fridayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(56,
+        * 70))); fridayWeek2.setDayName("Week 2 Friday");
+        * saturdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(70,
+        * 84))); saturdayWeek2.setDayName("Week 2 Saturday");
+        * sundayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(84,
+        * 98))); sundayWeek2.setDayName("Week 2 Sunday");
+        */
+       /**
+        * Can we turn this into a loop? Probably, wouldn't be suprised This code
+        * will be temporary, it'll probably be turned into a loop
+        */
+       Boolean storeMon8w1 = mon8w1.isSelected();
+       Boolean storeMon9w1 = mon9w1.isSelected();
+       Boolean storeMon10w1 = mon10w1.isSelected();
+       Boolean storeMon11w1 = mon11w1.isSelected();
+       Boolean storeMon12w1 = mon12w1.isSelected();
+       Boolean storeMon13w1 = mon13w1.isSelected();
+       Boolean storeMon14w1 = mon14w1.isSelected();
+       Boolean storeMon15w1 = mon15w1.isSelected();
+       Boolean storeMon16w1 = mon16w1.isSelected();
+       Boolean storeMon17w1 = mon17w1.isSelected();
+       Boolean storeMon18w1 = mon18w1.isSelected();
+       Boolean storeMon19w1 = mon19w1.isSelected();
+       Boolean storeMon20w1 = mon20w1.isSelected();
+       Boolean storeMon21w1 = mon21w1.isSelected();
 
-       for (JCheckBox element : this.weekDays1) {
-           //System.out.println(element);
-           week1.add(element.isSelected());
-       }
-       Boolean value = true;
-       for (JCheckBox element : this.weekDays2) {
-           week2.add(element.isSelected());
-           if (element.isSelected() == false) {
-               value = false;
-           }
-       }
-		 
-		 Day mondayWeek1 = new Day(userName, "Week 1 Monday", new ArrayList<Boolean>(week1.subList(0, 14)));
+       Boolean storeTue8w1 = tue8w1.isSelected();
+       Boolean storeTue9w1 = tue9w1.isSelected();
+       Boolean storeTue10w1 = tue10w1.isSelected();
+       Boolean storeTue11w1 = tue11w1.isSelected();
+       Boolean storeTue12w1 = tue12w1.isSelected();
+       Boolean storeTue13w1 = tue13w1.isSelected();
+       Boolean storeTue14w1 = tue14w1.isSelected();
+       Boolean storeTue15w1 = tue15w1.isSelected();
+       Boolean storeTue16w1 = tue16w1.isSelected();
+       Boolean storeTue17w1 = tue17w1.isSelected();
+       Boolean storeTue18w1 = tue18w1.isSelected();
+       Boolean storeTue19w1 = tue19w1.isSelected();
+       Boolean storeTue20w1 = tue20w1.isSelected();
+       Boolean storeTue21w1 = tue21w1.isSelected();
 
-       Day tuesdayWeek1 = new Day(userName, "Week 1 Tuesday", new ArrayList<Boolean>(week1.subList(14, 28)));
+       Boolean storeWed8w1 = wed8w1.isSelected();
+       Boolean storeWed9w1 = wed9w1.isSelected();
+       Boolean storeWed10w1 = wed10w1.isSelected();
+       Boolean storeWed11w1 = wed11w1.isSelected();
+       Boolean storeWed12w1 = wed12w1.isSelected();
+       Boolean storeWed13w1 = wed13w1.isSelected();
+       Boolean storeWed14w1 = wed14w1.isSelected();
+       Boolean storeWed15w1 = wed15w1.isSelected();
+       Boolean storeWed16w1 = wed16w1.isSelected();
+       Boolean storeWed17w1 = wed17w1.isSelected();
+       Boolean storeWed18w1 = wed18w1.isSelected();
+       Boolean storeWed19w1 = wed19w1.isSelected();
+       Boolean storeWed20w1 = wed20w1.isSelected();
+       Boolean storeWed21w1 = wed21w1.isSelected();
 
-       Day wednesdayWeek1 = new Day(userName, "Week 1 Wednesday", new ArrayList<Boolean>(week1.subList(28, 42)));
+       Boolean storeThu8w1 = thu8w1.isSelected();
+       Boolean storeThu9w1 = thu9w1.isSelected();
+       Boolean storeThu10w1 = thu10w1.isSelected();
+       Boolean storeThu11w1 = thu11w1.isSelected();
+       Boolean storeThu12w1 = thu12w1.isSelected();
+       Boolean storeThu13w1 = thu13w1.isSelected();
+       Boolean storeThu14w1 = thu14w1.isSelected();
+       Boolean storeThu15w1 = thu15w1.isSelected();
+       Boolean storeThu16w1 = thu16w1.isSelected();
+       Boolean storeThu17w1 = thu17w1.isSelected();
+       Boolean storeThu18w1 = thu18w1.isSelected();
+       Boolean storeThu19w1 = thu19w1.isSelected();
+       Boolean storeThu20w1 = thu20w1.isSelected();
+       Boolean storeThu21w1 = thu21w1.isSelected();
 
-       Day thursdayWeek1 = new Day(userName, "Week 1 Thursday", new ArrayList<Boolean>(week1.subList(42, 56)));
+       Boolean storeFri8w1 = fri8w1.isSelected();
+       Boolean storeFri9w1 = fri9w1.isSelected();
+       Boolean storeFri10w1 = fri10w1.isSelected();
+       Boolean storeFri11w1 = fri11w1.isSelected();
+       Boolean storeFri12w1 = fri12w1.isSelected();
+       Boolean storeFri13w1 = fri13w1.isSelected();
+       Boolean storeFri14w1 = fri14w1.isSelected();
+       Boolean storeFri15w1 = fri15w1.isSelected();
+       Boolean storeFri16w1 = fri16w1.isSelected();
+       Boolean storeFri17w1 = fri17w1.isSelected();
+       Boolean storeFri18w1 = fri18w1.isSelected();
+       Boolean storeFri19w1 = fri19w1.isSelected();
+       Boolean storeFri20w1 = fri20w1.isSelected();
+       Boolean storeFri21w1 = fri21w1.isSelected();
 
-       Day fridayWeek1 = new Day(userName, "Week 1 Friday", new ArrayList<Boolean>(week1.subList(56, 70)));
+       Boolean storeSat8w1 = sat8w1.isSelected();
+       Boolean storeSat9w1 = sat9w1.isSelected();
+       Boolean storeSat10w1 = sat10w1.isSelected();
+       Boolean storeSat11w1 = sat11w1.isSelected();
+       Boolean storeSat12w1 = sat12w1.isSelected();
+       Boolean storeSat13w1 = sat13w1.isSelected();
+       Boolean storeSat14w1 = sat14w1.isSelected();
+       Boolean storeSat15w1 = sat15w1.isSelected();
+       Boolean storeSat16w1 = sat16w1.isSelected();
+       Boolean storeSat17w1 = sat17w1.isSelected();
+       Boolean storeSat18w1 = sat18w1.isSelected();
+       Boolean storeSat19w1 = sat19w1.isSelected();
+       Boolean storeSat20w1 = sat20w1.isSelected();
+       Boolean storeSat21w1 = sat21w1.isSelected();
 
-       Day saturdayWeek1 = new Day(userName, "Week 1 Saturday", new ArrayList<Boolean>(week1.subList(70, 84)));
+       Boolean storeSun8w1 = sun8w1.isSelected();
+       Boolean storeSun9w1 = sun9w1.isSelected();
+       Boolean storeSun10w1 = sun10w1.isSelected();
+       Boolean storeSun11w1 = sun11w1.isSelected();
+       Boolean storeSun12w1 = sun12w1.isSelected();
+       Boolean storeSun13w1 = sun13w1.isSelected();
+       Boolean storeSun14w1 = sun14w1.isSelected();
+       Boolean storeSun15w1 = sun15w1.isSelected();
+       Boolean storeSun16w1 = sun16w1.isSelected();
+       Boolean storeSun17w1 = sun17w1.isSelected();
+       Boolean storeSun18w1 = sun18w1.isSelected();
+       Boolean storeSun19w1 = sun19w1.isSelected();
+       Boolean storeSun20w1 = sun20w1.isSelected();
+       Boolean storeSun21w1 = sun21w1.isSelected();
 
-       Day sundayWeek1 = new Day(userName, "Week 1 Sunday", new ArrayList<Boolean>(week1.subList(84, 98)));
+       Boolean storeMon8w2 = mon8w2.isSelected();
+       Boolean storeMon9w2 = mon9w2.isSelected();
+       Boolean storeMon10w2 = mon10w2.isSelected();
+       Boolean storeMon11w2 = mon11w2.isSelected();
+       Boolean storeMon12w2 = mon12w2.isSelected();
+       Boolean storeMon13w2 = mon13w2.isSelected();
+       Boolean storeMon14w2 = mon14w2.isSelected();
+       Boolean storeMon15w2 = mon15w2.isSelected();
+       Boolean storeMon16w2 = mon16w2.isSelected();
+       Boolean storeMon17w2 = mon17w2.isSelected();
+       Boolean storeMon18w2 = mon18w2.isSelected();
+       Boolean storeMon19w2 = mon19w2.isSelected();
+       Boolean storeMon20w2 = mon20w2.isSelected();
+       Boolean storeMon21w2 = mon21w2.isSelected();
 
-       Day mondayWeek2 = new Day(userName, "Week 2 Monday", new ArrayList<Boolean>(week1.subList(0, 14)));
+       Boolean storeTue8w2 = tue8w2.isSelected();
+       Boolean storeTue9w2 = tue9w2.isSelected();
+       Boolean storeTue10w2 = tue10w2.isSelected();
+       Boolean storeTue11w2 = tue11w2.isSelected();
+       Boolean storeTue12w2 = tue12w2.isSelected();
+       Boolean storeTue13w2 = tue13w2.isSelected();
+       Boolean storeTue14w2 = tue14w2.isSelected();
+       Boolean storeTue15w2 = tue15w2.isSelected();
+       Boolean storeTue16w2 = tue16w2.isSelected();
+       Boolean storeTue17w2 = tue17w2.isSelected();
+       Boolean storeTue18w2 = tue18w2.isSelected();
+       Boolean storeTue19w2 = tue19w2.isSelected();
+       Boolean storeTue20w2 = tue20w2.isSelected();
+       Boolean storeTue21w2 = tue21w2.isSelected();
 
-       Day tuesdayWeek2 = new Day(userName, "Week 2 Tuesday", new ArrayList<Boolean>(week1.subList(14, 28)));
+       Boolean storeWed8w2 = wed8w2.isSelected();
+       Boolean storeWed9w2 = wed9w2.isSelected();
+       Boolean storeWed10w2 = wed10w2.isSelected();
+       Boolean storeWed11w2 = wed11w2.isSelected();
+       Boolean storeWed12w2 = wed12w2.isSelected();
+       Boolean storeWed13w2 = wed13w2.isSelected();
+       Boolean storeWed14w2 = wed14w2.isSelected();
+       Boolean storeWed15w2 = wed15w2.isSelected();
+       Boolean storeWed16w2 = wed16w2.isSelected();
+       Boolean storeWed17w2 = wed17w2.isSelected();
+       Boolean storeWed18w2 = wed18w2.isSelected();
+       Boolean storeWed19w2 = wed19w2.isSelected();
+       Boolean storeWed20w2 = wed20w2.isSelected();
+       Boolean storeWed21w2 = wed21w2.isSelected();
 
-       Day wednesdayWeek2 = new Day(userName, "Week 2 Wednesday", new ArrayList<Boolean>(week1.subList(28, 42)));
+       Boolean storeThu8w2 = thu8w2.isSelected();
+       Boolean storeThu9w2 = thu9w2.isSelected();
+       Boolean storeThu10w2 = thu10w2.isSelected();
+       Boolean storeThu11w2 = thu11w2.isSelected();
+       Boolean storeThu12w2 = thu12w2.isSelected();
+       Boolean storeThu13w2 = thu13w2.isSelected();
+       Boolean storeThu14w2 = thu14w2.isSelected();
+       Boolean storeThu15w2 = thu15w2.isSelected();
+       Boolean storeThu16w2 = thu16w2.isSelected();
+       Boolean storeThu17w2 = thu17w2.isSelected();
+       Boolean storeThu18w2 = thu18w2.isSelected();
+       Boolean storeThu19w2 = thu19w2.isSelected();
+       Boolean storeThu20w2 = thu20w2.isSelected();
+       Boolean storeThu21w2 = thu21w2.isSelected();
 
-       Day thursdayWeek2 = new Day(userName, "Week 2 Thursday", new ArrayList<Boolean>(week1.subList(42, 56)));
+       Boolean storeFri8w2 = fri8w2.isSelected();
+       Boolean storeFri9w2 = fri9w2.isSelected();
+       Boolean storeFri10w2 = fri10w2.isSelected();
+       Boolean storeFri11w2 = fri11w2.isSelected();
+       Boolean storeFri12w2 = fri12w2.isSelected();
+       Boolean storeFri13w2 = fri13w2.isSelected();
+       Boolean storeFri14w2 = fri14w2.isSelected();
+       Boolean storeFri15w2 = fri15w2.isSelected();
+       Boolean storeFri16w2 = fri16w2.isSelected();
+       Boolean storeFri17w2 = fri17w2.isSelected();
+       Boolean storeFri18w2 = fri18w2.isSelected();
+       Boolean storeFri19w2 = fri19w2.isSelected();
+       Boolean storeFri20w2 = fri20w2.isSelected();
+       Boolean storeFri21w2 = fri21w2.isSelected();
 
-       Day fridayWeek2 = new Day(userName, "Week 2 Friday", new ArrayList<Boolean>(week1.subList(56, 70)));
+       Boolean storeSat8w2 = sat8w2.isSelected();
+       Boolean storeSat9w2 = sat9w2.isSelected();
+       Boolean storeSat10w2 = sat10w2.isSelected();
+       Boolean storeSat11w2 = sat11w2.isSelected();
+       Boolean storeSat12w2 = sat12w2.isSelected();
+       Boolean storeSat13w2 = sat13w2.isSelected();
+       Boolean storeSat14w2 = sat14w2.isSelected();
+       Boolean storeSat15w2 = sat15w2.isSelected();
+       Boolean storeSat16w2 = sat16w2.isSelected();
+       Boolean storeSat17w2 = sat17w2.isSelected();
+       Boolean storeSat18w2 = sat18w2.isSelected();
+       Boolean storeSat19w2 = sat19w2.isSelected();
+       Boolean storeSat20w2 = sat20w2.isSelected();
+       Boolean storeSat21w2 = sat21w2.isSelected();
 
-       Day saturdayWeek2 = new Day(userName, "Week 2 Saturday", new ArrayList<Boolean>(week1.subList(70, 84)));
-
-       Day sundayWeek2 = new Day(userName, "Week 2 Sunday", new ArrayList<Boolean>(week1.subList(84, 98)));
-		 
-		 if (value == false) {
-		     mondayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(0, 14)));
-           mondayWeek2.setDayName("Week 2 Monday");
-			  tuesdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(14, 28)));
-           tuesdayWeek2.setDayName("Week 2 Tuesday");
-			  wednesdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(28, 42)));
-           wednesdayWeek2.setDayName("Week 2 Wednesday");
-			  thursdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(42, 56)));
-           thursdayWeek2.setDayName("Week 2 Thursday");
-			  fridayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(56, 70)));
-           fridayWeek2.setDayName("Week 2 Friday");
-			  saturdayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(70, 84)));
-           saturdayWeek2.setDayName("Week 2 Saturday");
-			  sundayWeek2.SetArrayList(new ArrayList<Boolean>(week1.subList(84, 98)));
-           sundayWeek2.setDayName("Week 2 Sunday");
-		 */
-		
-      /**
-      * Can we turn this into a loop? Probably, wouldn't be suprised This code
-      * will be temporary, it'll probably be turned into a loop
-      */
-      Boolean storeMon8w1 = mon8w1.isSelected();
-      Boolean storeMon9w1 = mon9w1.isSelected();
-      Boolean storeMon10w1 = mon10w1.isSelected();
-      Boolean storeMon11w1 = mon11w1.isSelected();
-      Boolean storeMon12w1 = mon12w1.isSelected();
-      Boolean storeMon13w1 = mon13w1.isSelected();
-      Boolean storeMon14w1 = mon14w1.isSelected();
-      Boolean storeMon15w1 = mon15w1.isSelected();
-      Boolean storeMon16w1 = mon16w1.isSelected();
-      Boolean storeMon17w1 = mon17w1.isSelected();
-      Boolean storeMon18w1 = mon18w1.isSelected();
-      Boolean storeMon19w1 = mon19w1.isSelected();
-      Boolean storeMon20w1 = mon20w1.isSelected();
-      Boolean storeMon21w1 = mon21w1.isSelected();
-
-      Boolean storeTue8w1 = tue8w1.isSelected();
-      Boolean storeTue9w1 = tue9w1.isSelected();
-      Boolean storeTue10w1 = tue10w1.isSelected();
-      Boolean storeTue11w1 = tue11w1.isSelected();
-      Boolean storeTue12w1 = tue12w1.isSelected();
-      Boolean storeTue13w1 = tue13w1.isSelected();
-      Boolean storeTue14w1 = tue14w1.isSelected();
-      Boolean storeTue15w1 = tue15w1.isSelected();
-      Boolean storeTue16w1 = tue16w1.isSelected();
-      Boolean storeTue17w1 = tue17w1.isSelected();
-      Boolean storeTue18w1 = tue18w1.isSelected();
-      Boolean storeTue19w1 = tue19w1.isSelected();
-      Boolean storeTue20w1 = tue20w1.isSelected();
-      Boolean storeTue21w1 = tue21w1.isSelected();
-
-      Boolean storeWed8w1 = wed8w1.isSelected();
-      Boolean storeWed9w1 = wed9w1.isSelected();
-      Boolean storeWed10w1 = wed10w1.isSelected();
-      Boolean storeWed11w1 = wed11w1.isSelected();
-      Boolean storeWed12w1 = wed12w1.isSelected();
-      Boolean storeWed13w1 = wed13w1.isSelected();
-      Boolean storeWed14w1 = wed14w1.isSelected();
-      Boolean storeWed15w1 = wed15w1.isSelected();
-      Boolean storeWed16w1 = wed16w1.isSelected();
-      Boolean storeWed17w1 = wed17w1.isSelected();
-      Boolean storeWed18w1 = wed18w1.isSelected();
-      Boolean storeWed19w1 = wed19w1.isSelected();
-      Boolean storeWed20w1 = wed20w1.isSelected();
-      Boolean storeWed21w1 = wed21w1.isSelected();
-
-      Boolean storeThu8w1 = thu8w1.isSelected();
-      Boolean storeThu9w1 = thu9w1.isSelected();
-      Boolean storeThu10w1 = thu10w1.isSelected();
-      Boolean storeThu11w1 = thu11w1.isSelected();
-      Boolean storeThu12w1 = thu12w1.isSelected();
-      Boolean storeThu13w1 = thu13w1.isSelected();
-      Boolean storeThu14w1 = thu14w1.isSelected();
-      Boolean storeThu15w1 = thu15w1.isSelected();
-      Boolean storeThu16w1 = thu16w1.isSelected();
-      Boolean storeThu17w1 = thu17w1.isSelected();
-      Boolean storeThu18w1 = thu18w1.isSelected();
-      Boolean storeThu19w1 = thu19w1.isSelected();
-      Boolean storeThu20w1 = thu20w1.isSelected();
-      Boolean storeThu21w1 = thu21w1.isSelected();
-
-      Boolean storeFri8w1 = fri8w1.isSelected();
-      Boolean storeFri9w1 = fri9w1.isSelected();
-      Boolean storeFri10w1 = fri10w1.isSelected();
-      Boolean storeFri11w1 = fri11w1.isSelected();
-      Boolean storeFri12w1 = fri12w1.isSelected();
-      Boolean storeFri13w1 = fri13w1.isSelected();
-      Boolean storeFri14w1 = fri14w1.isSelected();
-      Boolean storeFri15w1 = fri15w1.isSelected();
-      Boolean storeFri16w1 = fri16w1.isSelected();
-      Boolean storeFri17w1 = fri17w1.isSelected();
-      Boolean storeFri18w1 = fri18w1.isSelected();
-      Boolean storeFri19w1 = fri19w1.isSelected();
-      Boolean storeFri20w1 = fri20w1.isSelected();
-      Boolean storeFri21w1 = fri21w1.isSelected();
-
-      Boolean storeSat8w1 = sat8w1.isSelected();
-      Boolean storeSat9w1 = sat9w1.isSelected();
-      Boolean storeSat10w1 = sat10w1.isSelected();
-      Boolean storeSat11w1 = sat11w1.isSelected();
-      Boolean storeSat12w1 = sat12w1.isSelected();
-      Boolean storeSat13w1 = sat13w1.isSelected();
-      Boolean storeSat14w1 = sat14w1.isSelected();
-      Boolean storeSat15w1 = sat15w1.isSelected();
-      Boolean storeSat16w1 = sat16w1.isSelected();
-      Boolean storeSat17w1 = sat17w1.isSelected();
-      Boolean storeSat18w1 = sat18w1.isSelected();
-      Boolean storeSat19w1 = sat19w1.isSelected();
-      Boolean storeSat20w1 = sat20w1.isSelected();
-      Boolean storeSat21w1 = sat21w1.isSelected();
-
-      Boolean storeSun8w1 = sun8w1.isSelected();
-      Boolean storeSun9w1 = sun9w1.isSelected();
-      Boolean storeSun10w1 = sun10w1.isSelected();
-      Boolean storeSun11w1 = sun11w1.isSelected();
-      Boolean storeSun12w1 = sun12w1.isSelected();
-      Boolean storeSun13w1 = sun13w1.isSelected();
-      Boolean storeSun14w1 = sun14w1.isSelected();
-      Boolean storeSun15w1 = sun15w1.isSelected();
-      Boolean storeSun16w1 = sun16w1.isSelected();
-      Boolean storeSun17w1 = sun17w1.isSelected();
-      Boolean storeSun18w1 = sun18w1.isSelected();
-      Boolean storeSun19w1 = sun19w1.isSelected();
-      Boolean storeSun20w1 = sun20w1.isSelected();
-      Boolean storeSun21w1 = sun21w1.isSelected();
-
-      Boolean storeMon8w2 = mon8w2.isSelected();
-      Boolean storeMon9w2 = mon9w2.isSelected();
-      Boolean storeMon10w2 = mon10w2.isSelected();
-      Boolean storeMon11w2 = mon11w2.isSelected();
-      Boolean storeMon12w2 = mon12w2.isSelected();
-      Boolean storeMon13w2 = mon13w2.isSelected();
-      Boolean storeMon14w2 = mon14w2.isSelected();
-      Boolean storeMon15w2 = mon15w2.isSelected();
-      Boolean storeMon16w2 = mon16w2.isSelected();
-      Boolean storeMon17w2 = mon17w2.isSelected();
-      Boolean storeMon18w2 = mon18w2.isSelected();
-      Boolean storeMon19w2 = mon19w2.isSelected();
-      Boolean storeMon20w2 = mon20w2.isSelected();
-      Boolean storeMon21w2 = mon21w2.isSelected();
-
-      Boolean storeTue8w2 = tue8w2.isSelected();
-      Boolean storeTue9w2 = tue9w2.isSelected();
-      Boolean storeTue10w2 = tue10w2.isSelected();
-      Boolean storeTue11w2 = tue11w2.isSelected();
-      Boolean storeTue12w2 = tue12w2.isSelected();
-      Boolean storeTue13w2 = tue13w2.isSelected();
-      Boolean storeTue14w2 = tue14w2.isSelected();
-      Boolean storeTue15w2 = tue15w2.isSelected();
-      Boolean storeTue16w2 = tue16w2.isSelected();
-      Boolean storeTue17w2 = tue17w2.isSelected();
-      Boolean storeTue18w2 = tue18w2.isSelected();
-      Boolean storeTue19w2 = tue19w2.isSelected();
-      Boolean storeTue20w2 = tue20w2.isSelected();
-      Boolean storeTue21w2 = tue21w2.isSelected();
-
-      Boolean storeWed8w2 = wed8w2.isSelected();
-      Boolean storeWed9w2 = wed9w2.isSelected();
-      Boolean storeWed10w2 = wed10w2.isSelected();
-      Boolean storeWed11w2 = wed11w2.isSelected();
-      Boolean storeWed12w2 = wed12w2.isSelected();
-      Boolean storeWed13w2 = wed13w2.isSelected();
-      Boolean storeWed14w2 = wed14w2.isSelected();
-      Boolean storeWed15w2 = wed15w2.isSelected();
-      Boolean storeWed16w2 = wed16w2.isSelected();
-      Boolean storeWed17w2 = wed17w2.isSelected();
-      Boolean storeWed18w2 = wed18w2.isSelected();
-      Boolean storeWed19w2 = wed19w2.isSelected();
-      Boolean storeWed20w2 = wed20w2.isSelected();
-      Boolean storeWed21w2 = wed21w2.isSelected();
-
-      Boolean storeThu8w2 = thu8w2.isSelected();
-      Boolean storeThu9w2 = thu9w2.isSelected();
-      Boolean storeThu10w2 = thu10w2.isSelected();
-      Boolean storeThu11w2 = thu11w2.isSelected();
-      Boolean storeThu12w2 = thu12w2.isSelected();
-      Boolean storeThu13w2 = thu13w2.isSelected();
-      Boolean storeThu14w2 = thu14w2.isSelected();
-      Boolean storeThu15w2 = thu15w2.isSelected();
-      Boolean storeThu16w2 = thu16w2.isSelected();
-      Boolean storeThu17w2 = thu17w2.isSelected();
-      Boolean storeThu18w2 = thu18w2.isSelected();
-      Boolean storeThu19w2 = thu19w2.isSelected();
-      Boolean storeThu20w2 = thu20w2.isSelected();
-      Boolean storeThu21w2 = thu21w2.isSelected();
-
-      Boolean storeFri8w2 = fri8w2.isSelected();
-      Boolean storeFri9w2 = fri9w2.isSelected();
-      Boolean storeFri10w2 = fri10w2.isSelected();
-      Boolean storeFri11w2 = fri11w2.isSelected();
-      Boolean storeFri12w2 = fri12w2.isSelected();
-      Boolean storeFri13w2 = fri13w2.isSelected();
-      Boolean storeFri14w2 = fri14w2.isSelected();
-      Boolean storeFri15w2 = fri15w2.isSelected();
-      Boolean storeFri16w2 = fri16w2.isSelected();
-      Boolean storeFri17w2 = fri17w2.isSelected();
-      Boolean storeFri18w2 = fri18w2.isSelected();
-      Boolean storeFri19w2 = fri19w2.isSelected();
-      Boolean storeFri20w2 = fri20w2.isSelected();
-      Boolean storeFri21w2 = fri21w2.isSelected();
-
-      Boolean storeSat8w2 = sat8w2.isSelected();
-      Boolean storeSat9w2 = sat9w2.isSelected();
-      Boolean storeSat10w2 = sat10w2.isSelected();
-      Boolean storeSat11w2 = sat11w2.isSelected();
-      Boolean storeSat12w2 = sat12w2.isSelected();
-      Boolean storeSat13w2 = sat13w2.isSelected();
-      Boolean storeSat14w2 = sat14w2.isSelected();
-      Boolean storeSat15w2 = sat15w2.isSelected();
-      Boolean storeSat16w2 = sat16w2.isSelected();
-      Boolean storeSat17w2 = sat17w2.isSelected();
-      Boolean storeSat18w2 = sat18w2.isSelected();
-      Boolean storeSat19w2 = sat19w2.isSelected();
-      Boolean storeSat20w2 = sat20w2.isSelected();
-      Boolean storeSat21w2 = sat21w2.isSelected();
-
-      Boolean storeSun8w2 = sun8w2.isSelected();
-      Boolean storeSun9w2 = sun9w2.isSelected();
-      Boolean storeSun10w2 = sun10w2.isSelected();
-      Boolean storeSun11w2 = sun11w2.isSelected();
-      Boolean storeSun12w2 = sun12w2.isSelected();
-      Boolean storeSun13w2 = sun13w2.isSelected();
-      Boolean storeSun14w2 = sun14w2.isSelected();
-      Boolean storeSun15w2 = sun15w2.isSelected();
-      Boolean storeSun16w2 = sun16w2.isSelected();
-      Boolean storeSun17w2 = sun17w2.isSelected();
-      Boolean storeSun18w2 = sun18w2.isSelected();
-      Boolean storeSun19w2 = sun19w2.isSelected();
-      Boolean storeSun20w2 = sun20w2.isSelected();
-      Boolean storeSun21w2 = sun21w2.isSelected();
+       Boolean storeSun8w2 = sun8w2.isSelected();
+       Boolean storeSun9w2 = sun9w2.isSelected();
+       Boolean storeSun10w2 = sun10w2.isSelected();
+       Boolean storeSun11w2 = sun11w2.isSelected();
+       Boolean storeSun12w2 = sun12w2.isSelected();
+       Boolean storeSun13w2 = sun13w2.isSelected();
+       Boolean storeSun14w2 = sun14w2.isSelected();
+       Boolean storeSun15w2 = sun15w2.isSelected();
+       Boolean storeSun16w2 = sun16w2.isSelected();
+       Boolean storeSun17w2 = sun17w2.isSelected();
+       Boolean storeSun18w2 = sun18w2.isSelected();
+       Boolean storeSun19w2 = sun19w2.isSelected();
+       Boolean storeSun20w2 = sun20w2.isSelected();
+       Boolean storeSun21w2 = sun21w2.isSelected();
 
        String userName = userStorageDAO.getUserName();
 
-      Day mondayWeek1 = new Day(userName, "Week 1 Monday", storeMon8w1, storeMon9w1, storeMon10w1, storeMon11w1, storeMon12w1,
-         storeMon13w1, storeMon14w1, storeMon15w1, storeMon16w1, storeMon17w1, storeMon18w1, storeMon19w1,
-         storeMon20w1, storeMon21w1);
+       Day mondayWeek1 = new Day(userName, "Week 1 Monday", storeMon8w1, storeMon9w1, storeMon10w1, storeMon11w1, storeMon12w1,
+               storeMon13w1, storeMon14w1, storeMon15w1, storeMon16w1, storeMon17w1, storeMon18w1, storeMon19w1,
+               storeMon20w1, storeMon21w1);
 
-      Day tuesdayWeek1 = new Day(userName, "Week 1 Tuesday", storeTue8w1, storeTue9w1, storeTue10w1, storeTue11w1, storeTue12w1,
-         storeTue13w1, storeTue14w1, storeTue15w1, storeTue16w1, storeTue17w1, storeTue18w1, storeTue19w1,
-         storeTue20w1, storeTue21w1);
+       Day tuesdayWeek1 = new Day(userName, "Week 1 Tuesday", storeTue8w1, storeTue9w1, storeTue10w1, storeTue11w1, storeTue12w1,
+               storeTue13w1, storeTue14w1, storeTue15w1, storeTue16w1, storeTue17w1, storeTue18w1, storeTue19w1,
+               storeTue20w1, storeTue21w1);
 
-      Day wednesdayWeek1 = new Day(userName, "Week 1 Wednesday", storeWed8w1, storeWed9w1, storeWed10w1, storeWed11w1, storeWed12w1,
-         storeWed13w1, storeWed14w1, storeWed15w1, storeWed16w1, storeWed17w1, storeWed18w1, storeWed19w1,
-         storeWed20w1, storeWed21w1);
+       Day wednesdayWeek1 = new Day(userName, "Week 1 Wednesday", storeWed8w1, storeWed9w1, storeWed10w1, storeWed11w1, storeWed12w1,
+               storeWed13w1, storeWed14w1, storeWed15w1, storeWed16w1, storeWed17w1, storeWed18w1, storeWed19w1,
+               storeWed20w1, storeWed21w1);
 
-      Day thursdayWeek1 = new Day(userName, "Week 1 Thursday", storeThu8w1, storeThu9w1, storeThu10w1, storeThu11w1, storeThu12w1,
-         storeThu13w1, storeThu14w1, storeThu15w1, storeThu16w1, storeThu17w1, storeThu18w1, storeThu19w1,
-         storeThu20w1, storeThu21w1);
+       Day thursdayWeek1 = new Day(userName, "Week 1 Thursday", storeThu8w1, storeThu9w1, storeThu10w1, storeThu11w1, storeThu12w1,
+               storeThu13w1, storeThu14w1, storeThu15w1, storeThu16w1, storeThu17w1, storeThu18w1, storeThu19w1,
+               storeThu20w1, storeThu21w1);
 
-      Day fridayWeek1 = new Day(userName, "Week 1 Friday", storeFri8w1, storeFri9w1, storeFri10w1, storeFri11w1, storeFri12w1,
-         storeFri13w1, storeFri14w1, storeFri15w1, storeFri16w1, storeFri17w1, storeFri18w1, storeFri19w1,
-         storeFri20w1, storeFri21w1);
+       Day fridayWeek1 = new Day(userName, "Week 1 Friday", storeFri8w1, storeFri9w1, storeFri10w1, storeFri11w1, storeFri12w1,
+               storeFri13w1, storeFri14w1, storeFri15w1, storeFri16w1, storeFri17w1, storeFri18w1, storeFri19w1,
+               storeFri20w1, storeFri21w1);
 
-      Day saturdayWeek1 = new Day(userName, "Week 1 Saturday", storeSat8w1, storeSat9w1, storeSat10w1, storeSat11w1, storeSat12w1,
-         storeSat13w1, storeSat14w1, storeSat15w1, storeSat16w1, storeSat17w1, storeSat18w1, storeSat19w1,
-         storeSat20w1, storeSat21w1);
+       Day saturdayWeek1 = new Day(userName, "Week 1 Saturday", storeSat8w1, storeSat9w1, storeSat10w1, storeSat11w1, storeSat12w1,
+               storeSat13w1, storeSat14w1, storeSat15w1, storeSat16w1, storeSat17w1, storeSat18w1, storeSat19w1,
+               storeSat20w1, storeSat21w1);
 
-      Day sundayWeek1 = new Day(userName, "Week 1 Sunday", storeSun8w1, storeSun9w1, storeSun10w1, storeSun11w1, storeSun12w1,
-         storeSun13w1, storeSun14w1, storeSun15w1, storeSun16w1, storeSun17w1, storeSun18w1, storeSun19w1,
-         storeSun20w1, storeSun21w1);
+       Day sundayWeek1 = new Day(userName, "Week 1 Sunday", storeSun8w1, storeSun9w1, storeSun10w1, storeSun11w1, storeSun12w1,
+               storeSun13w1, storeSun14w1, storeSun15w1, storeSun16w1, storeSun17w1, storeSun18w1, storeSun19w1,
+               storeSun20w1, storeSun21w1);
 
-      Day mondayWeek2 = new Day(userName, "Week 2 Monday", storeMon8w2, storeMon9w2, storeMon10w2, storeMon11w2, storeMon12w2,
-         storeMon13w2, storeMon14w2, storeMon15w2, storeMon16w2, storeMon17w2, storeMon18w2, storeMon19w2,
-         storeMon20w2, storeMon21w2);
+       Day mondayWeek2 = new Day(userName, "Week 2 Monday", storeMon8w2, storeMon9w2, storeMon10w2, storeMon11w2, storeMon12w2,
+               storeMon13w2, storeMon14w2, storeMon15w2, storeMon16w2, storeMon17w2, storeMon18w2, storeMon19w2,
+               storeMon20w2, storeMon21w2);
 
-      Day tuesdayWeek2 = new Day(userName, "Week 2 Tuesday", storeTue8w2, storeTue9w2, storeTue10w2, storeTue11w2, storeTue12w2,
-         storeTue13w2, storeTue14w2, storeTue15w2, storeTue16w2, storeTue17w2, storeTue18w2, storeTue19w2,
-         storeTue20w2, storeTue21w2);
+       Day tuesdayWeek2 = new Day(userName, "Week 2 Tuesday", storeTue8w2, storeTue9w2, storeTue10w2, storeTue11w2, storeTue12w2,
+               storeTue13w2, storeTue14w2, storeTue15w2, storeTue16w2, storeTue17w2, storeTue18w2, storeTue19w2,
+               storeTue20w2, storeTue21w2);
 
-      Day wednesdayWeek2 = new Day(userName, "Week 2 Wednesday", storeWed8w2, storeWed9w2, storeWed10w2, storeWed11w2, storeWed12w2,
-         storeWed13w2, storeWed14w2, storeWed15w2, storeWed16w2, storeWed17w2, storeWed18w2, storeWed19w2,
-         storeWed20w2, storeWed21w2);
+       Day wednesdayWeek2 = new Day(userName, "Week 2 Wednesday", storeWed8w2, storeWed9w2, storeWed10w2, storeWed11w2, storeWed12w2,
+               storeWed13w2, storeWed14w2, storeWed15w2, storeWed16w2, storeWed17w2, storeWed18w2, storeWed19w2,
+               storeWed20w2, storeWed21w2);
 
-      Day thursdayWeek2 = new Day(userName, "Week 2 Thursday", storeThu8w2, storeThu9w2, storeThu10w2, storeThu11w2, storeThu12w2,
-         storeThu13w2, storeThu14w2, storeThu15w2, storeThu16w2, storeThu17w2, storeThu18w2, storeThu19w2,
-         storeThu20w2, storeThu21w2);
+       Day thursdayWeek2 = new Day(userName, "Week 2 Thursday", storeThu8w2, storeThu9w2, storeThu10w2, storeThu11w2, storeThu12w2,
+               storeThu13w2, storeThu14w2, storeThu15w2, storeThu16w2, storeThu17w2, storeThu18w2, storeThu19w2,
+               storeThu20w2, storeThu21w2);
 
-      Day fridayWeek2 = new Day(userName, "Week 2 Friday", storeFri8w2, storeFri9w2, storeFri10w2, storeFri11w2, storeFri12w2,
-         storeFri13w2, storeFri14w2, storeFri15w2, storeFri16w2, storeFri17w2, storeFri18w2, storeFri19w2,
-         storeFri20w2, storeFri21w2);
+       Day fridayWeek2 = new Day(userName, "Week 2 Friday", storeFri8w2, storeFri9w2, storeFri10w2, storeFri11w2, storeFri12w2,
+               storeFri13w2, storeFri14w2, storeFri15w2, storeFri16w2, storeFri17w2, storeFri18w2, storeFri19w2,
+               storeFri20w2, storeFri21w2);
 
-      Day saturdayWeek2 = new Day(userName, "Week 2 Saturday", storeSat8w2, storeSat9w2, storeSat10w2, storeSat11w2, storeSat12w2,
-         storeSat13w2, storeSat14w2, storeSat15w2, storeSat16w2, storeSat17w2, storeSat18w2, storeSat19w2,
-         storeSat20w2, storeSat21w2);
+       Day saturdayWeek2 = new Day(userName, "Week 2 Saturday", storeSat8w2, storeSat9w2, storeSat10w2, storeSat11w2, storeSat12w2,
+               storeSat13w2, storeSat14w2, storeSat15w2, storeSat16w2, storeSat17w2, storeSat18w2, storeSat19w2,
+               storeSat20w2, storeSat21w2);
 
-      Day sundayWeek2 = new Day(userName, "Week 2 Sunday", storeSun8w2, storeSun9w2, storeSun10w2, storeSun11w2, storeSun12w2,
-         storeSun13w2, storeSun14w2, storeSun15w2, storeSun16w2, storeSun17w2, storeSun18w2, storeSun19w2,
-         storeSun20w2, storeSun21w2);
-		
-      if (storeMon8w2 == false && storeMon9w2 == false && storeMon10w2 == false && storeMon11w2 == false && storeMon12w2
-         == false && storeMon13w2 == false && storeMon14w2 == false && storeMon15w2 == false && storeMon16w2 == false && storeMon17w2 == false && storeMon18w2 == false && storeMon19w2
-         == false && storeMon20w2 == false && storeMon21w2 == false && storeTue8w2 == false && storeTue9w2 == false && storeTue10w2 == false && storeTue11w2 == false && storeTue12w2
-         == false && storeTue13w2 == false && storeTue14w2 == false && storeTue15w2 == false && storeTue16w2 == false && storeTue17w2 == false && storeTue18w2 == false && storeTue19w2
-         == false && storeTue20w2 == false && storeTue21w2 == false && storeWed8w2 == false && storeWed9w2 == false && storeWed10w2 == false && storeWed11w2 == false && storeWed12w2
-         == false && storeWed13w2 == false && storeWed14w2 == false && storeWed15w2 == false && storeWed16w2 == false && storeWed17w2 == false && storeWed18w2 == false && storeWed19w2
-         == false && storeWed20w2 == false && storeWed21w2 == false && storeThu8w2 == false && storeThu9w2 == false && storeThu10w2 == false && storeThu11w2 == false && storeThu12w2
-         == false && storeThu13w2 == false && storeThu14w2 == false && storeThu15w2 == false && storeThu16w2 == false && storeThu17w2 == false && storeThu18w2 == false && storeThu19w2
-         == false && storeThu20w2 == false && storeThu21w2 == false && storeFri8w2 == false && storeFri9w2 == false && storeFri10w2 == false && storeFri11w2 == false && storeFri12w2
-         == false && storeFri13w2 == false && storeFri14w2 == false && storeFri15w2 == false && storeFri16w2 == false && storeFri17w2 == false && storeFri18w2 == false && storeFri19w2
-         == false && storeFri20w2 == false && storeFri21w2 == false && storeSat8w2 == false && storeSat9w2 == false && storeSat10w2 == false && storeSat11w2 == false && storeSat12w2
-         == false && storeSat13w2 == false && storeSat14w2 == false && storeSat15w2 == false && storeSat16w2 == false && storeSat17w2 == false && storeSat18w2 == false && storeSat19w2
-         == false && storeSat20w2 == false && storeSat21w2 == false && storeSun8w2 == false && storeSun9w2 == false && storeSun10w2 == false && storeSun11w2 == false && storeSun12w2
-         == false && storeSun13w2 == false && storeSun14w2 == false && storeSun15w2 == false && storeSun16w2 == false && storeSun17w2 == false && storeSun18w2 == false && storeSun19w2
-         == false && storeSun20w2 == false && storeSun21w2 == false) {
+       Day sundayWeek2 = new Day(userName, "Week 2 Sunday", storeSun8w2, storeSun9w2, storeSun10w2, storeSun11w2, storeSun12w2,
+               storeSun13w2, storeSun14w2, storeSun15w2, storeSun16w2, storeSun17w2, storeSun18w2, storeSun19w2,
+               storeSun20w2, storeSun21w2);
 
-         mondayWeek2.setEightAM(storeMon8w1);
-         mondayWeek2.setNineAM(storeMon9w1);
-         mondayWeek2.setTenAM(storeMon10w1);
-         mondayWeek2.setElevenAM(storeMon11w1);
-         mondayWeek2.setTwelvePM(storeMon12w1);
-         mondayWeek2.setOnePM(storeMon13w1);
-         mondayWeek2.setTwoPM(storeMon14w1);
-         mondayWeek2.setThreePM(storeMon15w1);
-         mondayWeek2.setFourPM(storeMon16w1);
-         mondayWeek2.setFivePM(storeMon17w1);
-         mondayWeek2.setSixPM(storeMon18w1);
-         mondayWeek2.setSevenPM(storeMon19w1);
-         mondayWeek2.setEightPM(storeMon20w1);
-         mondayWeek2.setNinePM(storeMon21w1);
-         mondayWeek2.setDayName("Week 2 Monday");
+       if (storeMon8w2 == false && storeMon9w2 == false && storeMon10w2 == false && storeMon11w2 == false && storeMon12w2
+               == false && storeMon13w2 == false && storeMon14w2 == false && storeMon15w2 == false && storeMon16w2 == false && storeMon17w2 == false && storeMon18w2 == false && storeMon19w2
+               == false && storeMon20w2 == false && storeMon21w2 == false && storeTue8w2 == false && storeTue9w2 == false && storeTue10w2 == false && storeTue11w2 == false && storeTue12w2
+               == false && storeTue13w2 == false && storeTue14w2 == false && storeTue15w2 == false && storeTue16w2 == false && storeTue17w2 == false && storeTue18w2 == false && storeTue19w2
+               == false && storeTue20w2 == false && storeTue21w2 == false && storeWed8w2 == false && storeWed9w2 == false && storeWed10w2 == false && storeWed11w2 == false && storeWed12w2
+               == false && storeWed13w2 == false && storeWed14w2 == false && storeWed15w2 == false && storeWed16w2 == false && storeWed17w2 == false && storeWed18w2 == false && storeWed19w2
+               == false && storeWed20w2 == false && storeWed21w2 == false && storeThu8w2 == false && storeThu9w2 == false && storeThu10w2 == false && storeThu11w2 == false && storeThu12w2
+               == false && storeThu13w2 == false && storeThu14w2 == false && storeThu15w2 == false && storeThu16w2 == false && storeThu17w2 == false && storeThu18w2 == false && storeThu19w2
+               == false && storeThu20w2 == false && storeThu21w2 == false && storeFri8w2 == false && storeFri9w2 == false && storeFri10w2 == false && storeFri11w2 == false && storeFri12w2
+               == false && storeFri13w2 == false && storeFri14w2 == false && storeFri15w2 == false && storeFri16w2 == false && storeFri17w2 == false && storeFri18w2 == false && storeFri19w2
+               == false && storeFri20w2 == false && storeFri21w2 == false && storeSat8w2 == false && storeSat9w2 == false && storeSat10w2 == false && storeSat11w2 == false && storeSat12w2
+               == false && storeSat13w2 == false && storeSat14w2 == false && storeSat15w2 == false && storeSat16w2 == false && storeSat17w2 == false && storeSat18w2 == false && storeSat19w2
+               == false && storeSat20w2 == false && storeSat21w2 == false && storeSun8w2 == false && storeSun9w2 == false && storeSun10w2 == false && storeSun11w2 == false && storeSun12w2
+               == false && storeSun13w2 == false && storeSun14w2 == false && storeSun15w2 == false && storeSun16w2 == false && storeSun17w2 == false && storeSun18w2 == false && storeSun19w2
+               == false && storeSun20w2 == false && storeSun21w2 == false) {
 
-         tuesdayWeek2.setEightAM(storeTue8w1);
-         tuesdayWeek2.setNineAM(storeTue9w1);
-         tuesdayWeek2.setTenAM(storeTue10w1);
-         tuesdayWeek2.setElevenAM(storeTue11w1);
-         tuesdayWeek2.setTwelvePM(storeTue12w1);
-         tuesdayWeek2.setOnePM(storeTue13w1);
-         tuesdayWeek2.setTwoPM(storeTue14w1);
-         tuesdayWeek2.setThreePM(storeTue15w1);
-         tuesdayWeek2.setFourPM(storeTue16w1);
-         tuesdayWeek2.setFivePM(storeTue17w1);
-         tuesdayWeek2.setSixPM(storeTue18w1);
-         tuesdayWeek2.setSevenPM(storeTue19w1);
-         tuesdayWeek2.setEightPM(storeTue20w1);
-         tuesdayWeek2.setNinePM(storeTue21w1);
-         tuesdayWeek2.setDayName("Week 2 Tuesday");
+           mondayWeek2.setEightAM(storeMon8w1);
+           mondayWeek2.setNineAM(storeMon9w1);
+           mondayWeek2.setTenAM(storeMon10w1);
+           mondayWeek2.setElevenAM(storeMon11w1);
+           mondayWeek2.setTwelvePM(storeMon12w1);
+           mondayWeek2.setOnePM(storeMon13w1);
+           mondayWeek2.setTwoPM(storeMon14w1);
+           mondayWeek2.setThreePM(storeMon15w1);
+           mondayWeek2.setFourPM(storeMon16w1);
+           mondayWeek2.setFivePM(storeMon17w1);
+           mondayWeek2.setSixPM(storeMon18w1);
+           mondayWeek2.setSevenPM(storeMon19w1);
+           mondayWeek2.setEightPM(storeMon20w1);
+           mondayWeek2.setNinePM(storeMon21w1);
+           mondayWeek2.setDayName("Week 2 Monday");
 
-         wednesdayWeek2.setEightAM(storeWed8w1);
-         wednesdayWeek2.setNineAM(storeWed9w1);
-         wednesdayWeek2.setTenAM(storeWed10w1);
-         wednesdayWeek2.setElevenAM(storeWed11w1);
-         wednesdayWeek2.setTwelvePM(storeWed12w1);
-         wednesdayWeek2.setOnePM(storeWed13w1);
-         wednesdayWeek2.setTwoPM(storeWed14w1);
-         wednesdayWeek2.setThreePM(storeWed15w1);
-         wednesdayWeek2.setFourPM(storeWed16w1);
-         wednesdayWeek2.setFivePM(storeWed17w1);
-         wednesdayWeek2.setSixPM(storeWed18w1);
-         wednesdayWeek2.setSevenPM(storeWed19w1);
-         wednesdayWeek2.setEightPM(storeWed20w1);
-         wednesdayWeek2.setNinePM(storeWed21w1);
-         wednesdayWeek2.setDayName("Week 2 Wednesday");
+           tuesdayWeek2.setEightAM(storeTue8w1);
+           tuesdayWeek2.setNineAM(storeTue9w1);
+           tuesdayWeek2.setTenAM(storeTue10w1);
+           tuesdayWeek2.setElevenAM(storeTue11w1);
+           tuesdayWeek2.setTwelvePM(storeTue12w1);
+           tuesdayWeek2.setOnePM(storeTue13w1);
+           tuesdayWeek2.setTwoPM(storeTue14w1);
+           tuesdayWeek2.setThreePM(storeTue15w1);
+           tuesdayWeek2.setFourPM(storeTue16w1);
+           tuesdayWeek2.setFivePM(storeTue17w1);
+           tuesdayWeek2.setSixPM(storeTue18w1);
+           tuesdayWeek2.setSevenPM(storeTue19w1);
+           tuesdayWeek2.setEightPM(storeTue20w1);
+           tuesdayWeek2.setNinePM(storeTue21w1);
+           tuesdayWeek2.setDayName("Week 2 Tuesday");
 
-         thursdayWeek2.setEightAM(storeThu8w1);
-         thursdayWeek2.setNineAM(storeThu9w1);
-         thursdayWeek2.setTenAM(storeThu10w1);
-         thursdayWeek2.setElevenAM(storeThu11w1);
-         thursdayWeek2.setTwelvePM(storeThu12w1);
-         thursdayWeek2.setOnePM(storeThu13w1);
-         thursdayWeek2.setTwoPM(storeThu14w1);
-         thursdayWeek2.setThreePM(storeThu15w1);
-         thursdayWeek2.setFourPM(storeThu16w1);
-         thursdayWeek2.setFivePM(storeThu17w1);
-         thursdayWeek2.setSixPM(storeThu18w1);
-         thursdayWeek2.setSevenPM(storeThu19w1);
-         thursdayWeek2.setEightPM(storeThu20w1);
-         thursdayWeek2.setNinePM(storeThu21w1);
-			thursdayWeek2.setDayName("Week 2 Thursday");
+           wednesdayWeek2.setEightAM(storeWed8w1);
+           wednesdayWeek2.setNineAM(storeWed9w1);
+           wednesdayWeek2.setTenAM(storeWed10w1);
+           wednesdayWeek2.setElevenAM(storeWed11w1);
+           wednesdayWeek2.setTwelvePM(storeWed12w1);
+           wednesdayWeek2.setOnePM(storeWed13w1);
+           wednesdayWeek2.setTwoPM(storeWed14w1);
+           wednesdayWeek2.setThreePM(storeWed15w1);
+           wednesdayWeek2.setFourPM(storeWed16w1);
+           wednesdayWeek2.setFivePM(storeWed17w1);
+           wednesdayWeek2.setSixPM(storeWed18w1);
+           wednesdayWeek2.setSevenPM(storeWed19w1);
+           wednesdayWeek2.setEightPM(storeWed20w1);
+           wednesdayWeek2.setNinePM(storeWed21w1);
+           wednesdayWeek2.setDayName("Week 2 Wednesday");
 
-         fridayWeek2.setEightAM(storeFri8w1);
-         fridayWeek2.setNineAM(storeFri9w1);
-         fridayWeek2.setTenAM(storeFri10w1);
-         fridayWeek2.setElevenAM(storeFri11w1);
-         fridayWeek2.setTwelvePM(storeFri12w1);
-         fridayWeek2.setOnePM(storeFri13w1);
-         fridayWeek2.setTwoPM(storeFri14w1);
-         fridayWeek2.setThreePM(storeFri15w1);
-         fridayWeek2.setFourPM(storeFri16w1);
-         fridayWeek2.setFivePM(storeFri17w1);
-         fridayWeek2.setSixPM(storeFri18w1);
-         fridayWeek2.setSevenPM(storeFri19w1);
-         fridayWeek2.setEightPM(storeFri20w1);
-         fridayWeek2.setNinePM(storeFri21w1);
-         fridayWeek2.setDayName("Week 2 Friday");
+           thursdayWeek2.setEightAM(storeThu8w1);
+           thursdayWeek2.setNineAM(storeThu9w1);
+           thursdayWeek2.setTenAM(storeThu10w1);
+           thursdayWeek2.setElevenAM(storeThu11w1);
+           thursdayWeek2.setTwelvePM(storeThu12w1);
+           thursdayWeek2.setOnePM(storeThu13w1);
+           thursdayWeek2.setTwoPM(storeThu14w1);
+           thursdayWeek2.setThreePM(storeThu15w1);
+           thursdayWeek2.setFourPM(storeThu16w1);
+           thursdayWeek2.setFivePM(storeThu17w1);
+           thursdayWeek2.setSixPM(storeThu18w1);
+           thursdayWeek2.setSevenPM(storeThu19w1);
+           thursdayWeek2.setEightPM(storeThu20w1);
+           thursdayWeek2.setNinePM(storeThu21w1);
+           thursdayWeek2.setDayName("Week 2 Thursday");
 
-         saturdayWeek2.setEightAM(storeSat8w1);
-         saturdayWeek2.setNineAM(storeSat9w1);
-         saturdayWeek2.setTenAM(storeSat10w1);
-         saturdayWeek2.setElevenAM(storeSat11w1);
-         saturdayWeek2.setTwelvePM(storeSat12w1);
-         saturdayWeek2.setOnePM(storeSat13w1);
-         saturdayWeek2.setTwoPM(storeSat14w1);
-         saturdayWeek2.setThreePM(storeSat15w1);
-         saturdayWeek2.setFourPM(storeSat16w1);
-         saturdayWeek2.setFivePM(storeSat17w1);
-         saturdayWeek2.setSixPM(storeSat18w1);
-         saturdayWeek2.setSevenPM(storeSat19w1);
-         saturdayWeek2.setEightPM(storeSat20w1);
-         saturdayWeek2.setNinePM(storeSat21w1);
-         saturdayWeek2.setDayName("Week 2 Saturday");
+           fridayWeek2.setEightAM(storeFri8w1);
+           fridayWeek2.setNineAM(storeFri9w1);
+           fridayWeek2.setTenAM(storeFri10w1);
+           fridayWeek2.setElevenAM(storeFri11w1);
+           fridayWeek2.setTwelvePM(storeFri12w1);
+           fridayWeek2.setOnePM(storeFri13w1);
+           fridayWeek2.setTwoPM(storeFri14w1);
+           fridayWeek2.setThreePM(storeFri15w1);
+           fridayWeek2.setFourPM(storeFri16w1);
+           fridayWeek2.setFivePM(storeFri17w1);
+           fridayWeek2.setSixPM(storeFri18w1);
+           fridayWeek2.setSevenPM(storeFri19w1);
+           fridayWeek2.setEightPM(storeFri20w1);
+           fridayWeek2.setNinePM(storeFri21w1);
+           fridayWeek2.setDayName("Week 2 Friday");
 
-         sundayWeek2.setEightAM(storeSun8w1);
-         sundayWeek2.setNineAM(storeSun9w1);
-         sundayWeek2.setTenAM(storeSun10w1);
-         sundayWeek2.setElevenAM(storeSun11w1);
-         sundayWeek2.setTwelvePM(storeSun12w1);
-         sundayWeek2.setOnePM(storeSun13w1);
-         sundayWeek2.setTwoPM(storeSun14w1);
-         sundayWeek2.setThreePM(storeSun15w1);
-         sundayWeek2.setFourPM(storeSun16w1);
-         sundayWeek2.setFivePM(storeSun17w1);
-         sundayWeek2.setSixPM(storeSun18w1);
-         sundayWeek2.setSevenPM(storeSun19w1);
-         sundayWeek2.setEightPM(storeSun20w1);
-         sundayWeek2.setNinePM(storeSun21w1);
-         sundayWeek2.setDayName("Week 2 Sunday");
-		}
+           saturdayWeek2.setEightAM(storeSat8w1);
+           saturdayWeek2.setNineAM(storeSat9w1);
+           saturdayWeek2.setTenAM(storeSat10w1);
+           saturdayWeek2.setElevenAM(storeSat11w1);
+           saturdayWeek2.setTwelvePM(storeSat12w1);
+           saturdayWeek2.setOnePM(storeSat13w1);
+           saturdayWeek2.setTwoPM(storeSat14w1);
+           saturdayWeek2.setThreePM(storeSat15w1);
+           saturdayWeek2.setFourPM(storeSat16w1);
+           saturdayWeek2.setFivePM(storeSat17w1);
+           saturdayWeek2.setSixPM(storeSat18w1);
+           saturdayWeek2.setSevenPM(storeSat19w1);
+           saturdayWeek2.setEightPM(storeSat20w1);
+           saturdayWeek2.setNinePM(storeSat21w1);
+           saturdayWeek2.setDayName("Week 2 Saturday");
 
-           saveTimetable(mondayWeek1);
-           saveTimetable(tuesdayWeek1);
-           saveTimetable(wednesdayWeek1);
-           saveTimetable(thursdayWeek1);
-           saveTimetable(fridayWeek1);
-           saveTimetable(saturdayWeek1);
-           saveTimetable(sundayWeek1);
+           sundayWeek2.setEightAM(storeSun8w1);
+           sundayWeek2.setNineAM(storeSun9w1);
+           sundayWeek2.setTenAM(storeSun10w1);
+           sundayWeek2.setElevenAM(storeSun11w1);
+           sundayWeek2.setTwelvePM(storeSun12w1);
+           sundayWeek2.setOnePM(storeSun13w1);
+           sundayWeek2.setTwoPM(storeSun14w1);
+           sundayWeek2.setThreePM(storeSun15w1);
+           sundayWeek2.setFourPM(storeSun16w1);
+           sundayWeek2.setFivePM(storeSun17w1);
+           sundayWeek2.setSixPM(storeSun18w1);
+           sundayWeek2.setSevenPM(storeSun19w1);
+           sundayWeek2.setEightPM(storeSun20w1);
+           sundayWeek2.setNinePM(storeSun21w1);
+           sundayWeek2.setDayName("Week 2 Sunday");
 
-           saveTimetable(mondayWeek2);
-           saveTimetable(tuesdayWeek2);
-           saveTimetable(wednesdayWeek2);
-           saveTimetable(thursdayWeek2);
-           saveTimetable(fridayWeek2);
-           saveTimetable(saturdayWeek2);
-           saveTimetable(sundayWeek2);
+           /**
+            * Just in case someone tries this particular use case (Entering data
+            * into Week 2 that doesn't copy to Week 1)
+            */
+       } else if (storeMon8w1 == false && storeMon9w1 == false && storeMon10w1 == false && storeMon11w1 == false && storeMon12w1
+               == false && storeMon13w1 == false && storeMon14w1 == false && storeMon15w1 == false && storeMon16w1 == false && storeMon17w1 == false && storeMon18w1 == false && storeMon19w1
+               == false && storeMon20w1 == false && storeMon21w1 == false && storeTue8w1 == false && storeTue9w1 == false && storeTue10w1 == false && storeTue11w1 == false && storeTue12w1
+               == false && storeTue13w1 == false && storeTue14w1 == false && storeTue15w1 == false && storeTue16w1 == false && storeTue17w1 == false && storeTue18w1 == false && storeTue19w1
+               == false && storeTue20w1 == false && storeTue21w1 == false && storeWed8w1 == false && storeWed9w1 == false && storeWed10w1 == false && storeWed11w1 == false && storeWed12w1
+               == false && storeWed13w1 == false && storeWed14w1 == false && storeWed15w1 == false && storeWed16w1 == false && storeWed17w1 == false && storeWed18w1 == false && storeWed19w1
+               == false && storeWed20w1 == false && storeWed21w1 == false && storeThu8w1 == false && storeThu9w1 == false && storeThu10w1 == false && storeThu11w1 == false && storeThu12w1
+               == false && storeThu13w1 == false && storeThu14w1 == false && storeThu15w1 == false && storeThu16w1 == false && storeThu17w1 == false && storeThu18w1 == false && storeThu19w1
+               == false && storeThu20w1 == false && storeThu21w1 == false && storeFri8w1 == false && storeFri9w1 == false && storeFri10w1 == false && storeFri11w1 == false && storeFri12w1
+               == false && storeFri13w1 == false && storeFri14w1 == false && storeFri15w1 == false && storeFri16w1 == false && storeFri17w1 == false && storeFri18w1 == false && storeFri19w1
+               == false && storeFri20w1 == false && storeFri21w1 == false && storeSat8w1 == false && storeSat9w1 == false && storeSat10w1 == false && storeSat11w1 == false && storeSat12w1
+               == false && storeSat13w1 == false && storeSat14w1 == false && storeSat15w1 == false && storeSat16w1 == false && storeSat17w1 == false && storeSat18w1 == false && storeSat19w1
+               == false && storeSat20w1 == false && storeSat21w1 == false && storeSun8w1 == false && storeSun9w1 == false && storeSun10w1 == false && storeSun11w1 == false && storeSun12w1
+               == false && storeSun13w1 == false && storeSun14w1 == false && storeSun15w1 == false && storeSun16w1 == false && storeSun17w1 == false && storeSun18w1 == false && storeSun19w1
+               == false && storeSun20w1 == false && storeSun21w1 == false) {
 
-           dispose();
+           mondayWeek1.setEightAM(storeMon8w2);
+           mondayWeek1.setNineAM(storeMon9w2);
+           mondayWeek1.setTenAM(storeMon10w2);
+           mondayWeek1.setElevenAM(storeMon11w2);
+           mondayWeek1.setTwelvePM(storeMon12w2);
+           mondayWeek1.setOnePM(storeMon13w2);
+           mondayWeek1.setTwoPM(storeMon14w2);
+           mondayWeek1.setThreePM(storeMon15w2);
+           mondayWeek1.setFourPM(storeMon16w2);
+           mondayWeek1.setFivePM(storeMon17w2);
+           mondayWeek1.setSixPM(storeMon18w2);
+           mondayWeek1.setSevenPM(storeMon19w2);
+           mondayWeek1.setEightPM(storeMon20w2);
+           mondayWeek1.setNinePM(storeMon21w2);
+           mondayWeek1.setDayName("Week 1 Monday");
+
+           tuesdayWeek1.setEightAM(storeTue8w2);
+           tuesdayWeek1.setNineAM(storeTue9w2);
+           tuesdayWeek1.setTenAM(storeTue10w2);
+           tuesdayWeek1.setElevenAM(storeTue11w2);
+           tuesdayWeek1.setTwelvePM(storeTue12w2);
+           tuesdayWeek1.setOnePM(storeTue13w2);
+           tuesdayWeek1.setTwoPM(storeTue14w2);
+           tuesdayWeek1.setThreePM(storeTue15w2);
+           tuesdayWeek1.setFourPM(storeTue16w2);
+           tuesdayWeek1.setFivePM(storeTue17w2);
+           tuesdayWeek1.setSixPM(storeTue18w2);
+           tuesdayWeek1.setSevenPM(storeTue19w2);
+           tuesdayWeek1.setEightPM(storeTue20w2);
+           tuesdayWeek1.setNinePM(storeTue21w2);
+           tuesdayWeek1.setDayName("Week 1 Tuesday");
+
+           wednesdayWeek1.setEightAM(storeWed8w2);
+           wednesdayWeek1.setNineAM(storeWed9w2);
+           wednesdayWeek1.setTenAM(storeWed10w2);
+           wednesdayWeek1.setElevenAM(storeWed11w2);
+           wednesdayWeek1.setTwelvePM(storeWed12w2);
+           wednesdayWeek1.setOnePM(storeWed13w2);
+           wednesdayWeek1.setTwoPM(storeWed14w2);
+           wednesdayWeek1.setThreePM(storeWed15w2);
+           wednesdayWeek1.setFourPM(storeWed16w2);
+           wednesdayWeek1.setFivePM(storeWed17w2);
+           wednesdayWeek1.setSixPM(storeWed18w2);
+           wednesdayWeek1.setSevenPM(storeWed19w2);
+           wednesdayWeek1.setEightPM(storeWed20w2);
+           wednesdayWeek1.setNinePM(storeWed21w2);
+           wednesdayWeek1.setDayName("Week 1 Wednesday");
+
+           thursdayWeek1.setEightAM(storeThu8w2);
+           thursdayWeek1.setNineAM(storeThu9w2);
+           thursdayWeek1.setTenAM(storeThu10w2);
+           thursdayWeek1.setElevenAM(storeThu11w2);
+           thursdayWeek1.setTwelvePM(storeThu12w2);
+           thursdayWeek1.setOnePM(storeThu13w2);
+           thursdayWeek1.setTwoPM(storeThu14w2);
+           thursdayWeek1.setThreePM(storeThu15w2);
+           thursdayWeek1.setFourPM(storeThu16w2);
+           thursdayWeek1.setFivePM(storeThu17w2);
+           thursdayWeek1.setSixPM(storeThu18w2);
+           thursdayWeek1.setSevenPM(storeThu19w2);
+           thursdayWeek1.setEightPM(storeThu20w2);
+           thursdayWeek1.setNinePM(storeThu21w2);
+           thursdayWeek1.setDayName("Week 1 Thursday");
+
+           fridayWeek1.setEightAM(storeFri8w2);
+           fridayWeek1.setNineAM(storeFri9w2);
+           fridayWeek1.setTenAM(storeFri10w2);
+           fridayWeek1.setElevenAM(storeFri11w2);
+           fridayWeek1.setTwelvePM(storeFri12w2);
+           fridayWeek1.setOnePM(storeFri13w2);
+           fridayWeek1.setTwoPM(storeFri14w2);
+           fridayWeek1.setThreePM(storeFri15w2);
+           fridayWeek1.setFourPM(storeFri16w2);
+           fridayWeek1.setFivePM(storeFri17w2);
+           fridayWeek1.setSixPM(storeFri18w2);
+           fridayWeek1.setSevenPM(storeFri19w2);
+           fridayWeek1.setEightPM(storeFri20w2);
+           fridayWeek1.setNinePM(storeFri21w2);
+           fridayWeek1.setDayName("Week 1 Friday");
+
+           saturdayWeek1.setEightAM(storeSat8w2);
+           saturdayWeek1.setNineAM(storeSat9w2);
+           saturdayWeek1.setTenAM(storeSat10w2);
+           saturdayWeek1.setElevenAM(storeSat11w2);
+           saturdayWeek1.setTwelvePM(storeSat12w2);
+           saturdayWeek1.setOnePM(storeSat13w2);
+           saturdayWeek1.setTwoPM(storeSat14w2);
+           saturdayWeek1.setThreePM(storeSat15w2);
+           saturdayWeek1.setFourPM(storeSat16w2);
+           saturdayWeek1.setFivePM(storeSat17w2);
+           saturdayWeek1.setSixPM(storeSat18w2);
+           saturdayWeek1.setSevenPM(storeSat19w2);
+           saturdayWeek1.setEightPM(storeSat20w2);
+           saturdayWeek1.setNinePM(storeSat21w2);
+           saturdayWeek1.setDayName("Week 1 Saturday");
+
+           sundayWeek1.setEightAM(storeSun8w2);
+           sundayWeek1.setNineAM(storeSun9w2);
+           sundayWeek1.setTenAM(storeSun10w2);
+           sundayWeek1.setElevenAM(storeSun11w2);
+           sundayWeek1.setTwelvePM(storeSun12w2);
+           sundayWeek1.setOnePM(storeSun13w2);
+           sundayWeek1.setTwoPM(storeSun14w2);
+           sundayWeek1.setThreePM(storeSun15w2);
+           sundayWeek1.setFourPM(storeSun16w2);
+           sundayWeek1.setFivePM(storeSun17w2);
+           sundayWeek1.setSixPM(storeSun18w2);
+           sundayWeek1.setSevenPM(storeSun19w2);
+           sundayWeek1.setEightPM(storeSun20w2);
+           sundayWeek1.setNinePM(storeSun21w2);
+           sundayWeek1.setDayName("Week 1 Sunday");
+       }
+
+       saveTimetable(mondayWeek1);
+       saveTimetable(tuesdayWeek1);
+       saveTimetable(wednesdayWeek1);
+       saveTimetable(thursdayWeek1);
+       saveTimetable(fridayWeek1);
+       saveTimetable(saturdayWeek1);
+       saveTimetable(sundayWeek1);
+
+       saveTimetable(mondayWeek2);
+       saveTimetable(tuesdayWeek2);
+       saveTimetable(wednesdayWeek2);
+       saveTimetable(thursdayWeek2);
+       saveTimetable(fridayWeek2);
+       saveTimetable(saturdayWeek2);
+       saveTimetable(sundayWeek2);
+
+       dispose();
 
        HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userDAO, userStorageDAO);
        //centre the dialog on the parent window
@@ -5217,11 +5257,11 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
    }//GEN-LAST:event_buttonCancelActionPerformed
 
    private void helpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpButtonActionPerformed
-           Help dialog = new Help(this, true, timetableDAO, userDAO, userStorageDAO);
-           // centre the dialog on the parent window
-           dialog.setLocationRelativeTo(this);
-           // make the dialog visible
-           dialog.setVisible(true);
+       Help dialog = new Help(this, true, timetableDAO, userDAO, userStorageDAO);
+       // centre the dialog on the parent window
+       dialog.setLocationRelativeTo(this);
+       // make the dialog visible
+       dialog.setVisible(true);
    }//GEN-LAST:event_helpButtonActionPerformed
 
    // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -4581,6 +4581,138 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
            sundayWeek2.setEightPM(storeSun20w1);
            sundayWeek2.setNinePM(storeSun21w1);
            sundayWeek2.setDayName("Week 2 Sunday");
+
+           /**
+            * Just in case someone tries this particular use case (Entering data
+            * into Week 2 that doesn't copy to Week 1)
+            */
+       } else if (storeMon8w1 == false && storeMon9w1 == false && storeMon10w1 == false && storeMon11w1 == false && storeMon12w1
+               == false && storeMon13w1 == false && storeMon14w1 == false && storeMon15w1 == false && storeMon16w1 == false && storeMon17w1 == false && storeMon18w1 == false && storeMon19w1
+               == false && storeMon20w1 == false && storeMon21w1 == false && storeTue8w1 == false && storeTue9w1 == false && storeTue10w1 == false && storeTue11w1 == false && storeTue12w1
+               == false && storeTue13w1 == false && storeTue14w1 == false && storeTue15w1 == false && storeTue16w1 == false && storeTue17w1 == false && storeTue18w1 == false && storeTue19w1
+               == false && storeTue20w1 == false && storeTue21w1 == false && storeWed8w1 == false && storeWed9w1 == false && storeWed10w1 == false && storeWed11w1 == false && storeWed12w1
+               == false && storeWed13w1 == false && storeWed14w1 == false && storeWed15w1 == false && storeWed16w1 == false && storeWed17w1 == false && storeWed18w1 == false && storeWed19w1
+               == false && storeWed20w1 == false && storeWed21w1 == false && storeThu8w1 == false && storeThu9w1 == false && storeThu10w1 == false && storeThu11w1 == false && storeThu12w1
+               == false && storeThu13w1 == false && storeThu14w1 == false && storeThu15w1 == false && storeThu16w1 == false && storeThu17w1 == false && storeThu18w1 == false && storeThu19w1
+               == false && storeThu20w1 == false && storeThu21w1 == false && storeFri8w1 == false && storeFri9w1 == false && storeFri10w1 == false && storeFri11w1 == false && storeFri12w1
+               == false && storeFri13w1 == false && storeFri14w1 == false && storeFri15w1 == false && storeFri16w1 == false && storeFri17w1 == false && storeFri18w1 == false && storeFri19w1
+               == false && storeFri20w1 == false && storeFri21w1 == false && storeSat8w1 == false && storeSat9w1 == false && storeSat10w1 == false && storeSat11w1 == false && storeSat12w1
+               == false && storeSat13w1 == false && storeSat14w1 == false && storeSat15w1 == false && storeSat16w1 == false && storeSat17w1 == false && storeSat18w1 == false && storeSat19w1
+               == false && storeSat20w1 == false && storeSat21w1 == false && storeSun8w1 == false && storeSun9w1 == false && storeSun10w1 == false && storeSun11w1 == false && storeSun12w1
+               == false && storeSun13w1 == false && storeSun14w1 == false && storeSun15w1 == false && storeSun16w1 == false && storeSun17w1 == false && storeSun18w1 == false && storeSun19w1
+               == false && storeSun20w1 == false && storeSun21w1 == false) {
+
+           mondayWeek1.setEightAM(storeMon8w2);
+           mondayWeek1.setNineAM(storeMon9w2);
+           mondayWeek1.setTenAM(storeMon10w2);
+           mondayWeek1.setElevenAM(storeMon11w2);
+           mondayWeek1.setTwelvePM(storeMon12w2);
+           mondayWeek1.setOnePM(storeMon13w2);
+           mondayWeek1.setTwoPM(storeMon14w2);
+           mondayWeek1.setThreePM(storeMon15w2);
+           mondayWeek1.setFourPM(storeMon16w2);
+           mondayWeek1.setFivePM(storeMon17w2);
+           mondayWeek1.setSixPM(storeMon18w2);
+           mondayWeek1.setSevenPM(storeMon19w2);
+           mondayWeek1.setEightPM(storeMon20w2);
+           mondayWeek1.setNinePM(storeMon21w2);
+           mondayWeek1.setDayName("Week 1 Monday");
+
+           tuesdayWeek1.setEightAM(storeTue8w2);
+           tuesdayWeek1.setNineAM(storeTue9w2);
+           tuesdayWeek1.setTenAM(storeTue10w2);
+           tuesdayWeek1.setElevenAM(storeTue11w2);
+           tuesdayWeek1.setTwelvePM(storeTue12w2);
+           tuesdayWeek1.setOnePM(storeTue13w2);
+           tuesdayWeek1.setTwoPM(storeTue14w2);
+           tuesdayWeek1.setThreePM(storeTue15w2);
+           tuesdayWeek1.setFourPM(storeTue16w2);
+           tuesdayWeek1.setFivePM(storeTue17w2);
+           tuesdayWeek1.setSixPM(storeTue18w2);
+           tuesdayWeek1.setSevenPM(storeTue19w2);
+           tuesdayWeek1.setEightPM(storeTue20w2);
+           tuesdayWeek1.setNinePM(storeTue21w2);
+           tuesdayWeek1.setDayName("Week 1 Tuesday");
+
+           wednesdayWeek1.setEightAM(storeWed8w2);
+           wednesdayWeek1.setNineAM(storeWed9w2);
+           wednesdayWeek1.setTenAM(storeWed10w2);
+           wednesdayWeek1.setElevenAM(storeWed11w2);
+           wednesdayWeek1.setTwelvePM(storeWed12w2);
+           wednesdayWeek1.setOnePM(storeWed13w2);
+           wednesdayWeek1.setTwoPM(storeWed14w2);
+           wednesdayWeek1.setThreePM(storeWed15w2);
+           wednesdayWeek1.setFourPM(storeWed16w2);
+           wednesdayWeek1.setFivePM(storeWed17w2);
+           wednesdayWeek1.setSixPM(storeWed18w2);
+           wednesdayWeek1.setSevenPM(storeWed19w2);
+           wednesdayWeek1.setEightPM(storeWed20w2);
+           wednesdayWeek1.setNinePM(storeWed21w2);
+           wednesdayWeek1.setDayName("Week 1 Wednesday");
+
+           thursdayWeek1.setEightAM(storeThu8w2);
+           thursdayWeek1.setNineAM(storeThu9w2);
+           thursdayWeek1.setTenAM(storeThu10w2);
+           thursdayWeek1.setElevenAM(storeThu11w2);
+           thursdayWeek1.setTwelvePM(storeThu12w2);
+           thursdayWeek1.setOnePM(storeThu13w2);
+           thursdayWeek1.setTwoPM(storeThu14w2);
+           thursdayWeek1.setThreePM(storeThu15w2);
+           thursdayWeek1.setFourPM(storeThu16w2);
+           thursdayWeek1.setFivePM(storeThu17w2);
+           thursdayWeek1.setSixPM(storeThu18w2);
+           thursdayWeek1.setSevenPM(storeThu19w2);
+           thursdayWeek1.setEightPM(storeThu20w2);
+           thursdayWeek1.setNinePM(storeThu21w2);
+           thursdayWeek1.setDayName("Week 1 Thursday");
+
+           fridayWeek1.setEightAM(storeFri8w2);
+           fridayWeek1.setNineAM(storeFri9w2);
+           fridayWeek1.setTenAM(storeFri10w2);
+           fridayWeek1.setElevenAM(storeFri11w2);
+           fridayWeek1.setTwelvePM(storeFri12w2);
+           fridayWeek1.setOnePM(storeFri13w2);
+           fridayWeek1.setTwoPM(storeFri14w2);
+           fridayWeek1.setThreePM(storeFri15w2);
+           fridayWeek1.setFourPM(storeFri16w2);
+           fridayWeek1.setFivePM(storeFri17w2);
+           fridayWeek1.setSixPM(storeFri18w2);
+           fridayWeek1.setSevenPM(storeFri19w2);
+           fridayWeek1.setEightPM(storeFri20w2);
+           fridayWeek1.setNinePM(storeFri21w2);
+           fridayWeek1.setDayName("Week 1 Friday");
+
+           saturdayWeek1.setEightAM(storeSat8w2);
+           saturdayWeek1.setNineAM(storeSat9w2);
+           saturdayWeek1.setTenAM(storeSat10w2);
+           saturdayWeek1.setElevenAM(storeSat11w2);
+           saturdayWeek1.setTwelvePM(storeSat12w2);
+           saturdayWeek1.setOnePM(storeSat13w2);
+           saturdayWeek1.setTwoPM(storeSat14w2);
+           saturdayWeek1.setThreePM(storeSat15w2);
+           saturdayWeek1.setFourPM(storeSat16w2);
+           saturdayWeek1.setFivePM(storeSat17w2);
+           saturdayWeek1.setSixPM(storeSat18w2);
+           saturdayWeek1.setSevenPM(storeSat19w2);
+           saturdayWeek1.setEightPM(storeSat20w2);
+           saturdayWeek1.setNinePM(storeSat21w2);
+           saturdayWeek1.setDayName("Week 1 Saturday");
+
+           sundayWeek1.setEightAM(storeSun8w2);
+           sundayWeek1.setNineAM(storeSun9w2);
+           sundayWeek1.setTenAM(storeSun10w2);
+           sundayWeek1.setElevenAM(storeSun11w2);
+           sundayWeek1.setTwelvePM(storeSun12w2);
+           sundayWeek1.setOnePM(storeSun13w2);
+           sundayWeek1.setTwoPM(storeSun14w2);
+           sundayWeek1.setThreePM(storeSun15w2);
+           sundayWeek1.setFourPM(storeSun16w2);
+           sundayWeek1.setFivePM(storeSun17w2);
+           sundayWeek1.setSixPM(storeSun18w2);
+           sundayWeek1.setSevenPM(storeSun19w2);
+           sundayWeek1.setEightPM(storeSun20w2);
+           sundayWeek1.setNinePM(storeSun21w2);
+           sundayWeek1.setDayName("Week 1 Sunday");
        }
 
        saveTimetable(mondayWeek1);
