@@ -96,7 +96,7 @@ public class Contacts extends javax.swing.JFrame {
       });
 
       exitButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-      exitButton.setText("Exit");
+      exitButton.setText("Save & Exit");
       exitButton.setName("exitButton"); // NOI18N
       exitButton.addActionListener(new java.awt.event.ActionListener() {
          public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,7 +138,7 @@ public class Contacts extends javax.swing.JFrame {
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE)
                         .addComponent(jScrollPane1))
                      .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                     .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                     .addComponent(exitButton))
                   .addGap(129, 129, 129))
                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
                   .addComponent(titleLabel)
