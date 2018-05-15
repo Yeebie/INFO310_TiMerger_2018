@@ -177,7 +177,7 @@ public class HomeMenu extends javax.swing.JDialog {
                      .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(92, 92, 92)
                         .addComponent(editLabel)))))
-            .addContainerGap(170, Short.MAX_VALUE))
+            .addContainerGap(171, Short.MAX_VALUE))
          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
             .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -204,7 +204,7 @@ public class HomeMenu extends javax.swing.JDialog {
                .addComponent(editLabel1))
             .addGap(63, 63, 63)
             .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addContainerGap(93, Short.MAX_VALUE))
+            .addContainerGap(48, Short.MAX_VALUE))
       );
 
       javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

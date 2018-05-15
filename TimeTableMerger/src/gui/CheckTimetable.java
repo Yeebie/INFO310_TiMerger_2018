@@ -3851,7 +3851,7 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
       jPanel2.setName("jPanel2"); // NOI18N
 
       titleLabel.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 48)); // NOI18N
-      titleLabel.setText("Merged Timetable");
+      titleLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MergedTimeTable.png"))); // NOI18N
       titleLabel.setName("titleLabel"); // NOI18N
 
       buttonCancel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -3868,26 +3868,24 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
       jPanel2Layout.setHorizontalGroup(
          jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(jPanel2Layout.createSequentialGroup()
-            .addContainerGap(153, Short.MAX_VALUE)
+            .addContainerGap(107, Short.MAX_VALUE)
             .addComponent(titleLabel)
-            .addGap(30, 30, 30)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(buttonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(45, 45, 45))
+            .addContainerGap())
       );
       jPanel2Layout.setVerticalGroup(
          jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(jPanel2Layout.createSequentialGroup()
             .addContainerGap()
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-               .addGroup(jPanel2Layout.createSequentialGroup()
-                  .addComponent(buttonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addGap(3, 3, 3))
-               .addComponent(titleLabel))
-            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addComponent(titleLabel)
+               .addComponent(buttonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addContainerGap(151, Short.MAX_VALUE))
       );
 
       getContentPane().add(jPanel2);
-      jPanel2.setBounds(0, 0, 700, 75);
+      jPanel2.setBounds(0, 0, 700, 222);
 
       pack();
    }// </editor-fold>//GEN-END:initComponents

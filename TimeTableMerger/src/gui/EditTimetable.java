@@ -905,7 +905,7 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
       week1PanelLayout.setVerticalGroup(
          week1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(week1PanelLayout.createSequentialGroup()
-            .addComponent(week1Label, javax.swing.GroupLayout.PREFERRED_SIZE, 28, Short.MAX_VALUE)
+            .addComponent(week1Label, javax.swing.GroupLayout.PREFERRED_SIZE, 30, Short.MAX_VALUE)
             .addContainerGap())
       );
 
@@ -930,7 +930,7 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
       week2PanelLayout.setVerticalGroup(
          week2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(week2PanelLayout.createSequentialGroup()
-            .addComponent(week2Label, javax.swing.GroupLayout.PREFERRED_SIZE, 28, Short.MAX_VALUE)
+            .addComponent(week2Label, javax.swing.GroupLayout.PREFERRED_SIZE, 30, Short.MAX_VALUE)
             .addContainerGap())
       );
 
@@ -3748,10 +3748,11 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
       jPanel1Layout.setVerticalGroup(
          jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(jPanel1Layout.createSequentialGroup()
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-               .addComponent(switchButton)
-               .addComponent(helpButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(0, 9, Short.MAX_VALUE))
+            .addComponent(switchButton)
+            .addGap(0, 10, Short.MAX_VALUE))
+         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(helpButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
       );
 
       getContentPane().add(jPanel1);
@@ -3761,7 +3762,7 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
       jPanel2.setName("jPanel2"); // NOI18N
 
       titleLabel.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 48)); // NOI18N
-      titleLabel.setText("Edit Timetable");
+      titleLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/TimeTable.png"))); // NOI18N
       titleLabel.setName("titleLabel"); // NOI18N
 
       buttonCancel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -3787,30 +3788,27 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
       jPanel2Layout.setHorizontalGroup(
          jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(jPanel2Layout.createSequentialGroup()
-            .addGap(29, 29, 29)
+            .addContainerGap(55, Short.MAX_VALUE)
             .addComponent(buttonSaveTimetable, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+            .addGap(45, 45, 45)
             .addComponent(titleLabel)
-            .addGap(63, 63, 63)
+            .addGap(18, 18, 18)
             .addComponent(buttonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(45, 45, 45))
+            .addGap(56, 56, 56))
       );
       jPanel2Layout.setVerticalGroup(
          jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(jPanel2Layout.createSequentialGroup()
             .addContainerGap()
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-               .addGroup(jPanel2Layout.createSequentialGroup()
-                  .addComponent(buttonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addGap(3, 3, 3))
-               .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                  .addComponent(titleLabel)
-                  .addComponent(buttonSaveTimetable, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addComponent(buttonSaveTimetable, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+               .addComponent(buttonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+               .addComponent(titleLabel))
+            .addContainerGap(51, Short.MAX_VALUE))
       );
 
       getContentPane().add(jPanel2);
-      jPanel2.setBounds(0, 0, 700, 75);
+      jPanel2.setBounds(0, 0, 700, 137);
 
       pack();
    }// </editor-fold>//GEN-END:initComponents

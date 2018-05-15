@@ -3299,7 +3299,7 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
       );
 
       getContentPane().add(jPanel2);
-      jPanel2.setBounds(0, 0, 700, 75);
+      jPanel2.setBounds(0, 0, 700, 65);
 
       pack();
    }// </editor-fold>//GEN-END:initComponents
