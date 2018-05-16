@@ -6,12 +6,13 @@
 package domain;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  *
  * @author Yeebo
  */
-public class Day {
+public class Day implements Comparable<Day> {
 
     private String userName;
     private String dayName;
@@ -247,4 +248,99 @@ public class Day {
     public String toString() {
         return "Day{" + "userName=" + userName + ", dayName=" + dayName + ", eightAM=" + eightAM + ", nineAM=" + nineAM + ", tenAM=" + tenAM + ", elevenAM=" + elevenAM + ", twelvePM=" + twelvePM + ", onePM=" + onePM + ", twoPM=" + twoPM + ", threePM=" + threePM + ", fourPM=" + fourPM + ", fivePM=" + fivePM + ", sixPM=" + sixPM + ", sevenPM=" + sevenPM + ", eightPM=" + eightPM + ", ninePM=" + ninePM + '}';
     }
+    public int compareTo(Day day) {
+		String myday = this.getUserName();
+		String theirday = day.getUserName();
+		return myday.compareTo(theirday);
+	}
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 17 * hash + Objects.hashCode(this.userName);
+        hash = 17 * hash + Objects.hashCode(this.dayName);
+        hash = 17 * hash + Objects.hashCode(this.eightAM);
+        hash = 17 * hash + Objects.hashCode(this.nineAM);
+        hash = 17 * hash + Objects.hashCode(this.tenAM);
+        hash = 17 * hash + Objects.hashCode(this.elevenAM);
+        hash = 17 * hash + Objects.hashCode(this.twelvePM);
+        hash = 17 * hash + Objects.hashCode(this.onePM);
+        hash = 17 * hash + Objects.hashCode(this.twoPM);
+        hash = 17 * hash + Objects.hashCode(this.threePM);
+        hash = 17 * hash + Objects.hashCode(this.fourPM);
+        hash = 17 * hash + Objects.hashCode(this.fivePM);
+        hash = 17 * hash + Objects.hashCode(this.sixPM);
+        hash = 17 * hash + Objects.hashCode(this.sevenPM);
+        hash = 17 * hash + Objects.hashCode(this.eightPM);
+        hash = 17 * hash + Objects.hashCode(this.ninePM);
+        hash = 17 * hash + Objects.hashCode(this.dayTime);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Day other = (Day) obj;
+        if (!Objects.equals(this.userName, other.userName)) {
+            return false;
+        }
+        if (!Objects.equals(this.dayName, other.dayName)) {
+            return false;
+        }
+        if (!Objects.equals(this.eightAM, other.eightAM)) {
+            return false;
+        }
+        if (!Objects.equals(this.nineAM, other.nineAM)) {
+            return false;
+        }
+        if (!Objects.equals(this.tenAM, other.tenAM)) {
+            return false;
+        }
+        if (!Objects.equals(this.elevenAM, other.elevenAM)) {
+            return false;
+        }
+        if (!Objects.equals(this.twelvePM, other.twelvePM)) {
+            return false;
+        }
+        if (!Objects.equals(this.onePM, other.onePM)) {
+            return false;
+        }
+        if (!Objects.equals(this.twoPM, other.twoPM)) {
+            return false;
+        }
+        if (!Objects.equals(this.threePM, other.threePM)) {
+            return false;
+        }
+        if (!Objects.equals(this.fourPM, other.fourPM)) {
+            return false;
+        }
+        if (!Objects.equals(this.fivePM, other.fivePM)) {
+            return false;
+        }
+        if (!Objects.equals(this.sixPM, other.sixPM)) {
+            return false;
+        }
+        if (!Objects.equals(this.sevenPM, other.sevenPM)) {
+            return false;
+        }
+        if (!Objects.equals(this.eightPM, other.eightPM)) {
+            return false;
+        }
+        if (!Objects.equals(this.ninePM, other.ninePM)) {
+            return false;
+        }
+        if (!Objects.equals(this.dayTime, other.dayTime)) {
+            return false;
+        }
+        return true;
+    }
+    
 }
