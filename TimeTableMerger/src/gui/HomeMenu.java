@@ -64,11 +64,7 @@ public class HomeMenu extends javax.swing.JDialog {
       timetableButton = new javax.swing.JButton();
       scheduleButton = new javax.swing.JButton();
       contactButton = new javax.swing.JButton();
-      manageLabel = new javax.swing.JLabel();
-      contactsLabel = new javax.swing.JLabel();
-      editLabel = new javax.swing.JLabel();
       jButtonLogOut = new javax.swing.JButton();
-      editLabel1 = new javax.swing.JLabel();
 
       exitButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
       exitButton1.setText("Exit");
@@ -93,6 +89,8 @@ public class HomeMenu extends javax.swing.JDialog {
 
       timetableButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
       timetableButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/manageTimetable.png"))); // NOI18N
+      timetableButton.setText("Manage Timetable");
+      timetableButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
       timetableButton.setName("timetableButton"); // NOI18N
       timetableButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
       timetableButton.addActionListener(new java.awt.event.ActionListener() {
@@ -103,7 +101,10 @@ public class HomeMenu extends javax.swing.JDialog {
 
       scheduleButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
       scheduleButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/scheduleMeeting.png"))); // NOI18N
+      scheduleButton.setText("Schedule Meeting");
+      scheduleButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
       scheduleButton.setName("scheduleButton"); // NOI18N
+      scheduleButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
       scheduleButton.addActionListener(new java.awt.event.ActionListener() {
          public void actionPerformed(java.awt.event.ActionEvent evt) {
             scheduleButtonActionPerformed(evt);
@@ -112,99 +113,65 @@ public class HomeMenu extends javax.swing.JDialog {
 
       contactButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
       contactButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/addContacts.png"))); // NOI18N
+      contactButton.setText("Add Contacts");
+      contactButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
       contactButton.setName("contactButton"); // NOI18N
+      contactButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
       contactButton.addActionListener(new java.awt.event.ActionListener() {
          public void actionPerformed(java.awt.event.ActionEvent evt) {
             contactButtonActionPerformed(evt);
          }
       });
 
-      manageLabel.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 24)); // NOI18N
-      manageLabel.setText("Manage Timetable");
-      manageLabel.setName("manageLabel"); // NOI18N
-
-      contactsLabel.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 24)); // NOI18N
-      contactsLabel.setText("Add Contacts");
-      contactsLabel.setName("contactsLabel"); // NOI18N
-
-      editLabel.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 24)); // NOI18N
-      editLabel.setText("Log Out");
-      editLabel.setName("editLabel"); // NOI18N
-
       jButtonLogOut.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
       jButtonLogOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logoutButton.png"))); // NOI18N
+      jButtonLogOut.setText("Log Out");
+      jButtonLogOut.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
       jButtonLogOut.setName("jButtonLogOut"); // NOI18N
+      jButtonLogOut.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
       jButtonLogOut.addActionListener(new java.awt.event.ActionListener() {
          public void actionPerformed(java.awt.event.ActionEvent evt) {
             jButtonLogOutActionPerformed(evt);
          }
       });
 
-      editLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 24)); // NOI18N
-      editLabel1.setText("Schedule Timetable");
-      editLabel1.setName("editLabel1"); // NOI18N
-
       javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
       jPanel1.setLayout(jPanel1Layout);
       jPanel1Layout.setHorizontalGroup(
          jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(jPanel1Layout.createSequentialGroup()
-            .addGap(139, 139, 139)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                .addGroup(jPanel1Layout.createSequentialGroup()
-                  .addGap(27, 27, 27)
-                  .addComponent(scheduleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addGap(81, 81, 81)
-                  .addComponent(jButtonLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-               .addGroup(jPanel1Layout.createSequentialGroup()
-                  .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                     .addComponent(editLabel1)
-                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                           .addGap(28, 28, 28)
-                           .addComponent(timetableButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                           .addGap(8, 8, 8)
-                           .addComponent(manageLabel))))
+                  .addGap(78, 78, 78)
                   .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                           .addGroup(jPanel1Layout.createSequentialGroup()
-                              .addGap(10, 10, 10)
-                              .addComponent(contactsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
-                           .addComponent(contactButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(92, 92, 92)
-                        .addComponent(editLabel)))))
-            .addContainerGap(171, Short.MAX_VALUE))
-         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(274, 274, 274))
+                     .addComponent(timetableButton, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                     .addComponent(scheduleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                  .addGap(37, 37, 37)
+                  .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                     .addComponent(jButtonLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                     .addComponent(contactButton, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+               .addGroup(jPanel1Layout.createSequentialGroup()
+                  .addGap(271, 271, 271)
+                  .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addContainerGap(85, Short.MAX_VALUE))
       );
       jPanel1Layout.setVerticalGroup(
          jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-            .addGap(101, 101, 101)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-               .addComponent(timetableButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-               .addComponent(contactButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-               .addComponent(manageLabel)
-               .addComponent(contactsLabel))
-            .addGap(40, 40, 40)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-               .addComponent(scheduleButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-               .addComponent(jButtonLogOut, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-               .addComponent(editLabel)
-               .addComponent(editLabel1))
-            .addGap(63, 63, 63)
+            .addGap(84, 84, 84)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+               .addGroup(jPanel1Layout.createSequentialGroup()
+                  .addGap(1, 1, 1)
+                  .addComponent(contactButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                  .addComponent(jButtonLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+               .addGroup(jPanel1Layout.createSequentialGroup()
+                  .addComponent(timetableButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addGap(29, 29, 29)
+                  .addComponent(scheduleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGap(52, 52, 52)
             .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addContainerGap(48, Short.MAX_VALUE))
+            .addContainerGap(89, Short.MAX_VALUE))
       );
 
       javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -314,14 +281,10 @@ public class HomeMenu extends javax.swing.JDialog {
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
    private javax.swing.JButton contactButton;
-   private javax.swing.JLabel contactsLabel;
-   private javax.swing.JLabel editLabel;
-   private javax.swing.JLabel editLabel1;
    private javax.swing.JButton exitButton;
    private javax.swing.JButton exitButton1;
    private javax.swing.JButton jButtonLogOut;
    private javax.swing.JPanel jPanel1;
-   private javax.swing.JLabel manageLabel;
    private javax.swing.JButton scheduleButton;
    private javax.swing.JButton timetableButton;
    // End of variables declaration//GEN-END:variables
