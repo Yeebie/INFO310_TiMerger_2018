@@ -7,6 +7,7 @@ package domain;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Objects;
 import net.sf.oval.constraint.Email;
 import net.sf.oval.constraint.Length;
 import net.sf.oval.constraint.NotBlank;
@@ -16,7 +17,7 @@ import net.sf.oval.constraint.NotNull;
  *
  * @author Yeebo
  */
-public class User {
+public class User implements Comparable<User> {
 
 	@NotNull(message = "User Name must be provided.")
 	@NotBlank(message = "User Name must be provided.")
@@ -102,4 +103,48 @@ public class User {
 		//return "User{" + "userName=" + userName + ", firstName=" + firstName + ", lastName=" + lastName + ", password=" + password + ", email=" + email + '}';
 	}
 
+	public int compareTo(User user) {
+		String myuser = this.getFirstName();
+		String theiruser = user.getFirstName();
+		return myuser.compareTo(theiruser);
+	}
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 11 * hash + Objects.hashCode(this.userName);
+        hash = 11 * hash + Objects.hashCode(this.firstName);
+        hash = 11 * hash + Objects.hashCode(this.lastName);
+        hash = 11 * hash + Objects.hashCode(this.password);
+        hash = 11 * hash + Objects.hashCode(this.email);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final User other = (User) obj;
+        if (!Objects.equals(this.userName, other.userName)) {
+            return false;
+        }
+        if (!Objects.equals(this.firstName, other.firstName)) {
+            return false;
+        }
+        if (!Objects.equals(this.lastName, other.lastName)) {
+            return false;
+        }
+        if (!Objects.equals(this.email, other.email)) {
+            return false;
+        }
+        return true;
+    }
+        
 }
