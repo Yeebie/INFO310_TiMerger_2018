@@ -275,5 +275,20 @@ public class UserDAO {
 		  throw new DAOException(ex.getMessage(), ex);
     }
 	}
+	
+	public void deleteUser(User user){
+				String sql = "delete from User where UserName = ?";
+
+		try (
+				  Connection connection = JdbcConnection.getConnection(url);
+				  PreparedStatement stmt = connection.prepareStatement(sql);) {
+
+			stmt.setString(1, user.getUserName());
+
+			stmt.executeUpdate();
+		} catch (SQLException ex) {
+			throw new DAOException(ex.getMessage(), ex);
+		}
+	}
 
 }
