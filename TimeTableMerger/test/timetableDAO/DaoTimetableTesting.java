@@ -63,7 +63,7 @@ public class DaoTimetableTesting {
 	@Test
 	public void testDaoFindDay() {
 		Day retrieved = timetableDAO.getDay("testU","Tuesday");
-		//assertEquals("Retrieved day should be the same", tuesday, retrieved);
+		assertEquals("Retrieved day should be the same", tuesday, retrieved);
 
 		assertEquals("Retrieved username should be the same", tuesday.getUserName(), retrieved.getUserName());
 		assertEquals("Retrieved day name should be the same", tuesday.getDayName(), retrieved.getDayName());
