@@ -938,7 +938,7 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
       secondaryPanel.add(week2Panel, "card3");
 
       getContentPane().add(secondaryPanel);
-      secondaryPanel.setBounds(0, 39, 110, 40);
+      secondaryPanel.setBounds(0, 19, 110, 30);
 
       mainPanel.setName("mainPanel"); // NOI18N
       mainPanel.setLayout(new java.awt.CardLayout());
@@ -3763,9 +3763,9 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
       jPanel2Layout.setHorizontalGroup(
          jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(jPanel2Layout.createSequentialGroup()
-            .addGap(111, 111, 111)
+            .addGap(49, 49, 49)
             .addComponent(switchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(57, 57, 57)
+            .addGap(119, 119, 119)
             .addComponent(titleLabel)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
             .addComponent(Help, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3776,14 +3776,14 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
          .addGroup(jPanel2Layout.createSequentialGroup()
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                .addGroup(jPanel2Layout.createSequentialGroup()
-                  .addGap(42, 42, 42)
-                  .addComponent(switchButton))
+                  .addContainerGap()
+                  .addComponent(titleLabel))
                .addGroup(jPanel2Layout.createSequentialGroup()
-                  .addGap(49, 49, 49)
+                  .addGap(33, 33, 33)
                   .addComponent(Help, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                .addGroup(jPanel2Layout.createSequentialGroup()
-                  .addContainerGap()
-                  .addComponent(titleLabel)))
+                  .addGap(52, 52, 52)
+                  .addComponent(switchButton)))
             .addContainerGap(51, Short.MAX_VALUE))
       );
 

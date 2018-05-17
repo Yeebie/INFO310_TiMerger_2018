@@ -768,7 +768,6 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
    private void initComponents() {
 
       button1 = new java.awt.Button();
-      jTextPane1 = new javax.swing.JTextPane();
       secondaryPanel = new javax.swing.JPanel();
       week1Panel = new javax.swing.JPanel();
       week1Label = new javax.swing.JLabel();
@@ -875,6 +874,7 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
       sat21w1 = new javax.swing.JCheckBox();
       sun21w1 = new javax.swing.JCheckBox();
       timetableImage1 = new javax.swing.JLabel();
+      jTextPane1 = new javax.swing.JTextPane();
       week2 = new javax.swing.JPanel();
       mon8w2 = new javax.swing.JCheckBox();
       tue8w2 = new javax.swing.JCheckBox();
@@ -975,23 +975,17 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
       sat21w2 = new javax.swing.JCheckBox();
       sun21w2 = new javax.swing.JCheckBox();
       timetableImage2 = new javax.swing.JLabel();
-      jPanel1 = new javax.swing.JPanel();
+      jPanel2 = new javax.swing.JPanel();
       switchButton = new javax.swing.JButton();
       Help = new java.awt.Button();
-      jPanel2 = new javax.swing.JPanel();
       titleLabel = new javax.swing.JLabel();
+      jPanel3 = new javax.swing.JPanel();
       buttonCancel = new javax.swing.JButton();
 
       button1.setLabel("button1");
       button1.setName("button1"); // NOI18N
 
       getContentPane().setLayout(null);
-
-      jTextPane1.setEditable(false);
-      jTextPane1.setName("jTextPane1"); // NOI18N
-      jTextPane1.setBackground(new Color(0,0,0,0));
-      getContentPane().add(jTextPane1);
-      jTextPane1.setBounds(0, 120, 700, 520);
 
       secondaryPanel.setBackground(new java.awt.Color(255, 255, 255));
       secondaryPanel.setName("secondaryPanel"); // NOI18N
@@ -1008,15 +1002,13 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
       week1Panel.setLayout(week1PanelLayout);
       week1PanelLayout.setHorizontalGroup(
          week1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, week1PanelLayout.createSequentialGroup()
-            .addContainerGap(286, Short.MAX_VALUE)
-            .addComponent(week1Label))
+         .addComponent(week1Label, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
       );
       week1PanelLayout.setVerticalGroup(
          week1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, week1PanelLayout.createSequentialGroup()
-            .addComponent(week1Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addContainerGap())
+         .addGroup(week1PanelLayout.createSequentialGroup()
+            .addComponent(week1Label, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(0, 0, Short.MAX_VALUE))
       );
 
       secondaryPanel.add(week1Panel, "card2");
@@ -1034,7 +1026,7 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
       week2PanelLayout.setHorizontalGroup(
          week2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, week2PanelLayout.createSequentialGroup()
-            .addGap(0, 286, Short.MAX_VALUE)
+            .addGap(0, 16, Short.MAX_VALUE)
             .addComponent(week2Label))
       );
       week2PanelLayout.setVerticalGroup(
@@ -1045,7 +1037,7 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
       secondaryPanel.add(week2Panel, "card3");
 
       getContentPane().add(secondaryPanel);
-      secondaryPanel.setBounds(0, 75, 380, 36);
+      secondaryPanel.setBounds(15, 22, 110, 30);
 
       mainPanel.setEnabled(false);
       mainPanel.setName("mainPanel"); // NOI18N
@@ -2432,6 +2424,12 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
       timetableImage1.setPreferredSize(new java.awt.Dimension(505, 660));
       week1.add(timetableImage1);
       timetableImage1.setBounds(10, 7, 690, 520);
+
+      jTextPane1.setEditable(false);
+      jTextPane1.setName("jTextPane1"); // NOI18N
+      jTextPane1.setBackground(new Color(0,0,0,0));
+      week1.add(jTextPane1);
+      jTextPane1.setBounds(0, 10, 700, 520);
 
       mainPanel.add(week1, "card2");
 
@@ -3820,10 +3818,10 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
       mainPanel.add(week2, "card2");
 
       getContentPane().add(mainPanel);
-      mainPanel.setBounds(0, 111, 700, 700);
+      mainPanel.setBounds(0, 81, 700, 530);
 
-      jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-      jPanel1.setName("jPanel1"); // NOI18N
+      jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+      jPanel2.setName("jPanel2"); // NOI18N
 
       switchButton.setBackground(new java.awt.Color(255, 255, 255));
       switchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/switchWeek.png"))); // NOI18N
@@ -3836,7 +3834,7 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
          }
       });
 
-      Help.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+      Help.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
       Help.setLabel("?");
       Help.setName("Help"); // NOI18N
       Help.addActionListener(new java.awt.event.ActionListener() {
@@ -3845,33 +3843,42 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
          }
       });
 
-      javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-      jPanel1.setLayout(jPanel1Layout);
-      jPanel1Layout.setHorizontalGroup(
-         jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGroup(jPanel1Layout.createSequentialGroup()
-            .addComponent(switchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 244, Short.MAX_VALUE)
-            .addComponent(Help, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addContainerGap())
-      );
-      jPanel1Layout.setVerticalGroup(
-         jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addComponent(switchButton, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-         .addGroup(jPanel1Layout.createSequentialGroup()
-            .addContainerGap()
-            .addComponent(Help, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-      );
-
-      getContentPane().add(jPanel1);
-      jPanel1.setBounds(380, 75, 320, 40);
-
-      jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-      jPanel2.setName("jPanel2"); // NOI18N
-
       titleLabel.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 48)); // NOI18N
       titleLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MergedTimeTable.png"))); // NOI18N
       titleLabel.setName("titleLabel"); // NOI18N
+
+      javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+      jPanel2.setLayout(jPanel2Layout);
+      jPanel2Layout.setHorizontalGroup(
+         jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGroup(jPanel2Layout.createSequentialGroup()
+            .addGap(47, 47, 47)
+            .addComponent(switchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+            .addComponent(titleLabel)
+            .addGap(32, 32, 32)
+            .addComponent(Help, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(26, 26, 26))
+      );
+      jPanel2Layout.setVerticalGroup(
+         jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+            .addComponent(titleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE)
+            .addContainerGap())
+         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addComponent(switchButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                  .addComponent(Help, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addGap(30, 30, 30))))
+      );
+
+      getContentPane().add(jPanel2);
+      jPanel2.setBounds(0, 0, 700, 90);
+
+      jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+      jPanel3.setName("jPanel3"); // NOI18N
 
       buttonCancel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
       buttonCancel.setText("Back");
@@ -3882,29 +3889,25 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
          }
       });
 
-      javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-      jPanel2.setLayout(jPanel2Layout);
-      jPanel2Layout.setHorizontalGroup(
-         jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGroup(jPanel2Layout.createSequentialGroup()
-            .addContainerGap(107, Short.MAX_VALUE)
-            .addComponent(titleLabel)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+      javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+      jPanel3.setLayout(jPanel3Layout);
+      jPanel3Layout.setHorizontalGroup(
+         jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGroup(jPanel3Layout.createSequentialGroup()
+            .addGap(297, 297, 297)
             .addComponent(buttonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap(307, Short.MAX_VALUE))
+      );
+      jPanel3Layout.setVerticalGroup(
+         jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGroup(jPanel3Layout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(buttonCancel, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
             .addContainerGap())
       );
-      jPanel2Layout.setVerticalGroup(
-         jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGroup(jPanel2Layout.createSequentialGroup()
-            .addContainerGap()
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-               .addComponent(titleLabel)
-               .addComponent(buttonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addContainerGap(151, Short.MAX_VALUE))
-      );
 
-      getContentPane().add(jPanel2);
-      jPanel2.setBounds(0, 0, 700, 222);
+      getContentPane().add(jPanel3);
+      jPanel3.setBounds(0, 600, 700, 50);
 
       pack();
    }// </editor-fold>//GEN-END:initComponents
@@ -4756,8 +4759,8 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
    private javax.swing.JCheckBox fri8w2;
    private javax.swing.JCheckBox fri9w1;
    private javax.swing.JCheckBox fri9w2;
-   private javax.swing.JPanel jPanel1;
    private javax.swing.JPanel jPanel2;
+   private javax.swing.JPanel jPanel3;
    private javax.swing.JTextPane jTextPane1;
    private javax.swing.JPanel mainPanel;
    private javax.swing.JCheckBox mon10w1;
