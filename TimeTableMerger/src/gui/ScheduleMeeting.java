@@ -118,6 +118,7 @@ public class ScheduleMeeting extends javax.swing.JDialog {
       searchLabel2 = new javax.swing.JLabel();
       AddArrow = new javax.swing.JButton();
       RemoveArrow = new javax.swing.JButton();
+      jLabel2 = new javax.swing.JLabel();
 
       jPasswordField1.setText("jPasswordField1");
       jPasswordField1.setName("jPasswordField1"); // NOI18N
@@ -139,7 +140,8 @@ public class ScheduleMeeting extends javax.swing.JDialog {
       });
 
       monLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-      monLabel.setText("Monday");
+      monLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+      monLabel.setText("M");
       monLabel.setName("monLabel"); // NOI18N
 
       monCheckBox.setBackground(new java.awt.Color(255, 255, 255));
@@ -153,7 +155,8 @@ public class ScheduleMeeting extends javax.swing.JDialog {
       });
 
       tueLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-      tueLabel.setText("Tuesday");
+      tueLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+      tueLabel.setText("T");
       tueLabel.setName("tueLabel"); // NOI18N
 
       tueCheckBox.setBackground(new java.awt.Color(255, 255, 255));
@@ -167,7 +170,8 @@ public class ScheduleMeeting extends javax.swing.JDialog {
       });
 
       wedLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-      wedLabel.setText("Wednesday");
+      wedLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+      wedLabel.setText("W");
       wedLabel.setName("wedLabel"); // NOI18N
 
       wedCheckBox.setBackground(new java.awt.Color(255, 255, 255));
@@ -181,7 +185,8 @@ public class ScheduleMeeting extends javax.swing.JDialog {
       });
 
       thuLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-      thuLabel.setText("Thursday");
+      thuLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+      thuLabel.setText("T");
       thuLabel.setName("thuLabel"); // NOI18N
 
       thuCheckBox.setBackground(new java.awt.Color(255, 255, 255));
@@ -195,7 +200,8 @@ public class ScheduleMeeting extends javax.swing.JDialog {
       });
 
       friLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-      friLabel.setText("Friday");
+      friLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+      friLabel.setText("F");
       friLabel.setName("friLabel"); // NOI18N
 
       friCheckBox.setBackground(new java.awt.Color(255, 255, 255));
@@ -209,7 +215,8 @@ public class ScheduleMeeting extends javax.swing.JDialog {
       });
 
       satLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-      satLabel.setText("Saturday");
+      satLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+      satLabel.setText("S");
       satLabel.setName("satLabel"); // NOI18N
 
       satCheckBox.setBackground(new java.awt.Color(255, 255, 255));
@@ -223,7 +230,8 @@ public class ScheduleMeeting extends javax.swing.JDialog {
       });
 
       sunLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-      sunLabel.setText("Sunday");
+      sunLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+      sunLabel.setText("S");
       sunLabel.setName("sunLabel"); // NOI18N
 
       sunCheckBox.setBackground(new java.awt.Color(255, 255, 255));
@@ -236,7 +244,7 @@ public class ScheduleMeeting extends javax.swing.JDialog {
          }
       });
 
-      searchLabel.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 24)); // NOI18N
+      searchLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
       searchLabel.setText("Contact List:");
       searchLabel.setName("searchLabel"); // NOI18N
 
@@ -272,7 +280,7 @@ public class ScheduleMeeting extends javax.swing.JDialog {
       contactList1.setName("contactList1"); // NOI18N
       jScrollPane2.setViewportView(contactList1);
 
-      searchLabel2.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 24)); // NOI18N
+      searchLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
       searchLabel2.setText("Merge timetables with:");
       searchLabel2.setName("searchLabel2"); // NOI18N
 
@@ -292,6 +300,10 @@ public class ScheduleMeeting extends javax.swing.JDialog {
          }
       });
 
+      jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+      jLabel2.setText("Which days would you like to meet?");
+      jLabel2.setName("jLabel2"); // NOI18N
+
       javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
       mainPanel.setLayout(mainPanelLayout);
       mainPanelLayout.setHorizontalGroup(
@@ -299,122 +311,105 @@ public class ScheduleMeeting extends javax.swing.JDialog {
          .addGroup(mainPanelLayout.createSequentialGroup()
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                .addGroup(mainPanelLayout.createSequentialGroup()
-                  .addContainerGap()
-                  .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                     .addComponent(searchLabel)
-                     .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                           .addComponent(AddArrow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                           .addComponent(RemoveArrow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                  .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                     .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(searchLabel2))
-                     .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE))))
-               .addGroup(mainPanelLayout.createSequentialGroup()
-                  .addGap(116, 116, 116)
-                  .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                     .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                           .addComponent(thuLabel)
-                           .addComponent(monLabel)
-                           .addComponent(tueLabel)
-                           .addComponent(wedLabel))
-                        .addGap(18, 18, 18)
-                        .addComponent(thuCheckBox))
-                     .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addGap(141, 141, 141)
-                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                           .addComponent(tueCheckBox)
-                           .addComponent(monCheckBox)
-                           .addComponent(wedCheckBox))
-                        .addGap(67, 67, 67)
-                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                           .addGroup(mainPanelLayout.createSequentialGroup()
-                              .addComponent(friLabel)
-                              .addGap(18, 18, 18)
-                              .addComponent(friCheckBox))
-                           .addGroup(mainPanelLayout.createSequentialGroup()
-                              .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                 .addComponent(satLabel)
-                                 .addComponent(sunLabel))
-                              .addGap(18, 18, 18)
-                              .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                 .addComponent(satCheckBox)
-                                 .addComponent(sunCheckBox)))))))
-               .addGroup(mainPanelLayout.createSequentialGroup()
-                  .addGap(200, 200, 200)
+                  .addGap(214, 214, 214)
                   .addComponent(confirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                   .addGap(33, 33, 33)
                   .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
-                  .addContainerGap()
-                  .addComponent(jLabel1)
-                  .addGap(68, 68, 68)))
-            .addContainerGap(17, Short.MAX_VALUE))
+               .addGroup(mainPanelLayout.createSequentialGroup()
+                  .addGap(125, 125, 125)
+                  .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                     .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel2))
+                     .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addComponent(monCheckBox)
+                        .addGap(18, 18, 18)
+                        .addComponent(tueCheckBox)
+                        .addGap(18, 18, 18)
+                        .addComponent(wedCheckBox)
+                        .addGap(18, 18, 18)
+                        .addComponent(thuCheckBox)
+                        .addGap(18, 18, 18)
+                        .addComponent(friCheckBox)
+                        .addGap(18, 18, 18)
+                        .addComponent(satCheckBox)
+                        .addGap(18, 18, 18)
+                        .addComponent(sunCheckBox))
+                     .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(monLabel)
+                        .addGap(50, 50, 50)
+                        .addComponent(tueLabel)
+                        .addGap(50, 50, 50)
+                        .addComponent(wedLabel)
+                        .addGap(43, 43, 43)
+                        .addComponent(thuLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39)
+                        .addComponent(friLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(47, 47, 47)
+                        .addComponent(satLabel)
+                        .addGap(54, 54, 54)
+                        .addComponent(sunLabel))))
+               .addGroup(mainPanelLayout.createSequentialGroup()
+                  .addGap(195, 195, 195)
+                  .addComponent(durationLabel)
+                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                  .addComponent(durationCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
-            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(durationLabel)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-            .addComponent(durationCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(191, 191, 191))
+            .addGap(0, 31, Short.MAX_VALUE)
+            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
+                  .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                     .addComponent(searchLabel)
+                     .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                           .addGroup(mainPanelLayout.createSequentialGroup()
+                              .addGap(103, 103, 103)
+                              .addComponent(searchLabel2))
+                           .addGroup(mainPanelLayout.createSequentialGroup()
+                              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                              .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                 .addComponent(AddArrow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                 .addComponent(RemoveArrow, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE))
+                              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                              .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                  .addGap(29, 29, 29))
+               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
+                  .addComponent(jLabel1)
+                  .addGap(84, 84, 84))))
       );
       mainPanelLayout.setVerticalGroup(
          mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(mainPanelLayout.createSequentialGroup()
-            .addGap(14, 14, 14)
+            .addGap(35, 35, 35)
             .addComponent(jLabel1)
-            .addGap(18, 18, 18)
+            .addGap(28, 28, 28)
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                .addComponent(durationLabel)
                .addComponent(durationCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(27, 27, 27)
+            .addGap(35, 35, 35)
+            .addComponent(jLabel2)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-               .addGroup(mainPanelLayout.createSequentialGroup()
-                  .addGap(10, 10, 10)
-                  .addComponent(monLabel)
-                  .addGap(35, 35, 35)
-                  .addComponent(tueLabel)
-                  .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                     .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addComponent(wedLabel)
-                        .addGap(42, 42, 42)
-                        .addComponent(thuLabel)
-                        .addGap(11, 11, 11))
-                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, mainPanelLayout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(wedCheckBox)
-                        .addGap(18, 18, 18)
-                        .addComponent(thuCheckBox))))
-               .addGroup(mainPanelLayout.createSequentialGroup()
-                  .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                     .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addComponent(monCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(tueCheckBox))
-                     .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                           .addComponent(friCheckBox)
-                           .addGroup(mainPanelLayout.createSequentialGroup()
-                              .addGap(10, 10, 10)
-                              .addComponent(friLabel)))
-                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                           .addGroup(mainPanelLayout.createSequentialGroup()
-                              .addGap(18, 18, 18)
-                              .addComponent(satCheckBox)
-                              .addGap(18, 18, 18)
-                              .addComponent(sunCheckBox))
-                           .addGroup(mainPanelLayout.createSequentialGroup()
-                              .addGap(28, 28, 28)
-                              .addComponent(satLabel)
-                              .addGap(37, 37, 37)
-                              .addComponent(sunLabel)))))
-                  .addGap(67, 67, 67)))
+               .addComponent(satCheckBox)
+               .addComponent(sunCheckBox)
+               .addComponent(monCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+               .addComponent(tueCheckBox)
+               .addComponent(wedCheckBox)
+               .addComponent(thuCheckBox)
+               .addComponent(friCheckBox))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addComponent(satLabel)
+               .addComponent(sunLabel)
+               .addComponent(monLabel)
+               .addComponent(tueLabel)
+               .addComponent(wedLabel)
+               .addComponent(thuLabel)
+               .addComponent(friLabel))
+            .addGap(38, 38, 38)
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                .addComponent(searchLabel)
                .addComponent(searchLabel2))
@@ -425,13 +420,13 @@ public class ScheduleMeeting extends javax.swing.JDialog {
                   .addComponent(AddArrow)
                   .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                   .addComponent(RemoveArrow))
-               .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
-               .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-            .addGap(18, 18, 18)
+               .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+               .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING))
+            .addGap(28, 28, 28)
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                .addComponent(confirmButton)
                .addComponent(cancelButton))
-            .addGap(95, 95, 95))
+            .addGap(175, 175, 175))
       );
 
       javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -955,6 +950,7 @@ public class ScheduleMeeting extends javax.swing.JDialog {
    private javax.swing.JCheckBox friCheckBox;
    private javax.swing.JLabel friLabel;
    private javax.swing.JLabel jLabel1;
+   private javax.swing.JLabel jLabel2;
    private javax.swing.JPasswordField jPasswordField1;
    private javax.swing.JScrollPane jScrollPane1;
    private javax.swing.JScrollPane jScrollPane2;
