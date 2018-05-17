@@ -119,7 +119,7 @@ public class Login extends javax.swing.JFrame {
                   .addGap(76, 76, 76)
                   .addComponent(jLabel1))
                .addGroup(jPanel1Layout.createSequentialGroup()
-                  .addGap(183, 183, 183)
+                  .addGap(194, 194, 194)
                   .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                      .addComponent(jButtonLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                      .addGroup(jPanel1Layout.createSequentialGroup()

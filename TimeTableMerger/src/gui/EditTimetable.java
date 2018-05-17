@@ -3712,7 +3712,7 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
       mainPanel.add(week2, "card2");
 
       getContentPane().add(mainPanel);
-      mainPanel.setBounds(0, 81, 700, 530);
+      mainPanel.setBounds(0, 81, 700, 522);
 
       jPanel1.setBackground(new java.awt.Color(255, 255, 255));
       jPanel1.setName("jPanel1"); // NOI18N
@@ -3816,23 +3816,24 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
       jPanel3Layout.setHorizontalGroup(
          jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(jPanel3Layout.createSequentialGroup()
-            .addGap(248, 248, 248)
+            .addContainerGap()
             .addComponent(buttonSaveTimetable, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(18, 18, 18)
-            .addComponent(buttonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addContainerGap(240, Short.MAX_VALUE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 475, Short.MAX_VALUE)
+            .addComponent(buttonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(18, 18, 18))
       );
       jPanel3Layout.setVerticalGroup(
          jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(jPanel3Layout.createSequentialGroup()
+            .addContainerGap()
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-               .addComponent(buttonSaveTimetable, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-               .addComponent(buttonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(0, 7, Short.MAX_VALUE))
+               .addComponent(buttonSaveTimetable)
+               .addComponent(buttonCancel))
+            .addContainerGap(14, Short.MAX_VALUE))
       );
 
       getContentPane().add(jPanel3);
-      jPanel3.setBounds(0, 610, 700, 40);
+      jPanel3.setBounds(0, 597, 700, 50);
 
       pack();
    }// </editor-fold>//GEN-END:initComponents

@@ -3818,7 +3818,7 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
       mainPanel.add(week2, "card2");
 
       getContentPane().add(mainPanel);
-      mainPanel.setBounds(0, 81, 700, 530);
+      mainPanel.setBounds(0, 81, 700, 525);
 
       jPanel2.setBackground(new java.awt.Color(255, 255, 255));
       jPanel2.setName("jPanel2"); // NOI18N
@@ -3893,21 +3893,21 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
       jPanel3.setLayout(jPanel3Layout);
       jPanel3Layout.setHorizontalGroup(
          jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGroup(jPanel3Layout.createSequentialGroup()
-            .addGap(297, 297, 297)
-            .addComponent(buttonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addContainerGap(307, Short.MAX_VALUE))
+         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+            .addContainerGap(582, Short.MAX_VALUE)
+            .addComponent(buttonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(18, 18, 18))
       );
       jPanel3Layout.setVerticalGroup(
          jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(jPanel3Layout.createSequentialGroup()
-            .addContainerGap()
-            .addComponent(buttonCancel, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
-            .addContainerGap())
+            .addGap(19, 19, 19)
+            .addComponent(buttonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap(36, Short.MAX_VALUE))
       );
 
       getContentPane().add(jPanel3);
-      jPanel3.setBounds(0, 600, 700, 50);
+      jPanel3.setBounds(0, 590, 700, 80);
 
       pack();
    }// </editor-fold>//GEN-END:initComponents
