@@ -9,7 +9,9 @@ import org.junit.runners.Suite;
  * @author duecl801
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({timetableDAO.DaoTimetableTesting.class, timetableGUI.GuiCreateTimetableTesting.class, userDAO.DaoUserTesting.class})
+@Suite.SuiteClasses({timetableDAO.DaoTimetableTesting.class, userDAO.DaoUserTesting.class, 
+	timetableGUI.GuiCreateTimetableTesting.class, userGUI.GuiCreateAccountTesting.class})
+
 public class AllTests {
 
 	@Before

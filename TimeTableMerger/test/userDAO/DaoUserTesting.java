@@ -62,4 +62,11 @@ public class DaoUserTesting {
 		assertEquals("Retrieved user should be the same", user3, retrieved);
 	}
 	
+	@Test
+	public void testDeleteUser(){
+		userDAO.deleteUser(user1);
+		User retrieved = userDAO.getUser("username1");
+		assertNull("User should no longer exist", retrieved);
+	}
+	
 }
