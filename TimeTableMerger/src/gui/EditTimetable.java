@@ -875,7 +875,7 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
       timetableImage2 = new javax.swing.JLabel();
       jPanel1 = new javax.swing.JPanel();
       switchButton = new javax.swing.JButton();
-      helpButton = new java.awt.Button();
+      Help = new java.awt.Button();
       jPanel2 = new javax.swing.JPanel();
       titleLabel = new javax.swing.JLabel();
       buttonCancel = new javax.swing.JButton();
@@ -3727,11 +3727,12 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
          }
       });
 
-      helpButton.setLabel("?");
-      helpButton.setName("helpButton"); // NOI18N
-      helpButton.addActionListener(new java.awt.event.ActionListener() {
+      Help.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+      Help.setLabel("?");
+      Help.setName("help"); // NOI18N
+      Help.addActionListener(new java.awt.event.ActionListener() {
          public void actionPerformed(java.awt.event.ActionEvent evt) {
-            helpButtonActionPerformed(evt);
+            HelpActionPerformed(evt);
          }
       });
 
@@ -3741,18 +3742,21 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
          jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(jPanel1Layout.createSequentialGroup()
             .addComponent(switchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 241, Short.MAX_VALUE)
-            .addComponent(helpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(18, 18, 18))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 234, Short.MAX_VALUE)
+            .addComponent(Help, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(19, 19, 19))
       );
       jPanel1Layout.setVerticalGroup(
          jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(jPanel1Layout.createSequentialGroup()
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-               .addComponent(helpButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-               .addComponent(switchButton))
-            .addGap(0, 9, Short.MAX_VALUE))
+            .addComponent(switchButton)
+            .addGap(0, 10, Short.MAX_VALUE))
+         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(Help, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
       );
+
+      Help.getAccessibleContext().setAccessibleName("?");
 
       getContentPane().add(jPanel1);
       jPanel1.setBounds(380, 75, 320, 40);
@@ -3807,7 +3811,7 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
       );
 
       getContentPane().add(jPanel2);
-      jPanel2.setBounds(0, 0, 700, 142);
+      jPanel2.setBounds(0, 0, 700, 137);
 
       pack();
    }// </editor-fold>//GEN-END:initComponents
@@ -5252,15 +5256,16 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
        }
    }//GEN-LAST:event_buttonCancelActionPerformed
 
-   private void helpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpButtonActionPerformed
+   private void HelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HelpActionPerformed
        Help dialog = new Help(this, true, timetableDAO, userDAO, userStorageDAO);
        // centre the dialog on the parent window
        dialog.setLocationRelativeTo(this);
        // make the dialog visible
        dialog.setVisible(true);
-   }//GEN-LAST:event_helpButtonActionPerformed
+   }//GEN-LAST:event_HelpActionPerformed
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
+   private java.awt.Button Help;
    private javax.swing.JButton buttonCancel;
    private javax.swing.JButton buttonSaveTimetable;
    private javax.swing.JCheckBox fri10w1;
@@ -5291,7 +5296,6 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
    private javax.swing.JCheckBox fri8w2;
    private javax.swing.JCheckBox fri9w1;
    private javax.swing.JCheckBox fri9w2;
-   private java.awt.Button helpButton;
    private javax.swing.JPanel jPanel1;
    private javax.swing.JPanel jPanel2;
    private javax.swing.JPanel mainPanel;

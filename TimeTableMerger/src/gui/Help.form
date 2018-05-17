@@ -61,29 +61,30 @@
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="redColour" min="-2" pref="129" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="OK" min="-2" pref="81" max="-2" attributes="0"/>
-                                      <Component id="Label1" min="-2" pref="251" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="greenColour" min="-2" pref="129" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="Label2" min="-2" pref="251" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
+                          <Component id="OK" min="-2" pref="81" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="168" max="-2" attributes="0"/>
                           <Component id="HelpLabel" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="57" max="32767" attributes="0"/>
+                  <EmptySpace pref="181" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="greenColour" alignment="1" min="-2" pref="97" max="-2" attributes="0"/>
+                      <Component id="goldColour" alignment="1" min="-2" pref="97" max="-2" attributes="0"/>
+                      <Component id="redColour1" alignment="1" min="-2" pref="97" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="Label2" min="-2" pref="251" max="-2" attributes="0"/>
+                      <Component id="Label1" min="-2" pref="251" max="-2" attributes="0"/>
+                      <Component id="FreeTimeSlot2" min="-2" pref="251" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -92,25 +93,33 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="HelpLabel" min="-2" pref="85" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="greenColour" min="-2" pref="49" max="-2" attributes="0"/>
+                      <Component id="greenColour" min="-2" pref="36" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                           <Component id="Label2" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="redColour" min="-2" pref="49" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                           <Component id="Label1" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="redColour1" min="-2" pref="36" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace pref="36" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="goldColour" min="-2" pref="36" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                          <Component id="FreeTimeSlot2" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="39" max="32767" attributes="0"/>
                   <Component id="OK" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
               </Group>
@@ -137,12 +146,12 @@
             <Property name="name" type="java.lang.String" value="greenColour" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="redColour">
+        <Component class="javax.swing.JLabel" name="goldColour">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/redTile.png"/>
+              <Image iconType="3" name="/images/goldTile.png"/>
             </Property>
-            <Property name="name" type="java.lang.String" value="redColour" noResource="true"/>
+            <Property name="name" type="java.lang.String" value="goldColour" noResource="true"/>
           </Properties>
         </Component>
         <Component class="java.awt.Label" name="Label1">
@@ -165,6 +174,20 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OKActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="redColour1">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/images/redTile.png"/>
+            </Property>
+            <Property name="name" type="java.lang.String" value="redColour1" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="java.awt.Label" name="FreeTimeSlot2">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="FreeTimeSlot2" noResource="true"/>
+            <Property name="text" type="java.lang.String" value="Preferred Free Time Slots "/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>

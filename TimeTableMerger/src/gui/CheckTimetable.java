@@ -767,6 +767,7 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
    private void initComponents() {
 
+      button1 = new java.awt.Button();
       jTextPane1 = new javax.swing.JTextPane();
       secondaryPanel = new javax.swing.JPanel();
       week1Panel = new javax.swing.JPanel();
@@ -976,9 +977,13 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
       timetableImage2 = new javax.swing.JLabel();
       jPanel1 = new javax.swing.JPanel();
       switchButton = new javax.swing.JButton();
+      Help = new java.awt.Button();
       jPanel2 = new javax.swing.JPanel();
       titleLabel = new javax.swing.JLabel();
       buttonCancel = new javax.swing.JButton();
+
+      button1.setLabel("button1");
+      button1.setName("button1"); // NOI18N
 
       getContentPane().setLayout(null);
 
@@ -3831,17 +3836,31 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
          }
       });
 
+      Help.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+      Help.setLabel("?");
+      Help.setName("Help"); // NOI18N
+      Help.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            HelpActionPerformed(evt);
+         }
+      });
+
       javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
       jPanel1.setLayout(jPanel1Layout);
       jPanel1Layout.setHorizontalGroup(
          jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(jPanel1Layout.createSequentialGroup()
             .addComponent(switchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addContainerGap(284, Short.MAX_VALUE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 244, Short.MAX_VALUE)
+            .addComponent(Help, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap())
       );
       jPanel1Layout.setVerticalGroup(
          jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addComponent(switchButton, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+         .addGroup(jPanel1Layout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(Help, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
       );
 
       getContentPane().add(jPanel1);
@@ -4697,7 +4716,17 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 			dialog.setVisible(true);
    }//GEN-LAST:event_buttonCancelActionPerformed
 
+   private void HelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HelpActionPerformed
+       Help dialog = new Help(this, true, timetableDAO, userDAO, userStorageDAO);
+       // centre the dialog on the parent window
+       dialog.setLocationRelativeTo(this);
+       // make the dialog visible
+       dialog.setVisible(true);
+   }//GEN-LAST:event_HelpActionPerformed
+
    // Variables declaration - do not modify//GEN-BEGIN:variables
+   private java.awt.Button Help;
+   private java.awt.Button button1;
    private javax.swing.JButton buttonCancel;
    private javax.swing.JCheckBox fri10w1;
    private javax.swing.JCheckBox fri10w2;
