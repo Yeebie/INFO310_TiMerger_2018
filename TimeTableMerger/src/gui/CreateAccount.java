@@ -5,6 +5,7 @@ import dao.TimetableDAO;
 import dao.UserDAO;
 import dao.UserStorageDAO;
 import domain.User;
+import gui.helpers.ValidationHelper;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
@@ -20,6 +21,7 @@ public class CreateAccount extends javax.swing.JFrame {
     private final TimetableDAO timetableDAO;
     private final UserStorageDAO userStorageDAO;
     User user = new User();
+	 private ValidationHelper validHelp = new ValidationHelper();
 
     /**
      * Creates new form Test
@@ -287,6 +289,7 @@ public class CreateAccount extends javax.swing.JFrame {
                             this.user.setLastName(lnameString);
                             this.user.setPassword(passwordString);
                             this.user.setEmail(email);
+									 if(validHelp.isObjectValid(this.user)){
                             userDAO.saveUser(this.user);
 
                             dispose();
@@ -295,6 +298,7 @@ public class CreateAccount extends javax.swing.JFrame {
                             frame.setLocationRelativeTo(null);
                             // show the frame
                             frame.setVisible(true);
+									 }
 
                         } else {
                             JOptionPane.showMessageDialog(null, "Please enter the same password as above.", "Error", JOptionPane.ERROR_MESSAGE);

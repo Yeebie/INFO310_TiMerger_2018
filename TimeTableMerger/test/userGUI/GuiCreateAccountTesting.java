@@ -53,14 +53,6 @@ public class GuiCreateAccountTesting {
 		userDao = mock(UserDAO.class);
 		userStorageDao = mock(UserStorageDAO.class);
 		timetableDao = mock(TimetableDAO.class);
-
-		Mockito.doAnswer(new Answer<Void>() {
-			@Override
-			public Void answer(InvocationOnMock invocation) throws Throwable {
-				users.remove(user1);
-				return null;
-			}
-		}).when(userDao).deleteUser(user1);
 	}
 
 	@After
