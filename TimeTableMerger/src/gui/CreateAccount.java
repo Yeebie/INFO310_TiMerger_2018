@@ -308,6 +308,8 @@ public class CreateAccount extends javax.swing.JFrame {
 									 if(validHelp.isObjectValid(this.user)){
                             userDAO.saveUser(this.user);
 
+									 JOptionPane.showOptionDialog(null, "Thank you for creating an account!", "Success", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null, null, null);
+
                             dispose();
                             Login frame = new Login(userDAO, timetableDAO, userStorageDAO);
                             // centre the frame on the screen
