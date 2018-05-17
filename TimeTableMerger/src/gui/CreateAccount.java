@@ -1,5 +1,6 @@
 package gui;
 
+import com.sun.glass.events.KeyEvent;
 import dao.DAOException;
 import dao.TimetableDAO;
 import dao.UserDAO;
@@ -91,6 +92,11 @@ public class CreateAccount extends javax.swing.JFrame {
             firstNameFieldActionPerformed(evt);
          }
       });
+      firstNameField.addKeyListener(new java.awt.event.KeyAdapter() {
+         public void keyTyped(java.awt.event.KeyEvent evt) {
+            firstNameFieldKeyTyped(evt);
+         }
+      });
 
       lastNameLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
       lastNameLabel.setText("Last Name:");
@@ -98,6 +104,16 @@ public class CreateAccount extends javax.swing.JFrame {
 
       lastNameField.setMinimumSize(new java.awt.Dimension(12, 40));
       lastNameField.setName("lastNameField"); // NOI18N
+      lastNameField.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            lastNameFieldActionPerformed(evt);
+         }
+      });
+      lastNameField.addKeyListener(new java.awt.event.KeyAdapter() {
+         public void keyTyped(java.awt.event.KeyEvent evt) {
+            lastNameFieldKeyTyped(evt);
+         }
+      });
 
       passwordLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
       passwordLabel.setText("Password:");
@@ -173,9 +189,9 @@ public class CreateAccount extends javax.swing.JFrame {
                      .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                      .addComponent(firstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                      .addComponent(lastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))))
-            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addContainerGap(179, Short.MAX_VALUE))
          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-            .addGap(0, 110, Short.MAX_VALUE)
+            .addGap(0, 122, Short.MAX_VALUE)
             .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGap(96, 96, 96))
       );
@@ -319,6 +335,24 @@ public class CreateAccount extends javax.swing.JFrame {
             int result = JOptionPane.showConfirmDialog(this, ex.getMessage());
         }
     }//GEN-LAST:event_loginButtonActionPerformed
+
+   private void firstNameFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_firstNameFieldKeyTyped
+	char c=evt.getKeyChar();
+
+    if(!(Character.isAlphabetic(c) ||  (c==KeyEvent.VK_BACKSPACE)||  c==KeyEvent.VK_DELETE ))
+        evt.consume();      // TODO add your handling code here:
+   }//GEN-LAST:event_firstNameFieldKeyTyped
+
+   private void lastNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lastNameFieldActionPerformed
+      // TODO add your handling code here:
+   }//GEN-LAST:event_lastNameFieldActionPerformed
+
+   private void lastNameFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lastNameFieldKeyTyped
+      char c=evt.getKeyChar();
+
+    if(!(Character.isAlphabetic(c) ||  (c==KeyEvent.VK_BACKSPACE)||  c==KeyEvent.VK_DELETE ))
+        evt.consume();
+   }//GEN-LAST:event_lastNameFieldKeyTyped
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
    private javax.swing.JButton cancelButton;
