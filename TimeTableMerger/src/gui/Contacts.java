@@ -96,7 +96,7 @@ public class Contacts extends javax.swing.JFrame {
       });
 
       exitButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-      exitButton.setText("Save & Exit");
+      exitButton.setText("Done");
       exitButton.setName("exitButton"); // NOI18N
       exitButton.addActionListener(new java.awt.event.ActionListener() {
          public void actionPerformed(java.awt.event.ActionEvent evt) {
