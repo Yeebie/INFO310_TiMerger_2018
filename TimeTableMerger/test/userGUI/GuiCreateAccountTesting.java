@@ -59,7 +59,7 @@ public class GuiCreateAccountTesting {
     }
 	@After
 	public void tearDown() {
-            System.out.println("huhuhu");
+            
 		fixture.cleanUp();
                 
                 
@@ -86,10 +86,11 @@ public class GuiCreateAccountTesting {
 
 		// enter some details into the UI components
 		fixture.textBox("usernameField").enterText("Alzhu850");
-		fixture.textBox("firstNameField").enterText("Hussam");
-		fixture.textBox("lastNameField").enterText("Alzahrani");
+		fixture.textBox("firstNameField").enterText("Hus");
+		fixture.textBox("lastNameField").enterText("Alzah");
 		fixture.textBox("emailField").enterText("h22m@hot.com");
 		fixture.textBox("passwordField").enterText("12345");
+                fixture.textBox("reenterfield").enterText("12345");
 		
 
 		// click the save button
@@ -97,20 +98,16 @@ public class GuiCreateAccountTesting {
 
 		// create a Mockito argument captor to use to retrieve the passed student from the mocked DAO
 		ArgumentCaptor<User> argument = ArgumentCaptor.forClass(User.class);
-
-		 System.out.println("testing" + "argument");
-       
-        //      System.out.println(argument.capture() + "capture" ) ; 
-        //    System.out.println(argument + "argument") ; 
                  verify(userDao).saveUser(argument.capture());
 
                  User saveUser = argument.getValue();
 
 		// test that the product details were properly saved
 		assertEquals("Ensure the userName was saved", "Alzhu850",  saveUser.getUserName());
-		assertEquals("Ensure the firstName was saved", "Hussam", saveUser.getFirstName());
-		assertEquals("Ensure the lastName was saved", "Alzahrani", saveUser.getLastName());
+		assertEquals("Ensure the firstName was saved", "Hus", saveUser.getFirstName());
+		assertEquals("Ensure the lastName was saved", "Alzah", saveUser.getLastName());
 		assertEquals("Ensure the email was saved", "h22m@hot.com" , saveUser.getEmail());
+                assertEquals("Ensure the password was saved", "12345", saveUser.getPassword());
                 assertEquals("Ensure the password was saved", "12345", saveUser.getPassword());
 		
 
