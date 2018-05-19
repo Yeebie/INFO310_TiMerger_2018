@@ -5,6 +5,7 @@ import dao.UserDAO;
 import dao.UserStorageDAO;
 import domain.Day;
 import java.awt.CardLayout;
+import java.awt.Dimension;
 import static java.awt.SystemColor.window;
 import java.awt.Window;
 import java.util.ArrayList;
@@ -39,7 +40,7 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
         this.userDAO = userDAO;
         this.userStorageDAO = userStorageDAO;
         this.setName("Create Timetable");
-
+        setPreferredSize(new Dimension(700, 700));
         initComponents();
 
         /**
@@ -4715,6 +4716,8 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
            sundayWeek1.setDayName("Week 1 Sunday");
        }
 
+       System.out.println(mondayWeek1);
+
        saveTimetable(mondayWeek1);
        saveTimetable(tuesdayWeek1);
        saveTimetable(wednesdayWeek1);
@@ -4733,11 +4736,11 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
 
        dispose();
 
-       HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userDAO, userStorageDAO);
+       // HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userDAO, userStorageDAO);
        //centre the dialog on the parent window
-       dialog.setLocationRelativeTo(this);
+       // dialog.setLocationRelativeTo(this);
        //make the dialog visible
-       dialog.setVisible(true);
+       //  dialog.setVisible(true);
    }//GEN-LAST:event_buttonSaveTimetableActionPerformed
 
     private void saveTimetable(Day day) {
