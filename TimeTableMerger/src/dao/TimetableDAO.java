@@ -69,7 +69,7 @@ public class TimetableDAO {
 	}
 
 	public void saveDay(Day day) {
-		String sql = "merge into day (UserName, DayName, eightAM, nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM, sixPM, sevenPM, eightPM, ninePM) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+            	String sql = "merge into day (UserName, DayName, eightAM, nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM, sixPM, sevenPM, eightPM, ninePM) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		try (
 				  // get connection to database
 				  Connection dbCon = JdbcConnection.getConnection(url);
