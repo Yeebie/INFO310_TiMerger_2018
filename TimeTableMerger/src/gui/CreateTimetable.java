@@ -3314,11 +3314,11 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                .addComponent(buttonSaveTimetable)
                .addComponent(buttonCancel))
-            .addContainerGap(14, Short.MAX_VALUE))
+            .addContainerGap(24, Short.MAX_VALUE))
       );
 
       getContentPane().add(jPanel1);
-      jPanel1.setBounds(0, 600, 700, 50);
+      jPanel1.setBounds(0, 600, 700, 60);
 
       pack();
    }// </editor-fold>//GEN-END:initComponents
