@@ -176,106 +176,6 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
       week2Panel = new javax.swing.JPanel();
       week2Label = new javax.swing.JLabel();
       mainPanel = new javax.swing.JPanel();
-      week1 = new javax.swing.JPanel();
-      mon8w1 = new javax.swing.JCheckBox();
-      tue8w1 = new javax.swing.JCheckBox();
-      wed8w1 = new javax.swing.JCheckBox();
-      thu8w1 = new javax.swing.JCheckBox();
-      fri8w1 = new javax.swing.JCheckBox();
-      sat8w1 = new javax.swing.JCheckBox();
-      sun8w1 = new javax.swing.JCheckBox();
-      mon9w1 = new javax.swing.JCheckBox();
-      tue9w1 = new javax.swing.JCheckBox();
-      wed9w1 = new javax.swing.JCheckBox();
-      thu9w1 = new javax.swing.JCheckBox();
-      fri9w1 = new javax.swing.JCheckBox();
-      sat9w1 = new javax.swing.JCheckBox();
-      sun9w1 = new javax.swing.JCheckBox();
-      mon10w1 = new javax.swing.JCheckBox();
-      tue10w1 = new javax.swing.JCheckBox();
-      wed10w1 = new javax.swing.JCheckBox();
-      thu10w1 = new javax.swing.JCheckBox();
-      fri10w1 = new javax.swing.JCheckBox();
-      sat10w1 = new javax.swing.JCheckBox();
-      sun10w1 = new javax.swing.JCheckBox();
-      mon11w1 = new javax.swing.JCheckBox();
-      tue11w1 = new javax.swing.JCheckBox();
-      wed11w1 = new javax.swing.JCheckBox();
-      thu11w1 = new javax.swing.JCheckBox();
-      fri11w1 = new javax.swing.JCheckBox();
-      sat11w1 = new javax.swing.JCheckBox();
-      sun11w1 = new javax.swing.JCheckBox();
-      mon12w1 = new javax.swing.JCheckBox();
-      tue12w1 = new javax.swing.JCheckBox();
-      wed12w1 = new javax.swing.JCheckBox();
-      thu12w1 = new javax.swing.JCheckBox();
-      fri12w1 = new javax.swing.JCheckBox();
-      sat12w1 = new javax.swing.JCheckBox();
-      sun12w1 = new javax.swing.JCheckBox();
-      mon13w1 = new javax.swing.JCheckBox();
-      tue13w1 = new javax.swing.JCheckBox();
-      wed13w1 = new javax.swing.JCheckBox();
-      thu13w1 = new javax.swing.JCheckBox();
-      fri13w1 = new javax.swing.JCheckBox();
-      sat13w1 = new javax.swing.JCheckBox();
-      sun13w1 = new javax.swing.JCheckBox();
-      mon14w1 = new javax.swing.JCheckBox();
-      tue14w1 = new javax.swing.JCheckBox();
-      wed14w1 = new javax.swing.JCheckBox();
-      thu14w1 = new javax.swing.JCheckBox();
-      fri14w1 = new javax.swing.JCheckBox();
-      sat14w1 = new javax.swing.JCheckBox();
-      sun14w1 = new javax.swing.JCheckBox();
-      mon15w1 = new javax.swing.JCheckBox();
-      tue15w1 = new javax.swing.JCheckBox();
-      wed15w1 = new javax.swing.JCheckBox();
-      thu15w1 = new javax.swing.JCheckBox();
-      fri15w1 = new javax.swing.JCheckBox();
-      sat15w1 = new javax.swing.JCheckBox();
-      sun15w1 = new javax.swing.JCheckBox();
-      mon16w1 = new javax.swing.JCheckBox();
-      tue16w1 = new javax.swing.JCheckBox();
-      wed16w1 = new javax.swing.JCheckBox();
-      thu16w1 = new javax.swing.JCheckBox();
-      fri16w1 = new javax.swing.JCheckBox();
-      sat16w1 = new javax.swing.JCheckBox();
-      sun16w1 = new javax.swing.JCheckBox();
-      mon17w1 = new javax.swing.JCheckBox();
-      tue17w1 = new javax.swing.JCheckBox();
-      wed17w1 = new javax.swing.JCheckBox();
-      thu17w1 = new javax.swing.JCheckBox();
-      fri17w1 = new javax.swing.JCheckBox();
-      sat17w1 = new javax.swing.JCheckBox();
-      sun17w1 = new javax.swing.JCheckBox();
-      mon18w1 = new javax.swing.JCheckBox();
-      tue18w1 = new javax.swing.JCheckBox();
-      wed18w1 = new javax.swing.JCheckBox();
-      thu18w1 = new javax.swing.JCheckBox();
-      fri18w1 = new javax.swing.JCheckBox();
-      sat18w1 = new javax.swing.JCheckBox();
-      sun18w1 = new javax.swing.JCheckBox();
-      mon19w1 = new javax.swing.JCheckBox();
-      tue19w1 = new javax.swing.JCheckBox();
-      wed19w1 = new javax.swing.JCheckBox();
-      thu19w1 = new javax.swing.JCheckBox();
-      fri19w1 = new javax.swing.JCheckBox();
-      sat19w1 = new javax.swing.JCheckBox();
-      sun19w1 = new javax.swing.JCheckBox();
-      mon20w1 = new javax.swing.JCheckBox();
-      tue20w1 = new javax.swing.JCheckBox();
-      wed20w1 = new javax.swing.JCheckBox();
-      thu20w1 = new javax.swing.JCheckBox();
-      fri20w1 = new javax.swing.JCheckBox();
-      sat20w1 = new javax.swing.JCheckBox();
-      sun20w1 = new javax.swing.JCheckBox();
-      mon21w1 = new javax.swing.JCheckBox();
-      tue21w1 = new javax.swing.JCheckBox();
-      wed21w1 = new javax.swing.JCheckBox();
-      thu21w1 = new javax.swing.JCheckBox();
-      fri21w1 = new javax.swing.JCheckBox();
-      sat21w1 = new javax.swing.JCheckBox();
-      sun21w1 = new javax.swing.JCheckBox();
-      timetableImage1 = new javax.swing.JLabel();
       week2 = new javax.swing.JPanel();
       mon8w2 = new javax.swing.JCheckBox();
       tue8w2 = new javax.swing.JCheckBox();
@@ -376,12 +276,113 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
       sat21w2 = new javax.swing.JCheckBox();
       sun21w2 = new javax.swing.JCheckBox();
       timetableImage2 = new javax.swing.JLabel();
-      jPanel1 = new javax.swing.JPanel();
-      switchButton = new javax.swing.JButton();
+      week1 = new javax.swing.JPanel();
+      mon8w1 = new javax.swing.JCheckBox();
+      tue8w1 = new javax.swing.JCheckBox();
+      wed8w1 = new javax.swing.JCheckBox();
+      thu8w1 = new javax.swing.JCheckBox();
+      fri8w1 = new javax.swing.JCheckBox();
+      sat8w1 = new javax.swing.JCheckBox();
+      sun8w1 = new javax.swing.JCheckBox();
+      mon9w1 = new javax.swing.JCheckBox();
+      tue9w1 = new javax.swing.JCheckBox();
+      wed9w1 = new javax.swing.JCheckBox();
+      thu9w1 = new javax.swing.JCheckBox();
+      fri9w1 = new javax.swing.JCheckBox();
+      sat9w1 = new javax.swing.JCheckBox();
+      sun9w1 = new javax.swing.JCheckBox();
+      mon10w1 = new javax.swing.JCheckBox();
+      tue10w1 = new javax.swing.JCheckBox();
+      wed10w1 = new javax.swing.JCheckBox();
+      thu10w1 = new javax.swing.JCheckBox();
+      fri10w1 = new javax.swing.JCheckBox();
+      sat10w1 = new javax.swing.JCheckBox();
+      sun10w1 = new javax.swing.JCheckBox();
+      mon11w1 = new javax.swing.JCheckBox();
+      tue11w1 = new javax.swing.JCheckBox();
+      wed11w1 = new javax.swing.JCheckBox();
+      thu11w1 = new javax.swing.JCheckBox();
+      fri11w1 = new javax.swing.JCheckBox();
+      sat11w1 = new javax.swing.JCheckBox();
+      sun11w1 = new javax.swing.JCheckBox();
+      mon12w1 = new javax.swing.JCheckBox();
+      tue12w1 = new javax.swing.JCheckBox();
+      wed12w1 = new javax.swing.JCheckBox();
+      thu12w1 = new javax.swing.JCheckBox();
+      fri12w1 = new javax.swing.JCheckBox();
+      sat12w1 = new javax.swing.JCheckBox();
+      sun12w1 = new javax.swing.JCheckBox();
+      mon13w1 = new javax.swing.JCheckBox();
+      tue13w1 = new javax.swing.JCheckBox();
+      wed13w1 = new javax.swing.JCheckBox();
+      thu13w1 = new javax.swing.JCheckBox();
+      fri13w1 = new javax.swing.JCheckBox();
+      sat13w1 = new javax.swing.JCheckBox();
+      sun13w1 = new javax.swing.JCheckBox();
+      mon14w1 = new javax.swing.JCheckBox();
+      tue14w1 = new javax.swing.JCheckBox();
+      wed14w1 = new javax.swing.JCheckBox();
+      thu14w1 = new javax.swing.JCheckBox();
+      fri14w1 = new javax.swing.JCheckBox();
+      sat14w1 = new javax.swing.JCheckBox();
+      sun14w1 = new javax.swing.JCheckBox();
+      mon15w1 = new javax.swing.JCheckBox();
+      tue15w1 = new javax.swing.JCheckBox();
+      wed15w1 = new javax.swing.JCheckBox();
+      thu15w1 = new javax.swing.JCheckBox();
+      fri15w1 = new javax.swing.JCheckBox();
+      sat15w1 = new javax.swing.JCheckBox();
+      sun15w1 = new javax.swing.JCheckBox();
+      mon16w1 = new javax.swing.JCheckBox();
+      tue16w1 = new javax.swing.JCheckBox();
+      wed16w1 = new javax.swing.JCheckBox();
+      thu16w1 = new javax.swing.JCheckBox();
+      fri16w1 = new javax.swing.JCheckBox();
+      sat16w1 = new javax.swing.JCheckBox();
+      sun16w1 = new javax.swing.JCheckBox();
+      mon17w1 = new javax.swing.JCheckBox();
+      tue17w1 = new javax.swing.JCheckBox();
+      wed17w1 = new javax.swing.JCheckBox();
+      thu17w1 = new javax.swing.JCheckBox();
+      fri17w1 = new javax.swing.JCheckBox();
+      sat17w1 = new javax.swing.JCheckBox();
+      sun17w1 = new javax.swing.JCheckBox();
+      mon18w1 = new javax.swing.JCheckBox();
+      tue18w1 = new javax.swing.JCheckBox();
+      wed18w1 = new javax.swing.JCheckBox();
+      thu18w1 = new javax.swing.JCheckBox();
+      fri18w1 = new javax.swing.JCheckBox();
+      sat18w1 = new javax.swing.JCheckBox();
+      sun18w1 = new javax.swing.JCheckBox();
+      mon19w1 = new javax.swing.JCheckBox();
+      tue19w1 = new javax.swing.JCheckBox();
+      wed19w1 = new javax.swing.JCheckBox();
+      thu19w1 = new javax.swing.JCheckBox();
+      fri19w1 = new javax.swing.JCheckBox();
+      sat19w1 = new javax.swing.JCheckBox();
+      sun19w1 = new javax.swing.JCheckBox();
+      mon20w1 = new javax.swing.JCheckBox();
+      tue20w1 = new javax.swing.JCheckBox();
+      wed20w1 = new javax.swing.JCheckBox();
+      thu20w1 = new javax.swing.JCheckBox();
+      fri20w1 = new javax.swing.JCheckBox();
+      sat20w1 = new javax.swing.JCheckBox();
+      sun20w1 = new javax.swing.JCheckBox();
+      mon21w1 = new javax.swing.JCheckBox();
+      tue21w1 = new javax.swing.JCheckBox();
+      wed21w1 = new javax.swing.JCheckBox();
+      thu21w1 = new javax.swing.JCheckBox();
+      fri21w1 = new javax.swing.JCheckBox();
+      sat21w1 = new javax.swing.JCheckBox();
+      sun21w1 = new javax.swing.JCheckBox();
+      timetableImage1 = new javax.swing.JLabel();
       jPanel2 = new javax.swing.JPanel();
-      titleLabel = new javax.swing.JLabel();
-      buttonCancel = new javax.swing.JButton();
+      jLabel1 = new javax.swing.JLabel();
+      switchButton = new javax.swing.JButton();
+      Help = new java.awt.Button();
+      jPanel1 = new javax.swing.JPanel();
       buttonSaveTimetable = new javax.swing.JButton();
+      buttonCancel = new javax.swing.JButton();
 
       getContentPane().setLayout(null);
 
@@ -401,13 +402,13 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
       week1PanelLayout.setHorizontalGroup(
          week1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, week1PanelLayout.createSequentialGroup()
-            .addGap(0, 286, Short.MAX_VALUE)
+            .addGap(0, 16, Short.MAX_VALUE)
             .addComponent(week1Label))
       );
       week1PanelLayout.setVerticalGroup(
          week1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(week1PanelLayout.createSequentialGroup()
-            .addComponent(week1Label, javax.swing.GroupLayout.PREFERRED_SIZE, 28, Short.MAX_VALUE)
+            .addComponent(week1Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addContainerGap())
       );
 
@@ -426,1407 +427,23 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
       week2PanelLayout.setHorizontalGroup(
          week2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, week2PanelLayout.createSequentialGroup()
-            .addGap(0, 286, Short.MAX_VALUE)
+            .addGap(0, 16, Short.MAX_VALUE)
             .addComponent(week2Label))
       );
       week2PanelLayout.setVerticalGroup(
          week2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(week2PanelLayout.createSequentialGroup()
-            .addComponent(week2Label, javax.swing.GroupLayout.PREFERRED_SIZE, 28, Short.MAX_VALUE)
+            .addComponent(week2Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addContainerGap())
       );
 
       secondaryPanel.add(week2Panel, "card3");
 
       getContentPane().add(secondaryPanel);
-      secondaryPanel.setBounds(0, 75, 380, 36);
+      secondaryPanel.setBounds(0, 21, 110, 30);
 
       mainPanel.setName("mainPanel"); // NOI18N
       mainPanel.setLayout(new java.awt.CardLayout());
-
-      week1.setBackground(new java.awt.Color(255, 255, 255));
-      week1.setName("week1"); // NOI18N
-      week1.setLayout(null);
-
-      mon8w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      mon8w1.setBorderPainted(true);
-      mon8w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      mon8w1.setIconTextGap(0);
-      mon8w1.setName("mon8w1"); // NOI18N
-      mon8w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      mon8w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            mon8w1ActionPerformed(evt);
-         }
-      });
-      week1.add(mon8w1);
-      mon8w1.setBounds(70, 46, 88, 34);
-
-      tue8w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      tue8w1.setBorderPainted(true);
-      tue8w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      tue8w1.setIconTextGap(0);
-      tue8w1.setName("tue8w1"); // NOI18N
-      tue8w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      tue8w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            tue8w1ActionPerformed(evt);
-         }
-      });
-      week1.add(tue8w1);
-      tue8w1.setBounds(158, 46, 88, 34);
-
-      wed8w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      wed8w1.setBorderPainted(true);
-      wed8w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      wed8w1.setIconTextGap(0);
-      wed8w1.setName("wed8w1"); // NOI18N
-      wed8w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      wed8w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            wed8w1ActionPerformed(evt);
-         }
-      });
-      week1.add(wed8w1);
-      wed8w1.setBounds(246, 46, 88, 34);
-
-      thu8w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      thu8w1.setBorderPainted(true);
-      thu8w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      thu8w1.setIconTextGap(0);
-      thu8w1.setName("thu8w1"); // NOI18N
-      thu8w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      thu8w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            thu8w1ActionPerformed(evt);
-         }
-      });
-      week1.add(thu8w1);
-      thu8w1.setBounds(334, 46, 88, 34);
-
-      fri8w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      fri8w1.setBorderPainted(true);
-      fri8w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      fri8w1.setIconTextGap(0);
-      fri8w1.setName("fri8w1"); // NOI18N
-      fri8w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      fri8w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            fri8w1ActionPerformed(evt);
-         }
-      });
-      week1.add(fri8w1);
-      fri8w1.setBounds(422, 46, 88, 34);
-
-      sat8w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sat8w1.setBorderPainted(true);
-      sat8w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sat8w1.setIconTextGap(0);
-      sat8w1.setName("sat8w1"); // NOI18N
-      sat8w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sat8w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sat8w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sat8w1);
-      sat8w1.setBounds(510, 46, 88, 34);
-
-      sun8w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sun8w1.setBorderPainted(true);
-      sun8w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sun8w1.setIconTextGap(0);
-      sun8w1.setName("sun8w1"); // NOI18N
-      sun8w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sun8w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sun8w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sun8w1);
-      sun8w1.setBounds(598, 46, 88, 34);
-
-      mon9w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      mon9w1.setBorderPainted(true);
-      mon9w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      mon9w1.setIconTextGap(0);
-      mon9w1.setName("mon9w1"); // NOI18N
-      mon9w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      mon9w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            mon9w1ActionPerformed(evt);
-         }
-      });
-      week1.add(mon9w1);
-      mon9w1.setBounds(70, 80, 88, 34);
-
-      tue9w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      tue9w1.setBorderPainted(true);
-      tue9w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      tue9w1.setIconTextGap(0);
-      tue9w1.setName("tue9w1"); // NOI18N
-      tue9w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      tue9w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            tue9w1ActionPerformed(evt);
-         }
-      });
-      week1.add(tue9w1);
-      tue9w1.setBounds(158, 80, 88, 34);
-
-      wed9w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      wed9w1.setBorderPainted(true);
-      wed9w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      wed9w1.setIconTextGap(0);
-      wed9w1.setName("wed9w1"); // NOI18N
-      wed9w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      wed9w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            wed9w1ActionPerformed(evt);
-         }
-      });
-      week1.add(wed9w1);
-      wed9w1.setBounds(246, 80, 88, 34);
-
-      thu9w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      thu9w1.setBorderPainted(true);
-      thu9w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      thu9w1.setIconTextGap(0);
-      thu9w1.setName("thu9w1"); // NOI18N
-      thu9w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      thu9w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            thu9w1ActionPerformed(evt);
-         }
-      });
-      week1.add(thu9w1);
-      thu9w1.setBounds(334, 80, 88, 34);
-
-      fri9w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      fri9w1.setBorderPainted(true);
-      fri9w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      fri9w1.setIconTextGap(0);
-      fri9w1.setName("fri9w1"); // NOI18N
-      fri9w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      fri9w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            fri9w1ActionPerformed(evt);
-         }
-      });
-      week1.add(fri9w1);
-      fri9w1.setBounds(422, 80, 88, 34);
-
-      sat9w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sat9w1.setBorderPainted(true);
-      sat9w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sat9w1.setIconTextGap(0);
-      sat9w1.setName("sat9w1"); // NOI18N
-      sat9w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sat9w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sat9w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sat9w1);
-      sat9w1.setBounds(510, 80, 88, 34);
-
-      sun9w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sun9w1.setBorderPainted(true);
-      sun9w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sun9w1.setIconTextGap(0);
-      sun9w1.setName("sun9w1"); // NOI18N
-      sun9w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sun9w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sun9w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sun9w1);
-      sun9w1.setBounds(598, 80, 88, 34);
-
-      mon10w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      mon10w1.setBorderPainted(true);
-      mon10w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      mon10w1.setIconTextGap(0);
-      mon10w1.setName("mon10w1"); // NOI18N
-      mon10w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      mon10w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            mon10w1ActionPerformed(evt);
-         }
-      });
-      week1.add(mon10w1);
-      mon10w1.setBounds(70, 114, 88, 34);
-
-      tue10w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      tue10w1.setBorderPainted(true);
-      tue10w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      tue10w1.setIconTextGap(0);
-      tue10w1.setName("tue10w1"); // NOI18N
-      tue10w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      tue10w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            tue10w1ActionPerformed(evt);
-         }
-      });
-      week1.add(tue10w1);
-      tue10w1.setBounds(158, 114, 88, 34);
-
-      wed10w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      wed10w1.setBorderPainted(true);
-      wed10w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      wed10w1.setIconTextGap(0);
-      wed10w1.setName("wed10w1"); // NOI18N
-      wed10w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      wed10w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            wed10w1ActionPerformed(evt);
-         }
-      });
-      week1.add(wed10w1);
-      wed10w1.setBounds(246, 114, 88, 34);
-
-      thu10w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      thu10w1.setBorderPainted(true);
-      thu10w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      thu10w1.setIconTextGap(0);
-      thu10w1.setName("thu10w1"); // NOI18N
-      thu10w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      thu10w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            thu10w1ActionPerformed(evt);
-         }
-      });
-      week1.add(thu10w1);
-      thu10w1.setBounds(334, 114, 88, 34);
-
-      fri10w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      fri10w1.setBorderPainted(true);
-      fri10w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      fri10w1.setIconTextGap(0);
-      fri10w1.setName("fri10w1"); // NOI18N
-      fri10w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      fri10w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            fri10w1ActionPerformed(evt);
-         }
-      });
-      week1.add(fri10w1);
-      fri10w1.setBounds(422, 114, 88, 34);
-
-      sat10w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sat10w1.setBorderPainted(true);
-      sat10w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sat10w1.setIconTextGap(0);
-      sat10w1.setName("sat10w1"); // NOI18N
-      sat10w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sat10w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sat10w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sat10w1);
-      sat10w1.setBounds(510, 114, 88, 34);
-
-      sun10w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sun10w1.setBorderPainted(true);
-      sun10w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sun10w1.setIconTextGap(0);
-      sun10w1.setName("sun10w1"); // NOI18N
-      sun10w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sun10w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sun10w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sun10w1);
-      sun10w1.setBounds(598, 114, 88, 34);
-
-      mon11w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      mon11w1.setBorderPainted(true);
-      mon11w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      mon11w1.setIconTextGap(0);
-      mon11w1.setName("mon11w1"); // NOI18N
-      mon11w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      mon11w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            mon11w1ActionPerformed(evt);
-         }
-      });
-      week1.add(mon11w1);
-      mon11w1.setBounds(70, 148, 88, 34);
-
-      tue11w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      tue11w1.setBorderPainted(true);
-      tue11w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      tue11w1.setIconTextGap(0);
-      tue11w1.setName("tue11w1"); // NOI18N
-      tue11w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      tue11w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            tue11w1ActionPerformed(evt);
-         }
-      });
-      week1.add(tue11w1);
-      tue11w1.setBounds(158, 148, 88, 34);
-
-      wed11w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      wed11w1.setBorderPainted(true);
-      wed11w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      wed11w1.setIconTextGap(0);
-      wed11w1.setName("wed11w1"); // NOI18N
-      wed11w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      wed11w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            wed11w1ActionPerformed(evt);
-         }
-      });
-      week1.add(wed11w1);
-      wed11w1.setBounds(246, 148, 88, 34);
-
-      thu11w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      thu11w1.setBorderPainted(true);
-      thu11w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      thu11w1.setIconTextGap(0);
-      thu11w1.setName("thu11w1"); // NOI18N
-      thu11w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      thu11w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            thu11w1ActionPerformed(evt);
-         }
-      });
-      week1.add(thu11w1);
-      thu11w1.setBounds(334, 148, 88, 34);
-
-      fri11w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      fri11w1.setBorderPainted(true);
-      fri11w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      fri11w1.setIconTextGap(0);
-      fri11w1.setName("fri11w1"); // NOI18N
-      fri11w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      fri11w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            fri11w1ActionPerformed(evt);
-         }
-      });
-      week1.add(fri11w1);
-      fri11w1.setBounds(422, 148, 88, 34);
-
-      sat11w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sat11w1.setBorderPainted(true);
-      sat11w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sat11w1.setIconTextGap(0);
-      sat11w1.setName("sat11w1"); // NOI18N
-      sat11w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sat11w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sat11w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sat11w1);
-      sat11w1.setBounds(510, 148, 88, 34);
-
-      sun11w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sun11w1.setBorderPainted(true);
-      sun11w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sun11w1.setIconTextGap(0);
-      sun11w1.setName("sun11w1"); // NOI18N
-      sun11w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sun11w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sun11w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sun11w1);
-      sun11w1.setBounds(598, 148, 88, 34);
-
-      mon12w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      mon12w1.setBorderPainted(true);
-      mon12w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      mon12w1.setIconTextGap(0);
-      mon12w1.setName("mon12w1"); // NOI18N
-      mon12w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      mon12w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            mon12w1ActionPerformed(evt);
-         }
-      });
-      week1.add(mon12w1);
-      mon12w1.setBounds(70, 182, 88, 34);
-
-      tue12w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      tue12w1.setBorderPainted(true);
-      tue12w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      tue12w1.setIconTextGap(0);
-      tue12w1.setName("tue12w1"); // NOI18N
-      tue12w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      tue12w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            tue12w1ActionPerformed(evt);
-         }
-      });
-      week1.add(tue12w1);
-      tue12w1.setBounds(158, 182, 88, 34);
-
-      wed12w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      wed12w1.setBorderPainted(true);
-      wed12w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      wed12w1.setIconTextGap(0);
-      wed12w1.setName("wed12w1"); // NOI18N
-      wed12w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      wed12w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            wed12w1ActionPerformed(evt);
-         }
-      });
-      week1.add(wed12w1);
-      wed12w1.setBounds(246, 182, 88, 34);
-
-      thu12w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      thu12w1.setBorderPainted(true);
-      thu12w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      thu12w1.setIconTextGap(0);
-      thu12w1.setName("thu12w1"); // NOI18N
-      thu12w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      thu12w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            thu12w1ActionPerformed(evt);
-         }
-      });
-      week1.add(thu12w1);
-      thu12w1.setBounds(334, 182, 88, 34);
-
-      fri12w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      fri12w1.setBorderPainted(true);
-      fri12w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      fri12w1.setIconTextGap(0);
-      fri12w1.setName("fri12w1"); // NOI18N
-      fri12w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      fri12w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            fri12w1ActionPerformed(evt);
-         }
-      });
-      week1.add(fri12w1);
-      fri12w1.setBounds(422, 182, 88, 34);
-
-      sat12w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sat12w1.setBorderPainted(true);
-      sat12w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sat12w1.setIconTextGap(0);
-      sat12w1.setName("sat12w1"); // NOI18N
-      sat12w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sat12w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sat12w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sat12w1);
-      sat12w1.setBounds(510, 182, 88, 34);
-
-      sun12w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sun12w1.setBorderPainted(true);
-      sun12w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sun12w1.setIconTextGap(0);
-      sun12w1.setName("sun12w1"); // NOI18N
-      sun12w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sun12w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sun12w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sun12w1);
-      sun12w1.setBounds(598, 182, 88, 34);
-
-      mon13w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      mon13w1.setBorderPainted(true);
-      mon13w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      mon13w1.setIconTextGap(0);
-      mon13w1.setName("mon13w1"); // NOI18N
-      mon13w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      mon13w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            mon13w1ActionPerformed(evt);
-         }
-      });
-      week1.add(mon13w1);
-      mon13w1.setBounds(70, 216, 88, 34);
-
-      tue13w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      tue13w1.setBorderPainted(true);
-      tue13w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      tue13w1.setIconTextGap(0);
-      tue13w1.setName("tue13w1"); // NOI18N
-      tue13w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      tue13w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            tue13w1ActionPerformed(evt);
-         }
-      });
-      week1.add(tue13w1);
-      tue13w1.setBounds(158, 216, 88, 34);
-
-      wed13w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      wed13w1.setBorderPainted(true);
-      wed13w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      wed13w1.setIconTextGap(0);
-      wed13w1.setName("wed13w1"); // NOI18N
-      wed13w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      wed13w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            wed13w1ActionPerformed(evt);
-         }
-      });
-      week1.add(wed13w1);
-      wed13w1.setBounds(246, 216, 88, 34);
-
-      thu13w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      thu13w1.setBorderPainted(true);
-      thu13w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      thu13w1.setIconTextGap(0);
-      thu13w1.setName("thu13w1"); // NOI18N
-      thu13w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      thu13w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            thu13w1ActionPerformed(evt);
-         }
-      });
-      week1.add(thu13w1);
-      thu13w1.setBounds(334, 216, 88, 34);
-
-      fri13w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      fri13w1.setBorderPainted(true);
-      fri13w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      fri13w1.setIconTextGap(0);
-      fri13w1.setName("fri13w1"); // NOI18N
-      fri13w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      fri13w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            fri13w1ActionPerformed(evt);
-         }
-      });
-      week1.add(fri13w1);
-      fri13w1.setBounds(422, 216, 88, 34);
-
-      sat13w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sat13w1.setBorderPainted(true);
-      sat13w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sat13w1.setIconTextGap(0);
-      sat13w1.setName("sat13w1"); // NOI18N
-      sat13w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sat13w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sat13w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sat13w1);
-      sat13w1.setBounds(510, 216, 88, 34);
-
-      sun13w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sun13w1.setBorderPainted(true);
-      sun13w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sun13w1.setIconTextGap(0);
-      sun13w1.setName("sun13w1"); // NOI18N
-      sun13w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sun13w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sun13w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sun13w1);
-      sun13w1.setBounds(598, 216, 88, 34);
-
-      mon14w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      mon14w1.setBorderPainted(true);
-      mon14w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      mon14w1.setIconTextGap(0);
-      mon14w1.setName("mon14w1"); // NOI18N
-      mon14w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      mon14w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            mon14w1ActionPerformed(evt);
-         }
-      });
-      week1.add(mon14w1);
-      mon14w1.setBounds(70, 250, 88, 34);
-
-      tue14w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      tue14w1.setBorderPainted(true);
-      tue14w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      tue14w1.setIconTextGap(0);
-      tue14w1.setName("tue14w1"); // NOI18N
-      tue14w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      tue14w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            tue14w1ActionPerformed(evt);
-         }
-      });
-      week1.add(tue14w1);
-      tue14w1.setBounds(158, 250, 88, 34);
-
-      wed14w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      wed14w1.setBorderPainted(true);
-      wed14w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      wed14w1.setIconTextGap(0);
-      wed14w1.setName("wed14w1"); // NOI18N
-      wed14w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      wed14w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            wed14w1ActionPerformed(evt);
-         }
-      });
-      week1.add(wed14w1);
-      wed14w1.setBounds(246, 250, 88, 34);
-
-      thu14w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      thu14w1.setBorderPainted(true);
-      thu14w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      thu14w1.setIconTextGap(0);
-      thu14w1.setName("thu14w1"); // NOI18N
-      thu14w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      thu14w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            thu14w1ActionPerformed(evt);
-         }
-      });
-      week1.add(thu14w1);
-      thu14w1.setBounds(334, 250, 88, 34);
-
-      fri14w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      fri14w1.setBorderPainted(true);
-      fri14w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      fri14w1.setIconTextGap(0);
-      fri14w1.setName("fri14w1"); // NOI18N
-      fri14w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      fri14w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            fri14w1ActionPerformed(evt);
-         }
-      });
-      week1.add(fri14w1);
-      fri14w1.setBounds(422, 250, 88, 34);
-
-      sat14w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sat14w1.setBorderPainted(true);
-      sat14w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sat14w1.setIconTextGap(0);
-      sat14w1.setName("sat14w1"); // NOI18N
-      sat14w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sat14w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sat14w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sat14w1);
-      sat14w1.setBounds(510, 250, 88, 34);
-
-      sun14w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sun14w1.setBorderPainted(true);
-      sun14w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sun14w1.setIconTextGap(0);
-      sun14w1.setName("sun14w1"); // NOI18N
-      sun14w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sun14w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sun14w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sun14w1);
-      sun14w1.setBounds(598, 250, 88, 34);
-
-      mon15w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      mon15w1.setBorderPainted(true);
-      mon15w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      mon15w1.setIconTextGap(0);
-      mon15w1.setName("mon15w1"); // NOI18N
-      mon15w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      mon15w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            mon15w1ActionPerformed(evt);
-         }
-      });
-      week1.add(mon15w1);
-      mon15w1.setBounds(70, 284, 88, 34);
-
-      tue15w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      tue15w1.setBorderPainted(true);
-      tue15w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      tue15w1.setIconTextGap(0);
-      tue15w1.setName("tue15w1"); // NOI18N
-      tue15w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      tue15w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            tue15w1ActionPerformed(evt);
-         }
-      });
-      week1.add(tue15w1);
-      tue15w1.setBounds(158, 284, 88, 34);
-
-      wed15w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      wed15w1.setBorderPainted(true);
-      wed15w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      wed15w1.setIconTextGap(0);
-      wed15w1.setName("wed15w1"); // NOI18N
-      wed15w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      wed15w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            wed15w1ActionPerformed(evt);
-         }
-      });
-      week1.add(wed15w1);
-      wed15w1.setBounds(246, 284, 88, 34);
-
-      thu15w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      thu15w1.setBorderPainted(true);
-      thu15w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      thu15w1.setIconTextGap(0);
-      thu15w1.setName("thu15w1"); // NOI18N
-      thu15w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      thu15w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            thu15w1ActionPerformed(evt);
-         }
-      });
-      week1.add(thu15w1);
-      thu15w1.setBounds(334, 284, 88, 34);
-
-      fri15w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      fri15w1.setBorderPainted(true);
-      fri15w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      fri15w1.setIconTextGap(0);
-      fri15w1.setName("fri15w1"); // NOI18N
-      fri15w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      fri15w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            fri15w1ActionPerformed(evt);
-         }
-      });
-      week1.add(fri15w1);
-      fri15w1.setBounds(422, 284, 88, 34);
-
-      sat15w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sat15w1.setBorderPainted(true);
-      sat15w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sat15w1.setIconTextGap(0);
-      sat15w1.setName("sat15w1"); // NOI18N
-      sat15w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sat15w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sat15w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sat15w1);
-      sat15w1.setBounds(510, 284, 88, 34);
-
-      sun15w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sun15w1.setBorderPainted(true);
-      sun15w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sun15w1.setIconTextGap(0);
-      sun15w1.setName("sun15w1"); // NOI18N
-      sun15w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sun15w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sun15w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sun15w1);
-      sun15w1.setBounds(598, 284, 88, 34);
-
-      mon16w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      mon16w1.setBorderPainted(true);
-      mon16w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      mon16w1.setIconTextGap(0);
-      mon16w1.setName("mon16w1"); // NOI18N
-      mon16w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      mon16w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            mon16w1ActionPerformed(evt);
-         }
-      });
-      week1.add(mon16w1);
-      mon16w1.setBounds(70, 318, 88, 34);
-
-      tue16w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      tue16w1.setBorderPainted(true);
-      tue16w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      tue16w1.setIconTextGap(0);
-      tue16w1.setName("tue16w1"); // NOI18N
-      tue16w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      tue16w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            tue16w1ActionPerformed(evt);
-         }
-      });
-      week1.add(tue16w1);
-      tue16w1.setBounds(158, 318, 88, 34);
-
-      wed16w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      wed16w1.setBorderPainted(true);
-      wed16w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      wed16w1.setIconTextGap(0);
-      wed16w1.setName("wed16w1"); // NOI18N
-      wed16w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      wed16w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            wed16w1ActionPerformed(evt);
-         }
-      });
-      week1.add(wed16w1);
-      wed16w1.setBounds(246, 318, 88, 34);
-
-      thu16w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      thu16w1.setBorderPainted(true);
-      thu16w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      thu16w1.setIconTextGap(0);
-      thu16w1.setName("thu16w1"); // NOI18N
-      thu16w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      thu16w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            thu16w1ActionPerformed(evt);
-         }
-      });
-      week1.add(thu16w1);
-      thu16w1.setBounds(334, 318, 88, 34);
-
-      fri16w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      fri16w1.setBorderPainted(true);
-      fri16w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      fri16w1.setIconTextGap(0);
-      fri16w1.setName("fri16w1"); // NOI18N
-      fri16w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      fri16w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            fri16w1ActionPerformed(evt);
-         }
-      });
-      week1.add(fri16w1);
-      fri16w1.setBounds(422, 318, 88, 34);
-
-      sat16w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sat16w1.setBorderPainted(true);
-      sat16w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sat16w1.setIconTextGap(0);
-      sat16w1.setName("sat16w1"); // NOI18N
-      sat16w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sat16w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sat16w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sat16w1);
-      sat16w1.setBounds(510, 318, 88, 34);
-
-      sun16w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sun16w1.setBorderPainted(true);
-      sun16w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sun16w1.setIconTextGap(0);
-      sun16w1.setName("sun16w1"); // NOI18N
-      sun16w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sun16w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sun16w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sun16w1);
-      sun16w1.setBounds(598, 318, 88, 34);
-
-      mon17w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      mon17w1.setBorderPainted(true);
-      mon17w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      mon17w1.setIconTextGap(0);
-      mon17w1.setName("mon17w1"); // NOI18N
-      mon17w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      mon17w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            mon17w1ActionPerformed(evt);
-         }
-      });
-      week1.add(mon17w1);
-      mon17w1.setBounds(70, 352, 88, 34);
-
-      tue17w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      tue17w1.setBorderPainted(true);
-      tue17w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      tue17w1.setIconTextGap(0);
-      tue17w1.setName("tue17w1"); // NOI18N
-      tue17w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      tue17w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            tue17w1ActionPerformed(evt);
-         }
-      });
-      week1.add(tue17w1);
-      tue17w1.setBounds(158, 352, 88, 34);
-
-      wed17w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      wed17w1.setBorderPainted(true);
-      wed17w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      wed17w1.setIconTextGap(0);
-      wed17w1.setName("wed17w1"); // NOI18N
-      wed17w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      wed17w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            wed17w1ActionPerformed(evt);
-         }
-      });
-      week1.add(wed17w1);
-      wed17w1.setBounds(246, 352, 88, 34);
-
-      thu17w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      thu17w1.setBorderPainted(true);
-      thu17w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      thu17w1.setIconTextGap(0);
-      thu17w1.setName("thu17w1"); // NOI18N
-      thu17w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      thu17w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            thu17w1ActionPerformed(evt);
-         }
-      });
-      week1.add(thu17w1);
-      thu17w1.setBounds(334, 352, 88, 34);
-
-      fri17w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      fri17w1.setBorderPainted(true);
-      fri17w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      fri17w1.setIconTextGap(0);
-      fri17w1.setName("fri17w1"); // NOI18N
-      fri17w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      fri17w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            fri17w1ActionPerformed(evt);
-         }
-      });
-      week1.add(fri17w1);
-      fri17w1.setBounds(422, 352, 88, 34);
-
-      sat17w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sat17w1.setBorderPainted(true);
-      sat17w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sat17w1.setIconTextGap(0);
-      sat17w1.setName("sat17w1"); // NOI18N
-      sat17w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sat17w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sat17w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sat17w1);
-      sat17w1.setBounds(510, 352, 88, 34);
-
-      sun17w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sun17w1.setBorderPainted(true);
-      sun17w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sun17w1.setIconTextGap(0);
-      sun17w1.setName("sun17w1"); // NOI18N
-      sun17w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sun17w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sun17w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sun17w1);
-      sun17w1.setBounds(598, 352, 88, 34);
-
-      mon18w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      mon18w1.setBorderPainted(true);
-      mon18w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      mon18w1.setIconTextGap(0);
-      mon18w1.setName("mon18w1"); // NOI18N
-      mon18w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      mon18w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            mon18w1ActionPerformed(evt);
-         }
-      });
-      week1.add(mon18w1);
-      mon18w1.setBounds(70, 386, 88, 34);
-
-      tue18w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      tue18w1.setBorderPainted(true);
-      tue18w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      tue18w1.setIconTextGap(0);
-      tue18w1.setName("tue18w1"); // NOI18N
-      tue18w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      tue18w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            tue18w1ActionPerformed(evt);
-         }
-      });
-      week1.add(tue18w1);
-      tue18w1.setBounds(158, 386, 88, 34);
-
-      wed18w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      wed18w1.setBorderPainted(true);
-      wed18w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      wed18w1.setIconTextGap(0);
-      wed18w1.setName("wed18w1"); // NOI18N
-      wed18w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      wed18w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            wed18w1ActionPerformed(evt);
-         }
-      });
-      week1.add(wed18w1);
-      wed18w1.setBounds(246, 386, 88, 34);
-
-      thu18w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      thu18w1.setBorderPainted(true);
-      thu18w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      thu18w1.setIconTextGap(0);
-      thu18w1.setName("thu18w1"); // NOI18N
-      thu18w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      thu18w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            thu18w1ActionPerformed(evt);
-         }
-      });
-      week1.add(thu18w1);
-      thu18w1.setBounds(334, 386, 88, 34);
-
-      fri18w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      fri18w1.setBorderPainted(true);
-      fri18w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      fri18w1.setIconTextGap(0);
-      fri18w1.setName("fri18w1"); // NOI18N
-      fri18w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      fri18w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            fri18w1ActionPerformed(evt);
-         }
-      });
-      week1.add(fri18w1);
-      fri18w1.setBounds(422, 386, 88, 34);
-
-      sat18w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sat18w1.setBorderPainted(true);
-      sat18w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sat18w1.setIconTextGap(0);
-      sat18w1.setName("sat18w1"); // NOI18N
-      sat18w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sat18w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sat18w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sat18w1);
-      sat18w1.setBounds(510, 386, 88, 34);
-
-      sun18w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sun18w1.setBorderPainted(true);
-      sun18w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sun18w1.setIconTextGap(0);
-      sun18w1.setName("sun18w1"); // NOI18N
-      sun18w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sun18w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sun18w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sun18w1);
-      sun18w1.setBounds(598, 386, 88, 34);
-
-      mon19w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      mon19w1.setBorderPainted(true);
-      mon19w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      mon19w1.setIconTextGap(0);
-      mon19w1.setName("mon19w1"); // NOI18N
-      mon19w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      mon19w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            mon19w1ActionPerformed(evt);
-         }
-      });
-      week1.add(mon19w1);
-      mon19w1.setBounds(70, 420, 88, 34);
-
-      tue19w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      tue19w1.setBorderPainted(true);
-      tue19w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      tue19w1.setIconTextGap(0);
-      tue19w1.setName("tue19w1"); // NOI18N
-      tue19w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      tue19w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            tue19w1ActionPerformed(evt);
-         }
-      });
-      week1.add(tue19w1);
-      tue19w1.setBounds(158, 420, 88, 34);
-
-      wed19w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      wed19w1.setBorderPainted(true);
-      wed19w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      wed19w1.setIconTextGap(0);
-      wed19w1.setName("wed19w1"); // NOI18N
-      wed19w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      wed19w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            wed19w1ActionPerformed(evt);
-         }
-      });
-      week1.add(wed19w1);
-      wed19w1.setBounds(246, 420, 88, 34);
-
-      thu19w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      thu19w1.setBorderPainted(true);
-      thu19w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      thu19w1.setIconTextGap(0);
-      thu19w1.setName("thu19w1"); // NOI18N
-      thu19w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      thu19w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            thu19w1ActionPerformed(evt);
-         }
-      });
-      week1.add(thu19w1);
-      thu19w1.setBounds(334, 420, 88, 34);
-
-      fri19w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      fri19w1.setBorderPainted(true);
-      fri19w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      fri19w1.setIconTextGap(0);
-      fri19w1.setName("fri19w1"); // NOI18N
-      fri19w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      fri19w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            fri19w1ActionPerformed(evt);
-         }
-      });
-      week1.add(fri19w1);
-      fri19w1.setBounds(422, 420, 88, 34);
-
-      sat19w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sat19w1.setBorderPainted(true);
-      sat19w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sat19w1.setIconTextGap(0);
-      sat19w1.setName("sat19w1"); // NOI18N
-      sat19w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sat19w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sat19w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sat19w1);
-      sat19w1.setBounds(510, 420, 88, 34);
-
-      sun19w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sun19w1.setBorderPainted(true);
-      sun19w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sun19w1.setIconTextGap(0);
-      sun19w1.setName("sun19w1"); // NOI18N
-      sun19w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sun19w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sun19w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sun19w1);
-      sun19w1.setBounds(598, 420, 88, 34);
-
-      mon20w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      mon20w1.setBorderPainted(true);
-      mon20w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      mon20w1.setIconTextGap(0);
-      mon20w1.setName("mon20w1"); // NOI18N
-      mon20w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      mon20w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            mon20w1ActionPerformed(evt);
-         }
-      });
-      week1.add(mon20w1);
-      mon20w1.setBounds(70, 454, 88, 34);
-
-      tue20w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      tue20w1.setBorderPainted(true);
-      tue20w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      tue20w1.setIconTextGap(0);
-      tue20w1.setName("tue20w1"); // NOI18N
-      tue20w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      tue20w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            tue20w1ActionPerformed(evt);
-         }
-      });
-      week1.add(tue20w1);
-      tue20w1.setBounds(158, 454, 88, 34);
-
-      wed20w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      wed20w1.setBorderPainted(true);
-      wed20w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      wed20w1.setIconTextGap(0);
-      wed20w1.setName("wed20w1"); // NOI18N
-      wed20w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      wed20w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            wed20w1ActionPerformed(evt);
-         }
-      });
-      week1.add(wed20w1);
-      wed20w1.setBounds(246, 454, 88, 34);
-
-      thu20w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      thu20w1.setBorderPainted(true);
-      thu20w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      thu20w1.setIconTextGap(0);
-      thu20w1.setName("thu20w1"); // NOI18N
-      thu20w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      thu20w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            thu20w1ActionPerformed(evt);
-         }
-      });
-      week1.add(thu20w1);
-      thu20w1.setBounds(334, 454, 88, 34);
-
-      fri20w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      fri20w1.setBorderPainted(true);
-      fri20w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      fri20w1.setIconTextGap(0);
-      fri20w1.setName("fri20w1"); // NOI18N
-      fri20w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      fri20w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            fri20w1ActionPerformed(evt);
-         }
-      });
-      week1.add(fri20w1);
-      fri20w1.setBounds(422, 454, 88, 34);
-
-      sat20w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sat20w1.setBorderPainted(true);
-      sat20w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sat20w1.setIconTextGap(0);
-      sat20w1.setName("sat20w1"); // NOI18N
-      sat20w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sat20w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sat20w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sat20w1);
-      sat20w1.setBounds(510, 454, 88, 34);
-
-      sun20w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sun20w1.setBorderPainted(true);
-      sun20w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sun20w1.setIconTextGap(0);
-      sun20w1.setName("sun20w1"); // NOI18N
-      sun20w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sun20w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sun20w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sun20w1);
-      sun20w1.setBounds(598, 454, 88, 34);
-
-      mon21w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      mon21w1.setBorderPainted(true);
-      mon21w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      mon21w1.setIconTextGap(0);
-      mon21w1.setName("mon21w1"); // NOI18N
-      mon21w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      mon21w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            mon21w1ActionPerformed(evt);
-         }
-      });
-      week1.add(mon21w1);
-      mon21w1.setBounds(70, 488, 88, 34);
-
-      tue21w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      tue21w1.setBorderPainted(true);
-      tue21w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      tue21w1.setIconTextGap(0);
-      tue21w1.setName("tue21w1"); // NOI18N
-      tue21w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      tue21w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            tue21w1ActionPerformed(evt);
-         }
-      });
-      week1.add(tue21w1);
-      tue21w1.setBounds(158, 488, 88, 34);
-
-      wed21w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      wed21w1.setBorderPainted(true);
-      wed21w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      wed21w1.setIconTextGap(0);
-      wed21w1.setName("wed21w1"); // NOI18N
-      wed21w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      wed21w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            wed21w1ActionPerformed(evt);
-         }
-      });
-      week1.add(wed21w1);
-      wed21w1.setBounds(246, 488, 88, 34);
-
-      thu21w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      thu21w1.setBorderPainted(true);
-      thu21w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      thu21w1.setIconTextGap(0);
-      thu21w1.setName("thu21w1"); // NOI18N
-      thu21w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      thu21w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            thu21w1ActionPerformed(evt);
-         }
-      });
-      week1.add(thu21w1);
-      thu21w1.setBounds(334, 488, 88, 34);
-
-      fri21w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      fri21w1.setBorderPainted(true);
-      fri21w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      fri21w1.setIconTextGap(0);
-      fri21w1.setName("fri21w1"); // NOI18N
-      fri21w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      fri21w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            fri21w1ActionPerformed(evt);
-         }
-      });
-      week1.add(fri21w1);
-      fri21w1.setBounds(422, 488, 88, 34);
-
-      sat21w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sat21w1.setBorderPainted(true);
-      sat21w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sat21w1.setIconTextGap(0);
-      sat21w1.setName("sat21w1"); // NOI18N
-      sat21w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sat21w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sat21w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sat21w1);
-      sat21w1.setBounds(510, 488, 88, 34);
-
-      sun21w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-      sun21w1.setBorderPainted(true);
-      sun21w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
-      sun21w1.setIconTextGap(0);
-      sun21w1.setName("sun21w1"); // NOI18N
-      sun21w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
-      sun21w1.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sun21w1ActionPerformed(evt);
-         }
-      });
-      week1.add(sun21w1);
-      sun21w1.setBounds(598, 488, 88, 34);
-
-      timetableImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/timetableNew.PNG"))); // NOI18N
-      timetableImage1.setName("timetableImage1"); // NOI18N
-      timetableImage1.setPreferredSize(new java.awt.Dimension(505, 660));
-      week1.add(timetableImage1);
-      timetableImage1.setBounds(10, 7, 690, 520);
-
-      mainPanel.add(week1, "card2");
 
       week2.setBackground(new java.awt.Color(255, 255, 255));
       week2.setName("week2"); // NOI18N
@@ -3212,11 +1829,1398 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
 
       mainPanel.add(week2, "card2");
 
-      getContentPane().add(mainPanel);
-      mainPanel.setBounds(0, 111, 700, 700);
+      week1.setBackground(new java.awt.Color(255, 255, 255));
+      week1.setName("week1"); // NOI18N
+      week1.setLayout(null);
 
-      jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-      jPanel1.setName("jPanel1"); // NOI18N
+      mon8w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      mon8w1.setBorderPainted(true);
+      mon8w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      mon8w1.setIconTextGap(0);
+      mon8w1.setName("mon8w1"); // NOI18N
+      mon8w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      mon8w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            mon8w1ActionPerformed(evt);
+         }
+      });
+      week1.add(mon8w1);
+      mon8w1.setBounds(70, 46, 88, 34);
+
+      tue8w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      tue8w1.setBorderPainted(true);
+      tue8w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      tue8w1.setIconTextGap(0);
+      tue8w1.setName("tue8w1"); // NOI18N
+      tue8w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      tue8w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            tue8w1ActionPerformed(evt);
+         }
+      });
+      week1.add(tue8w1);
+      tue8w1.setBounds(158, 46, 88, 34);
+
+      wed8w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      wed8w1.setBorderPainted(true);
+      wed8w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      wed8w1.setIconTextGap(0);
+      wed8w1.setName("wed8w1"); // NOI18N
+      wed8w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      wed8w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            wed8w1ActionPerformed(evt);
+         }
+      });
+      week1.add(wed8w1);
+      wed8w1.setBounds(246, 46, 88, 34);
+
+      thu8w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      thu8w1.setBorderPainted(true);
+      thu8w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      thu8w1.setIconTextGap(0);
+      thu8w1.setName("thu8w1"); // NOI18N
+      thu8w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      thu8w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            thu8w1ActionPerformed(evt);
+         }
+      });
+      week1.add(thu8w1);
+      thu8w1.setBounds(334, 46, 88, 34);
+
+      fri8w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      fri8w1.setBorderPainted(true);
+      fri8w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      fri8w1.setIconTextGap(0);
+      fri8w1.setName("fri8w1"); // NOI18N
+      fri8w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      fri8w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            fri8w1ActionPerformed(evt);
+         }
+      });
+      week1.add(fri8w1);
+      fri8w1.setBounds(422, 46, 88, 34);
+
+      sat8w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sat8w1.setBorderPainted(true);
+      sat8w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sat8w1.setIconTextGap(0);
+      sat8w1.setName("sat8w1"); // NOI18N
+      sat8w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sat8w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sat8w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sat8w1);
+      sat8w1.setBounds(510, 46, 88, 34);
+
+      sun8w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sun8w1.setBorderPainted(true);
+      sun8w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sun8w1.setIconTextGap(0);
+      sun8w1.setName("sun8w1"); // NOI18N
+      sun8w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sun8w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sun8w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sun8w1);
+      sun8w1.setBounds(598, 46, 88, 34);
+
+      mon9w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      mon9w1.setBorderPainted(true);
+      mon9w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      mon9w1.setIconTextGap(0);
+      mon9w1.setName("mon9w1"); // NOI18N
+      mon9w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      mon9w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            mon9w1ActionPerformed(evt);
+         }
+      });
+      week1.add(mon9w1);
+      mon9w1.setBounds(70, 80, 88, 34);
+
+      tue9w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      tue9w1.setBorderPainted(true);
+      tue9w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      tue9w1.setIconTextGap(0);
+      tue9w1.setName("tue9w1"); // NOI18N
+      tue9w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      tue9w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            tue9w1ActionPerformed(evt);
+         }
+      });
+      week1.add(tue9w1);
+      tue9w1.setBounds(158, 80, 88, 34);
+
+      wed9w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      wed9w1.setBorderPainted(true);
+      wed9w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      wed9w1.setIconTextGap(0);
+      wed9w1.setName("wed9w1"); // NOI18N
+      wed9w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      wed9w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            wed9w1ActionPerformed(evt);
+         }
+      });
+      week1.add(wed9w1);
+      wed9w1.setBounds(246, 80, 88, 34);
+
+      thu9w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      thu9w1.setBorderPainted(true);
+      thu9w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      thu9w1.setIconTextGap(0);
+      thu9w1.setName("thu9w1"); // NOI18N
+      thu9w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      thu9w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            thu9w1ActionPerformed(evt);
+         }
+      });
+      week1.add(thu9w1);
+      thu9w1.setBounds(334, 80, 88, 34);
+
+      fri9w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      fri9w1.setBorderPainted(true);
+      fri9w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      fri9w1.setIconTextGap(0);
+      fri9w1.setName("fri9w1"); // NOI18N
+      fri9w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      fri9w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            fri9w1ActionPerformed(evt);
+         }
+      });
+      week1.add(fri9w1);
+      fri9w1.setBounds(422, 80, 88, 34);
+
+      sat9w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sat9w1.setBorderPainted(true);
+      sat9w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sat9w1.setIconTextGap(0);
+      sat9w1.setName("sat9w1"); // NOI18N
+      sat9w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sat9w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sat9w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sat9w1);
+      sat9w1.setBounds(510, 80, 88, 34);
+
+      sun9w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sun9w1.setBorderPainted(true);
+      sun9w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sun9w1.setIconTextGap(0);
+      sun9w1.setName("sun9w1"); // NOI18N
+      sun9w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sun9w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sun9w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sun9w1);
+      sun9w1.setBounds(598, 80, 88, 34);
+
+      mon10w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      mon10w1.setBorderPainted(true);
+      mon10w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      mon10w1.setIconTextGap(0);
+      mon10w1.setName("mon10w1"); // NOI18N
+      mon10w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      mon10w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            mon10w1ActionPerformed(evt);
+         }
+      });
+      week1.add(mon10w1);
+      mon10w1.setBounds(70, 114, 88, 34);
+
+      tue10w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      tue10w1.setBorderPainted(true);
+      tue10w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      tue10w1.setIconTextGap(0);
+      tue10w1.setName("tue10w1"); // NOI18N
+      tue10w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      tue10w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            tue10w1ActionPerformed(evt);
+         }
+      });
+      week1.add(tue10w1);
+      tue10w1.setBounds(158, 114, 88, 34);
+
+      wed10w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      wed10w1.setBorderPainted(true);
+      wed10w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      wed10w1.setIconTextGap(0);
+      wed10w1.setName("wed10w1"); // NOI18N
+      wed10w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      wed10w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            wed10w1ActionPerformed(evt);
+         }
+      });
+      week1.add(wed10w1);
+      wed10w1.setBounds(246, 114, 88, 34);
+
+      thu10w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      thu10w1.setBorderPainted(true);
+      thu10w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      thu10w1.setIconTextGap(0);
+      thu10w1.setName("thu10w1"); // NOI18N
+      thu10w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      thu10w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            thu10w1ActionPerformed(evt);
+         }
+      });
+      week1.add(thu10w1);
+      thu10w1.setBounds(334, 114, 88, 34);
+
+      fri10w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      fri10w1.setBorderPainted(true);
+      fri10w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      fri10w1.setIconTextGap(0);
+      fri10w1.setName("fri10w1"); // NOI18N
+      fri10w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      fri10w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            fri10w1ActionPerformed(evt);
+         }
+      });
+      week1.add(fri10w1);
+      fri10w1.setBounds(422, 114, 88, 34);
+
+      sat10w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sat10w1.setBorderPainted(true);
+      sat10w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sat10w1.setIconTextGap(0);
+      sat10w1.setName("sat10w1"); // NOI18N
+      sat10w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sat10w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sat10w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sat10w1);
+      sat10w1.setBounds(510, 114, 88, 34);
+
+      sun10w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sun10w1.setBorderPainted(true);
+      sun10w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sun10w1.setIconTextGap(0);
+      sun10w1.setName("sun10w1"); // NOI18N
+      sun10w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sun10w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sun10w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sun10w1);
+      sun10w1.setBounds(598, 114, 88, 34);
+
+      mon11w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      mon11w1.setBorderPainted(true);
+      mon11w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      mon11w1.setIconTextGap(0);
+      mon11w1.setName("mon11w1"); // NOI18N
+      mon11w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      mon11w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            mon11w1ActionPerformed(evt);
+         }
+      });
+      week1.add(mon11w1);
+      mon11w1.setBounds(70, 148, 88, 34);
+
+      tue11w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      tue11w1.setBorderPainted(true);
+      tue11w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      tue11w1.setIconTextGap(0);
+      tue11w1.setName("tue11w1"); // NOI18N
+      tue11w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      tue11w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            tue11w1ActionPerformed(evt);
+         }
+      });
+      week1.add(tue11w1);
+      tue11w1.setBounds(158, 148, 88, 34);
+
+      wed11w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      wed11w1.setBorderPainted(true);
+      wed11w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      wed11w1.setIconTextGap(0);
+      wed11w1.setName("wed11w1"); // NOI18N
+      wed11w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      wed11w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            wed11w1ActionPerformed(evt);
+         }
+      });
+      week1.add(wed11w1);
+      wed11w1.setBounds(246, 148, 88, 34);
+
+      thu11w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      thu11w1.setBorderPainted(true);
+      thu11w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      thu11w1.setIconTextGap(0);
+      thu11w1.setName("thu11w1"); // NOI18N
+      thu11w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      thu11w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            thu11w1ActionPerformed(evt);
+         }
+      });
+      week1.add(thu11w1);
+      thu11w1.setBounds(334, 148, 88, 34);
+
+      fri11w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      fri11w1.setBorderPainted(true);
+      fri11w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      fri11w1.setIconTextGap(0);
+      fri11w1.setName("fri11w1"); // NOI18N
+      fri11w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      fri11w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            fri11w1ActionPerformed(evt);
+         }
+      });
+      week1.add(fri11w1);
+      fri11w1.setBounds(422, 148, 88, 34);
+
+      sat11w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sat11w1.setBorderPainted(true);
+      sat11w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sat11w1.setIconTextGap(0);
+      sat11w1.setName("sat11w1"); // NOI18N
+      sat11w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sat11w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sat11w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sat11w1);
+      sat11w1.setBounds(510, 148, 88, 34);
+
+      sun11w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sun11w1.setBorderPainted(true);
+      sun11w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sun11w1.setIconTextGap(0);
+      sun11w1.setName("sun11w1"); // NOI18N
+      sun11w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sun11w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sun11w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sun11w1);
+      sun11w1.setBounds(598, 148, 88, 34);
+
+      mon12w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      mon12w1.setBorderPainted(true);
+      mon12w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      mon12w1.setIconTextGap(0);
+      mon12w1.setName("mon12w1"); // NOI18N
+      mon12w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      mon12w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            mon12w1ActionPerformed(evt);
+         }
+      });
+      week1.add(mon12w1);
+      mon12w1.setBounds(70, 182, 88, 34);
+
+      tue12w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      tue12w1.setBorderPainted(true);
+      tue12w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      tue12w1.setIconTextGap(0);
+      tue12w1.setName("tue12w1"); // NOI18N
+      tue12w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      tue12w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            tue12w1ActionPerformed(evt);
+         }
+      });
+      week1.add(tue12w1);
+      tue12w1.setBounds(158, 182, 88, 34);
+
+      wed12w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      wed12w1.setBorderPainted(true);
+      wed12w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      wed12w1.setIconTextGap(0);
+      wed12w1.setName("wed12w1"); // NOI18N
+      wed12w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      wed12w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            wed12w1ActionPerformed(evt);
+         }
+      });
+      week1.add(wed12w1);
+      wed12w1.setBounds(246, 182, 88, 34);
+
+      thu12w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      thu12w1.setBorderPainted(true);
+      thu12w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      thu12w1.setIconTextGap(0);
+      thu12w1.setName("thu12w1"); // NOI18N
+      thu12w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      thu12w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            thu12w1ActionPerformed(evt);
+         }
+      });
+      week1.add(thu12w1);
+      thu12w1.setBounds(334, 182, 88, 34);
+
+      fri12w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      fri12w1.setBorderPainted(true);
+      fri12w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      fri12w1.setIconTextGap(0);
+      fri12w1.setName("fri12w1"); // NOI18N
+      fri12w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      fri12w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            fri12w1ActionPerformed(evt);
+         }
+      });
+      week1.add(fri12w1);
+      fri12w1.setBounds(422, 182, 88, 34);
+
+      sat12w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sat12w1.setBorderPainted(true);
+      sat12w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sat12w1.setIconTextGap(0);
+      sat12w1.setName("sat12w1"); // NOI18N
+      sat12w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sat12w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sat12w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sat12w1);
+      sat12w1.setBounds(510, 182, 88, 34);
+
+      sun12w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sun12w1.setBorderPainted(true);
+      sun12w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sun12w1.setIconTextGap(0);
+      sun12w1.setName("sun12w1"); // NOI18N
+      sun12w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sun12w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sun12w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sun12w1);
+      sun12w1.setBounds(598, 182, 88, 34);
+
+      mon13w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      mon13w1.setBorderPainted(true);
+      mon13w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      mon13w1.setIconTextGap(0);
+      mon13w1.setName("mon13w1"); // NOI18N
+      mon13w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      mon13w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            mon13w1ActionPerformed(evt);
+         }
+      });
+      week1.add(mon13w1);
+      mon13w1.setBounds(70, 216, 88, 34);
+
+      tue13w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      tue13w1.setBorderPainted(true);
+      tue13w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      tue13w1.setIconTextGap(0);
+      tue13w1.setName("tue13w1"); // NOI18N
+      tue13w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      tue13w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            tue13w1ActionPerformed(evt);
+         }
+      });
+      week1.add(tue13w1);
+      tue13w1.setBounds(158, 216, 88, 34);
+
+      wed13w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      wed13w1.setBorderPainted(true);
+      wed13w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      wed13w1.setIconTextGap(0);
+      wed13w1.setName("wed13w1"); // NOI18N
+      wed13w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      wed13w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            wed13w1ActionPerformed(evt);
+         }
+      });
+      week1.add(wed13w1);
+      wed13w1.setBounds(246, 216, 88, 34);
+
+      thu13w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      thu13w1.setBorderPainted(true);
+      thu13w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      thu13w1.setIconTextGap(0);
+      thu13w1.setName("thu13w1"); // NOI18N
+      thu13w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      thu13w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            thu13w1ActionPerformed(evt);
+         }
+      });
+      week1.add(thu13w1);
+      thu13w1.setBounds(334, 216, 88, 34);
+
+      fri13w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      fri13w1.setBorderPainted(true);
+      fri13w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      fri13w1.setIconTextGap(0);
+      fri13w1.setName("fri13w1"); // NOI18N
+      fri13w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      fri13w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            fri13w1ActionPerformed(evt);
+         }
+      });
+      week1.add(fri13w1);
+      fri13w1.setBounds(422, 216, 88, 34);
+
+      sat13w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sat13w1.setBorderPainted(true);
+      sat13w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sat13w1.setIconTextGap(0);
+      sat13w1.setName("sat13w1"); // NOI18N
+      sat13w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sat13w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sat13w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sat13w1);
+      sat13w1.setBounds(510, 216, 88, 34);
+
+      sun13w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sun13w1.setBorderPainted(true);
+      sun13w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sun13w1.setIconTextGap(0);
+      sun13w1.setName("sun13w1"); // NOI18N
+      sun13w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sun13w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sun13w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sun13w1);
+      sun13w1.setBounds(598, 216, 88, 34);
+
+      mon14w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      mon14w1.setBorderPainted(true);
+      mon14w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      mon14w1.setIconTextGap(0);
+      mon14w1.setName("mon14w1"); // NOI18N
+      mon14w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      mon14w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            mon14w1ActionPerformed(evt);
+         }
+      });
+      week1.add(mon14w1);
+      mon14w1.setBounds(70, 250, 88, 34);
+
+      tue14w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      tue14w1.setBorderPainted(true);
+      tue14w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      tue14w1.setIconTextGap(0);
+      tue14w1.setName("tue14w1"); // NOI18N
+      tue14w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      tue14w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            tue14w1ActionPerformed(evt);
+         }
+      });
+      week1.add(tue14w1);
+      tue14w1.setBounds(158, 250, 88, 34);
+
+      wed14w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      wed14w1.setBorderPainted(true);
+      wed14w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      wed14w1.setIconTextGap(0);
+      wed14w1.setName("wed14w1"); // NOI18N
+      wed14w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      wed14w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            wed14w1ActionPerformed(evt);
+         }
+      });
+      week1.add(wed14w1);
+      wed14w1.setBounds(246, 250, 88, 34);
+
+      thu14w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      thu14w1.setBorderPainted(true);
+      thu14w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      thu14w1.setIconTextGap(0);
+      thu14w1.setName("thu14w1"); // NOI18N
+      thu14w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      thu14w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            thu14w1ActionPerformed(evt);
+         }
+      });
+      week1.add(thu14w1);
+      thu14w1.setBounds(334, 250, 88, 34);
+
+      fri14w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      fri14w1.setBorderPainted(true);
+      fri14w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      fri14w1.setIconTextGap(0);
+      fri14w1.setName("fri14w1"); // NOI18N
+      fri14w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      fri14w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            fri14w1ActionPerformed(evt);
+         }
+      });
+      week1.add(fri14w1);
+      fri14w1.setBounds(422, 250, 88, 34);
+
+      sat14w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sat14w1.setBorderPainted(true);
+      sat14w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sat14w1.setIconTextGap(0);
+      sat14w1.setName("sat14w1"); // NOI18N
+      sat14w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sat14w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sat14w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sat14w1);
+      sat14w1.setBounds(510, 250, 88, 34);
+
+      sun14w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sun14w1.setBorderPainted(true);
+      sun14w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sun14w1.setIconTextGap(0);
+      sun14w1.setName("sun14w1"); // NOI18N
+      sun14w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sun14w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sun14w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sun14w1);
+      sun14w1.setBounds(598, 250, 88, 34);
+
+      mon15w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      mon15w1.setBorderPainted(true);
+      mon15w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      mon15w1.setIconTextGap(0);
+      mon15w1.setName("mon15w1"); // NOI18N
+      mon15w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      mon15w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            mon15w1ActionPerformed(evt);
+         }
+      });
+      week1.add(mon15w1);
+      mon15w1.setBounds(70, 284, 88, 34);
+
+      tue15w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      tue15w1.setBorderPainted(true);
+      tue15w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      tue15w1.setIconTextGap(0);
+      tue15w1.setName("tue15w1"); // NOI18N
+      tue15w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      tue15w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            tue15w1ActionPerformed(evt);
+         }
+      });
+      week1.add(tue15w1);
+      tue15w1.setBounds(158, 284, 88, 34);
+
+      wed15w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      wed15w1.setBorderPainted(true);
+      wed15w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      wed15w1.setIconTextGap(0);
+      wed15w1.setName("wed15w1"); // NOI18N
+      wed15w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      wed15w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            wed15w1ActionPerformed(evt);
+         }
+      });
+      week1.add(wed15w1);
+      wed15w1.setBounds(246, 284, 88, 34);
+
+      thu15w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      thu15w1.setBorderPainted(true);
+      thu15w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      thu15w1.setIconTextGap(0);
+      thu15w1.setName("thu15w1"); // NOI18N
+      thu15w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      thu15w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            thu15w1ActionPerformed(evt);
+         }
+      });
+      week1.add(thu15w1);
+      thu15w1.setBounds(334, 284, 88, 34);
+
+      fri15w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      fri15w1.setBorderPainted(true);
+      fri15w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      fri15w1.setIconTextGap(0);
+      fri15w1.setName("fri15w1"); // NOI18N
+      fri15w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      fri15w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            fri15w1ActionPerformed(evt);
+         }
+      });
+      week1.add(fri15w1);
+      fri15w1.setBounds(422, 284, 88, 34);
+
+      sat15w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sat15w1.setBorderPainted(true);
+      sat15w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sat15w1.setIconTextGap(0);
+      sat15w1.setName("sat15w1"); // NOI18N
+      sat15w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sat15w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sat15w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sat15w1);
+      sat15w1.setBounds(510, 284, 88, 34);
+
+      sun15w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sun15w1.setBorderPainted(true);
+      sun15w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sun15w1.setIconTextGap(0);
+      sun15w1.setName("sun15w1"); // NOI18N
+      sun15w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sun15w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sun15w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sun15w1);
+      sun15w1.setBounds(598, 284, 88, 34);
+
+      mon16w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      mon16w1.setBorderPainted(true);
+      mon16w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      mon16w1.setIconTextGap(0);
+      mon16w1.setName("mon16w1"); // NOI18N
+      mon16w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      mon16w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            mon16w1ActionPerformed(evt);
+         }
+      });
+      week1.add(mon16w1);
+      mon16w1.setBounds(70, 318, 88, 34);
+
+      tue16w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      tue16w1.setBorderPainted(true);
+      tue16w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      tue16w1.setIconTextGap(0);
+      tue16w1.setName("tue16w1"); // NOI18N
+      tue16w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      tue16w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            tue16w1ActionPerformed(evt);
+         }
+      });
+      week1.add(tue16w1);
+      tue16w1.setBounds(158, 318, 88, 34);
+
+      wed16w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      wed16w1.setBorderPainted(true);
+      wed16w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      wed16w1.setIconTextGap(0);
+      wed16w1.setName("wed16w1"); // NOI18N
+      wed16w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      wed16w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            wed16w1ActionPerformed(evt);
+         }
+      });
+      week1.add(wed16w1);
+      wed16w1.setBounds(246, 318, 88, 34);
+
+      thu16w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      thu16w1.setBorderPainted(true);
+      thu16w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      thu16w1.setIconTextGap(0);
+      thu16w1.setName("thu16w1"); // NOI18N
+      thu16w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      thu16w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            thu16w1ActionPerformed(evt);
+         }
+      });
+      week1.add(thu16w1);
+      thu16w1.setBounds(334, 318, 88, 34);
+
+      fri16w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      fri16w1.setBorderPainted(true);
+      fri16w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      fri16w1.setIconTextGap(0);
+      fri16w1.setName("fri16w1"); // NOI18N
+      fri16w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      fri16w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            fri16w1ActionPerformed(evt);
+         }
+      });
+      week1.add(fri16w1);
+      fri16w1.setBounds(422, 318, 88, 34);
+
+      sat16w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sat16w1.setBorderPainted(true);
+      sat16w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sat16w1.setIconTextGap(0);
+      sat16w1.setName("sat16w1"); // NOI18N
+      sat16w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sat16w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sat16w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sat16w1);
+      sat16w1.setBounds(510, 318, 88, 34);
+
+      sun16w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sun16w1.setBorderPainted(true);
+      sun16w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sun16w1.setIconTextGap(0);
+      sun16w1.setName("sun16w1"); // NOI18N
+      sun16w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sun16w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sun16w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sun16w1);
+      sun16w1.setBounds(598, 318, 88, 34);
+
+      mon17w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      mon17w1.setBorderPainted(true);
+      mon17w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      mon17w1.setIconTextGap(0);
+      mon17w1.setName("mon17w1"); // NOI18N
+      mon17w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      mon17w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            mon17w1ActionPerformed(evt);
+         }
+      });
+      week1.add(mon17w1);
+      mon17w1.setBounds(70, 352, 88, 34);
+
+      tue17w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      tue17w1.setBorderPainted(true);
+      tue17w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      tue17w1.setIconTextGap(0);
+      tue17w1.setName("tue17w1"); // NOI18N
+      tue17w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      tue17w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            tue17w1ActionPerformed(evt);
+         }
+      });
+      week1.add(tue17w1);
+      tue17w1.setBounds(158, 352, 88, 34);
+
+      wed17w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      wed17w1.setBorderPainted(true);
+      wed17w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      wed17w1.setIconTextGap(0);
+      wed17w1.setName("wed17w1"); // NOI18N
+      wed17w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      wed17w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            wed17w1ActionPerformed(evt);
+         }
+      });
+      week1.add(wed17w1);
+      wed17w1.setBounds(246, 352, 88, 34);
+
+      thu17w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      thu17w1.setBorderPainted(true);
+      thu17w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      thu17w1.setIconTextGap(0);
+      thu17w1.setName("thu17w1"); // NOI18N
+      thu17w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      thu17w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            thu17w1ActionPerformed(evt);
+         }
+      });
+      week1.add(thu17w1);
+      thu17w1.setBounds(334, 352, 88, 34);
+
+      fri17w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      fri17w1.setBorderPainted(true);
+      fri17w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      fri17w1.setIconTextGap(0);
+      fri17w1.setName("fri17w1"); // NOI18N
+      fri17w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      fri17w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            fri17w1ActionPerformed(evt);
+         }
+      });
+      week1.add(fri17w1);
+      fri17w1.setBounds(422, 352, 88, 34);
+
+      sat17w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sat17w1.setBorderPainted(true);
+      sat17w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sat17w1.setIconTextGap(0);
+      sat17w1.setName("sat17w1"); // NOI18N
+      sat17w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sat17w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sat17w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sat17w1);
+      sat17w1.setBounds(510, 352, 88, 34);
+
+      sun17w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sun17w1.setBorderPainted(true);
+      sun17w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sun17w1.setIconTextGap(0);
+      sun17w1.setName("sun17w1"); // NOI18N
+      sun17w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sun17w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sun17w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sun17w1);
+      sun17w1.setBounds(598, 352, 88, 34);
+
+      mon18w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      mon18w1.setBorderPainted(true);
+      mon18w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      mon18w1.setIconTextGap(0);
+      mon18w1.setName("mon18w1"); // NOI18N
+      mon18w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      mon18w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            mon18w1ActionPerformed(evt);
+         }
+      });
+      week1.add(mon18w1);
+      mon18w1.setBounds(70, 386, 88, 34);
+
+      tue18w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      tue18w1.setBorderPainted(true);
+      tue18w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      tue18w1.setIconTextGap(0);
+      tue18w1.setName("tue18w1"); // NOI18N
+      tue18w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      tue18w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            tue18w1ActionPerformed(evt);
+         }
+      });
+      week1.add(tue18w1);
+      tue18w1.setBounds(158, 386, 88, 34);
+
+      wed18w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      wed18w1.setBorderPainted(true);
+      wed18w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      wed18w1.setIconTextGap(0);
+      wed18w1.setName("wed18w1"); // NOI18N
+      wed18w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      wed18w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            wed18w1ActionPerformed(evt);
+         }
+      });
+      week1.add(wed18w1);
+      wed18w1.setBounds(246, 386, 88, 34);
+
+      thu18w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      thu18w1.setBorderPainted(true);
+      thu18w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      thu18w1.setIconTextGap(0);
+      thu18w1.setName("thu18w1"); // NOI18N
+      thu18w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      thu18w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            thu18w1ActionPerformed(evt);
+         }
+      });
+      week1.add(thu18w1);
+      thu18w1.setBounds(334, 386, 88, 34);
+
+      fri18w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      fri18w1.setBorderPainted(true);
+      fri18w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      fri18w1.setIconTextGap(0);
+      fri18w1.setName("fri18w1"); // NOI18N
+      fri18w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      fri18w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            fri18w1ActionPerformed(evt);
+         }
+      });
+      week1.add(fri18w1);
+      fri18w1.setBounds(422, 386, 88, 34);
+
+      sat18w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sat18w1.setBorderPainted(true);
+      sat18w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sat18w1.setIconTextGap(0);
+      sat18w1.setName("sat18w1"); // NOI18N
+      sat18w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sat18w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sat18w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sat18w1);
+      sat18w1.setBounds(510, 386, 88, 34);
+
+      sun18w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sun18w1.setBorderPainted(true);
+      sun18w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sun18w1.setIconTextGap(0);
+      sun18w1.setName("sun18w1"); // NOI18N
+      sun18w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sun18w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sun18w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sun18w1);
+      sun18w1.setBounds(598, 386, 88, 34);
+
+      mon19w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      mon19w1.setBorderPainted(true);
+      mon19w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      mon19w1.setIconTextGap(0);
+      mon19w1.setName("mon19w1"); // NOI18N
+      mon19w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      mon19w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            mon19w1ActionPerformed(evt);
+         }
+      });
+      week1.add(mon19w1);
+      mon19w1.setBounds(70, 420, 88, 34);
+
+      tue19w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      tue19w1.setBorderPainted(true);
+      tue19w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      tue19w1.setIconTextGap(0);
+      tue19w1.setName("tue19w1"); // NOI18N
+      tue19w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      tue19w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            tue19w1ActionPerformed(evt);
+         }
+      });
+      week1.add(tue19w1);
+      tue19w1.setBounds(158, 420, 88, 34);
+
+      wed19w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      wed19w1.setBorderPainted(true);
+      wed19w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      wed19w1.setIconTextGap(0);
+      wed19w1.setName("wed19w1"); // NOI18N
+      wed19w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      wed19w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            wed19w1ActionPerformed(evt);
+         }
+      });
+      week1.add(wed19w1);
+      wed19w1.setBounds(246, 420, 88, 34);
+
+      thu19w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      thu19w1.setBorderPainted(true);
+      thu19w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      thu19w1.setIconTextGap(0);
+      thu19w1.setName("thu19w1"); // NOI18N
+      thu19w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      thu19w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            thu19w1ActionPerformed(evt);
+         }
+      });
+      week1.add(thu19w1);
+      thu19w1.setBounds(334, 420, 88, 34);
+
+      fri19w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      fri19w1.setBorderPainted(true);
+      fri19w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      fri19w1.setIconTextGap(0);
+      fri19w1.setName("fri19w1"); // NOI18N
+      fri19w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      fri19w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            fri19w1ActionPerformed(evt);
+         }
+      });
+      week1.add(fri19w1);
+      fri19w1.setBounds(422, 420, 88, 34);
+
+      sat19w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sat19w1.setBorderPainted(true);
+      sat19w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sat19w1.setIconTextGap(0);
+      sat19w1.setName("sat19w1"); // NOI18N
+      sat19w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sat19w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sat19w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sat19w1);
+      sat19w1.setBounds(510, 420, 88, 34);
+
+      sun19w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sun19w1.setBorderPainted(true);
+      sun19w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sun19w1.setIconTextGap(0);
+      sun19w1.setName("sun19w1"); // NOI18N
+      sun19w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sun19w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sun19w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sun19w1);
+      sun19w1.setBounds(598, 420, 88, 34);
+
+      mon20w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      mon20w1.setBorderPainted(true);
+      mon20w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      mon20w1.setIconTextGap(0);
+      mon20w1.setName("mon20w1"); // NOI18N
+      mon20w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      mon20w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            mon20w1ActionPerformed(evt);
+         }
+      });
+      week1.add(mon20w1);
+      mon20w1.setBounds(70, 454, 88, 34);
+
+      tue20w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      tue20w1.setBorderPainted(true);
+      tue20w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      tue20w1.setIconTextGap(0);
+      tue20w1.setName("tue20w1"); // NOI18N
+      tue20w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      tue20w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            tue20w1ActionPerformed(evt);
+         }
+      });
+      week1.add(tue20w1);
+      tue20w1.setBounds(158, 454, 88, 34);
+
+      wed20w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      wed20w1.setBorderPainted(true);
+      wed20w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      wed20w1.setIconTextGap(0);
+      wed20w1.setName("wed20w1"); // NOI18N
+      wed20w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      wed20w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            wed20w1ActionPerformed(evt);
+         }
+      });
+      week1.add(wed20w1);
+      wed20w1.setBounds(246, 454, 88, 34);
+
+      thu20w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      thu20w1.setBorderPainted(true);
+      thu20w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      thu20w1.setIconTextGap(0);
+      thu20w1.setName("thu20w1"); // NOI18N
+      thu20w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      thu20w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            thu20w1ActionPerformed(evt);
+         }
+      });
+      week1.add(thu20w1);
+      thu20w1.setBounds(334, 454, 88, 34);
+
+      fri20w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      fri20w1.setBorderPainted(true);
+      fri20w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      fri20w1.setIconTextGap(0);
+      fri20w1.setName("fri20w1"); // NOI18N
+      fri20w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      fri20w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            fri20w1ActionPerformed(evt);
+         }
+      });
+      week1.add(fri20w1);
+      fri20w1.setBounds(422, 454, 88, 34);
+
+      sat20w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sat20w1.setBorderPainted(true);
+      sat20w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sat20w1.setIconTextGap(0);
+      sat20w1.setName("sat20w1"); // NOI18N
+      sat20w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sat20w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sat20w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sat20w1);
+      sat20w1.setBounds(510, 454, 88, 34);
+
+      sun20w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sun20w1.setBorderPainted(true);
+      sun20w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sun20w1.setIconTextGap(0);
+      sun20w1.setName("sun20w1"); // NOI18N
+      sun20w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sun20w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sun20w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sun20w1);
+      sun20w1.setBounds(598, 454, 88, 34);
+
+      mon21w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      mon21w1.setBorderPainted(true);
+      mon21w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      mon21w1.setIconTextGap(0);
+      mon21w1.setName("mon21w1"); // NOI18N
+      mon21w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      mon21w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            mon21w1ActionPerformed(evt);
+         }
+      });
+      week1.add(mon21w1);
+      mon21w1.setBounds(70, 488, 88, 34);
+
+      tue21w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      tue21w1.setBorderPainted(true);
+      tue21w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      tue21w1.setIconTextGap(0);
+      tue21w1.setName("tue21w1"); // NOI18N
+      tue21w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      tue21w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            tue21w1ActionPerformed(evt);
+         }
+      });
+      week1.add(tue21w1);
+      tue21w1.setBounds(158, 488, 88, 34);
+
+      wed21w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      wed21w1.setBorderPainted(true);
+      wed21w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      wed21w1.setIconTextGap(0);
+      wed21w1.setName("wed21w1"); // NOI18N
+      wed21w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      wed21w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            wed21w1ActionPerformed(evt);
+         }
+      });
+      week1.add(wed21w1);
+      wed21w1.setBounds(246, 488, 88, 34);
+
+      thu21w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      thu21w1.setBorderPainted(true);
+      thu21w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      thu21w1.setIconTextGap(0);
+      thu21w1.setName("thu21w1"); // NOI18N
+      thu21w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      thu21w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            thu21w1ActionPerformed(evt);
+         }
+      });
+      week1.add(thu21w1);
+      thu21w1.setBounds(334, 488, 88, 34);
+
+      fri21w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      fri21w1.setBorderPainted(true);
+      fri21w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      fri21w1.setIconTextGap(0);
+      fri21w1.setName("fri21w1"); // NOI18N
+      fri21w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      fri21w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            fri21w1ActionPerformed(evt);
+         }
+      });
+      week1.add(fri21w1);
+      fri21w1.setBounds(422, 488, 88, 34);
+
+      sat21w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sat21w1.setBorderPainted(true);
+      sat21w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sat21w1.setIconTextGap(0);
+      sat21w1.setName("sat21w1"); // NOI18N
+      sat21w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sat21w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sat21w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sat21w1);
+      sat21w1.setBounds(510, 488, 88, 34);
+
+      sun21w1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+      sun21w1.setBorderPainted(true);
+      sun21w1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/greenTile.png"))); // NOI18N
+      sun21w1.setIconTextGap(0);
+      sun21w1.setName("sun21w1"); // NOI18N
+      sun21w1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redTile.png"))); // NOI18N
+      sun21w1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sun21w1ActionPerformed(evt);
+         }
+      });
+      week1.add(sun21w1);
+      sun21w1.setBounds(598, 488, 88, 34);
+
+      timetableImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/timetableNew.PNG"))); // NOI18N
+      timetableImage1.setName("timetableImage1"); // NOI18N
+      timetableImage1.setPreferredSize(new java.awt.Dimension(505, 660));
+      week1.add(timetableImage1);
+      timetableImage1.setBounds(10, 7, 690, 520);
+
+      mainPanel.add(week1, "card2");
+
+      getContentPane().add(mainPanel);
+      mainPanel.setBounds(0, 81, 700, 525);
+
+      jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+      jPanel2.setName("jPanel2"); // NOI18N
+
+      jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/TimeTable.png"))); // NOI18N
+      jLabel1.setName("jLabel1"); // NOI18N
 
       switchButton.setBackground(new java.awt.Color(255, 255, 255));
       switchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/switchWeek.png"))); // NOI18N
@@ -3229,39 +3233,50 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
          }
       });
 
-      javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-      jPanel1.setLayout(jPanel1Layout);
-      jPanel1Layout.setHorizontalGroup(
-         jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGroup(jPanel1Layout.createSequentialGroup()
-            .addComponent(switchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(0, 284, Short.MAX_VALUE))
-      );
-      jPanel1Layout.setVerticalGroup(
-         jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGroup(jPanel1Layout.createSequentialGroup()
-            .addComponent(switchButton)
-            .addGap(0, 9, Short.MAX_VALUE))
-      );
-
-      getContentPane().add(jPanel1);
-      jPanel1.setBounds(380, 75, 320, 40);
-
-      jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-      jPanel2.setName("jPanel2"); // NOI18N
-
-      titleLabel.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 48)); // NOI18N
-      titleLabel.setText("Create Timetable");
-      titleLabel.setName("titleLabel"); // NOI18N
-
-      buttonCancel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-      buttonCancel.setText("Cancel");
-      buttonCancel.setName("buttonCancel"); // NOI18N
-      buttonCancel.addActionListener(new java.awt.event.ActionListener() {
+      Help.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+      Help.setLabel("?");
+      Help.setName("Help"); // NOI18N
+      Help.addActionListener(new java.awt.event.ActionListener() {
          public void actionPerformed(java.awt.event.ActionEvent evt) {
-            buttonCancelActionPerformed(evt);
+            HelpActionPerformed(evt);
          }
       });
+
+      javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+      jPanel2.setLayout(jPanel2Layout);
+      jPanel2Layout.setHorizontalGroup(
+         jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+            .addGap(45, 45, 45)
+            .addComponent(switchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
+            .addComponent(jLabel1)
+            .addGap(112, 112, 112)
+            .addComponent(Help, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(26, 26, 26))
+      );
+      jPanel2Layout.setVerticalGroup(
+         jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGroup(jPanel2Layout.createSequentialGroup()
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                  .addComponent(jLabel1)
+                  .addContainerGap())
+               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                  .addComponent(switchButton)
+                  .addGap(19, 19, 19))))
+         .addGroup(jPanel2Layout.createSequentialGroup()
+            .addGap(33, 33, 33)
+            .addComponent(Help, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(0, 0, Short.MAX_VALUE))
+      );
+
+      getContentPane().add(jPanel2);
+      jPanel2.setBounds(0, 0, 700, 90);
+
+      jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+      jPanel1.setName("jPanel1"); // NOI18N
 
       buttonSaveTimetable.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
       buttonSaveTimetable.setText("Save");
@@ -3272,35 +3287,38 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
          }
       });
 
-      javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-      jPanel2.setLayout(jPanel2Layout);
-      jPanel2Layout.setHorizontalGroup(
-         jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGroup(jPanel2Layout.createSequentialGroup()
-            .addGap(29, 29, 29)
-            .addComponent(buttonSaveTimetable, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(44, 44, 44)
-            .addComponent(titleLabel)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-            .addComponent(buttonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(45, 45, 45))
-      );
-      jPanel2Layout.setVerticalGroup(
-         jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGroup(jPanel2Layout.createSequentialGroup()
+      buttonCancel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+      buttonCancel.setText("Cancel");
+      buttonCancel.setName("buttonCancel"); // NOI18N
+      buttonCancel.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            buttonCancelActionPerformed(evt);
+         }
+      });
+
+      javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+      jPanel1.setLayout(jPanel1Layout);
+      jPanel1Layout.setHorizontalGroup(
+         jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGroup(jPanel1Layout.createSequentialGroup()
             .addContainerGap()
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-               .addGroup(jPanel2Layout.createSequentialGroup()
-                  .addComponent(buttonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addGap(3, 3, 3))
-               .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                  .addComponent(titleLabel)
-                  .addComponent(buttonSaveTimetable, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(buttonSaveTimetable, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 479, Short.MAX_VALUE)
+            .addComponent(buttonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(18, 18, 18))
+      );
+      jPanel1Layout.setVerticalGroup(
+         jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGroup(jPanel1Layout.createSequentialGroup()
+            .addContainerGap()
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+               .addComponent(buttonSaveTimetable)
+               .addComponent(buttonCancel))
+            .addContainerGap(14, Short.MAX_VALUE))
       );
 
-      getContentPane().add(jPanel2);
-      jPanel2.setBounds(0, 0, 700, 65);
+      getContentPane().add(jPanel1);
+      jPanel1.setBounds(0, 600, 700, 50);
 
       pack();
    }// </editor-fold>//GEN-END:initComponents
@@ -4743,11 +4761,20 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
        //  dialog.setVisible(true);
    }//GEN-LAST:event_buttonSaveTimetableActionPerformed
 
+   private void HelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HelpActionPerformed
+      Help dialog = new Help(this, true, timetableDAO, userDAO, userStorageDAO);
+      // centre the dialog on the parent window
+      dialog.setLocationRelativeTo(this);
+      // make the dialog visible
+      dialog.setVisible(true);
+   }//GEN-LAST:event_HelpActionPerformed
+
     private void saveTimetable(Day day) {
         timetableDAO.saveDay(day);
     }
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
+   private java.awt.Button Help;
    private javax.swing.JButton buttonCancel;
    private javax.swing.JButton buttonSaveTimetable;
    private javax.swing.JCheckBox fri10w1;
@@ -4778,6 +4805,7 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
    private javax.swing.JCheckBox fri8w2;
    private javax.swing.JCheckBox fri9w1;
    private javax.swing.JCheckBox fri9w2;
+   private javax.swing.JLabel jLabel1;
    private javax.swing.JPanel jPanel1;
    private javax.swing.JPanel jPanel2;
    private javax.swing.JPanel mainPanel;
@@ -4897,7 +4925,6 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
    private javax.swing.JCheckBox thu9w2;
    private javax.swing.JLabel timetableImage1;
    private javax.swing.JLabel timetableImage2;
-   private javax.swing.JLabel titleLabel;
    private javax.swing.JCheckBox tue10w1;
    private javax.swing.JCheckBox tue10w2;
    private javax.swing.JCheckBox tue11w1;
