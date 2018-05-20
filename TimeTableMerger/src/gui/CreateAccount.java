@@ -309,11 +309,11 @@ public class CreateAccount extends javax.swing.JDialog {
 									 JOptionPane.showOptionDialog(null, "Thank you for creating an account!", "Success", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null, null, null);
 
                             dispose();
-                          // Login frame = new Login(userDAO, timetableDAO, userStorageDAO);
+                            Login frame = new Login(userDAO, timetableDAO, userStorageDAO);
                             // centre the frame on the screen
-                            //frame.setLocationRelativeTo(null);
+                            frame.setLocationRelativeTo(null);
                             // show the frame
-                            //frame.setVisible(true);
+                            frame.setVisible(true);
 									 }
 
                         } else {
