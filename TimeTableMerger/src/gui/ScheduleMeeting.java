@@ -90,23 +90,6 @@ public class ScheduleMeeting extends javax.swing.JDialog {
 
       jPasswordField1 = new javax.swing.JPasswordField();
       mainPanel = new javax.swing.JPanel();
-      durationLabel = new javax.swing.JLabel();
-      durationCombo = new javax.swing.JComboBox<>();
-      String[] hourDuration = new String[] {"1 Hour", "2 Hours", "3 Hours"}; durationCombo = new JComboBox<String>(hourDuration);
-      monLabel = new javax.swing.JLabel();
-      monCheckBox = new javax.swing.JCheckBox();
-      tueLabel = new javax.swing.JLabel();
-      tueCheckBox = new javax.swing.JCheckBox();
-      wedLabel = new javax.swing.JLabel();
-      wedCheckBox = new javax.swing.JCheckBox();
-      thuLabel = new javax.swing.JLabel();
-      thuCheckBox = new javax.swing.JCheckBox();
-      friLabel = new javax.swing.JLabel();
-      friCheckBox = new javax.swing.JCheckBox();
-      satLabel = new javax.swing.JLabel();
-      satCheckBox = new javax.swing.JCheckBox();
-      sunLabel = new javax.swing.JLabel();
-      sunCheckBox = new javax.swing.JCheckBox();
       searchLabel = new javax.swing.JLabel();
       jScrollPane1 = new javax.swing.JScrollPane();
       selectedContacts = new javax.swing.JList<>();
@@ -118,7 +101,6 @@ public class ScheduleMeeting extends javax.swing.JDialog {
       searchLabel2 = new javax.swing.JLabel();
       AddArrow = new javax.swing.JButton();
       RemoveArrow = new javax.swing.JButton();
-      jLabel2 = new javax.swing.JLabel();
 
       jPasswordField1.setText("jPasswordField1");
       jPasswordField1.setName("jPasswordField1"); // NOI18N
@@ -127,122 +109,6 @@ public class ScheduleMeeting extends javax.swing.JDialog {
 
       mainPanel.setBackground(new java.awt.Color(255, 255, 255));
       mainPanel.setName("mainPanel"); // NOI18N
-
-      durationLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-      durationLabel.setText("Duration:");
-      durationLabel.setName("durationLabel"); // NOI18N
-
-      durationCombo.setName("durationCombo"); // NOI18N
-      durationCombo.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            durationComboActionPerformed(evt);
-         }
-      });
-
-      monLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-      monLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-      monLabel.setText("M");
-      monLabel.setName("monLabel"); // NOI18N
-
-      monCheckBox.setBackground(new java.awt.Color(255, 255, 255));
-      monCheckBox.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/unselectedCheckBox.png"))); // NOI18N
-      monCheckBox.setName("monCheckBox"); // NOI18N
-      monCheckBox.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/selectedCheckBox.png"))); // NOI18N
-      monCheckBox.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            monCheckBoxActionPerformed(evt);
-         }
-      });
-
-      tueLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-      tueLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-      tueLabel.setText("T");
-      tueLabel.setName("tueLabel"); // NOI18N
-
-      tueCheckBox.setBackground(new java.awt.Color(255, 255, 255));
-      tueCheckBox.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/unselectedCheckBox.png"))); // NOI18N
-      tueCheckBox.setName("tueCheckBox"); // NOI18N
-      tueCheckBox.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/selectedCheckBox.png"))); // NOI18N
-      tueCheckBox.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            tueCheckBoxActionPerformed(evt);
-         }
-      });
-
-      wedLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-      wedLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-      wedLabel.setText("W");
-      wedLabel.setName("wedLabel"); // NOI18N
-
-      wedCheckBox.setBackground(new java.awt.Color(255, 255, 255));
-      wedCheckBox.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/unselectedCheckBox.png"))); // NOI18N
-      wedCheckBox.setName("wedCheckBox"); // NOI18N
-      wedCheckBox.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/selectedCheckBox.png"))); // NOI18N
-      wedCheckBox.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            wedCheckBoxActionPerformed(evt);
-         }
-      });
-
-      thuLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-      thuLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-      thuLabel.setText("T");
-      thuLabel.setName("thuLabel"); // NOI18N
-
-      thuCheckBox.setBackground(new java.awt.Color(255, 255, 255));
-      thuCheckBox.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/unselectedCheckBox.png"))); // NOI18N
-      thuCheckBox.setName("thuCheckBox"); // NOI18N
-      thuCheckBox.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/selectedCheckBox.png"))); // NOI18N
-      thuCheckBox.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            thuCheckBoxActionPerformed(evt);
-         }
-      });
-
-      friLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-      friLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-      friLabel.setText("F");
-      friLabel.setName("friLabel"); // NOI18N
-
-      friCheckBox.setBackground(new java.awt.Color(255, 255, 255));
-      friCheckBox.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/unselectedCheckBox.png"))); // NOI18N
-      friCheckBox.setName("friCheckBox"); // NOI18N
-      friCheckBox.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/selectedCheckBox.png"))); // NOI18N
-      friCheckBox.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            friCheckBoxActionPerformed(evt);
-         }
-      });
-
-      satLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-      satLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-      satLabel.setText("S");
-      satLabel.setName("satLabel"); // NOI18N
-
-      satCheckBox.setBackground(new java.awt.Color(255, 255, 255));
-      satCheckBox.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/unselectedCheckBox.png"))); // NOI18N
-      satCheckBox.setName("satCheckBox"); // NOI18N
-      satCheckBox.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/selectedCheckBox.png"))); // NOI18N
-      satCheckBox.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            satCheckBoxActionPerformed(evt);
-         }
-      });
-
-      sunLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-      sunLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-      sunLabel.setText("S");
-      sunLabel.setName("sunLabel"); // NOI18N
-
-      sunCheckBox.setBackground(new java.awt.Color(255, 255, 255));
-      sunCheckBox.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/unselectedCheckBox.png"))); // NOI18N
-      sunCheckBox.setName("sunCheckBox"); // NOI18N
-      sunCheckBox.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/selectedCheckBox.png"))); // NOI18N
-      sunCheckBox.addActionListener(new java.awt.event.ActionListener() {
-         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sunCheckBoxActionPerformed(evt);
-         }
-      });
 
       searchLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
       searchLabel.setText("Contact List:");
@@ -284,6 +150,7 @@ public class ScheduleMeeting extends javax.swing.JDialog {
       searchLabel2.setText("Merge timetables with:");
       searchLabel2.setName("searchLabel2"); // NOI18N
 
+      AddArrow.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
       AddArrow.setText("Add");
       AddArrow.setName("AddArrow"); // NOI18N
       AddArrow.addActionListener(new java.awt.event.ActionListener() {
@@ -292,6 +159,7 @@ public class ScheduleMeeting extends javax.swing.JDialog {
          }
       });
 
+      RemoveArrow.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
       RemoveArrow.setText("Remove");
       RemoveArrow.setName("RemoveArrow"); // NOI18N
       RemoveArrow.addActionListener(new java.awt.event.ActionListener() {
@@ -300,56 +168,12 @@ public class ScheduleMeeting extends javax.swing.JDialog {
          }
       });
 
-      jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-      jLabel2.setText("Which days would you like to meet?");
-      jLabel2.setName("jLabel2"); // NOI18N
-
       javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
       mainPanel.setLayout(mainPanelLayout);
       mainPanelLayout.setHorizontalGroup(
          mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(mainPanelLayout.createSequentialGroup()
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-               .addGroup(mainPanelLayout.createSequentialGroup()
-                  .addGap(203, 203, 203)
-                  .addComponent(durationLabel)
-                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                  .addComponent(durationCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
-               .addGroup(mainPanelLayout.createSequentialGroup()
-                  .addGap(142, 142, 142)
-                  .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                     .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel2))
-                     .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addComponent(monCheckBox)
-                        .addGap(18, 18, 18)
-                        .addComponent(tueCheckBox)
-                        .addGap(18, 18, 18)
-                        .addComponent(wedCheckBox)
-                        .addGap(18, 18, 18)
-                        .addComponent(thuCheckBox)
-                        .addGap(18, 18, 18)
-                        .addComponent(friCheckBox)
-                        .addGap(18, 18, 18)
-                        .addComponent(satCheckBox)
-                        .addGap(18, 18, 18)
-                        .addComponent(sunCheckBox))
-                     .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(monLabel)
-                        .addGap(50, 50, 50)
-                        .addComponent(tueLabel)
-                        .addGap(50, 50, 50)
-                        .addComponent(wedLabel)
-                        .addGap(43, 43, 43)
-                        .addComponent(thuLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39)
-                        .addComponent(friLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(47, 47, 47)
-                        .addComponent(satLabel)
-                        .addGap(54, 54, 54)
-                        .addComponent(sunLabel))))
                .addGroup(mainPanelLayout.createSequentialGroup()
                   .addGap(238, 238, 238)
                   .addComponent(confirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -369,13 +193,13 @@ public class ScheduleMeeting extends javax.swing.JDialog {
                               .addGap(103, 103, 103)
                               .addComponent(searchLabel2))
                            .addGroup(mainPanelLayout.createSequentialGroup()
-                              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                               .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                  .addComponent(AddArrow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                 .addComponent(RemoveArrow, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                 .addComponent(RemoveArrow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                               .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-            .addContainerGap(59, Short.MAX_VALUE))
+            .addContainerGap(47, Short.MAX_VALUE))
       );
       mainPanelLayout.setVerticalGroup(
          mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -387,39 +211,17 @@ public class ScheduleMeeting extends javax.swing.JDialog {
                .addComponent(searchLabel)
                .addComponent(searchLabel2))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-               .addGroup(mainPanelLayout.createSequentialGroup()
-                  .addGap(22, 22, 22)
-                  .addComponent(AddArrow)
+            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
+                  .addComponent(AddArrow, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                   .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                  .addComponent(RemoveArrow))
-               .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-               .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(48, 48, 48)
-            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-               .addComponent(durationLabel)
-               .addComponent(durationCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(46, 46, 46)
-            .addComponent(jLabel2)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-               .addComponent(satCheckBox)
-               .addComponent(sunCheckBox)
-               .addComponent(monCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-               .addComponent(tueCheckBox)
-               .addComponent(wedCheckBox)
-               .addComponent(thuCheckBox)
-               .addComponent(friCheckBox))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-               .addComponent(satLabel)
-               .addComponent(sunLabel)
-               .addComponent(monLabel)
-               .addComponent(tueLabel)
-               .addComponent(wedLabel)
-               .addComponent(thuLabel)
-               .addComponent(friLabel))
-            .addGap(35, 35, 35)
+                  .addComponent(RemoveArrow, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addGap(261, 261, 261))
+               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
+                  .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE)
+                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE))
+                  .addGap(48, 48, 48)))
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                .addComponent(confirmButton)
                .addComponent(cancelButton))
@@ -439,38 +241,6 @@ public class ScheduleMeeting extends javax.swing.JDialog {
 
       pack();
    }// </editor-fold>//GEN-END:initComponents
-
-   private void monCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_monCheckBoxActionPerformed
-       // TODO add your handling code here:
-   }//GEN-LAST:event_monCheckBoxActionPerformed
-
-   private void tueCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tueCheckBoxActionPerformed
-       // TODO add your handling code here:
-   }//GEN-LAST:event_tueCheckBoxActionPerformed
-
-   private void wedCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wedCheckBoxActionPerformed
-       // TODO add your handling code here:
-   }//GEN-LAST:event_wedCheckBoxActionPerformed
-
-   private void thuCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thuCheckBoxActionPerformed
-       // TODO add your handling code here:
-   }//GEN-LAST:event_thuCheckBoxActionPerformed
-
-   private void friCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_friCheckBoxActionPerformed
-       // TODO add your handling code here:
-   }//GEN-LAST:event_friCheckBoxActionPerformed
-
-   private void satCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_satCheckBoxActionPerformed
-       // TODO add your handling code here:
-   }//GEN-LAST:event_satCheckBoxActionPerformed
-
-   private void sunCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sunCheckBoxActionPerformed
-       // TODO add your handling code here:
-   }//GEN-LAST:event_sunCheckBoxActionPerformed
-
-   private void durationComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_durationComboActionPerformed
-       // TODO add your handling code here:
-   }//GEN-LAST:event_durationComboActionPerformed
 
    private void confirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmButtonActionPerformed
 //       Set<User> users = new HashSet<>();
@@ -942,30 +712,13 @@ public class ScheduleMeeting extends javax.swing.JDialog {
    private javax.swing.JButton cancelButton;
    private javax.swing.JButton confirmButton;
    private javax.swing.JList<String> contactList1;
-   private javax.swing.JComboBox<String> durationCombo;
-   private javax.swing.JLabel durationLabel;
-   private javax.swing.JCheckBox friCheckBox;
-   private javax.swing.JLabel friLabel;
    private javax.swing.JLabel jLabel1;
-   private javax.swing.JLabel jLabel2;
    private javax.swing.JPasswordField jPasswordField1;
    private javax.swing.JScrollPane jScrollPane1;
    private javax.swing.JScrollPane jScrollPane2;
    private javax.swing.JPanel mainPanel;
-   private javax.swing.JCheckBox monCheckBox;
-   private javax.swing.JLabel monLabel;
-   private javax.swing.JCheckBox satCheckBox;
-   private javax.swing.JLabel satLabel;
    private javax.swing.JLabel searchLabel;
    private javax.swing.JLabel searchLabel2;
    private javax.swing.JList<String> selectedContacts;
-   private javax.swing.JCheckBox sunCheckBox;
-   private javax.swing.JLabel sunLabel;
-   private javax.swing.JCheckBox thuCheckBox;
-   private javax.swing.JLabel thuLabel;
-   private javax.swing.JCheckBox tueCheckBox;
-   private javax.swing.JLabel tueLabel;
-   private javax.swing.JCheckBox wedCheckBox;
-   private javax.swing.JLabel wedLabel;
    // End of variables declaration//GEN-END:variables
 }
