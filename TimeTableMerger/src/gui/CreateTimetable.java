@@ -3303,22 +3303,22 @@ public class CreateTimetable extends javax.swing.JDialog { //Was javax.swing.JFr
          .addGroup(jPanel1Layout.createSequentialGroup()
             .addContainerGap()
             .addComponent(buttonSaveTimetable, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 479, Short.MAX_VALUE)
-            .addComponent(buttonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 476, Short.MAX_VALUE)
+            .addComponent(buttonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGap(18, 18, 18))
       );
       jPanel1Layout.setVerticalGroup(
          jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(jPanel1Layout.createSequentialGroup()
             .addContainerGap()
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-               .addComponent(buttonSaveTimetable)
-               .addComponent(buttonCancel))
-            .addContainerGap(14, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+               .addComponent(buttonSaveTimetable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+               .addComponent(buttonCancel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addContainerGap(44, Short.MAX_VALUE))
       );
 
       getContentPane().add(jPanel1);
-      jPanel1.setBounds(0, 600, 700, 50);
+      jPanel1.setBounds(0, 597, 700, 80);
 
       pack();
    }// </editor-fold>//GEN-END:initComponents

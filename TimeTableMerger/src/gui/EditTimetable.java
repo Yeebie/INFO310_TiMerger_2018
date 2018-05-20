@@ -3829,11 +3829,11 @@ public class EditTimetable extends javax.swing.JDialog { //Was javax.swing.JFram
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                .addComponent(buttonSaveTimetable)
                .addComponent(buttonCancel))
-            .addContainerGap(14, Short.MAX_VALUE))
+            .addContainerGap(24, Short.MAX_VALUE))
       );
 
       getContentPane().add(jPanel3);
-      jPanel3.setBounds(0, 597, 700, 50);
+      jPanel3.setBounds(0, 597, 700, 60);
 
       pack();
    }// </editor-fold>//GEN-END:initComponents
