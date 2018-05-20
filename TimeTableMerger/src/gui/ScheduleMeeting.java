@@ -70,13 +70,13 @@ public class ScheduleMeeting extends javax.swing.JDialog {
         contactList1.setModel(displayContactList);
 
         //set all days to selected by default
-        monCheckBox.setSelected(true);
-        tueCheckBox.setSelected(true);
-        wedCheckBox.setSelected(true);
-        thuCheckBox.setSelected(true);
-        friCheckBox.setSelected(true);
-        satCheckBox.setSelected(true);
-        sunCheckBox.setSelected(true);
+       // monCheckBox.setSelected(true);
+       // tueCheckBox.setSelected(true);
+       // wedCheckBox.setSelected(true);
+       // thuCheckBox.setSelected(true);
+       // friCheckBox.setSelected(true);
+       // satCheckBox.setSelected(true);
+       // sunCheckBox.setSelected(true);
     }
 
     /**
@@ -172,34 +172,32 @@ public class ScheduleMeeting extends javax.swing.JDialog {
       mainPanel.setLayout(mainPanelLayout);
       mainPanelLayout.setHorizontalGroup(
          mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel1)
+            .addGap(87, 87, 87))
          .addGroup(mainPanelLayout.createSequentialGroup()
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                .addGroup(mainPanelLayout.createSequentialGroup()
-                  .addGap(238, 238, 238)
+                  .addGap(26, 26, 26)
+                  .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                     .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                           .addComponent(AddArrow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                           .addComponent(RemoveArrow)))
+                     .addComponent(searchLabel))
+                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                  .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                     .addComponent(searchLabel2)
+                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))
+               .addGroup(mainPanelLayout.createSequentialGroup()
+                  .addGap(218, 218, 218)
                   .addComponent(confirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                   .addGap(18, 18, 18)
-                  .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-               .addGroup(mainPanelLayout.createSequentialGroup()
-                  .addGap(113, 113, 113)
-                  .addComponent(jLabel1))
-               .addGroup(mainPanelLayout.createSequentialGroup()
-                  .addGap(48, 48, 48)
-                  .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                     .addComponent(searchLabel)
-                     .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                           .addGroup(mainPanelLayout.createSequentialGroup()
-                              .addGap(103, 103, 103)
-                              .addComponent(searchLabel2))
-                           .addGroup(mainPanelLayout.createSequentialGroup()
-                              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                              .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                 .addComponent(AddArrow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                 .addComponent(RemoveArrow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                              .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-            .addContainerGap(47, Short.MAX_VALUE))
+                  .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addContainerGap(27, Short.MAX_VALUE))
       );
       mainPanelLayout.setVerticalGroup(
          mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -210,22 +208,23 @@ public class ScheduleMeeting extends javax.swing.JDialog {
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                .addComponent(searchLabel)
                .addComponent(searchLabel2))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addGroup(mainPanelLayout.createSequentialGroup()
+                  .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
                   .addComponent(AddArrow, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                   .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                   .addComponent(RemoveArrow, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addGap(261, 261, 261))
+                  .addGap(247, 247, 247))
                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
-                  .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE)
-                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE))
-                  .addGap(48, 48, 48)))
+                  .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addGap(28, 28, 28)))
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                .addComponent(confirmButton)
                .addComponent(cancelButton))
-            .addGap(24, 24, 24))
+            .addGap(26, 26, 26))
       );
 
       javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -247,17 +246,17 @@ public class ScheduleMeeting extends javax.swing.JDialog {
 //       users = userDAO.getUserList();
 
 //set day fields to true/false depending if check box has been unselected (chec kboxes are selected by default
-       monday = monCheckBox.isSelected();
-       tuesday = tueCheckBox.isSelected();
-       wednesday = wedCheckBox.isSelected();
-       thursday = thuCheckBox.isSelected();
-       friday = friCheckBox.isSelected();
-       saturday = satCheckBox.isSelected();
-       sunday = sunCheckBox.isSelected();
+      // monday = monCheckBox.isSelected();
+      // tuesday = tueCheckBox.isSelected();
+      // wednesday = wedCheckBox.isSelected();
+      // thursday = thuCheckBox.isSelected();
+      // friday = friCheckBox.isSelected();
+      // saturday = satCheckBox.isSelected();
+      // sunday = sunCheckBox.isSelected();
 
-       String storeDuration = String.valueOf(durationCombo.getSelectedItem());
+      // String storeDuration = String.valueOf(durationCombo.getSelectedItem());
 
-       System.out.println("Selected Duration: " + storeDuration);
+      /// System.out.println("Selected Duration: " + storeDuration);
 
        //Compare a user's day with the master timetable's day
        try {
