@@ -62,6 +62,7 @@ public class Contacts extends javax.swing.JFrame {
       jScrollPane2 = new javax.swing.JScrollPane();
       contactsList = new javax.swing.JList<>();
       ContactList = new javax.swing.JLabel();
+      backButton = new javax.swing.JButton();
 
       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -118,6 +119,15 @@ public class Contacts extends javax.swing.JFrame {
       ContactList.setText("Contact List: ");
       ContactList.setName("ContactList"); // NOI18N
 
+      backButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+      backButton.setText("Back");
+      backButton.setName("backButton"); // NOI18N
+      backButton.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            backButtonActionPerformed(evt);
+         }
+      });
+
       javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
       mainPanel.setLayout(mainPanelLayout);
       mainPanelLayout.setHorizontalGroup(
@@ -130,7 +140,10 @@ public class Contacts extends javax.swing.JFrame {
                   .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE)
                   .addComponent(jScrollPane1))
                .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-               .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+               .addGroup(mainPanelLayout.createSequentialGroup()
+                  .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addGap(18, 18, 18)
+                  .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
             .addGap(129, 129, 129))
          .addGroup(mainPanelLayout.createSequentialGroup()
             .addGap(157, 157, 157)
@@ -152,15 +165,17 @@ public class Contacts extends javax.swing.JFrame {
                .addComponent(searchText, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                .addComponent(searchButton))
             .addGap(31, 31, 31)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
             .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(40, 40, 40)
+            .addGap(29, 29, 29)
             .addComponent(ContactList)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-            .addComponent(exitButton)
+            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+               .addComponent(backButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+               .addComponent(exitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGap(26, 26, 26))
       );
 
@@ -235,10 +250,21 @@ public class Contacts extends javax.swing.JFrame {
 		}
    }//GEN-LAST:event_addButtonActionPerformed
 
+   private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
+      // TODO add your handling code here:
+		dispose();
+		HomeMenu dialog = new HomeMenu(this, true, timetableDAO, userDAO, userStorageDAO);
+		// centre the dialog on the parent window
+		dialog.setLocationRelativeTo(this);
+		// make the dialog visible
+		dialog.setVisible(true);
+   }//GEN-LAST:event_backButtonActionPerformed
+
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
    private javax.swing.JLabel ContactList;
    private javax.swing.JButton addButton;
+   private javax.swing.JButton backButton;
    private javax.swing.JList<String> contactsList;
    private javax.swing.JButton exitButton;
    private javax.swing.JScrollPane jScrollPane1;

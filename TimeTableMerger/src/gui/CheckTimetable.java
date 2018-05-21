@@ -768,6 +768,7 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
    private void initComponents() {
 
       button1 = new java.awt.Button();
+      blockPanel = new java.awt.Panel();
       secondaryPanel = new javax.swing.JPanel();
       week1Panel = new javax.swing.JPanel();
       week1Label = new javax.swing.JLabel();
@@ -874,7 +875,6 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
       sat21w1 = new javax.swing.JCheckBox();
       sun21w1 = new javax.swing.JCheckBox();
       timetableImage1 = new javax.swing.JLabel();
-      jTextPane1 = new javax.swing.JTextPane();
       week2 = new javax.swing.JPanel();
       mon8w2 = new javax.swing.JCheckBox();
       tue8w2 = new javax.swing.JCheckBox();
@@ -987,6 +987,24 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 
       getContentPane().setLayout(null);
 
+      blockPanel.setForeground(new java.awt.Color(0,0,0,0));
+      blockPanel.setName("blockPanel"); // NOI18N
+      blockPanel.setBackground(new java.awt.Color(0,0,0,0));
+
+      javax.swing.GroupLayout blockPanelLayout = new javax.swing.GroupLayout(blockPanel);
+      blockPanel.setLayout(blockPanelLayout);
+      blockPanelLayout.setHorizontalGroup(
+         blockPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGap(0, 700, Short.MAX_VALUE)
+      );
+      blockPanelLayout.setVerticalGroup(
+         blockPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGap(0, 530, Short.MAX_VALUE)
+      );
+
+      getContentPane().add(blockPanel);
+      blockPanel.setBounds(0, 80, 700, 530);
+
       secondaryPanel.setBackground(new java.awt.Color(255, 255, 255));
       secondaryPanel.setName("secondaryPanel"); // NOI18N
       secondaryPanel.setLayout(new java.awt.CardLayout());
@@ -1025,13 +1043,15 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
       week2Panel.setLayout(week2PanelLayout);
       week2PanelLayout.setHorizontalGroup(
          week2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, week2PanelLayout.createSequentialGroup()
-            .addGap(0, 16, Short.MAX_VALUE)
-            .addComponent(week2Label))
+         .addGroup(week2PanelLayout.createSequentialGroup()
+            .addComponent(week2Label, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addContainerGap())
       );
       week2PanelLayout.setVerticalGroup(
          week2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addComponent(week2Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+         .addGroup(week2PanelLayout.createSequentialGroup()
+            .addComponent(week2Label, javax.swing.GroupLayout.PREFERRED_SIZE, 28, Short.MAX_VALUE)
+            .addContainerGap())
       );
 
       secondaryPanel.add(week2Panel, "card3");
@@ -2424,12 +2444,6 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
       timetableImage1.setPreferredSize(new java.awt.Dimension(505, 660));
       week1.add(timetableImage1);
       timetableImage1.setBounds(10, 7, 690, 520);
-
-      jTextPane1.setEditable(false);
-      jTextPane1.setName("jTextPane1"); // NOI18N
-      jTextPane1.setBackground(new Color(0,0,0,0));
-      week1.add(jTextPane1);
-      jTextPane1.setBounds(0, 10, 700, 520);
 
       mainPanel.add(week1, "card2");
 
@@ -4729,6 +4743,7 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
    private java.awt.Button Help;
+   private java.awt.Panel blockPanel;
    private java.awt.Button button1;
    private javax.swing.JButton buttonCancel;
    private javax.swing.JCheckBox fri10w1;
@@ -4761,7 +4776,6 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
    private javax.swing.JCheckBox fri9w2;
    private javax.swing.JPanel jPanel2;
    private javax.swing.JPanel jPanel3;
-   private javax.swing.JTextPane jTextPane1;
    private javax.swing.JPanel mainPanel;
    private javax.swing.JCheckBox mon10w1;
    private javax.swing.JCheckBox mon10w2;
