@@ -136,7 +136,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/scheduleMeeting.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Schedule Meeting"/>
+            <Property name="text" type="java.lang.String" value="Compare Timetable"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="name" type="java.lang.String" value="scheduleButton" noResource="true"/>
             <Property name="verticalTextPosition" type="int" value="3"/>

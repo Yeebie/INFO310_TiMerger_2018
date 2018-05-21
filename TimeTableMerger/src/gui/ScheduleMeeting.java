@@ -120,7 +120,7 @@ public class ScheduleMeeting extends javax.swing.JDialog {
       jScrollPane1.setViewportView(selectedContacts);
 
       jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 85)); // NOI18N
-      jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ScheduleMeeting2.png"))); // NOI18N
+      jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/compareTimetable.png"))); // NOI18N
       jLabel1.setName("jLabel1"); // NOI18N
 
       confirmButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -172,10 +172,6 @@ public class ScheduleMeeting extends javax.swing.JDialog {
       mainPanel.setLayout(mainPanelLayout);
       mainPanelLayout.setHorizontalGroup(
          mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
-            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel1)
-            .addGap(87, 87, 87))
          .addGroup(mainPanelLayout.createSequentialGroup()
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                .addGroup(mainPanelLayout.createSequentialGroup()
@@ -198,6 +194,10 @@ public class ScheduleMeeting extends javax.swing.JDialog {
                   .addGap(18, 18, 18)
                   .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
             .addContainerGap(27, Short.MAX_VALUE))
+         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(jLabel1)
+            .addGap(97, 97, 97))
       );
       mainPanelLayout.setVerticalGroup(
          mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

@@ -101,7 +101,7 @@ public class HomeMenu extends javax.swing.JDialog {
 
       scheduleButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
       scheduleButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/scheduleMeeting.png"))); // NOI18N
-      scheduleButton.setText("Schedule Meeting");
+      scheduleButton.setText("Compare Timetable");
       scheduleButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
       scheduleButton.setName("scheduleButton"); // NOI18N
       scheduleButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
