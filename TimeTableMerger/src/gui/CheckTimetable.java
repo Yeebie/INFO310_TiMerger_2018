@@ -768,7 +768,7 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
    private void initComponents() {
 
       button1 = new java.awt.Button();
-      blockPanel = new java.awt.Panel();
+      jTextPane1 = new javax.swing.JTextPane();
       secondaryPanel = new javax.swing.JPanel();
       week1Panel = new javax.swing.JPanel();
       week1Label = new javax.swing.JLabel();
@@ -987,23 +987,11 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 
       getContentPane().setLayout(null);
 
-      blockPanel.setForeground(new java.awt.Color(0,0,0,0));
-      blockPanel.setName("blockPanel"); // NOI18N
-      blockPanel.setBackground(new java.awt.Color(0,0,0,0));
-
-      javax.swing.GroupLayout blockPanelLayout = new javax.swing.GroupLayout(blockPanel);
-      blockPanel.setLayout(blockPanelLayout);
-      blockPanelLayout.setHorizontalGroup(
-         blockPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGap(0, 700, Short.MAX_VALUE)
-      );
-      blockPanelLayout.setVerticalGroup(
-         blockPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGap(0, 530, Short.MAX_VALUE)
-      );
-
-      getContentPane().add(blockPanel);
-      blockPanel.setBounds(0, 80, 700, 530);
+      jTextPane1.setEditable(false);
+      jTextPane1.setName("jTextPane1"); // NOI18N
+      jTextPane1.setBackground(new Color(0,0,0,0));
+      getContentPane().add(jTextPane1);
+      jTextPane1.setBounds(0, 80, 700, 530);
 
       secondaryPanel.setBackground(new java.awt.Color(255, 255, 255));
       secondaryPanel.setName("secondaryPanel"); // NOI18N
@@ -4743,7 +4731,6 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
    private java.awt.Button Help;
-   private java.awt.Panel blockPanel;
    private java.awt.Button button1;
    private javax.swing.JButton buttonCancel;
    private javax.swing.JCheckBox fri10w1;
@@ -4776,6 +4763,7 @@ public class CheckTimetable extends javax.swing.JDialog { //Was javax.swing.JFra
    private javax.swing.JCheckBox fri9w2;
    private javax.swing.JPanel jPanel2;
    private javax.swing.JPanel jPanel3;
+   private javax.swing.JTextPane jTextPane1;
    private javax.swing.JPanel mainPanel;
    private javax.swing.JCheckBox mon10w1;
    private javax.swing.JCheckBox mon10w2;

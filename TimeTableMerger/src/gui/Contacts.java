@@ -76,6 +76,11 @@ public class Contacts extends javax.swing.JFrame {
       searchText.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
       searchText.setText("Search");
       searchText.setName("searchText"); // NOI18N
+      searchText.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            searchTextActionPerformed(evt);
+         }
+      });
 
       searchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/searchIcon.png"))); // NOI18N
       searchButton.setBorderPainted(false);
@@ -259,6 +264,10 @@ public class Contacts extends javax.swing.JFrame {
 		// make the dialog visible
 		dialog.setVisible(true);
    }//GEN-LAST:event_backButtonActionPerformed
+
+   private void searchTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchTextActionPerformed
+      // TODO add your handling code here:
+   }//GEN-LAST:event_searchTextActionPerformed
 
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
