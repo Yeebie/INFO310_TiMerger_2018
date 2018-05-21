@@ -16,7 +16,8 @@ import java.util.Set;
  */
 public class UserDAO {
 
-	private String url = "jdbc:h2:tcp://localhost:9092/info310;IFEXISTS=TRUE";
+	//private String url = "jdbc:h2:tcp://localhost:9092/info310;IFEXISTS=TRUE";
+	private String url = "jdbc:h2:˜/info310;IFEXISTS=TRUE";
 
 	public UserDAO() {
 	}
