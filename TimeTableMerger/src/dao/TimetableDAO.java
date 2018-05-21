@@ -17,8 +17,8 @@ import java.sql.SQLException;
  */
 public class TimetableDAO {
 
-	//private String url = "jdbc:h2:tcp://localhost:9092/info310;IFEXISTS=TRUE";
-	private String url = "jdbc:h2:˜/info310;IFEXISTS=TRUE";
+	private String url = "jdbc:h2:tcp://localhost:9092/info310;IFEXISTS=TRUE";
+	//private String url = "jdbc:h2:˜/info310;IFEXISTS=TRUE";
 
 	public TimetableDAO() {
 		//Uses default URL
