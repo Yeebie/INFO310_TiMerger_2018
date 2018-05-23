@@ -22,7 +22,7 @@ public class CreateAccount extends javax.swing.JDialog {
     private final TimetableDAO timetableDAO;
     private final UserStorageDAO userStorageDAO;
     User user = new User();
-	 private ValidationHelper validHelp = new ValidationHelper();
+    private ValidationHelper validHelp = new ValidationHelper();
 
     /**
      * Creates new form Test
@@ -303,18 +303,18 @@ public class CreateAccount extends javax.swing.JDialog {
                             this.user.setLastName(lnameString);
                             this.user.setPassword(passwordString);
                             this.user.setEmail(email);
-									 if(validHelp.isObjectValid(this.user)){
-                            userDAO.saveUser(this.user);
+                            if (validHelp.isObjectValid(this.user)) {
+                                userDAO.saveUser(this.user);
 
-									 JOptionPane.showOptionDialog(null, "Thank you for creating an account!", "Success", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null, null, null);
+                                JOptionPane.showOptionDialog(null, "Thank you for creating an account!", "Success", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null, null, null);
 
-                            dispose();
-                            Login frame = new Login(userDAO, timetableDAO, userStorageDAO);
-                            // centre the frame on the screen
-                            frame.setLocationRelativeTo(null);
-                            // show the frame
-                            frame.setVisible(true);
-									 }
+                                dispose();
+                                Login frame = new Login(userDAO, timetableDAO, userStorageDAO);
+                                // centre the frame on the screen
+                                frame.setLocationRelativeTo(null);
+                                // show the frame
+                                frame.setVisible(true);
+                            }
 
                         } else {
                             JOptionPane.showMessageDialog(null, "Please enter the same password as above.", "Error", JOptionPane.ERROR_MESSAGE);
@@ -337,21 +337,23 @@ public class CreateAccount extends javax.swing.JDialog {
     }//GEN-LAST:event_loginButtonActionPerformed
 
    private void firstNameFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_firstNameFieldKeyTyped
-	char c=evt.getKeyChar();
+       char c = evt.getKeyChar();
 
-    if(!(Character.isAlphabetic(c) ||  (c==KeyEvent.VK_BACKSPACE)||  c==KeyEvent.VK_DELETE ))
-        evt.consume();      // TODO add your handling code here:
+       if (!(Character.isAlphabetic(c) || (c == KeyEvent.VK_BACKSPACE) || c == KeyEvent.VK_DELETE)) {
+           evt.consume();      // TODO add your handling code here:
+       }
    }//GEN-LAST:event_firstNameFieldKeyTyped
 
    private void lastNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lastNameFieldActionPerformed
-      // TODO add your handling code here:
+       // TODO add your handling code here:
    }//GEN-LAST:event_lastNameFieldActionPerformed
 
    private void lastNameFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lastNameFieldKeyTyped
-      char c=evt.getKeyChar();
+       char c = evt.getKeyChar();
 
-    if(!(Character.isAlphabetic(c) ||  (c==KeyEvent.VK_BACKSPACE)||  c==KeyEvent.VK_DELETE ))
-        evt.consume();
+       if (!(Character.isAlphabetic(c) || (c == KeyEvent.VK_BACKSPACE) || c == KeyEvent.VK_DELETE)) {
+           evt.consume();
+       }
    }//GEN-LAST:event_lastNameFieldKeyTyped
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
